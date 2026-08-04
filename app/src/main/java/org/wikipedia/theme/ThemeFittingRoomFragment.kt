@@ -12,7 +12,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.concurrency.FlowEventBus
 import org.wikipedia.databinding.FragmentThemeFittingRoomBinding
 import org.wikipedia.events.ChangeTextSizeEvent
@@ -51,7 +51,7 @@ class ThemeFittingRoomFragment : Fragment() {
 
     private fun updateTextSize() {
         val titleMultiplier = 1.6f
-        val fontSize = WikipediaApp.instance.getFontSize()
+        val fontSize = NITCWikiApp.instance.getFontSize()
         binding.themeTestText.textSize = fontSize
         binding.themeTestTitle.textSize = fontSize * titleMultiplier
     }

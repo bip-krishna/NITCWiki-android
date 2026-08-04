@@ -7,7 +7,7 @@ import androidx.compose.ui.graphics.Color
 import org.wikipedia.compose.ComposeColors
 
 @Immutable
-data class WikipediaColor(
+data class NITCWikiColor(
     val isDarkTheme: Boolean = false,
     val primaryColor: Color,
     val paperColor: Color,
@@ -26,8 +26,8 @@ data class WikipediaColor(
     val overlayColor: Color
 )
 
-val LocalWikipediaColor = staticCompositionLocalOf {
-    WikipediaColor(
+val LocalNITCWikiColor = staticCompositionLocalOf {
+    NITCWikiColor(
         primaryColor = Color.Unspecified,
         paperColor = Color.Unspecified,
         backgroundColor = Color.Unspecified,
@@ -46,7 +46,7 @@ val LocalWikipediaColor = staticCompositionLocalOf {
     )
 }
 
-val LightColors = WikipediaColor(
+val LightColors = NITCWikiColor(
     primaryColor = ComposeColors.Gray700,
     paperColor = ComposeColors.White,
     backgroundColor = ComposeColors.Gray100,
@@ -64,7 +64,7 @@ val LightColors = WikipediaColor(
     overlayColor = ComposeColors.Black_30
 )
 
-val DarkColors = WikipediaColor(
+val DarkColors = NITCWikiColor(
     isDarkTheme = true,
     primaryColor = ComposeColors.Gray200,
     paperColor = ComposeColors.Gray700,
@@ -83,7 +83,7 @@ val DarkColors = WikipediaColor(
     overlayColor = ComposeColors.Black_70
 )
 
-val BlackColors = WikipediaColor(
+val BlackColors = NITCWikiColor(
     isDarkTheme = true,
     primaryColor = ComposeColors.Gray200,
     paperColor = ComposeColors.Black,
@@ -102,7 +102,7 @@ val BlackColors = WikipediaColor(
     overlayColor = ComposeColors.Black_70
 )
 
-val SepiaColors = WikipediaColor(
+val SepiaColors = NITCWikiColor(
     primaryColor = ComposeColors.Gray700,
     paperColor = ComposeColors.Beige100,
     backgroundColor = ComposeColors.Beige300,
@@ -121,7 +121,7 @@ val SepiaColors = WikipediaColor(
 )
 
 @Composable
-fun WikipediaColor.shimmerColors(): List<Color> {
+fun NITCWikiColor.shimmerColors(): List<Color> {
     return if (isDarkTheme) {
         listOf(
             borderColor.copy(alpha = 0.3f),

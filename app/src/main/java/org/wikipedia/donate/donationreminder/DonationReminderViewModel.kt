@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
 import org.wikipedia.dataclient.donate.DonationConfigHelper
 import org.wikipedia.donate.DonateUtil
@@ -100,7 +100,7 @@ class DonationReminderViewModel(savedStateHandle: SavedStateHandle) : ViewModel(
     }
 
     private fun createReadFrequencyOptions(): SelectableOption<Int> {
-        val context = WikipediaApp.instance
+        val context = NITCWikiApp.instance
         val options = DonationReminderHelper.defaultReadFrequencyOptions
         val optionItems = options.map {
             OptionItem.Preset(it, context.resources.getQuantityString(R.plurals.donation_reminders_text_articles,
@@ -137,7 +137,7 @@ class DonationReminderViewModel(savedStateHandle: SavedStateHandle) : ViewModel(
             }
         }
 
-        val context = WikipediaApp.instance
+        val context = NITCWikiApp.instance
         val presets = donationConfig?.currencyAmountPresets[currencyCode]?.take(maxPresetItemsInDropdown) ?: listOf(minimumAmount)
         val options = presets.map {
             OptionItem.Preset(it, DonateUtil.currencyFormat.format(it).replace(formatRegex, ""))

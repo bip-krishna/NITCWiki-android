@@ -3,7 +3,7 @@ package org.wikipedia.widgets
 import android.content.Context
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.page.PageTitle
@@ -20,7 +20,7 @@ class WidgetFeaturedPageWorker(
 
     override suspend fun doWork(): Result {
         return try {
-            val app = WikipediaApp.instance
+            val app = NITCWikiApp.instance
             val mainPageTitle = PageTitle(MainPageNameData.valueFor(app.appOrSystemLanguageCode), app.wikiSite)
             val date = DateUtil.getUtcRequestDateFor(0)
 

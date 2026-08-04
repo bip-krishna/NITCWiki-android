@@ -6,7 +6,7 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.withContext
 import org.json.JSONException
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.createaccount.CreateAccountException
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
@@ -91,7 +91,7 @@ object ThrowableUtil {
         return t is MwException && t.error.code?.contains("notloggedin") == true
     }
 
-    suspend fun getBlockMessageHtml(blockInfo: MwServiceError.BlockInfo, wikiSite: WikiSite = WikipediaApp.instance.wikiSite): String {
+    suspend fun getBlockMessageHtml(blockInfo: MwServiceError.BlockInfo, wikiSite: WikiSite = NITCWikiApp.instance.wikiSite): String {
         var html = ""
         withContext(Dispatchers.IO) {
             val userInfoCall = async { ServiceFactory.get(wikiSite).getUserInfo() }
@@ -105,7 +105,7 @@ object ThrowableUtil {
     }
 
     private fun parseBlockedError(template: String, info: MwServiceError.BlockInfo, reason: String, userName: String): String {
-        return template.replace("$1", "<a href=\"${StringUtil.userPageTitleFromName(info.blockedBy, WikipediaApp.instance.wikiSite).uri}\">${info.blockedBy}</a>")
+        return template.replace("$1", "<a href=\"${StringUtil.userPageTitleFromName(info.blockedBy, NITCWikiApp.instance.wikiSite).uri}\">${info.blockedBy}</a>")
             .replace("$2", reason)
             .replace("$3", "") // IP address of user (TODO: somehow get from API?)
             .replace("$4", "") // unknown parameter (unused?)

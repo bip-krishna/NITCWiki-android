@@ -14,7 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.dataclient.WikiSite
@@ -60,7 +60,7 @@ class GamesHubFragment : Fragment() {
                 )
                 setContent {
                     val activity = requireActivity()
-                    val languageList = WikipediaApp.instance.languageState.appLanguageCodes
+                    val languageList = NITCWikiApp.instance.languageState.appLanguageCodes
                     val transition = rememberInfiniteTransition()
                     BaseTheme {
                         GamesHubScreen(

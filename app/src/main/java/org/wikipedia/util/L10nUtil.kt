@@ -11,7 +11,7 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.withContext
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
@@ -37,19 +37,19 @@ object L10nUtil {
 
     @Deprecated("Use getString from current Activity's context instead.")
     fun getString(@StringRes resId: Int): String {
-        val context = WikipediaApp.instance.currentResumedActivity ?: WikipediaApp.instance
+        val context = NITCWikiApp.instance.currentResumedActivity ?: NITCWikiApp.instance
         return context.getString(resId)
     }
 
     @Deprecated("Use Context extension instead.")
     fun getString(languageCode: String, @StringRes resId: Int): String {
-        val context = WikipediaApp.instance.currentResumedActivity ?: WikipediaApp.instance
+        val context = NITCWikiApp.instance.currentResumedActivity ?: NITCWikiApp.instance
         return getStringForLocale(context, Locale(languageCode), resId)
     }
 
     @Deprecated("Use Context extension instead.")
     fun getString(title: PageTitle, @StringRes resId: Int): String {
-        val context = WikipediaApp.instance.currentResumedActivity ?: WikipediaApp.instance
+        val context = NITCWikiApp.instance.currentResumedActivity ?: NITCWikiApp.instance
         return getStringForLocale(context, Locale(title.wikiSite.languageCode), resId)
     }
 
@@ -95,7 +95,7 @@ object L10nUtil {
         if (desiredLocale.language == CHINESE_LANGUAGE_CODE) {
             // create a new Locale object to manage only "zh" language code based on its app language
             // code. e.g.: search "HK" article in "zh-hant" or "zh-hans" will get "zh" language code
-            config.setLocale(getDesiredLocale(Locale(WikipediaApp.instance.languageState.appLanguageCode)))
+            config.setLocale(getDesiredLocale(Locale(NITCWikiApp.instance.languageState.appLanguageCode)))
         } else {
             config.setLocale(getDesiredLocale(desiredLocale))
         }

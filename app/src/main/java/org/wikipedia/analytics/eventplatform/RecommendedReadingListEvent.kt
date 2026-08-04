@@ -2,7 +2,7 @@ package org.wikipedia.analytics.eventplatform
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.json.JsonUtil
 
 object RecommendedReadingListEvent {
@@ -16,7 +16,7 @@ object RecommendedReadingListEvent {
         currentSetting: String? = null,
         selected: String? = null,
         source: String? = null,
-        wikiId: String = WikipediaApp.instance.appOrSystemLanguageCode
+        wikiId: String = NITCWikiApp.instance.appOrSystemLanguageCode
     ) {
         val actionData = ActionData(
             optionsShown = optionsShown,
@@ -32,7 +32,7 @@ object RecommendedReadingListEvent {
                 action,
                 activeInterface,
                 action_data = JsonUtil.encodeToString(actionData).orEmpty(),
-                primary_language = WikipediaApp.instance.languageState.appLanguageCode,
+                primary_language = NITCWikiApp.instance.languageState.appLanguageCode,
                 wiki_id = wikiId,
                 streamName = "app_rabbit_holes"
             )

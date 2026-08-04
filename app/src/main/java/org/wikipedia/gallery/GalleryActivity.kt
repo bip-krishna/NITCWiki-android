@@ -29,7 +29,7 @@ import org.wikipedia.Constants
 import org.wikipedia.Constants.ImageEditType
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.bridge.JavaScriptActionHandler
@@ -320,7 +320,7 @@ class GalleryActivity : BaseActivity(), LinkPreviewDialog.LoadPageCallback, Gall
         item.mediaInfo?.let {
             val sourceTitle = PageTitle(item.imageTitle.prefixedText, WikiSite(Service.COMMONS_URL, viewModel.wikiSite.languageCode))
             val targetTitle = PageTitle(item.imageTitle.prefixedText, WikiSite(Service.COMMONS_URL,
-                targetLanguageCode ?: WikipediaApp.instance.languageState.appLanguageCodes[1]))
+                targetLanguageCode ?: NITCWikiApp.instance.languageState.appLanguageCodes[1]))
             val currentCaption = it.captions[viewModel.wikiSite.languageCode].orEmpty().ifEmpty {
                 RichTextUtil.stripHtml(it.metadata?.imageDescription())
             }
@@ -423,7 +423,7 @@ class GalleryActivity : BaseActivity(), LinkPreviewDialog.LoadPageCallback, Gall
         L.v("Link clicked was $urlStr")
         var url = UriUtil.resolveProtocolRelativeUrl(urlStr)
         if (url.startsWith("/wiki/")) {
-            val title = PageTitle.titleForInternalLink(url, WikipediaApp.instance.wikiSite)
+            val title = PageTitle.titleForInternalLink(url, NITCWikiApp.instance.wikiSite)
             showLinkPreview(title)
         } else {
             val uri = url.toUri()
@@ -434,8 +434,8 @@ class GalleryActivity : BaseActivity(), LinkPreviewDialog.LoadPageCallback, Gall
             } else {
                 // if it's a /w/ URI, turn it into a full URI and go external
                 if (url.startsWith("/w/")) {
-                    url = String.format("%1\$s://%2\$s", WikipediaApp.instance.wikiSite.scheme(),
-                        WikipediaApp.instance.wikiSite.authority()) + url
+                    url = String.format("%1\$s://%2\$s", NITCWikiApp.instance.wikiSite.scheme(),
+                        NITCWikiApp.instance.wikiSite.authority()) + url
                 }
                 UriUtil.handleExternalLink(this@GalleryActivity, url.toUri())
             }
@@ -558,13 +558,13 @@ class GalleryActivity : BaseActivity(), LinkPreviewDialog.LoadPageCallback, Gall
 
             // and if we have another language in which the caption doesn't exist, then offer
             // it to be translatable.
-            val languageState = WikipediaApp.instance.languageState
+            val languageState = NITCWikiApp.instance.languageState
             if (languageState.appLanguageCodes.size > 1) {
                 languageState.appLanguageCodes.firstOrNull { !mediaInfo.captions.containsKey(it) }?.let {
                     targetLanguageCode = it
                     imageEditType = ImageEditType.ADD_CAPTION_TRANSLATION
                     binding.ctaButtonText.text = getString(R.string.gallery_add_image_caption_in_language_button,
-                        WikipediaApp.instance.languageState.getAppLanguageLocalizedName(targetLanguageCode))
+                        NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(targetLanguageCode))
                 }
             }
             binding.ctaContainer.isVisible = imageEditType != null

@@ -2,7 +2,7 @@ package org.wikipedia.analytics.eventplatform
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.donate.CampaignCollection
 import org.wikipedia.json.JsonUtil
 import org.wikipedia.settings.Prefs
@@ -14,7 +14,7 @@ open class DonorExperienceEvent {
         fun logAction(
             action: String,
             activeInterface: String,
-            wikiId: String = WikipediaApp.instance.appOrSystemLanguageCode,
+            wikiId: String = NITCWikiApp.instance.appOrSystemLanguageCode,
             campaignId: String? = null
         ) {
             submit(
@@ -28,7 +28,7 @@ open class DonorExperienceEvent {
         fun logDonationReminderAction(
             action: String,
             activeInterface: String,
-            wikiId: String = WikipediaApp.instance.appOrSystemLanguageCode,
+            wikiId: String = NITCWikiApp.instance.appOrSystemLanguageCode,
             defaultMilestone: Boolean? = null,
             campaignId: String? = null,
             articleFrequency: Int? = null,
@@ -54,14 +54,14 @@ open class DonorExperienceEvent {
             action: String,
             activeInterface: String,
             actionData: String,
-            wikiId: String = WikipediaApp.instance.appOrSystemLanguageCode
+            wikiId: String = NITCWikiApp.instance.appOrSystemLanguageCode
         ) {
             EventPlatformClient.submit(
                 AppInteractionEvent(
                     action,
                     activeInterface,
                     actionData,
-                    WikipediaApp.instance.languageState.appLanguageCode,
+                    NITCWikiApp.instance.languageState.appLanguageCode,
                     wikiId,
                     "app_donor_experience"
                 )

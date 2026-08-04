@@ -24,7 +24,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import org.hamcrest.Matchers.allOf
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.base.TestConfig
 import org.wikipedia.base.TestThemeColorType
 import org.wikipedia.base.TestWikipediaColors
@@ -115,13 +115,13 @@ class SearchRobot : BaseRobot() {
     }
 
     fun checkLanguageAvailability(languageCode: String) = apply {
-        val language = WikipediaApp.instance.languageState.getAppLanguageLocalizedName(languageCode) ?: ""
+        val language = NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(languageCode) ?: ""
         verify.viewWithIdAndText(viewId = R.id.language_label, text = language)
         delay(TestConfig.DELAY_SHORT)
     }
 
     fun clickLanguage(languageCode: String) = apply {
-        val language = WikipediaApp.instance.languageState.getAppLanguageLocalizedName(languageCode) ?: ""
+        val language = NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(languageCode) ?: ""
         list.selectTabWithText(R.id.horizontal_scroll_languages, language)
         delay(TestConfig.DELAY_SHORT)
     }

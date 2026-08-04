@@ -4,7 +4,7 @@ import android.media.MediaPlayer
 import android.media.MediaPlayer.OnCompletionListener
 import android.media.MediaPlayer.OnPreparedListener
 import androidx.core.net.toUri
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.util.log.L
 import java.io.IOException
 
@@ -46,9 +46,9 @@ class MediaPlayerImplementation {
     private fun setDataSource(path: String): Boolean {
         return try {
             player.setDataSource(
-                WikipediaApp.instance,
+                NITCWikiApp.instance,
                 path.toUri(),
-                mapOf("User-Agent" to WikipediaApp.instance.userAgent)
+                mapOf("User-Agent" to NITCWikiApp.instance.userAgent)
             )
             true
         } catch (e: IOException) {

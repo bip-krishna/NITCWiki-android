@@ -17,7 +17,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import org.wikimedia.testkitchen.config.StreamConfig
 import org.wikipedia.BuildConfig
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activitytab.ActivityTabModules
 import org.wikipedia.analytics.SessionData
 import org.wikipedia.analytics.eventplatform.AppSessionEvent
@@ -589,7 +589,7 @@ object Prefs {
         set(value) = PrefsIoUtil.setString(R.string.preference_key_user_contrib_filter_excluded_ns, JsonUtil.encodeToString(value))
 
     var userContribFilterLangCode
-        get() = PrefsIoUtil.getString(R.string.preference_key_user_contrib_filter_lang_code, WikipediaApp.instance.appOrSystemLanguageCode)!!
+        get() = PrefsIoUtil.getString(R.string.preference_key_user_contrib_filter_lang_code, NITCWikiApp.instance.appOrSystemLanguageCode)!!
         set(value) = PrefsIoUtil.setString(R.string.preference_key_user_contrib_filter_lang_code, value)
 
     var donationBannerOptIn
@@ -670,7 +670,7 @@ object Prefs {
         set(value) = PrefsIoUtil.setInt(R.string.preference_key_event_platform_queue_size, value)
 
     var recentEditsWikiCode
-        get() = PrefsIoUtil.getString(R.string.preference_key_recent_edits_wiki_code, WikipediaApp.instance.appOrSystemLanguageCode).orEmpty()
+        get() = PrefsIoUtil.getString(R.string.preference_key_recent_edits_wiki_code, NITCWikiApp.instance.appOrSystemLanguageCode).orEmpty()
         set(value) = PrefsIoUtil.setString(R.string.preference_key_recent_edits_wiki_code, value)
 
     var recentEditsIncludedTypeCodes
@@ -691,7 +691,7 @@ object Prefs {
         set(value) = PrefsIoUtil.setBoolean(R.string.preference_key_show_recent_edits_feedback_form, value)
 
     var placesWikiCode
-        get() = PrefsIoUtil.getString(R.string.preference_key_places_wiki_code, WikipediaApp.instance.appOrSystemLanguageCode).orEmpty()
+        get() = PrefsIoUtil.getString(R.string.preference_key_places_wiki_code, NITCWikiApp.instance.appOrSystemLanguageCode).orEmpty()
         set(value) = PrefsIoUtil.setString(R.string.preference_key_places_wiki_code, value)
 
     var placesDefaultLocationLatLng
@@ -723,8 +723,8 @@ object Prefs {
         }
 
     val placesLastLocationFlow: Flow<Location?> = callbackFlow {
-        val key = WikipediaApp.instance.getString(R.string.preference_key_places_last_location_and_zoom_level)
-        val prefs = PreferenceManager.getDefaultSharedPreferences(WikipediaApp.instance)
+        val key = NITCWikiApp.instance.getString(R.string.preference_key_places_last_location_and_zoom_level)
+        val prefs = PreferenceManager.getDefaultSharedPreferences(NITCWikiApp.instance)
         trySend(placesLastLocationAndZoomLevel?.first)
         val listener = SharedPreferences.OnSharedPreferenceChangeListener { _, changedKey ->
             if (changedKey == key) {
@@ -743,7 +743,7 @@ object Prefs {
      * costs one shared listener rather than a dedicated [callbackFlow] per key.
      */
     val preferenceKeyChangeFlow: Flow<String> = callbackFlow {
-        val prefs = PreferenceManager.getDefaultSharedPreferences(WikipediaApp.instance)
+        val prefs = PreferenceManager.getDefaultSharedPreferences(NITCWikiApp.instance)
         val listener = SharedPreferences.OnSharedPreferenceChangeListener { _, changedKey ->
             changedKey?.let { trySend(it) }
         }
@@ -756,7 +756,7 @@ object Prefs {
      * preference [keys] changes, so collectors can re-read the current values reactively.
      */
     fun observeKeys(@StringRes vararg keys: Int): Flow<Unit> {
-        val keyStrings = keys.map { WikipediaApp.instance.getString(it) }.toSet()
+        val keyStrings = keys.map { NITCWikiApp.instance.getString(it) }.toSet()
         return preferenceKeyChangeFlow
             .filter { it in keyStrings }
             .onStart { emit("") }
@@ -982,7 +982,7 @@ object Prefs {
         set(value) = PrefsIoUtil.setString(R.string.preference_key_home_for_you_modules_today, value)
 
     var homeLanguageCode
-        get() = PrefsIoUtil.getString(R.string.preference_key_home_language_code, WikipediaApp.instance.appOrSystemLanguageCode)!!
+        get() = PrefsIoUtil.getString(R.string.preference_key_home_language_code, NITCWikiApp.instance.appOrSystemLanguageCode)!!
         set(value) = PrefsIoUtil.setString(R.string.preference_key_home_language_code, value)
 
     var homePreferenceSelection: HomePreferenceType

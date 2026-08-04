@@ -25,7 +25,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import org.wikipedia.R
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 
 @Composable
@@ -41,7 +41,7 @@ fun OnboardingListItem(
             modifier = Modifier
                 .padding(top = (2.5).dp),
             painter = painterResource(item.icon),
-            tint = WikipediaTheme.colors.progressiveColor,
+            tint = NITCWikiTheme.colors.progressiveColor,
             contentDescription = null
         )
 
@@ -54,12 +54,12 @@ fun OnboardingListItem(
             Text(
                 text = stringResource(item.title),
                 style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold),
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
             Text(
                 text = item.subtitleString ?: stringResource(item.subTitle),
                 style = MaterialTheme.typography.bodyMedium,
-                color = WikipediaTheme.colors.secondaryColor
+                color = NITCWikiTheme.colors.secondaryColor
             )
         }
     }
@@ -86,17 +86,17 @@ fun TwoButtonBottomBar(
                 .weight(1f),
             border = BorderStroke(
                 width = 1.dp,
-                color = WikipediaTheme.colors.borderColor
+                color = NITCWikiTheme.colors.borderColor
             ),
             colors = ButtonDefaults.buttonColors(
-                containerColor = WikipediaTheme.colors.paperColor
+                containerColor = NITCWikiTheme.colors.paperColor
             ),
             onClick = onSecondaryOnClick
         ) {
             Text(
                 text = secondaryButtonText,
                 style = MaterialTheme.typography.labelLarge,
-                color = WikipediaTheme.colors.progressiveColor,
+                color = NITCWikiTheme.colors.progressiveColor,
                 textAlign = TextAlign.Center
             )
         }
@@ -105,7 +105,7 @@ fun TwoButtonBottomBar(
             modifier = Modifier
                 .weight(1f),
             colors = ButtonDefaults.buttonColors(
-                containerColor = WikipediaTheme.colors.progressiveColor
+                containerColor = NITCWikiTheme.colors.progressiveColor
             ),
             onClick = onPrimaryOnClick
         ) {
@@ -115,7 +115,7 @@ fun TwoButtonBottomBar(
                 Text(
                     text = targetText,
                     style = MaterialTheme.typography.labelLarge,
-                    color = WikipediaTheme.colors.paperColor,
+                    color = NITCWikiTheme.colors.paperColor,
                     textAlign = TextAlign.Center
                 )
             }

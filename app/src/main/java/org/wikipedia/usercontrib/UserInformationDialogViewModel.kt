@@ -7,7 +7,7 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.util.Resource
@@ -28,7 +28,7 @@ class UserInformationDialogViewModel(savedStateHandle: SavedStateHandle) : ViewM
             _uiState.value = Resource.Error(throwable)
         }) {
             _uiState.value = Resource.Loading()
-            val userInfo = ServiceFactory.get(WikiSite.forLanguageCode(WikipediaApp.instance.appOrSystemLanguageCode)).globalUserInfo(userName)
+            val userInfo = ServiceFactory.get(WikiSite.forLanguageCode(NITCWikiApp.instance.appOrSystemLanguageCode)).globalUserInfo(userName)
             userInfo.query?.globalUserInfo?.let {
                 val editCount = String.format("%,d", it.editCount)
                 _uiState.value = Resource.Success(Pair(editCount, it.registrationDate))

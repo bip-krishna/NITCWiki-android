@@ -11,7 +11,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.theme.BaseTheme
@@ -36,7 +36,7 @@ class LangLinksActivity : BaseActivity() {
                     uiState = uiState,
                     onLanguageSelected = { item ->
                         val pageTitle = item.pageTitle ?: return@ComposeLangLinksScreen
-                        WikipediaApp.instance.languageState
+                        NITCWikiApp.instance.languageState
                             .addMruLanguageCode(item.languageCode)
                         val historyEntry = HistoryEntry(pageTitle, HistoryEntry.SOURCE_LANGUAGE_LINK).apply {
                             prevId = viewModel.historyEntryId

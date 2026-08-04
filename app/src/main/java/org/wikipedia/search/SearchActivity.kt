@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.SingleFragmentActivity
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.extensions.instrument
@@ -74,7 +74,7 @@ class SearchActivity : SingleFragmentActivity<SearchFragment>() {
         const val EXTRA_SHOW_HYBRID_SEARCH = "showHybridSearch"
 
         fun newIntent(context: Context, source: InvokeSource, query: String?, returnLink: Boolean = false, title: String? = null, initiateHybridSearch: Boolean = false): Intent {
-            if (HybridSearchAbCTest().shouldShowOnboarding(WikipediaApp.instance.languageState.appLanguageCode)) {
+            if (HybridSearchAbCTest().shouldShowOnboarding(NITCWikiApp.instance.languageState.appLanguageCode)) {
                 Prefs.isHybridSearchOnboardingShown = true
                 return HybridSearchOnboardingActivity.newIntent(context, source)
             }

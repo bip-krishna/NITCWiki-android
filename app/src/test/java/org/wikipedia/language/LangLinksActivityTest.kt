@@ -4,7 +4,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.page.PageTitle
 
@@ -15,7 +15,7 @@ class LangLinksActivityTest {
         val title = PageTitle(null, "洋基體育場 (1923年)", WikiSite.forLanguageCode("zh-tw"))
         val list = baseLanguageEntries
 
-        LangLinksViewModel.addVariantEntriesIfNeeded(WikipediaApp.instance.languageState, title, list)
+        LangLinksViewModel.addVariantEntriesIfNeeded(NITCWikiApp.instance.languageState, title, list)
         compareLists(list, expectedZhHantResults)
     }
 
@@ -24,7 +24,7 @@ class LangLinksActivityTest {
         val title = PageTitle(null, "洋基体育场 (1923年)", WikiSite.forLanguageCode("zh-cn"))
         val list = baseLanguageEntries
 
-        LangLinksViewModel.addVariantEntriesIfNeeded(WikipediaApp.instance.languageState, title, list)
+        LangLinksViewModel.addVariantEntriesIfNeeded(NITCWikiApp.instance.languageState, title, list)
         compareLists(list, expectedZhHansResults)
     }
 
@@ -33,7 +33,7 @@ class LangLinksActivityTest {
         val title = PageTitle(null, "Yankee Stadium (1923)", WikiSite.forLanguageCode("da"))
         val list = baseLanguageEntriesWithZhVariants
 
-        LangLinksViewModel.addVariantEntriesIfNeeded(WikipediaApp.instance.languageState, title, list)
+        LangLinksViewModel.addVariantEntriesIfNeeded(NITCWikiApp.instance.languageState, title, list)
         compareLists(list, expectedGeneralResults)
     }
 
@@ -72,7 +72,7 @@ class LangLinksActivityTest {
         get() {
             val result = baseLanguageEntries
             // this order follows the order in languages_list.xml
-            val variants = WikipediaApp.instance.languageState.getLanguageVariants("zh")
+            val variants = NITCWikiApp.instance.languageState.getLanguageVariants("zh")
             if (variants != null) {
                 for (languageCode in variants) {
                     if (!listOf("zh-tw", "zh-hant", "zh-hans").contains(languageCode)) {
@@ -87,7 +87,7 @@ class LangLinksActivityTest {
         get() {
             val result = baseLanguageEntries
             // this order follows the order in languages_list.xml
-            val variants = WikipediaApp.instance.languageState.getLanguageVariants("zh")
+            val variants = NITCWikiApp.instance.languageState.getLanguageVariants("zh")
             if (variants != null) {
                 for (languageCode in variants) {
                     if (!listOf("zh-cn", "zh-hant", "zh-hans").contains(languageCode)) {

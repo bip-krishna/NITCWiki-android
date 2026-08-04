@@ -30,7 +30,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.analytics.eventplatform.EditAttemptStepEvent
 import org.wikipedia.analytics.eventplatform.ImageRecommendationsEvent
@@ -251,7 +251,7 @@ class SuggestedEditsImageRecsFragment : SuggestedEditsItemFragment(), MenuProvid
                         val palette = Palette.from(ImageService.getBitmap(image)).generate()
                         var color1 = palette.getLightVibrantColor(ContextCompat.getColor(requireContext(), R.color.gray600))
                         var color2 = palette.getLightMutedColor(ContextCompat.getColor(requireContext(), R.color.gray300))
-                        if (WikipediaApp.instance.currentTheme.isDark) {
+                        if (NITCWikiApp.instance.currentTheme.isDark) {
                             color1 = ResourceUtil.darkenColor(color1)
                             color2 = ResourceUtil.darkenColor(color2)
                         }
@@ -468,7 +468,7 @@ class SuggestedEditsImageRecsFragment : SuggestedEditsItemFragment(), MenuProvid
 
         fun newInstance(): SuggestedEditsItemFragment {
             return SuggestedEditsImageRecsFragment().apply {
-                arguments = bundleOf(ARG_LANG to WikipediaApp.instance.appOrSystemLanguageCode)
+                arguments = bundleOf(ARG_LANG to NITCWikiApp.instance.appOrSystemLanguageCode)
             }
         }
     }

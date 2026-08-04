@@ -7,7 +7,7 @@ import android.app.Activity
 import androidx.core.os.bundleOf
 import androidx.core.text.isDigitsOnly
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.SharedPreferenceCookieManager
 import org.wikipedia.json.JsonUtil
 import org.wikipedia.login.LoginResult
@@ -58,13 +58,13 @@ object AccountUtil {
     var groups: Set<String>
         get() {
             val account = account() ?: return emptySet()
-            val setStr = accountManager().getUserData(account, WikipediaApp.instance.getString(R.string.preference_key_login_groups))
+            val setStr = accountManager().getUserData(account, NITCWikiApp.instance.getString(R.string.preference_key_login_groups))
             return if (setStr.isNullOrEmpty()) emptySet() else (JsonUtil.decodeFromString(setStr) ?: emptySet())
         }
         set(groups) {
             val account = account() ?: return
             accountManager().setUserData(account,
-                    WikipediaApp.instance.getString(R.string.preference_key_login_groups),
+                    NITCWikiApp.instance.getString(R.string.preference_key_login_groups),
                     JsonUtil.encodeToString(groups))
         }
 
@@ -93,7 +93,7 @@ object AccountUtil {
     }
 
     fun accountType(): String {
-        return WikipediaApp.instance.getString(R.string.account_type)
+        return NITCWikiApp.instance.getString(R.string.account_type)
     }
 
     fun getUserNameFromCookie(): String {
@@ -142,6 +142,6 @@ object AccountUtil {
     }
 
     private fun accountManager(): AccountManager {
-        return AccountManager.get(WikipediaApp.instance)
+        return AccountManager.get(NITCWikiApp.instance)
     }
 }

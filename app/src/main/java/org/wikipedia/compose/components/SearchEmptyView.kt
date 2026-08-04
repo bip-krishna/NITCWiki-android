@@ -20,7 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import org.wikipedia.R
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 
 @Composable
@@ -37,10 +37,10 @@ fun SearchEmptyView(
             modifier = Modifier
                 .requiredSize(96.dp)
                 .clip(CircleShape)
-                .background(WikipediaTheme.colors.backgroundColor)
+                .background(NITCWikiTheme.colors.backgroundColor)
                 .padding(20.dp),
             painter = painterResource(R.drawable.outline_search_24),
-            tint = WikipediaTheme.colors.placeholderColor,
+            tint = NITCWikiTheme.colors.placeholderColor,
             contentDescription = null
         )
         Text(
@@ -48,7 +48,7 @@ fun SearchEmptyView(
                 .padding(top = 4.dp),
             text = emptyTexTitle,
             style = MaterialTheme.typography.bodyLarge,
-            color = WikipediaTheme.colors.placeholderColor
+            color = NITCWikiTheme.colors.placeholderColor
         )
     }
 }

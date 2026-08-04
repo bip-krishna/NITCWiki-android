@@ -15,7 +15,7 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.ImageRecommendationsEvent
 import org.wikipedia.commons.ImagePreviewDialog
 import org.wikipedia.databinding.FragmentInsertMediaSettingsBinding
@@ -75,7 +75,7 @@ class InsertMediaSettingsFragment : Fragment() {
         binding.imageInfoContainer.setOnClickListener {
             sendInsertMediaEvent("image_detail_view")
             viewModel.selectedImage?.let {
-                val summary = PageSummaryForEdit(it.prefixedText, WikipediaApp.instance.appOrSystemLanguageCode, it,
+                val summary = PageSummaryForEdit(it.prefixedText, NITCWikiApp.instance.appOrSystemLanguageCode, it,
                     it.displayText, RichTextUtil.stripHtml(it.description), it.thumbUrl)
                 ExclusiveBottomSheetPresenter.show(childFragmentManager,
                     ImagePreviewDialog.newInstance(summary))

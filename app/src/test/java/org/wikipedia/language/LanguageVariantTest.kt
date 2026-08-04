@@ -4,7 +4,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.WikiSite
 import java.util.Locale
 
@@ -15,7 +15,7 @@ class LanguageVariantTest {
     @Test
     fun testDefaultLocaleAndAcceptLanguageAgree() {
         val defaultLocale = Locale.getDefault()
-        val appLanguage = WikipediaApp.instance.languageState.appLanguageCode
+        val appLanguage = NITCWikiApp.instance.languageState.appLanguageCode
 
         testDefaultLocaleAndAcceptLanguageAgree("zh,zh-Hant-TW;q=0.8", "zh", Locale.TRADITIONAL_CHINESE)
         testDefaultLocaleAndAcceptLanguageAgree("zh,zh-Hans-CN;q=0.8", "zh", Locale.SIMPLIFIED_CHINESE)
@@ -27,13 +27,13 @@ class LanguageVariantTest {
         testDefaultLocaleAndAcceptLanguageAgree("zh-Hant,zh-Hant-TW;q=0.8", AppLanguageLookUpTable.TRADITIONAL_CHINESE_LANGUAGE_CODE, Locale.TRADITIONAL_CHINESE)
         testDefaultLocaleAndAcceptLanguageAgree("zh-tw,zh-Hant-TW;q=0.9,en;q=0.7", AppLanguageLookUpTable.TRADITIONAL_CHINESE_LANGUAGE_CODE, Locale.US, WikiSite.forLanguageCode("zh-tw"))
 
-        WikipediaApp.instance.languageState.setAppLanguageCodes(listOf(appLanguage))
+        NITCWikiApp.instance.languageState.setAppLanguageCodes(listOf(appLanguage))
         Locale.setDefault(defaultLocale)
     }
 
     private fun testDefaultLocaleAndAcceptLanguageAgree(expected: String, appLanguage: String, systemLocale: Locale, wiki: WikiSite? = null) {
-        WikipediaApp.instance.languageState.setAppLanguageCodes(listOf(appLanguage))
+        NITCWikiApp.instance.languageState.setAppLanguageCodes(listOf(appLanguage))
         Locale.setDefault(systemLocale)
-        assertEquals(expected, WikipediaApp.instance.getAcceptLanguage(wiki))
+        assertEquals(expected, NITCWikiApp.instance.getAcceptLanguage(wiki))
     }
 }

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name_prod">Wikipedia</string>
-    <string name="app_name_beta" tools:ignore="UnusedResources">Wikipedia Beta</string>
-    <string name="app_name_alpha" tools:ignore="UnusedResources">Wikipedia Alpha</string>
+    <string name="app_name_prod">NITCWiki</string>
+    <string name="app_name_beta" tools:ignore="UnusedResources">NITCWiki Beta</string>
+    <string name="app_name_alpha" tools:ignore="UnusedResources">NITCWiki Alpha</string>
 
     <string name="wikimedia">Wikimedia</string>
 
     <string name="nav_item_back">Back</string>
     <string name="page_tabs_back">Back</string>
     <string name="nav_item_forward">Forward</string>
-    <string name="search_hint">Search Wikipedia</string>
+    <string name="search_hint">Search NITCWiki</string>
     <string name="search_hint_voice_search">Voice input search</string>
     <string name="search_hint_search_languages">Search for a language</string>
     <string name="search_back_button_content_description">Go back</string>
@@ -124,12 +124,12 @@
     <string name="edit_save_action_license_logged_in"><![CDATA[By publishing, you agree to the <a href="%1$s">Terms of Use</a>, and to irrevocably release your contributions under the <a href="%2$s">CC BY-SA 4.0</a> license.]]></string>
     <string name="edit_save_action_license_anon"><![CDATA[By publishing, you agree to the <a href="%1$s">Terms of Use</a>, and to irrevocably release your contributions under the <a href="%2$s/">CC BY-SA 4.0</a> license. Edits will be attributed to the IP address of your device. If you <a href="https://#login">log in</a>, you will have more privacy.]]></string>
     <string name="edit_anon_warning"><![CDATA[Edits will be attributed to the IP address of your device. If you <a href="https://#login">log in</a>, you will have more privacy.]]></string>
-    <string name="preference_title_language">Wikipedia languages</string>
+    <string name="preference_title_language">NITCWiki languages</string>
     <string name="langlinks_filter_hint">Search</string>
     <string name="langlinks_empty">This page is not available in other languages.</string>
     <string name="langlinks_no_match">No languages found</string>
     <string name="langlinks_activity_title">Other languages</string>
-    <string name="langlinks_your_wikipedia_languages">Your Wikipedia languages</string>
+    <string name="langlinks_your_wikipedia_languages">Your NITCWiki languages</string>
     <string name="menu_save_changes">Publish changes</string>
     <string name="edit_saved_successfully">Edit published!</string>
     <string name="stub_article_edit_saved_successfully">Edit published! Changes may take time to appear.</string>
@@ -153,7 +153,7 @@
     <string name="edit_section_captcha_hint">Repeat words from above</string>
     <string name="title_captcha">Enter CAPTCHA</string>
     <string name="edit_section_captcha_reload">Tap CAPTCHA to reload</string>
-    <string name="nav_item_login">Log in to Wikipedia</string>
+    <string name="nav_item_login">Log in to NITCWiki</string>
     <string name="login_username_hint">Username</string>
     <string name="login_password_hint">Password</string>
     <string name="account_creation_password_hint">Password</string>
@@ -179,22 +179,22 @@
     <string name="logout_prompt">This will log you out on all devices where you are currently logged in. Do you want to continue?</string>
     <string name="logout_dialog_cancel_button_text">Cancel</string>
     <string name="logged_out_in_background_title">Logged out</string>
-    <string name="logged_out_in_background_dialog">You have been logged out of Wikipedia. Would you like to log in again?</string>
+    <string name="logged_out_in_background_dialog">You have been logged out of NITCWiki. Would you like to log in again?</string>
     <string name="logged_out_in_background_login">Log in</string>
     <string name="logged_out_in_background_cancel">Cancel</string>
     <string name="account_vanish_request_title">Vanish account</string>
     <string name="account_vanish_request_confirm_title">Vanish account warning</string>
-    <string name="account_vanish_request_confirm"><![CDATA[Vanishing is a <b>last resort</b> and should <b>only be used when you wish to stop editing forever</b> and also to hide as many of your past associations as possible.<br/><br/>Account deletion on Wikipedia is done by changing your account name to make it so others cannot recognize your contributions in a process called account vanishing. <b>Vanishing does not guarantee complete anonymity or remove contributions to the projects</b>.]]></string>
+    <string name="account_vanish_request_confirm"><![CDATA[Vanishing is a <b>last resort</b> and should <b>only be used when you wish to stop editing forever</b> and also to hide as many of your past associations as possible.<br/><br/>Account deletion on NITCWiki is done by changing your account name to make it so others cannot recognize your contributions in a process called account vanishing. <b>Vanishing does not guarantee complete anonymity or remove contributions to the projects</b>.]]></string>
     <string name="history_empty_title">No recently viewed articles</string>
     <string name="history_empty_message">Track what you\'ve been reading here.</string>
     <string name="history_offline_articles_toast">Some articles in history may not be viewable while offline.</string>
     <string name="search_empty_message">Search and read the free encyclopedia in your language</string>
-    <string name="search_empty_message_multilingual_upgrade">Search Wikipedia in more languages</string>
+    <string name="search_empty_message_multilingual_upgrade">Search NITCWiki in more languages</string>
     <string name="delete_selected_items">Delete selected items</string>
-    <string name="wp_stylized"><![CDATA[<big>W</big>IKIPEDI<big>A</big>]]></string>
+    <string name="wp_stylized"><![CDATA[<big>N</big>ITCWIK<big>I</big>]]></string>
     <string name="create_account_username_hint">Username</string>
     <string name="login_dont_have_account">Don\'t have an account?</string>
-    <string name="login_join_wikipedia">Join Wikipedia</string>
+    <string name="login_join_wikipedia">Join NITCWiki</string>
     <string name="login_forgot_password">Forgot your password?</string>
     <string name="create_account_already_have">Already have an account?</string>
     <string name="create_account_activity_title">Create an account</string>
@@ -220,7 +220,7 @@
     <string name="create_account_ip_block_details">Details</string>
     <string name="preferences_general_heading">General</string>
     <string name="preferences_account_heading">Account</string>
-    <string name="wikipedia_app_faq">Wikipedia App FAQ</string>
+    <string name="wikipedia_app_faq">NITCWiki App FAQ</string>
     <string name="send_feedback">Send app feedback</string>
     <string name="create_account_account_created_toast">Account created!</string>
     <string name="preferences_heading_syncing">Syncing</string>
@@ -228,8 +228,8 @@
     <string name="preferences_heading_experimental">Experimental</string>
     <string name="preference_title_sync_reading_lists_from_account">Reading list syncing</string>
     <string name="preference_title_download_reading_list_articles">Download reading list articles</string>
-    <string name="preference_summary_sync_reading_lists">Sync reading lists across different devices by saving them to your Wikipedia account</string>
-    <string name="preference_summary_sync_reading_lists_from_account">Sync reading lists across different devices by saving them to your Wikipedia account \"%s\"</string>
+    <string name="preference_summary_sync_reading_lists">Sync reading lists across different devices by saving them to your NITCWiki account</string>
+    <string name="preference_summary_sync_reading_lists_from_account">Sync reading lists across different devices by saving them to your NITCWiki account \"%s\"</string>
     <string name="preference_dialog_of_turning_off_reading_list_sync_title">Remove synced reading lists from \"%s\"?</string>
     <string name="preference_dialog_of_turning_off_reading_list_sync_text">This will completely delete all previously synced reading lists from remote storage. Remove all synced lists from your account \"%s\"?</string>
     <string name="preference_title_auto_upload_crash_reports">Send crash reports</string>
@@ -247,11 +247,11 @@
     <string name="page_watchlist_overflow_menu_onboarding_tooltip_text"><![CDATA[Keep track of what\'s happening to articles you are interested in. Tap the overflow menu and select <b>Add to Watchlist</b> to see changes to an article.]]></string>
     <string name="settings_item_preferences">Settings</string>
     <string name="settings_activity_title">Settings</string>
-    <string name="about_description">About the Wikipedia app</string>
+    <string name="about_description">About the NITCWiki app</string>
     <string name="privacy_policy_description">Privacy policy</string>
     <string name="terms_of_use_description">Terms of use</string>
     <string name="legal_safety_contacts_description">Legal and safety contacts</string>
-    <string name="about_wikipedia_url">https://en.wikipedia.org/wiki/Wikipedia:About</string>
+    <string name="about_wikipedia_url">https://wiki.fosscell.org/wiki/NITC_Wiki:About</string>
     <string name="privacy_policy_url">https://foundation.wikimedia.org/wiki/Special:MyLanguage/Privacy_policy</string>
     <string name="offline_reading_and_data_url">https://www.mediawiki.org/wiki/Special:MyLanguage/Wikimedia_Apps/Android_FAQ#Offline_reading_and_data</string>
     <string name="android_app_faq_url">https://www.mediawiki.org/wiki/Special:MyLanguage/Wikimedia_Apps/Android_FAQ</string>
@@ -270,7 +270,7 @@
     <string name="about_app_license"><![CDATA[Source code available on <a href=\"https://github.com/wikimedia/apps-android-wikipedia\">GitHub</a> under the <a href=\"https://www.apache.org/licenses/LICENSE-2.0\">Apache 2.0 License</a>. Unless otherwise specified, content is available under a <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">Creative Commons Attribution-ShareAlike License</a>.]]></string>
     <string name="about_wmf"><![CDATA[A product of the <a href="https://wikimediafoundation.org/">Wikimedia Foundation</a>]]></string>
     <string name="about_activity_title">About</string>
-    <string name="about_logo_content_description">Wikipedia puzzle globe logo</string>
+    <string name="about_logo_content_description">NITCWiki puzzle globe logo</string>
     <string name="edit_abandon_confirm">The page has been modified. Are you sure you want to exit without saving your changes?</string>
     <string name="edit_abandon_confirm_yes">Yes</string>
     <string name="edit_abandon_confirm_no">No</string>
@@ -315,7 +315,7 @@
     <string name="abusefilter_title_warn">This may be an unconstructive edit. Are you sure you want to publish it?</string>
     <string name="abusefilter_title_disallow">You cannot publish this edit. Please go back and change it.</string>
     <string name="abusefilter_text_warn"><![CDATA[An automated filter has identified this edit as potentially unconstructive. It may contain one or more of the following:<br /><br />· Typing in all caps<br />· Blanking articles or spamming<br />· Irrelevant external links or images<br />· Repeating characters]]></string>
-    <string name="abusefilter_text_disallow"><![CDATA[An automated filter has identified this edit as potentially unconstructive, or potential vandalism.<br /><br />Wikipedia is an encyclopedia and only neutral, notable content belongs here.]]></string>
+    <string name="abusefilter_text_disallow"><![CDATA[An automated filter has identified this edit as potentially unconstructive, or potential vandalism.<br /><br />NITCWiki is an encyclopedia and only neutral, notable content belongs here.]]></string>
     <string name="page_similar_titles">Similar pages</string>
     <string name="search_did_you_mean">Did you mean \"%s\"?</string>
     <string name="search_recent_header">Recent searches:</string>
@@ -332,11 +332,11 @@
     <string name="table_infobox">Quick facts</string>
     <string name="table_other">More information</string>
     <string name="table_close">Close</string>
-    <string name="widget_name_featured_page">Wikipedia featured page</string>
+    <string name="widget_name_featured_page">NITCWiki featured page</string>
     <string name="widget_title_featured_page">Today\'s featured page:</string>
-    <string name="widget_name_search">Wikipedia search</string>
-    <string name="widget_description_search">The fastest way to search Wikipedia</string>
-    <string name="widget_description_featured_page">The best articles Wikipedia has to offer</string>
+    <string name="widget_name_search">NITCWiki search</string>
+    <string name="widget_description_search">The fastest way to search NITCWiki</string>
+    <string name="widget_description_featured_page">The best articles NITCWiki has to offer</string>
     <string name="wiktionary_no_definitions_found">No definitions found.</string>
     <string name="alpha_update_notification_title">New alpha update available</string>
     <string name="alpha_update_notification_text">Tap to download</string>
@@ -835,13 +835,13 @@
     <string name="view_random_article_card_title">Random article</string>
     <string name="view_random_article_card_action">More random articles</string>
     <string name="view_top_read_card_title">Top read</string>
-    <string name="view_top_read_card_description">What is trending today on Wikipedia</string>
+    <string name="view_top_read_card_description">What is trending today on NITCWiki</string>
     <string name="view_top_read_card_action">More top read</string>
     <string name="view_top_read_card_pageviews_k_suffix">%d k</string>
     <string name="view_top_read_card_pageviews_m_suffix">%d M</string>
     <string name="view_top_read_card_pageviews_views_suffix">views</string>
     <string name="view_next_random_article">Load another random article</string>
-    <string name="view_main_page_card_title">Today on Wikipedia</string>
+    <string name="view_main_page_card_title">Today on NITCWiki</string>
     <string name="view_main_page_card_action">View main page</string>
     <string name="view_featured_image_card_title">Picture of the day</string>
     <string name="view_featured_image_card_download">Download</string>
@@ -874,10 +874,10 @@
     <string name="feed_item_type_news">Articles about current events</string>
     <string name="feed_item_type_on_this_day">Events in history on this day</string>
     <string name="feed_item_type_because_you_read">Suggestions based on a recently read article from your history</string>
-    <string name="feed_item_type_featured_article">Daily featured article on Wikipedia</string>
+    <string name="feed_item_type_featured_article">Daily featured article on NITCWiki</string>
     <string name="feed_item_type_trending">Daily most-viewed articles</string>
     <string name="feed_item_type_featured_image">Daily featured image from Wikimedia Commons</string>
-    <string name="feed_item_type_main_page">Main page of Wikipedia with daily featured content</string>
+    <string name="feed_item_type_main_page">Main page of NITCWiki with daily featured content</string>
     <string name="feed_item_type_randomizer">Generate random articles to read</string>
     <string name="feed_item_type_suggested_edits">Suggestions to add content to Wikipedia</string>
     <string name="feed_item_type_places">Nearby articles based on the current location</string>
@@ -1064,8 +1064,8 @@
     <string name="suggested_edits_image_tags_add_tag">Add tag</string>
     <string name="suggested_edits_image_tags_exit_dialog_message">The unpublished tags will not be saved</string>
     <string name="suggested_edits_image_zoom_tooltip">Pinch to zoom this image.</string>
-    <string name="suggested_edits_encouragement_message">%s\, thanks for your edits. Below you can find more ways to contribute to Wikipedia.</string>
-    <string name="suggested_edits_onboarding_message"><![CDATA[<b>Hi %s\</b>, below you can find some quick and easy ways to help improve Wikipedia. You\'ll see the difference you\'re making as soon as you get started. Happy editing!]]></string>
+    <string name="suggested_edits_encouragement_message">%s\, thanks for your edits. Below you can find more ways to contribute to NITCWiki.</string>
+    <string name="suggested_edits_onboarding_message"><![CDATA[<b>Hi %s\</b>, below you can find some quick and easy ways to help improve NITCWiki. You\'ll see the difference you\'re making as soon as you get started. Happy editing!]]></string>
     <string name="suggested_edits_image_captions_task_detail">Describe an image to help readers understand its meaning and context.</string>
     <string name="suggested_edits_add_descriptions_task_detail">Summarize an article to help readers understand the subject at a glance.</string>
     <string name="suggested_edits_contributions_stat_tooltip">Your total number of contributions so far.</string>
@@ -1198,13 +1198,13 @@
     <string name="edit_published_view">View</string>
     <string name="activity_tab_logged_out_title">Log in or create an account to view your activity on the Wikipedia app</string>
     <string name="activity_tab_user_reading">%s\'s reading</string>
-    <string name="activity_tab_on_wikipedia_android">On Wikipedia Android</string>
+    <string name="activity_tab_on_wikipedia_android">On NITCWiki Android</string>
     <string name="activity_tab_weekly_time_spent_hm">%1$dh %2$dm</string>
     <string name="activity_tab_weekly_time_spent">Time spent reading this week</string>
     <string name="activity_tab_monthly_articles_read">Articles read this month</string>
     <string name="activity_tab_monthly_articles_saved">Articles saved this month</string>
     <string name="activity_tab_monthly_top_categories">Top categories read this month</string>
-    <string name="activity_tab_explore_wikipedia">Discover through Wikipedia</string>
+    <string name="activity_tab_explore_wikipedia">Discover through NITCWiki</string>
     <string name="activity_tab_discover_encourage">Looking for something new to read?</string>
     <string name="activity_tab_donation_unknown">Unknown</string>
     <string name="activity_tab_donation_last_donation"><![CDATA[<b>Last donation</b> in app]]></string>
@@ -1277,11 +1277,11 @@
     <string name="activity_tab_onboarding_impact_title">Impact highlights</string>
     <string name="activity_tab_onboarding_impact_message">Discover insights about your contributions and the reach of the knowledge you\'ve shared.</string>
     <string name="activity_tab_onboarding_engage_title">More ways to engage</string>
-    <string name="activity_tab_onboarding_engage_message">Explore stats for games, saved articles, and other activities that connect you more deeply with Wikipedia.</string>
+    <string name="activity_tab_onboarding_engage_message">Explore stats for games, saved articles, and other activities that connect you more deeply with NITCWiki.</string>
     <string name="activity_tab_onboarding_stay_in_control_title">Stay in control</string>
     <string name="activity_tab_onboarding_stay_in_control_message">Choose which modules to display. All personal data stays private on your device and browsing history can be cleared at anytime.</string>
-    <string name="edits_screen_what_is_title">Editing in the Wikipedia app</string>
-    <string name="edits_screen_what_is_body">Unsure where to get started with editing? Try Suggested Edits, a feature that creates opportunities to make small but vital contributions to Wikipedia. Alternatively, go directly to an article of interest and make a change using wikitext.</string>
+    <string name="edits_screen_what_is_title">Editing in the NITCWiki app</string>
+    <string name="edits_screen_what_is_body">Unsure where to get started with editing? Try Suggested Edits, a feature that creates opportunities to make small but vital contributions to NITCWiki. Alternatively, go directly to an article of interest and make a change using wikitext.</string>
     <string name="activity_tab_snackbar_label">Game stats are shown for your primary language.</string>
 
     <!-- /Suggested edits -->
@@ -1327,8 +1327,8 @@
     <string name="onboarding_welcome_title_v2">The Free Encyclopedia\n&#8230;in over 300 languages</string>
     <string name="onboarding_next">Next</string>
     <string name="onboarding_fresh_install_knowledge_title">All the world\'s knowledge</string>
-    <string name="onboarding_fresh_install_knowledge_text">Wikipedia is a free online encyclopedia with 65 million articles collaboratively written and maintained in more than 300 languages by a community of volunteers.</string>
-    <string name="onboarding_fresh_install_knowledge_learn_more">Learn more about Wikipedia</string>
+    <string name="onboarding_fresh_install_knowledge_text">NITCWiki is a free online encyclopedia with 65 million articles collaboratively written and maintained in more than 300 languages by a community of volunteers.</string>
+    <string name="onboarding_fresh_install_knowledge_learn_more">Learn more about NITCWiki</string>
     <string name="onboarding_app_languages_title">Read in more than 300 languages</string>
     <string name="onboarding_app_languages_text">We\'ve noticed the following languages on your device:</string>
     <string name="onboarding_app_languages_primary">Primary</string>
@@ -1362,7 +1362,7 @@
     <string name="languages_list_activity_title">Add a language</string>
     <string name="languages_list_suggested_text">Suggested</string>
     <string name="languages_list_all_text">All languages</string>
-    <string name="wikipedia_languages_title">Wikipedia languages</string>
+    <string name="wikipedia_languages_title">NITCWiki languages</string>
     <string name="wikipedia_languages_your_languages_text">Your languages</string>
     <string name="wikipedia_languages_add_language_text">Add language</string>
     <string name="wikipedia_languages_remove_text">Remove language</string>
@@ -1986,7 +1986,7 @@
     <string name="on_this_day_game_stats_log_in_prompt_card_button">Log in</string>
     <string name="on_this_day_game_stats_log_in_prompt_card_title">Log in to view your game stats</string>
     <string name="on_this_day_game_stats_log_in_prompt_card_description">See your streaks, scores, and more</string>
-    <string name="wikipedia_games_title">Wikipedia games</string>
+    <string name="wikipedia_games_title">NITCWiki games</string>
     <string name="wikipedia_games_subtitle">Daily trivia games based Wikipedia content.</string>
 
     <!-- Year In Review -->
@@ -2493,8 +2493,8 @@
     <string name="explore_feed_onboarding_curiosity_title">Follow your curiosity</string>
     <string name="explore_feed_onboarding_curiosity_description">Select topics that interest you, and we will personalize your feed.\n\nWe collect minimal data that is anonymized.</string>
     <string name="explore_feed_deselect_all_button_label">Deselect all</string>
-    <string name="explore_feed_potd_subtitle">Daily images on Wikimedia Commons, selected by volunteer contributors</string>
-    <string name="explore_feed_featured_article_subtitle">Featured articles are some of the highest-quality articles on Wikipedia, selected daily by editors</string>
+    <string name="explore_feed_potd_subtitle">Daily images on NITC Wiki Commons, selected by volunteer contributors</string>
+    <string name="explore_feed_featured_article_subtitle">Featured articles are some of the highest-quality articles on NITCWiki, selected daily by editors</string>
     <string name="explore_feed_preference_selection_screen_title">What would you like to see first?</string>
     <string name="explore_feed_preference_community_content_title">Community-related content</string>
     <string name="explore_feed_preference_personalized_content_title">Personalized content</string>

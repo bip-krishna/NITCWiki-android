@@ -14,7 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 import kotlin.math.max
 
@@ -24,7 +24,7 @@ fun LineChart(
     modifier: Modifier = Modifier,
     chartSampleSize: Int = 10,
     strokeWidth: Dp = 2.dp,
-    strokeColor: Color = WikipediaTheme.colors.progressiveColor
+    strokeColor: Color = NITCWikiTheme.colors.progressiveColor
 ) {
     if (map.isEmpty()) {
         return

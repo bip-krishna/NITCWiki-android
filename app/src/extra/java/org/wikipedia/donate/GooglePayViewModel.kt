@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 import org.json.JSONObject
 import org.wikipedia.BuildConfig
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.Service
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
@@ -77,14 +77,14 @@ class GooglePayViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
             uiState.value = Resource.Loading()
 
             val donationConfigCall = async { DonationConfigHelper.getConfig() }
-            val donationMessagesCall = async { ServiceFactory[WikipediaApp.instance.wikiSite, DonationConfigHelper.DONATE_WIKI_URL, Service::class.java].getMessages(
+            val donationMessagesCall = async { ServiceFactory[NITCWikiApp.instance.wikiSite, DonationConfigHelper.DONATE_WIKI_URL, Service::class.java].getMessages(
                 listOf(MSG_DISCLAIMER_INFORMATION_SHARING, MSG_DISCLAIMER_MONTHLY_CANCEL).joinToString("|"),
-                null, WikipediaApp.instance.appOrSystemLanguageCode) }
+                null, NITCWikiApp.instance.appOrSystemLanguageCode) }
 
             donationConfig = donationConfigCall.await()
             donationMessagesCall.await().let { response ->
-                disclaimerInformationSharing = response.query?.allmessages?.find { it.name == MSG_DISCLAIMER_INFORMATION_SHARING }?.content?.replace("$1", WikipediaApp.instance.getString(R.string.donor_privacy_policy_url))
-                disclaimerMonthlyCancel = response.query?.allmessages?.find { it.name == MSG_DISCLAIMER_MONTHLY_CANCEL }?.content?.replace("$1", WikipediaApp.instance.getString(R.string.donate_email))
+                disclaimerInformationSharing = response.query?.allmessages?.find { it.name == MSG_DISCLAIMER_INFORMATION_SHARING }?.content?.replace("$1", NITCWikiApp.instance.getString(R.string.donor_privacy_policy_url))
+                disclaimerMonthlyCancel = response.query?.allmessages?.find { it.name == MSG_DISCLAIMER_MONTHLY_CANCEL }?.content?.replace("$1", NITCWikiApp.instance.getString(R.string.donate_email))
             }
 
             // The paymentMethods API is rate limited, so we cache it manually.
@@ -165,7 +165,7 @@ class GooglePayViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
                         donorCountry = billingObj.optString("countryCode", DonateUtil.currentCountryCode),
                         email = paymentDataObj.optString("email", ""),
                         fullName = billingObj.optString("name", ""),
-                        language = WikipediaApp.instance.appOrSystemLanguageCode,
+                        language = NITCWikiApp.instance.appOrSystemLanguageCode,
                         recurring = if (recurring) "1" else "0",
                         paymentToken = token,
                         optIn = if (optInEmail) "1" else "0",
@@ -175,7 +175,7 @@ class GooglePayViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
                         postalCode = billingObj.optString("postalCode", ""),
                         stateProvince = billingObj.optString("administrativeArea", ""),
                         streetAddress = billingObj.optString("address1", ""),
-                        appInstallId = WikipediaApp.instance.appInstallID
+                        appInstallId = NITCWikiApp.instance.appInstallID
                     )
                     L.d("Payment response: $response")
                 } catch (e: SocketTimeoutException) {

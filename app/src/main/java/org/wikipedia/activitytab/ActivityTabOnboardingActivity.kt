@@ -29,7 +29,7 @@ import org.wikipedia.compose.components.OnboardingItem
 import org.wikipedia.compose.components.OnboardingListItem
 import org.wikipedia.compose.components.TwoButtonBottomBar
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.settings.Prefs
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.DeviceUtil
@@ -100,7 +100,7 @@ fun OnboardingScreen(
     Scaffold(
         modifier = modifier
             .safeDrawingPadding(),
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
         bottomBar = {
             TwoButtonBottomBar(
                 modifier = Modifier.fillMaxWidth()
@@ -126,7 +126,7 @@ fun OnboardingScreen(
                 textAlign = TextAlign.Center,
                 text = stringResource(R.string.activity_tab_onboarding_screen_title),
                 style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Medium),
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
 
             onboardingItems.forEach { onboardingItem ->

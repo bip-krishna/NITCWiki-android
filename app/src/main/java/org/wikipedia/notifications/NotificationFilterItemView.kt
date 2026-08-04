@@ -12,7 +12,7 @@ import androidx.core.view.isVisible
 import androidx.core.widget.ImageViewCompat
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.databinding.ItemNotificationFilterBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
@@ -86,7 +86,7 @@ class NotificationFilterItemView constructor(context: Context, attrs: AttributeS
             Constants.WIKI_CODE_WIKIDATA -> context.getString(R.string.wikidata)
             context.getString(R.string.notifications_all_wikis_text) -> filterCode
             context.getString(R.string.notifications_all_types_text) -> filterCode
-            else -> WikipediaApp.instance.languageState.getAppLanguageLocalizedName(filterCode).orEmpty()
+            else -> NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(filterCode).orEmpty()
         }
     }
 }

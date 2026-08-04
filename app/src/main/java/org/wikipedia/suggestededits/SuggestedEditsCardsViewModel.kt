@@ -8,15 +8,15 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.mwapi.SiteMatrix
 import org.wikipedia.descriptions.DescriptionEditActivity
 import org.wikipedia.util.Resource
 
 class SuggestedEditsCardsViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
-    var langFromCode = WikipediaApp.instance.languageState.appLanguageCode
-    var langToCode = WikipediaApp.instance.languageState.appLanguageCodes.getOrElse(1) { "" }
+    var langFromCode = NITCWikiApp.instance.languageState.appLanguageCode
+    var langToCode = NITCWikiApp.instance.languageState.appLanguageCodes.getOrElse(1) { "" }
     var action = savedStateHandle.get<DescriptionEditActivity.Action>(Constants.INTENT_EXTRA_ACTION)!!
 
     private val _uiState = MutableStateFlow(Resource<List<String>>())
@@ -31,7 +31,7 @@ class SuggestedEditsCardsViewModel(savedStateHandle: SavedStateHandle) : ViewMod
             _uiState.value = Resource.Error(throwable)
         }) {
             _uiState.value = Resource.Loading()
-            val app = WikipediaApp.instance
+            val app = NITCWikiApp.instance
             val siteMatrix = ServiceFactory.get(app.wikiSite).getSiteMatrix()
             val list = mutableListOf<String>()
             app.languageState.appLanguageCodes.forEach { code ->

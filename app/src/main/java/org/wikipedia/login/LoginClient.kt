@@ -6,7 +6,7 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.Service
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
@@ -130,8 +130,8 @@ class LoginClient {
     }
 
     private fun showToast(@StringRes stringId: Int) {
-        WikipediaApp.instance.mainThreadHandler.post {
-            Toast.makeText(WikipediaApp.instance, stringId, Toast.LENGTH_LONG).show()
+        NITCWikiApp.instance.mainThreadHandler.post {
+            Toast.makeText(NITCWikiApp.instance, stringId, Toast.LENGTH_LONG).show()
         }
     }
 

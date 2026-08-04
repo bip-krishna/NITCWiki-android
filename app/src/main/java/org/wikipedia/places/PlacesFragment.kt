@@ -65,7 +65,7 @@ import org.maplibre.android.style.layers.PropertyFactory.textIgnorePlacement
 import org.maplibre.android.style.layers.PropertyFactory.textSize
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.PlacesEvent
 import org.wikipedia.databinding.FragmentPlacesBinding
 import org.wikipedia.databinding.ItemPlacesListBinding
@@ -217,7 +217,7 @@ class PlacesFragment : Fragment(), LinkPreviewDialog.LoadPageCallback, LinkPrevi
 
         binding.tabsButton.setOnClickListener {
             PlacesEvent.logAction("tabs_view_click", "search_bar_view")
-            if (WikipediaApp.instance.tabCount == 1) {
+            if (NITCWikiApp.instance.tabCount == 1) {
                 startActivity(PageActivity.newIntent(requireActivity()))
             } else {
                 startActivity(TabActivity.newIntent(requireActivity()))
@@ -460,12 +460,12 @@ class PlacesFragment : Fragment(), LinkPreviewDialog.LoadPageCallback, LinkPrevi
     }
 
     private fun updateSearchCardViews() {
-        val tabsCount = WikipediaApp.instance.tabCount
+        val tabsCount = NITCWikiApp.instance.tabCount
         binding.tabsButton.isVisible = tabsCount != 0
         binding.tabsButton.updateTabCount(false)
 
-        if (!WikipediaApp.instance.languageState.appLanguageCodes.contains(Prefs.placesWikiCode)) {
-            Prefs.placesWikiCode = WikipediaApp.instance.appOrSystemLanguageCode
+        if (!NITCWikiApp.instance.languageState.appLanguageCodes.contains(Prefs.placesWikiCode)) {
+            Prefs.placesWikiCode = NITCWikiApp.instance.appOrSystemLanguageCode
         }
         binding.langCodeButton.setLangCode(Prefs.placesWikiCode)
 
@@ -706,7 +706,7 @@ class PlacesFragment : Fragment(), LinkPreviewDialog.LoadPageCallback, LinkPrevi
         if (inNewTab) {
             TabUtil.openInNewBackgroundTab(entry)
             requireActivity().invalidateOptionsMenu()
-            binding.tabsButton.isVisible = WikipediaApp.instance.tabCount > 0
+            binding.tabsButton.isVisible = NITCWikiApp.instance.tabCount > 0
             binding.tabsButton.updateTabCount(true)
         } else {
             startActivity(PageActivity.newIntentForNewTab(requireActivity(), entry, entry.title))
@@ -828,7 +828,7 @@ class PlacesFragment : Fragment(), LinkPreviewDialog.LoadPageCallback, LinkPrevi
             }
         }
 
-        fun getStyleAsset() = if (WikipediaApp.instance.currentTheme.isDark) "asset://mapstyle-dark.json" else "asset://mapstyle.json"
+        fun getStyleAsset() = if (NITCWikiApp.instance.currentTheme.isDark) "asset://mapstyle-dark.json" else "asset://mapstyle.json"
 
         fun getMarkerRect() = Rect(0, 0, MARKER_SIZE, MARKER_SIZE)
 

@@ -22,7 +22,7 @@ class AboutSettingsTest : BaseTest<SettingsActivity>(
         systemRobot
             .clickOnSystemDialogWithText("Allow")
         settingsRobot
-            .clickAboutWikipediaAppOptionItem()
+            .clickAboutNITCWikiAppOptionItem()
             .activateDeveloperMode(context)
             .pressBack()
             .clickDeveloperMode()

@@ -21,7 +21,7 @@ import androidx.fragment.app.Fragment
 import org.wikipedia.BuildConfig
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.SingleFragmentActivity
 import org.wikipedia.analytics.eventplatform.ImageRecommendationsEvent
 import org.wikipedia.analytics.eventplatform.PatrollerExperienceEvent
@@ -122,7 +122,7 @@ class MainActivity : SingleFragmentActivity<MainFragment>(), MainFragment.Callba
             binding.mainToolbar.title = ""
             controlNavTabInFragment = false
 
-            applyNavBarTheme(if ((fragment.currentFragment as? HomeFragment)?.getCurrentTab() == HomeTab.FOR_YOU) Theme.BLACK else WikipediaApp.instance.currentTheme)
+            applyNavBarTheme(if ((fragment.currentFragment as? HomeFragment)?.getCurrentTab() == HomeTab.FOR_YOU) Theme.BLACK else NITCWikiApp.instance.currentTheme)
         } else {
             if (tab == NavTab.SEARCH && Prefs.showSearchTabTooltip) {
                 FeedbackUtil.showTooltip(this, fragment.binding.mainNavTabLayout.findViewById(NavTab.SEARCH.id), getString(R.string.search_tab_tooltip), aboveOrBelow = true, autoDismiss = false)
@@ -143,7 +143,7 @@ class MainActivity : SingleFragmentActivity<MainFragment>(), MainFragment.Callba
             binding.mainToolbar.isVisible = true
             controlNavTabInFragment = true
 
-            applyNavBarTheme(WikipediaApp.instance.currentTheme)
+            applyNavBarTheme(NITCWikiApp.instance.currentTheme)
         }
         applyInsets()
     }

@@ -39,7 +39,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
@@ -239,7 +239,7 @@ fun GamesHubLanguageChip(
     onShowDisabledMessage: (String) -> Unit,
     onSelected: () -> Unit,
 ) {
-    val langText = WikipediaApp.instance.languageState.getAppLanguageLocalizedName(langCode) ?: langCode
+    val langText = NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(langCode) ?: langCode
     val isEnabled = WikiGames.WHICH_CAME_FIRST.isLangSupported(langCode) // TODO: Add check for other games when they are added
     val textColor = if (isEnabled) WikipediaTheme.colors.primaryColor else WikipediaTheme.colors.inactiveColor
     val snackbarMessage = stringResource(R.string.games_hub_activity_games_unavailable_message)

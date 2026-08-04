@@ -4,7 +4,7 @@ import android.app.Activity
 import android.content.Context
 import androidx.appcompat.app.AlertDialog
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
 import org.wikipedia.dataclient.donate.Campaign
@@ -20,7 +20,7 @@ import java.util.Date
 
 class CampaignDialog internal constructor(private val context: Context, val campaign: Campaign, val onNeutralButtonClick: (() -> Unit)? = null) : AlertDialog.Builder(context), CampaignDialogView.Callback {
     private var dialog: AlertDialog? = null
-    private val campaignIdOriginal = campaign.getIdForLang(WikipediaApp.instance.appOrSystemLanguageCode)
+    private val campaignIdOriginal = campaign.getIdForLang(NITCWikiApp.instance.appOrSystemLanguageCode)
     private val campaignId = DonationReminderHelper.getCampaignId(campaignIdOriginal)
 
     init {
@@ -28,7 +28,7 @@ class CampaignDialog internal constructor(private val context: Context, val camp
         campaignView.callback = this
         val dateDiff = Duration.between(Instant.ofEpochMilli(Prefs.announcementPauseTime), Instant.now())
         campaignView.showNeutralButton = dateDiff.toDays() >= 1 && campaign.endDateTime?.isAfter(LocalDateTime.now().plusDays(1)) == true || Prefs.ignoreDateForAnnouncements
-        campaignView.setupViews(campaignId, campaign.getAssetsForLang(WikipediaApp.instance.appOrSystemLanguageCode))
+        campaignView.setupViews(campaignId, campaign.getAssetsForLang(NITCWikiApp.instance.appOrSystemLanguageCode))
         setView(campaignView)
 
         DonorExperienceEvent.logAction("impression", "article_banner", campaignId = campaignId)

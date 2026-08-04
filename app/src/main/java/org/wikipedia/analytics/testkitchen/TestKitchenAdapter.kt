@@ -12,7 +12,7 @@ import org.wikimedia.testkitchen.context.PerformerData
 import org.wikimedia.testkitchen.event.Event
 import org.wikimedia.testkitchen.instrument.ExperimentImpl
 import org.wikipedia.BuildConfig
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.ABTest
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.dataclient.ServiceFactory
@@ -30,7 +30,7 @@ object TestKitchenAdapter : ClientDataCallback, EventSender {
 
     val flushEventsRunnable: Runnable = {
         client.flushEventQueue()
-        WikipediaApp.instance.mainThreadHandler.postDelayed(flushEventsRunnable, FLUSH_DELAY_MILLIS)
+        NITCWikiApp.instance.mainThreadHandler.postDelayed(flushEventsRunnable, FLUSH_DELAY_MILLIS)
     }
 
     val client = TestKitchenClient(
@@ -47,21 +47,21 @@ object TestKitchenAdapter : ClientDataCallback, EventSender {
     override fun getAgentData(): AgentData {
         return AgentData(
             BuildConfig.FLAVOR + BuildConfig.BUILD_TYPE,
-            WikipediaApp.instance.appInstallID,
-            WikipediaApp.instance.currentTheme.toString(),
-            WikipediaApp.instance.versionCode,
-            "WikipediaApp/" + BuildConfig.VERSION_NAME,
+            NITCWikiApp.instance.appInstallID,
+            NITCWikiApp.instance.currentTheme.toString(),
+            NITCWikiApp.instance.versionCode,
+            "NITCWikiApp/" + BuildConfig.VERSION_NAME,
             "android",
             "app",
             Build.BRAND + " " + Build.MODEL,
-            WikipediaApp.instance.languageState.systemLanguageCode,
+            NITCWikiApp.instance.languageState.systemLanguageCode,
             if (ReleaseUtil.isProdRelease) "prod" else "dev"
         )
     }
 
     override fun getMediawikiData(): MediawikiData {
         return MediawikiData(
-            WikipediaApp.instance.wikiSite.dbName(),
+            NITCWikiApp.instance.wikiSite.dbName(),
         )
     }
 
@@ -70,8 +70,8 @@ object TestKitchenAdapter : ClientDataCallback, EventSender {
             isLoggedIn = AccountUtil.isLoggedIn,
             isTemp = AccountUtil.isTemporaryAccount,
             sessionId = client.sessionController.sessionId,
-            languageGroups = WikipediaApp.instance.languageState.appLanguageCodes.take(10).joinToString(","),
-            languagePrimary = WikipediaApp.instance.appOrSystemLanguageCode
+            languageGroups = NITCWikiApp.instance.languageState.appLanguageCodes.take(10).joinToString(","),
+            languagePrimary = NITCWikiApp.instance.appOrSystemLanguageCode
         )
     }
 

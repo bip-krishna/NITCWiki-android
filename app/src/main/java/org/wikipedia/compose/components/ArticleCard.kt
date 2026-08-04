@@ -26,7 +26,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import org.wikipedia.R
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.page.PageTitle
 import org.wikipedia.views.imageservice.ImageService
 
@@ -41,9 +41,9 @@ fun ArticleCard(
         modifier = modifier
             .fillMaxWidth(),
         elevation = 0.dp,
-        border = BorderStroke(width = 1.dp, color = WikipediaTheme.colors.borderColor),
+        border = BorderStroke(width = 1.dp, color = NITCWikiTheme.colors.borderColor),
         colors = CardDefaults.cardColors(
-            containerColor = if (isSelected) WikipediaTheme.colors.additionColor else WikipediaTheme.colors.paperColor
+            containerColor = if (isSelected) NITCWikiTheme.colors.additionColor else NITCWikiTheme.colors.paperColor
         ),
         shape = RoundedCornerShape(16.dp),
         onClick = {
@@ -58,8 +58,8 @@ fun ArticleCard(
                 val request = ImageService.getRequest(LocalContext.current, url = item.thumbUrl, detectFace = true)
                 AsyncImage(
                     model = request,
-                    placeholder = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
-                    error = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
+                    placeholder = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
+                    error = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
                     contentScale = ContentScale.Crop,
                     contentDescription = null,
                     modifier = Modifier
@@ -74,7 +74,7 @@ fun ArticleCard(
                 HtmlText(
                     text = item.displayText,
                     style = MaterialTheme.typography.bodyLarge,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
                 Spacer(modifier = Modifier.height(2.dp))
                 Row {
@@ -82,7 +82,7 @@ fun ArticleCard(
                         HtmlText(
                             text = item.description.orEmpty(),
                             style = MaterialTheme.typography.bodyMedium,
-                            color = WikipediaTheme.colors.secondaryColor,
+                            color = NITCWikiTheme.colors.secondaryColor,
                             maxLines = 3,
                             overflow = TextOverflow.Ellipsis,
                             modifier = Modifier.weight(1f)
@@ -95,7 +95,7 @@ fun ArticleCard(
                         Icon(
                             modifier = Modifier.size(24.dp).align(Alignment.Bottom),
                             painter = painterResource(R.drawable.check_circle_24px),
-                            tint = WikipediaTheme.colors.primaryColor,
+                            tint = NITCWikiTheme.colors.primaryColor,
                             contentDescription = null
                         )
                     } else {

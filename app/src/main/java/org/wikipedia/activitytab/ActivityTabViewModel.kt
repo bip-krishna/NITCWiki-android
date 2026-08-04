@@ -19,7 +19,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activitytab.timeline.HistoryEntryPagingSource
 import org.wikipedia.activitytab.timeline.ReadingListPagingSource
 import org.wikipedia.activitytab.timeline.TimelineItem
@@ -197,7 +197,7 @@ class ActivityTabViewModel : ViewModel() {
             }
 
             val gamesStats =
-                OnThisDayGameViewModel.getGameStatistics(WikipediaApp.instance.wikiSite.languageCode)
+                OnThisDayGameViewModel.getGameStatistics(NITCWikiApp.instance.wikiSite.languageCode)
             _wikiGamesUiState.value = UiState.Success(gamesStats)
         }
     }
@@ -211,7 +211,7 @@ class ActivityTabViewModel : ViewModel() {
         }) {
             _impactUiState.value = UiState.Loading
             // The impact API is rate limited, so we cache it manually.
-            val wikiSite = WikipediaApp.instance.wikiSite
+            val wikiSite = NITCWikiApp.instance.wikiSite
             val now = Instant.now().epochSecond
             val impact: GrowthUserImpact
             val impactLastResponseBodyMap = Prefs.impactLastResponseBody.toMutableMap()

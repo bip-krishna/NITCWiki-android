@@ -27,7 +27,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.commons.FilePageActivity
 import org.wikipedia.databinding.FragmentGalleryItemBinding
@@ -233,7 +233,7 @@ class GalleryItemFragment : Fragment(), MenuProvider {
                 true
             }
             binding.videoView.setVideoURI(bestUrl.toUri(),
-                mapOf("User-Agent" to WikipediaApp.instance.userAgent))
+                mapOf("User-Agent" to NITCWikiApp.instance.userAgent))
         }
     }
 

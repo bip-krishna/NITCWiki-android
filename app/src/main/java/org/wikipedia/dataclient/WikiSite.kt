@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.json.UriSerializer
 import org.wikipedia.language.AppLanguageLookUpTable
 import org.wikipedia.util.UriUtil
@@ -58,17 +58,17 @@ data class WikiSite(
         languageCode = UriUtil.getLanguageVariantFromUri(tempUri).ifEmpty { authorityToLanguageCode(authority) }
 
         // For language variant wikis, automatically switch to the preferred variant if possible.
-        val parentLanguageCode = WikipediaApp.instance.languageState.getDefaultLanguageCode(languageCode)
+        val parentLanguageCode = NITCWikiApp.instance.languageState.getDefaultLanguageCode(languageCode)
         // For the default language code like "zh", we need to check if it has variants.
-        var languageVariants = WikipediaApp.instance.languageState.getLanguageVariants(languageCode)
+        var languageVariants = NITCWikiApp.instance.languageState.getLanguageVariants(languageCode)
         if (parentLanguageCode != null || languageVariants != null) {
             // Get language variants from the parent language code
             if (languageVariants == null) {
-                languageVariants = WikipediaApp.instance.languageState.getLanguageVariants(parentLanguageCode)
+                languageVariants = NITCWikiApp.instance.languageState.getLanguageVariants(parentLanguageCode)
             }
             // Try to find the first selected variant that matches the URL's parent language code
             // This prevents showing mixed language variants article when the URL contains parent language codes such as "zh" or "wiki"
-            languageCode = WikipediaApp.instance.languageState.appLanguageCodes.firstOrNull {
+            languageCode = NITCWikiApp.instance.languageState.appLanguageCodes.firstOrNull {
                 languageVariants?.contains(it) == true
             } ?: languageCode
         }
@@ -76,7 +76,7 @@ data class WikiSite(
 //        if (languageCode == Constants.WIKI_CODE_COMMONS) {
 //            // Special case for Commons: if the WikiSite was constructed from "commons.wikimedia.org",
 //            // then the languageCode will be "commons" which is incorrect, so set it to the default language.
-//            languageCode = WikipediaApp.instance.appOrSystemLanguageCode
+//            languageCode = NITCWikiApp.instance.appOrSystemLanguageCode
 //        }
 
         // Use default subdomain in authority to prevent error when requesting endpoints. e.g. zh-tw.wikipedia.org
@@ -165,14 +165,14 @@ data class WikiSite(
 
         /**
          * For use only in Composable Previews, since this bypasses much of the internal constructor
-         * logic that depends on a WikipediaApp instance.
+         * logic that depends on a NITCWikiApp instance.
          */
         fun preview(languageCode: String = "en"): WikiSite {
             return WikiSite("https://$languageCode.wikipedia.org/".toUri(), languageCode)
         }
 
         private fun languageCodeToSubdomain(languageCode: String): String {
-            return WikipediaApp.instance.languageState.getDefaultLanguageCode(languageCode) ?: normalizeLanguageCode(languageCode)
+            return NITCWikiApp.instance.languageState.getDefaultLanguageCode(languageCode) ?: normalizeLanguageCode(languageCode)
         }
 
         fun authorityToLanguageCode(authority: String): String {

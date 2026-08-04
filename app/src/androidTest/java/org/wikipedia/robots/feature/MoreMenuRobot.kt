@@ -10,7 +10,7 @@ import androidx.test.espresso.intent.matcher.IntentMatchers.hasData
 import org.hamcrest.Matchers.allOf
 import org.wikipedia.BuildConfig
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.base.TestConfig
 import org.wikipedia.dataclient.donate.CampaignCollection
@@ -89,8 +89,8 @@ class MoreMenuRobot : BaseRobot() {
             val customTabIntentMatcher = allOf(
                 hasAction(Intent.ACTION_VIEW),
                 hasData(context.getString(R.string.donate_url, CampaignCollection.getFormattedCampaignId("appmenu"),
-                    WikipediaApp.instance.languageState.systemLanguageCode, BuildConfig.VERSION_NAME,
-                    WikipediaApp.instance.appInstallID))
+                    NITCWikiApp.instance.languageState.systemLanguageCode, BuildConfig.VERSION_NAME,
+                    NITCWikiApp.instance.appInstallID))
             )
             intended(customTabIntentMatcher)
         } catch (e: AssertionError) {

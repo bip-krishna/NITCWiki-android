@@ -4,7 +4,7 @@ import android.app.Activity
 import android.view.View
 import com.google.android.material.snackbar.Snackbar
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.descriptions.DescriptionEditActivity.Action
 import org.wikipedia.util.FeedbackUtil
@@ -20,7 +20,7 @@ object SuggestedEditsSnackbars {
 
     fun show(activity: Activity, action: Action?, sequentialSnackbar: Boolean = true, targetLanguageCode: String? = null,
              enableViewAction: Boolean = false, listener: OpenPageListener? = null) {
-        val app = WikipediaApp.instance
+        val app = NITCWikiApp.instance
         if (sequentialSnackbar) {
             val snackbar = FeedbackUtil.makeSnackbar(activity,
                     if ((action == Action.TRANSLATE_DESCRIPTION || action == Action.TRANSLATE_CAPTION) &&

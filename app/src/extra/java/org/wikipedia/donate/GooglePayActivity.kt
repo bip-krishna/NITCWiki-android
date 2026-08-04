@@ -23,7 +23,7 @@ import com.google.android.material.button.MaterialButton
 import kotlinx.coroutines.launch
 import org.json.JSONArray
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
 import org.wikipedia.databinding.ActivityDonateBinding
@@ -237,7 +237,7 @@ class GooglePayActivity : BaseActivity() {
 
         val methods = JSONArray().put(GooglePayComponent.baseCardPaymentMethod)
         binding.payButton.initialize(ButtonOptions.newBuilder()
-            .setButtonTheme(if (WikipediaApp.instance.currentTheme.isDark) ButtonConstants.ButtonTheme.DARK else ButtonConstants.ButtonTheme.LIGHT)
+            .setButtonTheme(if (NITCWikiApp.instance.currentTheme.isDark) ButtonConstants.ButtonTheme.DARK else ButtonConstants.ButtonTheme.LIGHT)
             .setButtonType(ButtonConstants.ButtonType.DONATE)
             .setAllowedPaymentMethods(methods.toString())
             .build())

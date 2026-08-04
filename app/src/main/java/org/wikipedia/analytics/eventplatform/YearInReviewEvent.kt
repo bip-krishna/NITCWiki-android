@@ -2,7 +2,7 @@ package org.wikipedia.analytics.eventplatform
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.donate.CampaignCollection
 import org.wikipedia.json.JsonUtil
 
@@ -17,7 +17,7 @@ open class YearInReviewEvent {
             slide: String? = null,
             feedbackSelect: Int? = null,
             feedbackText: String? = null,
-            wikiId: String = WikipediaApp.instance.appOrSystemLanguageCode
+            wikiId: String = NITCWikiApp.instance.appOrSystemLanguageCode
         ) {
             EventPlatformClient.submit(
                 AppInteractionEvent(
@@ -32,7 +32,7 @@ open class YearInReviewEvent {
                         feedbackSelect = feedbackSelect,
                         feedbackText = feedbackText
                     )).orEmpty(),
-                    primary_language = WikipediaApp.instance.languageState.appLanguageCode,
+                    primary_language = NITCWikiApp.instance.languageState.appLanguageCode,
                     wiki_id = wikiId,
                     streamName = "app_donor_experience"
                 )

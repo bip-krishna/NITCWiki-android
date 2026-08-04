@@ -1,6 +1,6 @@
 package org.wikipedia.analytics.eventplatform
 
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.settings.Prefs
 
 class PlacesEvent {
@@ -20,7 +20,7 @@ class PlacesEvent {
                     action,
                     activeInterface,
                     actionData,
-                    WikipediaApp.instance.languageState.appLanguageCode,
+                    NITCWikiApp.instance.languageState.appLanguageCode,
                     Prefs.placesWikiCode,
                     "app_places_interaction"
                 )

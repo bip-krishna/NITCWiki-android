@@ -2,7 +2,7 @@ package org.wikipedia.dataclient.okhttp
 
 import okhttp3.Interceptor
 import okhttp3.Response
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.settings.Prefs
 import java.io.IOException
 
@@ -17,7 +17,7 @@ internal class DefaultMaxStaleRequestInterceptor : Interceptor {
 
         if (!req.cacheControl.noCache &&
                 req.cacheControl.maxAgeSeconds != 0 &&
-                (Prefs.preferOfflineContent() || !WikipediaApp.instance.isOnline)) {
+                (Prefs.preferOfflineContent() || !NITCWikiApp.instance.isOnline)) {
             // If we're offline, or if we prefer offline content, then raise the max-stale value
             // to infinity, since we would rather show some content than none.
             req = req.newBuilder()

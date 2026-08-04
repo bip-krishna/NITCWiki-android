@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.RecommendedReadingListEvent
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.dataclient.ServiceFactory
@@ -65,8 +65,8 @@ class RecommendedReadingListInterestsViewModel(savedStateHandle: SavedStateHandl
             val maxRandomItems = 6
             if (results.size < maxRandomItems) {
                 for (i in results.size until maxRandomItems) {
-                    val title = ServiceFactory.getRest(WikipediaApp.instance.wikiSite).getRandomSummary()
-                        .getPageTitle(WikipediaApp.instance.wikiSite)
+                    val title = ServiceFactory.getRest(NITCWikiApp.instance.wikiSite).getRandomSummary()
+                        .getPageTitle(NITCWikiApp.instance.wikiSite)
                     if (!results.contains(title)) {
                         results.add(title)
                     }

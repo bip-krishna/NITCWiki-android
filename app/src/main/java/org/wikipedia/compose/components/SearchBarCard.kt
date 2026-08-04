@@ -21,7 +21,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.wikipedia.R
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 
 @Composable
 fun SearchBarCard(
@@ -35,7 +35,7 @@ fun SearchBarCard(
             .height(56.dp)
             .clip(RoundedCornerShape(28.dp))
             .background(
-                color = WikipediaTheme.colors.backgroundColor,
+                color = NITCWikiTheme.colors.backgroundColor,
                 shape = RoundedCornerShape(24.dp)
             )
             .clickable(onClick = onSearchClick),
@@ -45,14 +45,14 @@ fun SearchBarCard(
         Icon(
             painter = painterResource(R.drawable.outline_search_24),
             contentDescription = stringResource(R.string.search_hint),
-            tint = WikipediaTheme.colors.secondaryColor,
+            tint = NITCWikiTheme.colors.secondaryColor,
             modifier = Modifier.size(24.dp)
         )
         Text(
             modifier = Modifier.padding(start = 16.dp, end = 16.dp),
             text = text,
             style = MaterialTheme.typography.bodyLarge,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
     }
 }

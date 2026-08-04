@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.PatrollerExperienceEvent
 import org.wikipedia.databinding.ActivitySuggestedEditsRecentEditsFiltersBinding
@@ -25,7 +25,7 @@ class SuggestedEditsRecentEditsFilterActivity : BaseActivity() {
 
     private lateinit var binding: ActivitySuggestedEditsRecentEditsFiltersBinding
     private var appLanguagesPreFilterList = mutableListOf<String>()
-    private val appLanguagesList get() = WikipediaApp.instance.languageState.appLanguageCodes
+    private val appLanguagesList get() = NITCWikiApp.instance.languageState.appLanguageCodes
 
     private val languageChooserLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         val addedCode = appLanguagesList.asSequence().minus(appLanguagesPreFilterList.toSet()).map { it }.toList().toString()
@@ -34,7 +34,7 @@ class SuggestedEditsRecentEditsFilterActivity : BaseActivity() {
         appLanguagesPreFilterList.clear()
 
         if (!appLanguagesList.contains(Prefs.recentEditsWikiCode)) {
-            Prefs.recentEditsWikiCode = WikipediaApp.instance.appOrSystemLanguageCode
+            Prefs.recentEditsWikiCode = NITCWikiApp.instance.appOrSystemLanguageCode
         }
 
         setUpRecyclerView()
@@ -80,7 +80,7 @@ class SuggestedEditsRecentEditsFilterActivity : BaseActivity() {
     }
 
     private fun resetFilterSettings() {
-        Prefs.recentEditsWikiCode = WikipediaApp.instance.appOrSystemLanguageCode
+        Prefs.recentEditsWikiCode = NITCWikiApp.instance.appOrSystemLanguageCode
         Prefs.recentEditsIncludedTypeCodes = SuggestedEditsRecentEditsFilterTypes.DEFAULT_FILTER_TYPE_SET.map { it.id }
         setUpRecyclerView()
         invalidateOptionsMenu()

@@ -10,7 +10,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.wikipedia.BuildConfig
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
 import org.wikipedia.analytics.eventplatform.RecommendedReadingListEvent
 import org.wikipedia.analytics.eventplatform.YearInReviewEvent
@@ -52,7 +52,7 @@ internal class SettingsPreferenceLoader(fragment: PreferenceFragmentCompat) : Ba
             true
         }
         findPreference(R.string.preference_key_color_theme).let {
-            it.setSummary(WikipediaApp.instance.currentTheme.nameId)
+            it.setSummary(NITCWikiApp.instance.currentTheme.nameId)
             it.onPreferenceClickListener = Preference.OnPreferenceClickListener {
                 activity.startActivity(ThemeFittingRoomActivity.newIntent(activity))
                 true
@@ -157,7 +157,7 @@ internal class SettingsPreferenceLoader(fragment: PreferenceFragmentCompat) : Ba
 
     fun updateLanguagePrefSummary() {
         // TODO: resolve RTL vs LTR with multiple languages (e.g. list contains English and Hebrew)
-        findPreference(R.string.preference_key_language).summary = WikipediaApp.instance.languageState.appLanguageLocalizedNames
+        findPreference(R.string.preference_key_language).summary = NITCWikiApp.instance.languageState.appLanguageLocalizedNames
     }
 
     fun updateRecommendedReadingListSummary() {

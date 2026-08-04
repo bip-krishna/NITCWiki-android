@@ -14,7 +14,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.databinding.FragmentOnThisDayGameMainMenuBinding
 import org.wikipedia.dataclient.WikiSite
@@ -165,8 +165,8 @@ class OnThisDayGameMainMenuFragment : OnThisDayGameBaseFragment() {
             }
         }
 
-        fun maybeShowOnThisDayGameDialog(activity: Activity, invokeSource: InvokeSource, articleWikiSite: WikiSite = WikipediaApp.instance.wikiSite) {
-            val wikiSite = WikipediaApp.instance.wikiSite
+        fun maybeShowOnThisDayGameDialog(activity: Activity, invokeSource: InvokeSource, articleWikiSite: WikiSite = NITCWikiApp.instance.wikiSite) {
+            val wikiSite = NITCWikiApp.instance.wikiSite
             // Both of the primary language and the article language should be in the supported languages list.
             if (!Prefs.otdEntryDialogShown &&
                 WikiGames.WHICH_CAME_FIRST.isLangSupported(wikiSite.languageCode) &&

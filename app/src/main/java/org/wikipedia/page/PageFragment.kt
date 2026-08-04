@@ -48,7 +48,7 @@ import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.LongPressHandler
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.FragmentUtil.getCallback
 import org.wikipedia.analytics.eventplatform.ArticleFindInPageInteractionEvent
 import org.wikipedia.analytics.eventplatform.ArticleInteractionEvent
@@ -177,7 +177,7 @@ class PageFragment : Fragment(), BackPressedHandler, CommunicationBridge.Communi
     private var avPlayer: AvPlayer? = null
     private var avCallback: AvCallback? = null
     private var sections: MutableList<Section>? = null
-    private var app = WikipediaApp.instance
+    private var app = NITCWikiApp.instance
 
     override lateinit var linkHandler: LinkHandler
     override lateinit var webView: ObservableWebView
@@ -413,7 +413,7 @@ class PageFragment : Fragment(), BackPressedHandler, CommunicationBridge.Communi
                     // tells us the page is finished loading. In such a case, we must infer that the
                     // page has now loaded and trigger the remaining logic ourselves.
                     if ("true" != pcsExists) {
-                        if (WikipediaApp.instance.currentTheme.isDark) {
+                        if (NITCWikiApp.instance.currentTheme.isDark) {
                             // TODO: remove when mobile web supports automatic dark mode through
                             // the `prefers-color-scheme` media query.
                             bridge.execute(JavaScriptActionHandler.mobileWebSetDarkMode())
@@ -571,7 +571,7 @@ class PageFragment : Fragment(), BackPressedHandler, CommunicationBridge.Communi
                 lifecycleScope.launch(CoroutineExceptionHandler { _, t -> L.e(t) }) {
                     ServiceFactory.get(title.wikiSite).getInfoByPageIdsOrTitles(null, title.prefixedText)
                         .query?.firstPage()?.let { page ->
-                            WikipediaApp.instance.tabList.find { it.backStackPositionTitle == title }?.backStackPositionTitle?.apply {
+                            NITCWikiApp.instance.tabList.find { it.backStackPositionTitle == title }?.backStackPositionTitle?.apply {
                                 thumbUrl = page.thumbUrl()
                                 description = page.description
                             }
@@ -958,7 +958,7 @@ class PageFragment : Fragment(), BackPressedHandler, CommunicationBridge.Communi
 
         maybeShowAnnouncement()
         OnThisDayGameMainMenuFragment.maybeShowOnThisDayGameDialog(requireActivity(),
-            InvokeSource.PAGE_ACTIVITY, model.title?.wikiSite ?: WikipediaApp.instance.wikiSite)
+            InvokeSource.PAGE_ACTIVITY, model.title?.wikiSite ?: NITCWikiApp.instance.wikiSite)
 
         bridge.onMetadataReady()
         // Explicitly set the top margin (even though it might have already been set in the setup

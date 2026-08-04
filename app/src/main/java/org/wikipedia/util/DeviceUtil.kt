@@ -21,7 +21,7 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.appbar.MaterialToolbar
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import kotlin.system.exitProcess
 
 object DeviceUtil {
@@ -52,14 +52,14 @@ object DeviceUtil {
                 resources.configuration.keyboard != Configuration.KEYBOARD_NOKEYS)
     }
 
-    fun setLightSystemUiVisibility(activity: Activity, light: Boolean = !WikipediaApp.instance.currentTheme.isDark) {
+    fun setLightSystemUiVisibility(activity: Activity, light: Boolean = !NITCWikiApp.instance.currentTheme.isDark) {
         activity.window.insetsControllerCompat.isAppearanceLightStatusBars = light
         activity.window.insetsControllerCompat.isAppearanceLightNavigationBars = light
     }
 
     fun setNavigationBarColor(window: Window, @ColorInt color: Int) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val isDarkThemeOrDarkBackground = WikipediaApp.instance.currentTheme.isDark || color == Color.BLACK
+            val isDarkThemeOrDarkBackground = NITCWikiApp.instance.currentTheme.isDark || color == Color.BLACK
             window.navigationBarColor = color
             window.insetsControllerCompat.isAppearanceLightNavigationBars = !isDarkThemeOrDarkBackground
         }
@@ -67,7 +67,7 @@ object DeviceUtil {
 
     fun updateStatusBarTheme(activity: Activity, toolbar: MaterialToolbar?, reset: Boolean) {
         activity.window.insetsControllerCompat.isAppearanceLightStatusBars = !reset ||
-                !WikipediaApp.instance.currentTheme.isDark
+                !NITCWikiApp.instance.currentTheme.isDark
         toolbar?.setNavigationIconTint(if (reset) Color.WHITE else ResourceUtil.getThemedColor(activity, R.attr.primary_color))
     }
 
@@ -82,15 +82,15 @@ object DeviceUtil {
      * There's a platform-specific issue where the app gets launched in "Restricted" mode during a
      * backup operation; And if the app crashes during that operation, it remains in Restricted
      * mode in subsequent launches, including subsequent user-requested launches. While in this
-     * mode, the system doesn't actually launch our custom subclassed WikipediaApp object, but
+     * mode, the system doesn't actually launch our custom subclassed NITCWikiApp object, but
      * instead uses a vanilla Application object, which will cause issues when other classes try
-     * to access static data from the WikipediaApp object.
+     * to access static data from the NITCWikiApp object.
      *
      * This is a workaround that explicitly terminates the app process if it's running in Restricted
      * mode, to be used sparingly from places where this crash is most likely to occur.
      */
     fun assertAppContext(context: Context, terminateOnFail: Boolean = false): Boolean {
-        if (context.applicationContext !is WikipediaApp) {
+        if (context.applicationContext !is NITCWikiApp) {
             if (terminateOnFail) {
                 Handler(context.mainLooper).post { exitProcess(0) }
             }
@@ -101,12 +101,12 @@ object DeviceUtil {
 
     fun setEdgeToEdge(activity: AppCompatActivity) {
         activity.enableEdgeToEdge()
-        WindowCompat.getInsetsController(activity.window, activity.window.decorView).isAppearanceLightStatusBars = !WikipediaApp.instance.currentTheme.isDark
+        WindowCompat.getInsetsController(activity.window, activity.window.decorView).isAppearanceLightStatusBars = !NITCWikiApp.instance.currentTheme.isDark
     }
 
     val isOnWiFi: Boolean
         get() {
-            val info = (WikipediaApp.instance.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager)
+            val info = (NITCWikiApp.instance.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager)
                     .getNetworkInfo(ConnectivityManager.TYPE_WIFI)
             return info != null && info.isConnected
         }
@@ -117,7 +117,7 @@ object DeviceUtil {
 
     val isAccessibilityEnabled: Boolean
         get() {
-            val am = WikipediaApp.instance.getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager
+            val am = NITCWikiApp.instance.getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager
             // TODO: add more logic if other accessibility tools have different settings.
             return am.isEnabled && am.isTouchExplorationEnabled
         }

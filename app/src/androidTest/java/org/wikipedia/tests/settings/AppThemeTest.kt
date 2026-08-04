@@ -6,7 +6,7 @@ import junit.framework.TestCase.assertEquals
 import org.junit.Assert.assertNotEquals
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.base.BaseTest
 import org.wikipedia.robots.AppThemeRobot
 import org.wikipedia.robots.SystemRobot
@@ -73,7 +73,7 @@ class AppThemeTest : BaseTest<ThemeFittingRoomActivity>(
     private fun getThemeAttribute(): Theme {
         var currentTheme = Theme.LIGHT
         activityScenarioRule.scenario.onActivity { activity ->
-            currentTheme = WikipediaApp.instance.currentTheme
+            currentTheme = NITCWikiApp.instance.currentTheme
         }
         return currentTheme
     }

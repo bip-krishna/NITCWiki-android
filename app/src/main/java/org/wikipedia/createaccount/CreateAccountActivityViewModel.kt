@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.Service
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.util.StringUtil
@@ -41,13 +41,13 @@ class CreateAccountActivityViewModel : ViewModel() {
         viewModelScope.launch(CoroutineExceptionHandler { _, throwable ->
             _authManagerState.value = AccountInfoState.Error(throwable)
         }) {
-            val response = ServiceFactory.get(WikipediaApp.instance.wikiSite).getAuthManagerInfo()
+            val response = ServiceFactory.get(NITCWikiApp.instance.wikiSite).getAuthManagerInfo()
             token = response.query?.createAccountToken()
             if (token.isNullOrEmpty()) {
                 _authManagerState.value = AccountInfoState.InvalidToken
             } else if (response.query?.hasHCaptchaRequest() == true) {
                 val hCaptchaDisclaimerMessage = "hcaptcha-privacy-policy"
-                val message = ServiceFactory.get(WikipediaApp.instance.wikiSite).getMessages(hCaptchaDisclaimerMessage, null)
+                val message = ServiceFactory.get(NITCWikiApp.instance.wikiSite).getMessages(hCaptchaDisclaimerMessage, null)
                     .query?.allmessages?.find { it.name == hCaptchaDisclaimerMessage }?.content.orEmpty()
                 _authManagerState.value = AccountInfoState.HCaptchaDisclaimer(StringUtil.parseWikitextExternalLinks(message))
             }
@@ -58,7 +58,7 @@ class CreateAccountActivityViewModel : ViewModel() {
         viewModelScope.launch(CoroutineExceptionHandler { _, throwable ->
             _createAccountInfoState.value = AccountInfoState.Error(throwable)
         }) {
-            val response = ServiceFactory.get(WikipediaApp.instance.wikiSite).getAuthManagerInfo()
+            val response = ServiceFactory.get(NITCWikiApp.instance.wikiSite).getAuthManagerInfo()
             token = response.query?.createAccountToken()
             val captchaId = response.query?.captchaId()
             if (token.isNullOrEmpty()) {
@@ -77,7 +77,7 @@ class CreateAccountActivityViewModel : ViewModel() {
         viewModelScope.launch(CoroutineExceptionHandler { _, throwable ->
             _doCreateAccountState.value = CreateAccountState.Error(throwable)
         }) {
-            val response = ServiceFactory.get(WikipediaApp.instance.wikiSite).postCreateAccount(userName, password, repeat, token, Service.WIKIPEDIA_URL,
+            val response = ServiceFactory.get(NITCWikiApp.instance.wikiSite).postCreateAccount(userName, password, repeat, token, Service.WIKIPEDIA_URL,
                 email, captchaId, captchaWord)
             if ("PASS" == response.status) {
                 _doCreateAccountState.value = CreateAccountState.Pass(response.user)
@@ -98,7 +98,7 @@ class CreateAccountActivityViewModel : ViewModel() {
             }
             delay(1000)
             val userName = text.toString()
-            val response = ServiceFactory.get(WikipediaApp.instance.wikiSite).getUserList(userName)
+            val response = ServiceFactory.get(NITCWikiApp.instance.wikiSite).getUserList(userName)
             response.query?.getUserResponse(userName)?.let {
                 _verifyUserNameState.emit(UserNameState.Success)
                 if (it.hasBlockError) {

@@ -21,7 +21,7 @@ import org.wikimedia.testkitchen.instrument.InstrumentImpl
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.BreadcrumbsContextHelper
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
 import org.wikipedia.analytics.eventplatform.EventPlatformClient
@@ -150,7 +150,7 @@ abstract class BaseActivity : AppCompatActivity(), ConnectionStateMonitor.Callba
             ReadingListSyncAdapter.manualSyncWithForce()
         }
 
-        WikipediaApp.instance.connectionStateMonitor.registerCallback(this)
+        NITCWikiApp.instance.connectionStateMonitor.registerCallback(this)
 
         DeviceUtil.setLightSystemUiVisibility(this)
         setStatusBarColor(ResourceUtil.getThemedColor(this, R.attr.paper_color))
@@ -208,21 +208,21 @@ abstract class BaseActivity : AppCompatActivity(), ConnectionStateMonitor.Callba
     }
 
     override fun onDestroy() {
-        WikipediaApp.instance.connectionStateMonitor.unregisterCallback(this)
+        NITCWikiApp.instance.connectionStateMonitor.unregisterCallback(this)
         CustomHtmlParser.pruneBitmaps(this)
         super.onDestroy()
     }
 
     override fun onPause() {
         super.onPause()
-        WikipediaApp.instance.appSessionEvent.persistSession()
+        NITCWikiApp.instance.appSessionEvent.persistSession()
         TestKitchenAdapter.client.onAppPause()
         EventPlatformClient.flushCachedEvents()
     }
 
     override fun onResume() {
         super.onResume()
-        WikipediaApp.instance.appSessionEvent.touchSession()
+        NITCWikiApp.instance.appSessionEvent.touchSession()
         TestKitchenAdapter.client.onAppResume()
         BreadCrumbLogEvent.logScreenShown(this)
         TestKitchenAdapter.client.getInstrument("apps-open")
@@ -275,8 +275,8 @@ abstract class BaseActivity : AppCompatActivity(), ConnectionStateMonitor.Callba
     }
 
     protected open fun setTheme() {
-        if (WikipediaApp.instance.currentTheme != Theme.LIGHT) {
-            setTheme(WikipediaApp.instance.currentTheme.resourceId)
+        if (NITCWikiApp.instance.currentTheme != Theme.LIGHT) {
+            setTheme(NITCWikiApp.instance.currentTheme.resourceId)
         }
     }
 

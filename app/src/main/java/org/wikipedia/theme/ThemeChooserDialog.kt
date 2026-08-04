@@ -22,7 +22,7 @@ import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.analytics.eventplatform.AppearanceSettingInteractionEvent
 import org.wikipedia.concurrency.FlowEventBus
@@ -49,7 +49,7 @@ class ThemeChooserDialog : ExtendedBottomSheetDialogFragment() {
         INCREASE, DECREASE, RESET
     }
 
-    private var app = WikipediaApp.instance
+    private var app = NITCWikiApp.instance
     private lateinit var appearanceSettingInteractionEvent: AppearanceSettingInteractionEvent
     private lateinit var invokeSource: InvokeSource
     private var updatingFont = false

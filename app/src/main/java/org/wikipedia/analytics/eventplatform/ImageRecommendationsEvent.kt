@@ -2,7 +2,7 @@ package org.wikipedia.analytics.eventplatform
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.descriptions.DescriptionEditActivity
 import org.wikipedia.util.ActiveTimer
 import org.wikipedia.util.UriUtil
@@ -69,7 +69,7 @@ class ImageRecommendationsEvent(
         }
 
         private fun submitImageRecommendationEvent(action: String, activeInterface: String, actionData: String, wikiId: String) {
-            EventPlatformClient.submit(ImageRecommendationsEvent(action, activeInterface, actionData, WikipediaApp.instance.languageState.appLanguageCode, wikiId))
+            EventPlatformClient.submit(ImageRecommendationsEvent(action, activeInterface, actionData, NITCWikiApp.instance.languageState.appLanguageCode, wikiId))
         }
     }
 }

@@ -11,7 +11,7 @@
             tools:node="remove"/>
 
         <service
-            android:name=".push.WikipediaFirebaseMessagingService"
+            android:name=".push.NITCWikiFirebaseMessagingService"
             tools:node="remove"/>
 
         <activity

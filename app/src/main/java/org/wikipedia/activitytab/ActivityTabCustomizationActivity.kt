@@ -26,12 +26,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.ActivityTabEvent
 import org.wikipedia.compose.components.WikiTopAppBar
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.games.WikiGames
 import org.wikipedia.settings.Prefs
 import org.wikipedia.theme.Theme
@@ -50,7 +50,7 @@ class ActivityTabCustomizationActivity : BaseActivity() {
                     },
                     modules = Prefs.activityTabModules,
                     haveAtLeastOneDonation = Prefs.donationResults.isNotEmpty(),
-                    areGamesAvailable = WikiGames.WHICH_CAME_FIRST.isLangSupported(WikipediaApp.instance.wikiSite.languageCode)
+                    areGamesAvailable = WikiGames.WHICH_CAME_FIRST.isLangSupported(NITCWikiApp.instance.wikiSite.languageCode)
                 )
             }
         }
@@ -75,7 +75,7 @@ class ActivityTabCustomizationActivity : BaseActivity() {
                 timeline = isTimelineEnabled.toOnOffString(),
                 all = when {
                     noModulesVisible(haveAtLeastOneDonation = Prefs.donationResults.isNotEmpty(),
-                        areGamesAvailable = WikiGames.WHICH_CAME_FIRST.isLangSupported(WikipediaApp.instance.wikiSite.languageCode)) -> "off"
+                        areGamesAvailable = WikiGames.WHICH_CAME_FIRST.isLangSupported(NITCWikiApp.instance.wikiSite.languageCode)) -> "off"
                     areAllModulesEnabled() -> "on"
                     else -> null
                 }
@@ -109,7 +109,7 @@ fun CustomizationScreen(
                 onNavigationClick = onBackButtonClick
             )
         },
-        containerColor = WikipediaTheme.colors.backgroundColor,
+        containerColor = NITCWikiTheme.colors.backgroundColor,
         content = { paddingValues ->
             LazyColumn(
                 modifier = Modifier
@@ -123,7 +123,7 @@ fun CustomizationScreen(
                             .padding(bottom = 16.dp),
                         text = stringResource(R.string.activity_tab_menu_customize_description),
                         style = MaterialTheme.typography.bodySmall,
-                        color = WikipediaTheme.colors.secondaryColor
+                        color = NITCWikiTheme.colors.secondaryColor
                     )
                 }
                 itemsIndexed(ModuleType.entries) { index, moduleType ->
@@ -141,7 +141,7 @@ fun CustomizationScreen(
                     )
                     if (index < ModuleType.entries.size - 1) {
                         HorizontalDivider(
-                            color = WikipediaTheme.colors.borderColor
+                            color = NITCWikiTheme.colors.borderColor
                         )
                     }
                 }
@@ -160,13 +160,13 @@ private fun CustomizationScreenSwitch(
     ListItem(
         modifier = modifier,
         colors = ListItemDefaults.colors(
-            containerColor = WikipediaTheme.colors.paperColor
+            containerColor = NITCWikiTheme.colors.paperColor
         ),
         headlineContent = {
             Text(
                 text = title,
                 style = MaterialTheme.typography.bodyLarge,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         },
         trailingContent = {
@@ -176,11 +176,11 @@ private fun CustomizationScreenSwitch(
                     onCheckedChange(it)
                 },
                 colors = SwitchDefaults.colors(
-                    uncheckedTrackColor = WikipediaTheme.colors.paperColor,
+                    uncheckedTrackColor = NITCWikiTheme.colors.paperColor,
                     uncheckedThumbColor = MaterialTheme.colorScheme.outline,
                     uncheckedBorderColor = MaterialTheme.colorScheme.outline,
-                    checkedTrackColor = WikipediaTheme.colors.progressiveColor,
-                    checkedThumbColor = WikipediaTheme.colors.paperColor
+                    checkedTrackColor = NITCWikiTheme.colors.progressiveColor,
+                    checkedThumbColor = NITCWikiTheme.colors.paperColor
                 )
             )
         }

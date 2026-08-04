@@ -16,7 +16,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.databinding.FragmentSearchRecentBinding
 import org.wikipedia.dataclient.ServiceFactory
@@ -92,7 +92,7 @@ class RecentSearchesFragment : Fragment() {
     private fun updateSearchEmptyView(searchesEmpty: Boolean) {
         if (searchesEmpty) {
             binding.searchEmptyContainer.visibility = View.VISIBLE
-            if (WikipediaApp.instance.languageState.appLanguageCodes.size == 1) {
+            if (NITCWikiApp.instance.languageState.appLanguageCodes.size == 1) {
                 binding.addLanguagesButton.visibility = View.VISIBLE
                 binding.searchEmptyMessage.text = getString(R.string.search_empty_message_multilingual_upgrade)
             } else {

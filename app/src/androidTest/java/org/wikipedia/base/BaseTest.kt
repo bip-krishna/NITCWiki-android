@@ -16,7 +16,7 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.wikipedia.TestLogRule
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.settings.Prefs
 import java.util.concurrent.TimeUnit
 
@@ -103,7 +103,7 @@ abstract class BaseTest<T : AppCompatActivity>(
         activityScenarioRule.scenario.onActivity {
             activity = it
         }
-        WikipediaApp.instance.languageState.let {
+        NITCWikiApp.instance.languageState.let {
             it.removeAppLanguageCodes(it.appLanguageCodes.filter { it != "en" })
         }
         // Disable animations
@@ -124,7 +124,7 @@ abstract class BaseTest<T : AppCompatActivity>(
     }
 
     fun isOnline(): Boolean {
-        return WikipediaApp.instance.isOnline
+        return NITCWikiApp.instance.isOnline
     }
 
     @After

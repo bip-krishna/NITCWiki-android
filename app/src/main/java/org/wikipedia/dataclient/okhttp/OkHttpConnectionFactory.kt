@@ -7,7 +7,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.tls.HandshakeCertificates
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.SharedPreferenceCookieManager
 import org.wikipedia.settings.Prefs
 import java.io.File
@@ -23,7 +23,7 @@ object OkHttpConnectionFactory {
 
     private const val CACHE_DIR_NAME = "okhttp-cache"
     private const val NET_CACHE_SIZE = (64 * 1024 * 1024).toLong()
-    private val NET_CACHE = Cache(File(WikipediaApp.instance.cacheDir, CACHE_DIR_NAME), NET_CACHE_SIZE)
+    private val NET_CACHE = Cache(File(NITCWikiApp.instance.cacheDir, CACHE_DIR_NAME), NET_CACHE_SIZE)
     val client = createClient()
 
     private fun createClient(): OkHttpClient {
@@ -44,8 +44,8 @@ object OkHttpConnectionFactory {
             val certFactory = CertificateFactory.getInstance("X.509")
             val certificates = HandshakeCertificates.Builder()
                 .addPlatformTrustedCertificates()
-                .addTrustedCertificate(certFactory.generateCertificate(WikipediaApp.instance.resources.openRawResource(R.raw.isrg_root_x1)) as X509Certificate)
-                .addTrustedCertificate(certFactory.generateCertificate(WikipediaApp.instance.resources.openRawResource(R.raw.isrg_root_x2)) as X509Certificate)
+                .addTrustedCertificate(certFactory.generateCertificate(NITCWikiApp.instance.resources.openRawResource(R.raw.isrg_root_x1)) as X509Certificate)
+                .addTrustedCertificate(certFactory.generateCertificate(NITCWikiApp.instance.resources.openRawResource(R.raw.isrg_root_x2)) as X509Certificate)
                 .build()
             builder.sslSocketFactory(certificates.sslSocketFactory(), certificates.trustManager)
         }

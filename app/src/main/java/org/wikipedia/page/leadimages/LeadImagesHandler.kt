@@ -12,7 +12,7 @@ import org.wikipedia.Constants
 import org.wikipedia.Constants.ImageEditType
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.bridge.JavaScriptActionHandler
@@ -106,7 +106,7 @@ class LeadImagesHandler(private val parentFragment: PageFragment,
     private fun updateCallToAction() {
         dispose()
         pageHeaderView.callToActionText = null
-        if (!WikipediaApp.instance.isOnline || !AccountUtil.isLoggedIn || leadImageUrl?.contains(Service.URL_FRAGMENT_FROM_COMMONS) != true || page == null) {
+        if (!NITCWikiApp.instance.isOnline || !AccountUtil.isLoggedIn || leadImageUrl?.contains(Service.URL_FRAGMENT_FROM_COMMONS) != true || page == null) {
             return
         }
         title?.let {
@@ -137,8 +137,8 @@ class LeadImagesHandler(private val parentFragment: PageFragment,
                     if (!labelMap.containsKey(it.wikiSite.languageCode)) {
                         imageEditType = ImageEditType.ADD_CAPTION
                     }
-                    if (WikipediaApp.instance.languageState.appLanguageCodes.size >= Constants.MIN_LANGUAGES_TO_UNLOCK_TRANSLATION) {
-                        WikipediaApp.instance.languageState.appLanguageCodes.firstOrNull { lang -> !labelMap.containsKey(lang) }?.run {
+                    if (NITCWikiApp.instance.languageState.appLanguageCodes.size >= Constants.MIN_LANGUAGES_TO_UNLOCK_TRANSLATION) {
+                        NITCWikiApp.instance.languageState.appLanguageCodes.firstOrNull { lang -> !labelMap.containsKey(lang) }?.run {
                             imageEditType = ImageEditType.ADD_CAPTION_TRANSLATION
                             captionTargetPageTitle = PageTitle(imageTitle, WikiSite(Service.COMMONS_URL, this))
                         }
@@ -165,7 +165,7 @@ class LeadImagesHandler(private val parentFragment: PageFragment,
                 }
                 captionTargetPageTitle?.run {
                     callToActionTargetSummary = PageSummaryForEdit(prefixedText, wikiSite.languageCode, this, displayText, null, leadImageUrl)
-                    pageHeaderView.callToActionText = parentFragment.getString(R.string.suggested_edits_article_cta_image_caption_in_language, WikipediaApp.instance.languageState.getAppLanguageLocalizedName(wikiSite.languageCode))
+                    pageHeaderView.callToActionText = parentFragment.getString(R.string.suggested_edits_article_cta_image_caption_in_language, NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(wikiSite.languageCode))
                 }
             }
             else -> {

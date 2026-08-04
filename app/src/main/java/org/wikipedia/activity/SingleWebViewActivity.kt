@@ -20,7 +20,7 @@ import androidx.core.view.isVisible
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
 import org.wikipedia.analytics.eventplatform.YearInReviewEvent
 import org.wikipedia.bridge.JavaScriptActionHandler
@@ -63,7 +63,7 @@ class SingleWebViewActivity : BaseActivity() {
         showBackButton = intent.getBooleanExtra(EXTRA_SHOW_BACK_BUTTON, false)
         isWebForm = intent.getBooleanExtra(EXTRA_IS_WEB_FORM, false)
         pageTitleToLoadOnBackPress = intent.parcelableExtra(Constants.ARG_TITLE)
-        blankLinkHandler = SingleWebViewLinkHandler(this, WikipediaApp.instance.wikiSite)
+        blankLinkHandler = SingleWebViewLinkHandler(this, NITCWikiApp.instance.wikiSite)
 
         onBackPressedDispatcher.addCallback(this) {
             if (!isWebForm && binding.webView.canGoBack()) {

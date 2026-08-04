@@ -15,7 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.core.content.ContextCompat
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.compose.theme.BaseTheme
@@ -29,11 +29,11 @@ import org.wikipedia.util.ResourceUtil
 
 class InitialOnboardingActivity : BaseActivity() {
 
-    private val appLanguageCodesState = mutableStateOf(WikipediaApp.instance.languageState.appLanguageCodes.toList())
+    private val appLanguageCodesState = mutableStateOf(NITCWikiApp.instance.languageState.appLanguageCodes.toList())
 
     private val languagesLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-        appLanguageCodesState.value = WikipediaApp.instance.languageState.appLanguageCodes.toList()
-        Prefs.homeLanguageCode = WikipediaApp.instance.languageState.appLanguageCode
+        appLanguageCodesState.value = NITCWikiApp.instance.languageState.appLanguageCodes.toList()
+        Prefs.homeLanguageCode = NITCWikiApp.instance.languageState.appLanguageCode
         setResult(RESULT_LANGUAGE_CHANGED)
     }
 
@@ -54,14 +54,14 @@ class InitialOnboardingActivity : BaseActivity() {
                 currentTheme = currentTheme
             ) {
                 AppOnboardingScreen(
-                    languageState = WikipediaApp.instance.languageState,
+                    languageState = NITCWikiApp.instance.languageState,
                     appLanguageCodes = appLanguageCodesState.value,
                     isNewUser = Prefs.isInitialOnboardingEnabled,
                     onAddLanguageClick = {
                         languagesLauncher.launch(WikipediaLanguagesActivity.newIntent(this, Constants.InvokeSource.ONBOARDING_DIALOG))
                     },
                     onUpdateTheme = {
-                        currentTheme = WikipediaApp.instance.currentTheme
+                        currentTheme = NITCWikiApp.instance.currentTheme
                         currentNavigationBarColor = ResourceUtil.getThemedColor(this, R.attr.paper_color)
                     },
                     onFinish = {

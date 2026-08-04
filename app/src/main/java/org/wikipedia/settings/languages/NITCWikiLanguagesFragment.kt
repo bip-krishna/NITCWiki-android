@@ -18,24 +18,24 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.databinding.FragmentWikipediaLanguagesBinding
 import org.wikipedia.json.JsonUtil
 import org.wikipedia.language.addlanguages.AddLanguagesListActivity
-import org.wikipedia.push.WikipediaFirebaseMessagingService
+import org.wikipedia.push.NITCWikiFirebaseMessagingService
 import org.wikipedia.settings.SettingsActivity
 import org.wikipedia.views.DefaultViewHolder
 import org.wikipedia.views.MultiSelectActionModeCallback
 import java.util.*
 
-class WikipediaLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesItemView.Callback {
+class NITCWikiLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesItemView.Callback {
     private var _binding: FragmentWikipediaLanguagesBinding? = null
     private val binding get() = _binding!!
     private lateinit var itemTouchHelper: ItemTouchHelper
-    private lateinit var adapter: WikipediaLanguageItemAdapter
+    private lateinit var adapter: NITCWikiLanguageItemAdapter
     private lateinit var invokeSource: InvokeSource
     private lateinit var initialLanguageList: String
-    private var app: WikipediaApp = WikipediaApp.instance
+    private var app: NITCWikiApp = NITCWikiApp.instance
     private val wikipediaLanguages = mutableListOf<String>()
     private val selectedCodes = mutableListOf<String>()
     private var actionMode: ActionMode? = null
@@ -49,7 +49,7 @@ class WikipediaLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesI
         invokeSource = requireActivity().intent.getSerializableExtra(Constants.INTENT_EXTRA_INVOKE_SOURCE) as InvokeSource
         initialLanguageList = JsonUtil.encodeToString(app.languageState.appLanguageCodes).orEmpty()
         requireActivity().addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
-        prepareWikipediaLanguagesList()
+        prepareNITCWikiLanguagesList()
         setupRecyclerView()
         return binding.root
     }
@@ -59,10 +59,10 @@ class WikipediaLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesI
         if (requestCode == Constants.ACTIVITY_REQUEST_ADD_A_LANGUAGE && resultCode == Activity.RESULT_OK) {
             interactionsCount += data!!.getIntExtra(ADD_LANGUAGE_INTERACTIONS, 0)
             isLanguageSearched = isLanguageSearched || data.getBooleanExtra(AddLanguagesListActivity.LANGUAGE_SEARCHED, false)
-            prepareWikipediaLanguagesList()
+            prepareNITCWikiLanguagesList()
             requireActivity().invalidateOptionsMenu()
             adapter.notifyDataSetChanged()
-            WikipediaFirebaseMessagingService.updateSubscription()
+            NITCWikiFirebaseMessagingService.updateSubscription()
         }
     }
 
@@ -102,27 +102,27 @@ class WikipediaLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesI
         adapter.notifyDataSetChanged()
     }
 
-    private fun prepareWikipediaLanguagesList() {
+    private fun prepareNITCWikiLanguagesList() {
         wikipediaLanguages.clear()
         wikipediaLanguages.addAll(app.languageState.appLanguageCodes)
     }
 
     private fun setupRecyclerView() {
         binding.wikipediaLanguagesRecycler.setHasFixedSize(true)
-        adapter = WikipediaLanguageItemAdapter()
+        adapter = NITCWikiLanguageItemAdapter()
         binding.wikipediaLanguagesRecycler.adapter = adapter
         binding.wikipediaLanguagesRecycler.layoutManager = LinearLayoutManager(activity)
         itemTouchHelper = ItemTouchHelper(RearrangeableItemTouchHelperCallback(adapter))
         itemTouchHelper.attachToRecyclerView(binding.wikipediaLanguagesRecycler)
     }
 
-    private fun updateWikipediaLanguages() {
+    private fun updateNITCWikiLanguages() {
         app.languageState.setAppLanguageCodes(wikipediaLanguages)
         adapter.notifyDataSetChanged()
         requireActivity().invalidateOptionsMenu()
     }
 
-    private inner class WikipediaLanguageItemAdapter : RecyclerView.Adapter<DefaultViewHolder<*>>() {
+    private inner class NITCWikiLanguageItemAdapter : RecyclerView.Adapter<DefaultViewHolder<*>>() {
         private var checkboxEnabled = false
         override fun getItemViewType(position: Int): Int {
             return when (position) {
@@ -145,13 +145,13 @@ class WikipediaLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesI
                     FooterViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.view_wikipedia_language_footer, parent, false))
                 }
                 else -> {
-                    WikipediaLanguageItemHolder(WikipediaLanguagesItemView(parent.context))
+                    NITCWikiLanguageItemHolder(WikipediaLanguagesItemView(parent.context))
                 }
             }
         }
 
         override fun onBindViewHolder(holder: DefaultViewHolder<*>, pos: Int) {
-            if (holder is WikipediaLanguageItemHolder) {
+            if (holder is NITCWikiLanguageItemHolder) {
                 holder.bindItem(wikipediaLanguages[pos - NUM_HEADERS], pos - NUM_FOOTERS)
                 holder.view.setCheckBoxEnabled(checkboxEnabled)
                 holder.view.setCheckBoxChecked(selectedCodes.contains(wikipediaLanguages[pos - NUM_HEADERS]))
@@ -173,7 +173,7 @@ class WikipediaLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesI
 
         override fun onViewAttachedToWindow(holder: DefaultViewHolder<*>) {
             super.onViewAttachedToWindow(holder)
-            if (holder is WikipediaLanguageItemHolder) {
+            if (holder is NITCWikiLanguageItemHolder) {
                 holder.view.setDragHandleTouchListener { v, event ->
                     when (event.actionMasked) {
                         MotionEvent.ACTION_DOWN -> {
@@ -185,7 +185,7 @@ class WikipediaLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesI
                     }
                     false
                 }
-                holder.view.callback = this@WikipediaLanguagesFragment
+                holder.view.callback = this@NITCWikiLanguagesFragment
             } else if (holder is FooterViewHolder) {
                 holder.view.visibility = if (checkboxEnabled) View.GONE else View.VISIBLE
                 holder.view.setOnClickListener {
@@ -198,7 +198,7 @@ class WikipediaLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesI
         }
 
         override fun onViewDetachedFromWindow(holder: DefaultViewHolder<*>) {
-            if (holder is WikipediaLanguageItemHolder) {
+            if (holder is NITCWikiLanguageItemHolder) {
                 holder.view.callback = null
                 holder.view.setDragHandleTouchListener(null)
             }
@@ -215,7 +215,7 @@ class WikipediaLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesI
         }
     }
 
-    private inner class RearrangeableItemTouchHelperCallback(private val adapter: WikipediaLanguageItemAdapter) : ItemTouchHelper.Callback() {
+    private inner class RearrangeableItemTouchHelperCallback(private val adapter: NITCWikiLanguageItemAdapter) : ItemTouchHelper.Callback() {
         override fun isLongPressDragEnabled(): Boolean {
             return false
         }
@@ -226,11 +226,11 @@ class WikipediaLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesI
 
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {}
         override fun getMovementFlags(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder): Int {
-            return if (viewHolder is WikipediaLanguageItemHolder) makeMovementFlags(ItemTouchHelper.UP or ItemTouchHelper.DOWN, 0) else -1
+            return if (viewHolder is NITCWikiLanguageItemHolder) makeMovementFlags(ItemTouchHelper.UP or ItemTouchHelper.DOWN, 0) else -1
         }
 
         override fun onMove(recyclerView: RecyclerView, source: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder): Boolean {
-            if (target is WikipediaLanguageItemHolder) {
+            if (target is NITCWikiLanguageItemHolder) {
                 adapter.onMoveItem(source.bindingAdapterPosition, target.bindingAdapterPosition)
             }
             return true
@@ -240,7 +240,7 @@ class WikipediaLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesI
             super.clearView(recyclerView, viewHolder)
             recyclerView.post {
                 if (isAdded) {
-                    updateWikipediaLanguages()
+                    updateNITCWikiLanguages()
                 }
             }
         }
@@ -252,7 +252,7 @@ class WikipediaLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesI
         }
     }
 
-    private inner class WikipediaLanguageItemHolder(itemView: WikipediaLanguagesItemView) : DefaultViewHolder<WikipediaLanguagesItemView>(itemView) {
+    private inner class NITCWikiLanguageItemHolder(itemView: WikipediaLanguagesItemView) : DefaultViewHolder<WikipediaLanguagesItemView>(itemView) {
         fun bindItem(languageCode: String, position: Int) {
             view.setContents(languageCode, app.languageState.getAppLanguageLocalizedName(languageCode), position)
         }
@@ -292,7 +292,7 @@ class WikipediaLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesI
     private fun deleteSelectedLanguages() {
         app.languageState.removeAppLanguageCodes(selectedCodes)
         interactionsCount++
-        prepareWikipediaLanguagesList()
+        prepareNITCWikiLanguagesList()
         unselectAllLanguages()
     }
 
@@ -352,8 +352,8 @@ class WikipediaLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesI
         const val ADD_LANGUAGE_INTERACTIONS = "add_language_interactions"
         const val SESSION_TOKEN = "session_token"
 
-        fun newInstance(invokeSource: InvokeSource): WikipediaLanguagesFragment {
-            val instance = WikipediaLanguagesFragment()
+        fun newInstance(invokeSource: InvokeSource): NITCWikiLanguagesFragment {
+            val instance = NITCWikiLanguagesFragment()
             instance.arguments = bundleOf(Constants.INTENT_EXTRA_INVOKE_SOURCE to invokeSource)
             return instance
         }

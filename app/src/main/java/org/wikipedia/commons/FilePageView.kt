@@ -13,7 +13,7 @@ import android.widget.LinearLayout
 import org.wikipedia.Constants
 import org.wikipedia.Constants.PREFERRED_GALLERY_IMAGE_SIZE
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.databinding.ViewFilePageBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.mwapi.MwQueryPage
@@ -83,7 +83,7 @@ class FilePageView(context: Context, attrs: AttributeSet? = null) : LinearLayout
         } else {
             addDetail(
                 titleString = context.getString(R.string.suggested_edits_image_preview_dialog_caption_in_language_title,
-                    WikipediaApp.instance.languageState.getAppLanguageLocalizedName(getProperLanguageCode(summaryForEdit, imageFromCommons))),
+                    NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(getProperLanguageCode(summaryForEdit, imageFromCommons))),
                 detail = if (summaryForEdit.pageTitle.description.isNullOrEmpty()) summaryForEdit.description else summaryForEdit.pageTitle.description,
                 listener = if (showEditButton) imageCaptionOnClickListener(summaryForEdit, callback) else null
             )
@@ -121,7 +121,7 @@ class FilePageView(context: Context, attrs: AttributeSet? = null) : LinearLayout
 
     private fun getProperLanguageCode(summary: PageSummaryForEdit, imageFromCommons: Boolean): String {
         return if (!imageFromCommons || summary.lang == Constants.WIKI_CODE_COMMONS) {
-            WikipediaApp.instance.languageState.appLanguageCode
+            NITCWikiApp.instance.languageState.appLanguageCode
         } else {
             summary.lang
         }

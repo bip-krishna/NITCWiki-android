@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import androidx.core.view.isVisible
 import org.wikipedia.Constants.MIN_LANGUAGES_TO_UNLOCK_TRANSLATION
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.databinding.ViewSuggestedEditsTaskItemBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
@@ -25,7 +25,7 @@ internal class SuggestedEditsTaskView(context: Context, attrs: AttributeSet? = n
     }
 
     private fun updateTranslateActionUI() {
-        val color = ResourceUtil.getThemedColor(context, if (WikipediaApp.instance.languageState.appLanguageCodes.size >= MIN_LANGUAGES_TO_UNLOCK_TRANSLATION)
+        val color = ResourceUtil.getThemedColor(context, if (NITCWikiApp.instance.languageState.appLanguageCodes.size >= MIN_LANGUAGES_TO_UNLOCK_TRANSLATION)
             R.attr.progressive_color else R.attr.placeholder_color)
         binding.secondaryButton.iconTint = ColorStateList.valueOf(color)
         binding.secondaryButton.setTextColor(color)

@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import java.util.concurrent.TimeUnit
 
 @Suppress("unused")
@@ -16,7 +16,7 @@ class DailyStatsEvent(private val app_install_age_in_days: Long,
     companion object {
         private const val STREAM_NAME = "android.daily_stats"
 
-        fun log(app: WikipediaApp) {
+        fun log(app: NITCWikiApp) {
             EventPlatformClient.submit(DailyStatsEvent(getInstallAgeDays(app), app.languageState.appLanguageCodes))
         }
 

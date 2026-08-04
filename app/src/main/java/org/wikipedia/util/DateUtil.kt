@@ -5,7 +5,7 @@ import android.icu.text.RelativeDateTimeFormatter
 import android.os.Build
 import android.text.format.DateFormat
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.extensions.getResources
 import org.wikipedia.extensions.getString
 import org.wikipedia.extensions.toLocalDate
@@ -160,7 +160,7 @@ object DateUtil {
         //       difficult for translators to write correct format specifiers without being able to
         //       test them. We should investigate localization support in date libraries such as
         //       Joda-Time and how TWN solves this classic problem.
-        val dateFormat = DateFormat.getMediumDateFormat(WikipediaApp.instance)
+        val dateFormat = DateFormat.getMediumDateFormat(NITCWikiApp.instance)
         dateFormat.timeZone = TimeZone.getTimeZone("UTC")
         return dateFormat.format(date)
     }

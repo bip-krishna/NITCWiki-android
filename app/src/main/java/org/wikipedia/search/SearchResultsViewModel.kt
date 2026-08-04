@@ -22,7 +22,7 @@ import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.mwapi.MwQueryResponse
@@ -47,7 +47,7 @@ class SearchResultsViewModel : ViewModel() {
     private val _lexicalResultsForLogging = MutableStateFlow<List<SearchResult>?>(null)
     var lexicalResultsForLogging = _lexicalResultsForLogging.asStateFlow()
 
-    private var _languageCode = MutableStateFlow(WikipediaApp.instance.languageState.appLanguageCode)
+    private var _languageCode = MutableStateFlow(NITCWikiApp.instance.languageState.appLanguageCode)
     var languageCode = _languageCode.asStateFlow()
 
     private var _hybridSearchResultState = MutableStateFlow<UiState<List<SearchResult>>>(UiState.Loading)

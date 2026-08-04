@@ -8,7 +8,7 @@ import android.net.Uri
 import android.os.TransactionTooLargeException
 import androidx.annotation.StringRes
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.Service
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.page.PageTitle
@@ -93,7 +93,7 @@ object UriUtil {
     }
 
     fun resolveProtocolRelativeUrl(url: String): String {
-        return if (url.startsWith("//")) WikipediaApp.instance.wikiSite.scheme() + ":" + url else url
+        return if (url.startsWith("//")) NITCWikiApp.instance.wikiSite.scheme() + ":" + url else url
     }
 
     fun isValidPageLink(uri: Uri): Boolean {

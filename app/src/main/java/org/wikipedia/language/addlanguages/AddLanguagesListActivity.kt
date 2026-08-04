@@ -10,7 +10,7 @@ import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.theme.BaseTheme
@@ -49,7 +49,7 @@ class AddLanguagesListActivity : BaseActivity() {
                         viewModel.updateSearchTerm(query)
                     },
                     onListItemClick = { languageCode ->
-                        val app = WikipediaApp.instance
+                        val app = NITCWikiApp.instance
                         if (languageCode != app.appOrSystemLanguageCode) {
                             app.languageState.addAppLanguageCode(languageCode)
                         }

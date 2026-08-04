@@ -23,7 +23,7 @@ class SettingsRobot : BaseRobot() {
         verify.viewWithTextDisplayed("Settings")
     }
 
-    fun clickAboutWikipediaAppOptionItem() = apply {
+    fun clickAboutNITCWikiAppOptionItem() = apply {
         scrollToSettingsPreferenceItem(R.string.about_description, click())
         delay(TestConfig.DELAY_SHORT)
     }

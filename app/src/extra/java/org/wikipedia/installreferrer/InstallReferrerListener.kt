@@ -5,7 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import com.android.installreferrer.api.InstallReferrerClient
 import com.android.installreferrer.api.InstallReferrerStateListener
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.InstallReferrerEvent
 import org.wikipedia.concurrency.FlowEventBus
 import org.wikipedia.events.ImportReadingListsEvent
@@ -48,7 +48,7 @@ class InstallReferrerListener : InstallReferrerStateListener {
             InstallReferrerClient.InstallReferrerResponse.FEATURE_NOT_SUPPORTED -> { }
             InstallReferrerClient.InstallReferrerResponse.SERVICE_UNAVAILABLE -> { }
         }
-        WikipediaApp.instance.mainThreadHandler.post {
+        NITCWikiApp.instance.mainThreadHandler.post {
             referrerClient?.endConnection()
             referrerClient = null
             INSTANCE = null
@@ -122,8 +122,8 @@ class InstallReferrerListener : InstallReferrerStateListener {
                 !refUtmCampaign.isNullOrEmpty() || !refUtmSource.isNullOrEmpty()) {
             InstallReferrerEvent.logInstall(refUrl, refUtmMedium, refUtmCampaign, refUtmSource)
         }
-        if (!refUrl.isNullOrEmpty() && ShareUtil.canOpenUrlInApp(WikipediaApp.instance, refUrl)) {
-            openPageFromUrl(WikipediaApp.instance, refUrl)
+        if (!refUrl.isNullOrEmpty() && ShareUtil.canOpenUrlInApp(NITCWikiApp.instance, refUrl)) {
+            openPageFromUrl(NITCWikiApp.instance, refUrl)
         }
         if (!refChannel.isNullOrEmpty()) {
             Prefs.appChannel = refChannel

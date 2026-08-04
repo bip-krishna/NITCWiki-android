@@ -46,7 +46,7 @@ import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.compose.components.OnboardingItem
@@ -121,8 +121,8 @@ class HybridSearchOnboardingActivity : BaseActivity() {
         setContent {
             BaseTheme {
                 HybridSearchOnboardingScreen(
-                    langCode = WikipediaApp.instance.appOrSystemLanguageCode,
-                    searchExamples = suggestedQueriesPerLanguage[WikipediaApp.instance.appOrSystemLanguageCode] ?: defaultSuggestedQueries,
+                    langCode = NITCWikiApp.instance.appOrSystemLanguageCode,
+                    searchExamples = suggestedQueriesPerLanguage[NITCWikiApp.instance.appOrSystemLanguageCode] ?: defaultSuggestedQueries,
                     onGetStarted = {
                         instrument?.submitInteraction("click", elementId = "start_button")
 

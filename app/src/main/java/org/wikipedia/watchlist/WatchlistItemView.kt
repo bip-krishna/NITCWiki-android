@@ -10,7 +10,7 @@ import android.widget.FrameLayout
 import androidx.annotation.DrawableRes
 import androidx.core.view.isVisible
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.databinding.ItemWatchlistBinding
 import org.wikipedia.dataclient.mwapi.MwQueryResult
 import org.wikipedia.extensions.setLayoutDirectionByLang
@@ -37,7 +37,7 @@ class WatchlistItemView(context: Context, attrs: AttributeSet? = null) : FrameLa
                 callback?.onUserClick(item!!, it)
             }
         }
-        if (WikipediaApp.instance.languageState.appLanguageCodes.size == 1) {
+        if (NITCWikiApp.instance.languageState.appLanguageCodes.size == 1) {
             binding.langCodeText.visibility = GONE
         } else {
             binding.langCodeText.visibility = VISIBLE

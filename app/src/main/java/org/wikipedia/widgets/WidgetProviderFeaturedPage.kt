@@ -17,7 +17,7 @@ import androidx.work.WorkManager
 import androidx.work.WorkRequest
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.Service
 import org.wikipedia.history.HistoryEntry
 import org.wikipedia.page.PageActivity
@@ -43,7 +43,7 @@ class WidgetProviderFeaturedPage : AppWidgetProvider() {
             var pageTitle: PageTitle? = null
             val bundle = BundleCompat.getParcelable(options, Constants.ARG_TITLE, Bundle::class.java)
             if (bundle != null) {
-                bundle.classLoader = WikipediaApp.instance.classLoader
+                bundle.classLoader = NITCWikiApp.instance.classLoader
                 pageTitle = BundleCompat.getParcelable(bundle, Constants.ARG_TITLE, PageTitle::class.java)
             }
             if (pageTitle == null || (System.currentTimeMillis() - lastServerUpdateMillis) > TimeUnit.HOURS.toMillis(1)) {
@@ -96,7 +96,7 @@ class WidgetProviderFeaturedPage : AppWidgetProvider() {
             val ids = appWidgetManager.getAppWidgetIds(ComponentName(context.applicationContext, WidgetProviderFeaturedPage::class.java))
             ids.forEach { id ->
                 val options = appWidgetManager.getAppWidgetOptions(id)
-                val bundle = Bundle(WikipediaApp.instance.classLoader)
+                val bundle = Bundle(NITCWikiApp.instance.classLoader)
                 bundle.putParcelable(Constants.ARG_TITLE, pageTitle)
                 options.putParcelable(Constants.ARG_TITLE, bundle)
                 appWidgetManager.updateAppWidgetOptions(id, options)

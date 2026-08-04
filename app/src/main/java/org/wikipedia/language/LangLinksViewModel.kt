@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.mwapi.SiteMatrix
@@ -24,7 +24,7 @@ import org.wikipedia.util.UiState
 
 class LangLinksViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
     private val pageTitle = savedStateHandle.get<PageTitle>(Constants.ARG_TITLE)!!
-    private val app = WikipediaApp.instance
+    private val app = NITCWikiApp.instance
 
     private var siteInfoList = listOf<SiteMatrix.SiteInfo>()
     private var originalLanguageEntries = listOf<PageTitle>()
@@ -49,7 +49,7 @@ class LangLinksViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
                 response.query!!.langLinks().toMutableList()
             }
             val siteInfoDeferred = async {
-                val siteMatrix = ServiceFactory.get(WikipediaApp.instance.wikiSite).getSiteMatrix()
+                val siteMatrix = ServiceFactory.get(NITCWikiApp.instance.wikiSite).getSiteMatrix()
                 SiteMatrix.getSites(siteMatrix)
             }
 
@@ -111,7 +111,7 @@ class LangLinksViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
 
     private fun getCanonicalName(code: String): String? {
         return siteInfoList.find { it.code == code }?.localname.orEmpty()
-            .ifEmpty { WikipediaApp.instance.languageState.getAppLanguageCanonicalName(code) }
+            .ifEmpty { NITCWikiApp.instance.languageState.getAppLanguageCanonicalName(code) }
     }
 
     private fun updateLanguageItems(searchTerm: String = "") {
@@ -179,7 +179,7 @@ class LangLinksViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
         while (it.hasNext()) {
             val link = it.next()
             val languageCode = link.wikiSite.languageCode
-            val languageVariants = WikipediaApp.instance.languageState.getLanguageVariants(languageCode)
+            val languageVariants = NITCWikiApp.instance.languageState.getLanguageVariants(languageCode)
             if (AppLanguageLookUpTable.BELARUSIAN_LEGACY_LANGUAGE_CODE == languageCode) {
                 // Replace legacy name of тарашкевіца language with the correct name.
                 // TODO: Can probably be removed when T111853 is resolved.
@@ -194,12 +194,12 @@ class LangLinksViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
                 }
             }
         }
-        addVariantEntriesIfNeeded(WikipediaApp.instance.languageState, pageTitle, languageEntries)
+        addVariantEntriesIfNeeded(NITCWikiApp.instance.languageState, pageTitle, languageEntries)
     }
 
     private fun sortLanguageEntriesByMru(entries: MutableList<PageTitle>) {
         var addIndex = 0
-        for (language in WikipediaApp.instance.languageState.mruLanguageCodes) {
+        for (language in NITCWikiApp.instance.languageState.mruLanguageCodes) {
             for (i in entries.indices) {
                 if (entries[i].wikiSite.languageCode == language) {
                     val entry = entries.removeAt(i)

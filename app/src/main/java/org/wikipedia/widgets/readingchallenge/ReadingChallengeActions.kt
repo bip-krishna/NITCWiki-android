@@ -7,7 +7,7 @@ import androidx.glance.action.ActionParameters
 import androidx.glance.appwidget.action.ActionCallback
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.main.MainActivity
 import org.wikipedia.navtab.NavTab
 import org.wikipedia.random.RandomActivity
@@ -53,7 +53,7 @@ class RandomizerAction : ActionCallback {
         parameters: ActionParameters
     ) {
         context.startActivity(
-            RandomActivity.newIntent(context, WikipediaApp.instance.wikiSite, InvokeSource.WIDGET)
+            RandomActivity.newIntent(context, NITCWikiApp.instance.wikiSite, InvokeSource.WIDGET)
                 .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 .putExtra(Constants.INTENT_WIDGET_TYPE, WidgetTypes.READING_CHALLENGE.value)
         )

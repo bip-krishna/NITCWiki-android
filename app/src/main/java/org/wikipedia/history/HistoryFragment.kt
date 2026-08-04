@@ -29,7 +29,7 @@ import kotlinx.coroutines.launch
 import org.wikipedia.BackPressedHandler
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.databinding.FragmentHistoryBinding
@@ -181,7 +181,7 @@ class HistoryFragment : Fragment(), BackPressedHandler {
 
     fun refresh() {
         adapter.notifyItemRangeChanged(0, adapter.itemCount)
-        if (!WikipediaApp.instance.isOnline && Prefs.showHistoryOfflineArticlesToast) {
+        if (!NITCWikiApp.instance.isOnline && Prefs.showHistoryOfflineArticlesToast) {
             Toast.makeText(requireContext(), R.string.history_offline_articles_toast, Toast.LENGTH_SHORT).show()
             Prefs.showHistoryOfflineArticlesToast = false
         }
@@ -268,7 +268,7 @@ class HistoryFragment : Fragment(), BackPressedHandler {
             historyFilterButton = itemView.findViewById(R.id.history_filter)
             clearHistoryButton = itemView.findViewById(R.id.history_delete)
             searchCardView.setOnClickListener { (requireParentFragment() as MainFragment).openSearchActivity(Constants.InvokeSource.NAV_MENU, null, it) }
-            voiceSearchButton.isVisible = WikipediaApp.instance.voiceRecognitionAvailable
+            voiceSearchButton.isVisible = NITCWikiApp.instance.voiceRecognitionAvailable
             voiceSearchButton.setOnClickListener { (requireParentFragment() as MainFragment).onFeedVoiceSearchRequested() }
             historyFilterButton.setOnClickListener {
                 if (actionMode == null) {
@@ -291,7 +291,7 @@ class HistoryFragment : Fragment(), BackPressedHandler {
         }
 
         private fun updateSearchHint(searchIcon: ImageView, searchTextView: TextView) {
-            val showHybridSearch = Prefs.isHybridSearchOnboardingShown && HybridSearchAbCTest().isHybridSearchEnabled(WikipediaApp.instance.appOrSystemLanguageCode)
+            val showHybridSearch = Prefs.isHybridSearchOnboardingShown && HybridSearchAbCTest().isHybridSearchEnabled(NITCWikiApp.instance.appOrSystemLanguageCode)
             searchIcon.contentDescription = getString(if (showHybridSearch) R.string.hybrid_search_search_hint else R.string.search_hint)
             searchTextView.text = getString(if (showHybridSearch) R.string.hybrid_search_search_hint else R.string.search_hint)
         }

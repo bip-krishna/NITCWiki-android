@@ -6,7 +6,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.categories.db.Category
 import org.wikipedia.categories.db.CategoryDao
 import org.wikipedia.edit.db.EditSummary
@@ -106,8 +106,8 @@ abstract class AppDatabase : RoomDatabase() {
         }
         val MIGRATION_22_23 = object : Migration(22, 23) {
             override fun migrate(db: SupportSQLiteDatabase) {
-                val defaultLang = WikipediaApp.instance.appOrSystemLanguageCode
-                val defaultAuthority = WikipediaApp.instance.wikiSite.authority()
+                val defaultLang = NITCWikiApp.instance.appOrSystemLanguageCode
+                val defaultAuthority = NITCWikiApp.instance.wikiSite.authority()
                 val defaultTitle = MainPageNameData.valueFor(defaultLang)
 
                 // convert Recent Searches table
@@ -388,7 +388,7 @@ abstract class AppDatabase : RoomDatabase() {
         }
 
         val instance: AppDatabase by lazy(LazyThreadSafetyMode.SYNCHRONIZED) {
-            Room.databaseBuilder(WikipediaApp.instance, AppDatabase::class.java, DATABASE_NAME)
+            Room.databaseBuilder(NITCWikiApp.instance, AppDatabase::class.java, DATABASE_NAME)
                 .addMigrations(MIGRATION_19_20, MIGRATION_20_21, MIGRATION_21_22, MIGRATION_22_23,
                     MIGRATION_23_24, MIGRATION_24_25, MIGRATION_25_26, MIGRATION_26_27,
                     MIGRATION_26_28, MIGRATION_27_28, MIGRATION_28_29, MIGRATION_29_30,

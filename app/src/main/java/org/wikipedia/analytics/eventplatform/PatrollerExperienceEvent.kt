@@ -1,6 +1,6 @@
 package org.wikipedia.analytics.eventplatform
 
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.settings.Prefs
 
 class PatrollerExperienceEvent {
@@ -55,7 +55,7 @@ class PatrollerExperienceEvent {
                     action,
                     activeInterface,
                     actionData,
-                    WikipediaApp.instance.languageState.appLanguageCode,
+                    NITCWikiApp.instance.languageState.appLanguageCode,
                     Prefs.recentEditsWikiCode,
                     "app_patroller_experience"
                 )

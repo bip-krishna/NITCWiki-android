@@ -17,7 +17,7 @@ import androidx.lifecycle.lifecycleScope
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.coroutines.launch
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.auth.AccountUtil
@@ -32,7 +32,7 @@ import org.wikipedia.extensions.getInstrumentActionContext
 import org.wikipedia.extensions.instrument
 import org.wikipedia.extensions.parcelableExtra
 import org.wikipedia.notifications.PollNotificationWorker
-import org.wikipedia.push.WikipediaFirebaseMessagingService.Companion.updateSubscription
+import org.wikipedia.push.NITCWikiFirebaseMessagingService.Companion.updateSubscription
 import org.wikipedia.readinglist.sync.ReadingListSyncAdapter
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.DeviceUtil
@@ -49,7 +49,7 @@ class LoginActivity : BaseActivity() {
     private lateinit var captchaHandler: CaptchaHandler
     private lateinit var loginSource: String
 
-    private var wiki = WikipediaApp.instance.wikiSite
+    private var wiki = NITCWikiApp.instance.wikiSite
     private var uiPromptResult: LoginResult? = null
     private var captchaResult: CaptchaResult? = null
     private var firstStepToken: String? = null
@@ -171,7 +171,7 @@ class LoginActivity : BaseActivity() {
         }
         binding.footerContainer.forgotPasswordLink.setOnClickListener {
             instrument?.submitInteraction("click", elementId = "forgot_password_link")
-            val forgotPasswordUrl = WikipediaApp.instance.getString(R.string.forget_password_link, wiki.languageCode)
+            val forgotPasswordUrl = NITCWikiApp.instance.getString(R.string.forget_password_link, wiki.languageCode)
             visitInExternalBrowser(this, forgotPasswordUrl.toUri())
         }
     }
@@ -264,9 +264,9 @@ class LoginActivity : BaseActivity() {
         showProgressBar(true)
 
         if (uiPromptResult == null && captchaResult == null) {
-            loginClient.login(lifecycleScope, WikipediaApp.instance.wikiSite, username, password, cb = loginCallback)
+            loginClient.login(lifecycleScope, NITCWikiApp.instance.wikiSite, username, password, cb = loginCallback)
         } else {
-            loginClient.login(lifecycleScope, WikipediaApp.instance.wikiSite, username, password, token = firstStepToken,
+            loginClient.login(lifecycleScope, NITCWikiApp.instance.wikiSite, username, password, token = firstStepToken,
                 captchaId = if (captchaResult != null) captchaHandler.captchaId() else null,
                 captchaWord = if (captchaResult != null) captchaHandler.captchaWord() else null,
                 twoFactorCode = if (uiPromptResult is LoginOATHResult) twoFactorCode else null,

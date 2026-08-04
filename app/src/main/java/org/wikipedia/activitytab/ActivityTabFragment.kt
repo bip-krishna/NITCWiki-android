@@ -80,7 +80,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.activity.FragmentUtil.getCallback
 import org.wikipedia.activitytab.timeline.ActivitySource
@@ -97,7 +97,7 @@ import org.wikipedia.compose.components.WikiLangCodeBox
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.extensions.shimmerEffect
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.concurrency.FlowEventBus
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.growthtasks.GrowthUserImpact
@@ -179,10 +179,10 @@ class ActivityTabFragment : Fragment() {
                     ActivityTabScreen(
                         isLoggedIn = AccountUtil.isLoggedIn && !AccountUtil.isTemporaryAccount,
                         userName = AccountUtil.userName,
-                        languageCode = WikipediaApp.instance.wikiSite.languageCode,
+                        languageCode = NITCWikiApp.instance.wikiSite.languageCode,
                         modules = Prefs.activityTabModules,
                         haveAtLeastOneDonation = Prefs.donationResults.isNotEmpty(),
-                        areGamesAvailable = WikiGames.WHICH_CAME_FIRST.isLangSupported(WikipediaApp.instance.wikiSite.languageCode),
+                        areGamesAvailable = WikiGames.WHICH_CAME_FIRST.isLangSupported(NITCWikiApp.instance.wikiSite.languageCode),
                         refreshSilently = viewModel.shouldRefreshTimelineSilently,
                         scrollToGames = scrollToGames,
                         readingHistoryState = viewModel.readingHistoryState.collectAsState().value,
@@ -282,8 +282,8 @@ class ActivityTabFragment : Fragment() {
         Scaffold(
             modifier = Modifier
                 .fillMaxSize()
-                .background(WikipediaTheme.colors.paperColor),
-            containerColor = WikipediaTheme.colors.paperColor
+                .background(NITCWikiTheme.colors.paperColor),
+            containerColor = NITCWikiTheme.colors.paperColor
         ) { paddingValues ->
             var isRefreshing by remember { mutableStateOf(false) }
             val state = rememberPullToRefreshState()
@@ -316,13 +316,13 @@ class ActivityTabFragment : Fragment() {
                             text = stringResource(R.string.activity_tab_logged_out_title),
                             style = MaterialTheme.typography.titleSmall,
                             textAlign = TextAlign.Center,
-                            color = WikipediaTheme.colors.primaryColor
+                            color = NITCWikiTheme.colors.primaryColor
                         )
                         Button(
                             modifier = Modifier.padding(top = 16.dp),
                             contentPadding = PaddingValues(horizontal = 18.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = WikipediaTheme.colors.progressiveColor,
+                                containerColor = NITCWikiTheme.colors.progressiveColor,
                                 contentColor = Color.White,
                             ),
                             onClick = {
@@ -350,8 +350,8 @@ class ActivityTabFragment : Fragment() {
                         Button(
                             contentPadding = PaddingValues(horizontal = 18.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = WikipediaTheme.colors.paperColor,
-                                contentColor = WikipediaTheme.colors.primaryColor,
+                                containerColor = NITCWikiTheme.colors.paperColor,
+                                contentColor = NITCWikiTheme.colors.primaryColor,
                             ),
                             onClick = {
                                 ActivityTabEvent.submit(activeInterface = "activity_tab_login", action = "login_click")
@@ -399,7 +399,7 @@ class ActivityTabFragment : Fragment() {
                             text = stringResource(R.string.activity_tab_customize_screen_no_modules_message),
                             style = MaterialTheme.typography.bodyMedium,
                             textAlign = TextAlign.Center,
-                            color = WikipediaTheme.colors.primaryColor,
+                            color = NITCWikiTheme.colors.primaryColor,
                             linkInteractionListener = {
                                 startActivity(ActivityTabCustomizationActivity.newIntent(requireContext()))
                             }
@@ -423,8 +423,8 @@ class ActivityTabFragment : Fragment() {
                         state = state,
                         isRefreshing = isRefreshing,
                         modifier = Modifier.align(Alignment.TopCenter),
-                        containerColor = WikipediaTheme.colors.paperColor,
-                        color = WikipediaTheme.colors.progressiveColor
+                        containerColor = NITCWikiTheme.colors.paperColor,
+                        color = NITCWikiTheme.colors.progressiveColor
                     )
                 }
             ) {
@@ -440,8 +440,8 @@ class ActivityTabFragment : Fragment() {
                                     .background(
                                         brush = Brush.verticalGradient(
                                             colors = listOf(
-                                                WikipediaTheme.colors.paperColor,
-                                                WikipediaTheme.colors.additionColor
+                                                NITCWikiTheme.colors.paperColor,
+                                                NITCWikiTheme.colors.additionColor
                                             )
                                         )
                                     )
@@ -485,8 +485,8 @@ class ActivityTabFragment : Fragment() {
                                 .background(
                                     brush = Brush.verticalGradient(
                                         colors = listOf(
-                                            WikipediaTheme.colors.paperColor,
-                                            WikipediaTheme.colors.additionColor
+                                            NITCWikiTheme.colors.paperColor,
+                                            NITCWikiTheme.colors.additionColor
                                         )
                                     )
                                 )
@@ -505,7 +505,7 @@ class ActivityTabFragment : Fragment() {
                                         text = stringResource(R.string.activity_tab_impact),
                                         style = MaterialTheme.typography.titleLarge,
                                         fontWeight = FontWeight.Medium,
-                                        color = WikipediaTheme.colors.primaryColor
+                                        color = NITCWikiTheme.colors.primaryColor
                                     )
                                     WikiLangCodeBox(
                                         modifier = Modifier
@@ -579,7 +579,7 @@ class ActivityTabFragment : Fragment() {
                                     text = stringResource(R.string.activity_tab_highlights),
                                     style = MaterialTheme.typography.titleLarge,
                                     fontWeight = FontWeight.Medium,
-                                    color = WikipediaTheme.colors.primaryColor
+                                    color = NITCWikiTheme.colors.primaryColor
                                 )
                             }
 
@@ -597,7 +597,7 @@ class ActivityTabFragment : Fragment() {
                                         requireActivity().startActivity(OnThisDayGameActivity.newIntent(
                                             context = requireContext(),
                                             invokeSource = Constants.InvokeSource.ACTIVITY_TAB,
-                                            wikiSite = WikipediaApp.instance.wikiSite
+                                            wikiSite = NITCWikiApp.instance.wikiSite
                                         ))
                                     },
                                     onStatsCardClick = {
@@ -707,7 +707,7 @@ class ActivityTabFragment : Fragment() {
                                     contentAlignment = Alignment.Center
                                 ) {
                                     CircularProgressIndicator(
-                                        color = WikipediaTheme.colors.progressiveColor
+                                        color = NITCWikiTheme.colors.progressiveColor
                                     )
                                 }
                             }
@@ -963,21 +963,21 @@ fun CommonCardHeader(
                 Icon(
                     modifier = Modifier.size(16.dp),
                     painter = icon,
-                    tint = WikipediaTheme.colors.primaryColor,
+                    tint = NITCWikiTheme.colors.primaryColor,
                     contentDescription = null
                 )
                 if (useHtmlText) {
                     HtmlText(
                         text = title,
                         style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Normal),
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         lineHeight = MaterialTheme.typography.labelMedium.lineHeight
                     )
                 } else {
                     Text(
                         text = title,
                         style = MaterialTheme.typography.labelMedium,
-                        color = WikipediaTheme.colors.primaryColor
+                        color = NITCWikiTheme.colors.primaryColor
                     )
                 }
             }
@@ -986,7 +986,7 @@ fun CommonCardHeader(
                     text = it,
                     modifier = Modifier.padding(top = 4.dp),
                     style = MaterialTheme.typography.bodySmall,
-                    color = WikipediaTheme.colors.secondaryColor
+                    color = NITCWikiTheme.colors.secondaryColor
                 )
             }
         }
@@ -994,7 +994,7 @@ fun CommonCardHeader(
             Icon(
                 modifier = Modifier.size(24.dp),
                 painter = painterResource(R.drawable.ic_chevron_forward_white_24dp),
-                tint = WikipediaTheme.colors.secondaryColor,
+                tint = NITCWikiTheme.colors.secondaryColor,
                 contentDescription = null
             )
         }

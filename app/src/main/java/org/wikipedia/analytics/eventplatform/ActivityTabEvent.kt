@@ -2,7 +2,7 @@ package org.wikipedia.analytics.eventplatform
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.json.JsonUtil
 
 object ActivityTabEvent {
@@ -20,7 +20,7 @@ object ActivityTabEvent {
         donations: String? = null,
         timeline: String? = null,
         all: String? = null,
-        wikiId: String = WikipediaApp.instance.appOrSystemLanguageCode
+        wikiId: String = NITCWikiApp.instance.appOrSystemLanguageCode
     ) {
         EventPlatformClient.submit(
             AppInteractionEvent(
@@ -39,7 +39,7 @@ object ActivityTabEvent {
                     timeline = timeline,
                     all = all
                 )).orEmpty(),
-                WikipediaApp.instance.languageState.appLanguageCode,
+                NITCWikiApp.instance.languageState.appLanguageCode,
                 wikiId,
                 streamName = "app_activity_tab"
             )

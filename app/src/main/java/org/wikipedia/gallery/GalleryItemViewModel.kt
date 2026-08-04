@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.mwapi.MwQueryPage
 import org.wikipedia.page.PageTitle
@@ -36,9 +36,9 @@ class GalleryItemViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
         }) {
             val wikiSite = if (mediaListItem.isInCommons) Constants.commonsWikiSite else imageTitle.wikiSite
             val response = if (mediaListItem.isVideo) {
-                ServiceFactory.get(wikiSite).getVideoInfo(imageTitle.prefixedText, WikipediaApp.instance.appOrSystemLanguageCode)
+                ServiceFactory.get(wikiSite).getVideoInfo(imageTitle.prefixedText, NITCWikiApp.instance.appOrSystemLanguageCode)
             } else {
-                ServiceFactory.get(wikiSite).getImageInfo(imageTitle.prefixedText, WikipediaApp.instance.appOrSystemLanguageCode)
+                ServiceFactory.get(wikiSite).getImageInfo(imageTitle.prefixedText, NITCWikiApp.instance.appOrSystemLanguageCode)
             }
             mediaPage = response.query?.firstPage()
             _uiState.value = Resource.Success(FileUtil.isVideo(mediaPage?.imageInfo()?.mime.orEmpty()))

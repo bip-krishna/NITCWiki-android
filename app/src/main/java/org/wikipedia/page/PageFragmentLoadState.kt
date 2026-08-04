@@ -8,7 +8,7 @@ import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.ArticleLinkPreviewInteractionEvent
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.bridge.CommunicationBridge
@@ -157,13 +157,13 @@ class PageFragmentLoadState(private var model: PageViewModel,
                     saveHeader = if (model.isInReadingList) OfflineCacheInterceptor.SAVE_HEADER_SAVE else null,
                     langHeader = title.wikiSite.languageCode, titleHeader = UriUtil.encodeURL(title.prefixedText))
             }
-            val makeWatchRequest = WikipediaApp.instance.isOnline && AccountUtil.isLoggedIn
+            val makeWatchRequest = NITCWikiApp.instance.isOnline && AccountUtil.isLoggedIn
             val watchedRequest = async {
                 try {
                     if (makeWatchRequest) {
                         ServiceFactory.get(title.wikiSite)
                             .getWatchedStatusWithCategories(title.prefixedText)
-                    } else if (WikipediaApp.instance.isOnline && !AccountUtil.isLoggedIn) {
+                    } else if (NITCWikiApp.instance.isOnline && !AccountUtil.isLoggedIn) {
                         AnonymousNotificationHelper.maybeGetAnonUserInfo(title.wikiSite)
                     } else {
                         MwQueryResponse()
@@ -175,7 +175,7 @@ class PageFragmentLoadState(private var model: PageViewModel,
             }
             val categoriesRequest = async {
                 try {
-                    if (!makeWatchRequest && WikipediaApp.instance.isOnline) {
+                    if (!makeWatchRequest && NITCWikiApp.instance.isOnline) {
                         ServiceFactory.get(title.wikiSite).getCategoriesProps(title.text)
                     } else {
                         MwQueryResponse()
@@ -257,7 +257,7 @@ class PageFragmentLoadState(private var model: PageViewModel,
                 title.fragment = response.raw().request.url.fragment
             }
             if (title.description.isNullOrEmpty()) {
-                WikipediaApp.instance.appSessionEvent.noDescription()
+                NITCWikiApp.instance.appSessionEvent.noDescription()
             }
             if (!title.isMainPage) {
                 title.displayText = page?.displayTitle.orEmpty()
@@ -267,7 +267,7 @@ class PageFragmentLoadState(private var model: PageViewModel,
             fragment.requireActivity().invalidateOptionsMenu()
 
             // Update our tab list to prevent ZH variants issue.
-            WikipediaApp.instance.tabList.getOrNull(WikipediaApp.instance.tabCount - 1)?.setBackStackPositionTitle(title)
+            NITCWikiApp.instance.tabList.getOrNull(NITCWikiApp.instance.tabCount - 1)?.setBackStackPositionTitle(title)
 
             // Update our history entry, in case the Title was changed (i.e. normalized)
             model.curEntry?.let {
@@ -292,7 +292,7 @@ class PageFragmentLoadState(private var model: PageViewModel,
                 }
 
                 // And finally, count this as a page view.
-                WikipediaApp.instance.appSessionEvent.pageViewed(entry)
+                NITCWikiApp.instance.appSessionEvent.pageViewed(entry)
                 ArticleLinkPreviewInteractionEvent(title.wikiSite.dbName(), pageSummary?.pageId ?: 0, entry.source).logNavigate()
             }
         }

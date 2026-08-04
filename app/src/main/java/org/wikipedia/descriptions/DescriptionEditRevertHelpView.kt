@@ -12,7 +12,7 @@ import android.widget.ScrollView
 import androidx.core.text.buildSpannedString
 import androidx.core.text.inSpans
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.databinding.ViewDescriptionEditRevertHelpBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.StringUtil
@@ -46,7 +46,7 @@ class DescriptionEditRevertHelpView constructor(context: Context, attrs: Attribu
 
     private fun getHistoryUri(qNumber: String): Uri {
         return Uri.Builder()
-                .scheme(WikipediaApp.instance.wikiSite.scheme())
+                .scheme(NITCWikiApp.instance.wikiSite.scheme())
                 .authority("m.wikidata.org")
                 .appendPath("wiki")
                 .appendPath("Special:History")

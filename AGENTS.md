@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This repository is the official Wikipedia app for Android, with features for reading Wikipedia articles, exploring the Wikipedia ecosystem by searching and browsing related content, as well as editing and administering Wikipedia content.
+This repository is the official NITCWiki app for Android, with features for reading NITCWiki articles, exploring the NITCWiki ecosystem by searching and browsing related content, as well as editing and administering NITCWiki content.
 
 ## General architecture
 
@@ -11,8 +11,8 @@ This repository is the official Wikipedia app for Android, with features for rea
 
 - The `dev` flavor is used for day-to-day development and running on local devices by developers.
 - The `alpha` flavor is used for continuous integration and QA testing, both manually and using GitHub Actions.
-- The `beta` flavor is for building and deploying to the [Wikipedia Beta](https://play.google.com/store/apps/details?id=org.wikipedia.beta) app on the Play Store.
-- The `prod` flavor is for building and deploying to the production [Wikipedia](https://play.google.com/store/apps/details?id=org.wikipedia) app on the Play Store and other third-party app stores.
+- The `beta` flavor is for building and deploying to the [NITCWiki Beta](https://play.google.com/store/apps/details?id=org.wikipedia.beta) app on the Play Store.
+- The `prod` flavor is for building and deploying to the production [NITCWiki](https://play.google.com/store/apps/details?id=org.wikipedia) app on the Play Store and other third-party app stores.
 - The `fdroid` flavor is for building and deploying to the [F-Droid store](https://f-droid.org/en/packages/org.wikipedia) specifically. This flavor is configured to exclude any closed-source packages or libraries. All such code is contained in the `src/extra` directory, which is included in all other flavors, but is stubbed out in the `fdroid` flavor.
 
 ### Project organization
@@ -23,14 +23,14 @@ Classes and packages are organized roughly by "feature":
 ├── compose/         # Shared Compose UI components, theme, and extensions (use this before writing new UI)
 │   ├── components/  # Reusable composables (WikiButtons, WikiCard, HtmlText, WikiTopAppBar, etc.)
 │   ├── extensions/  # Compose-targeted extension functions (Html, Modifier, String)
-│   └── theme/       # WikipediaTheme, WikipediaColor (access via LocalWikipediaColor.current)
-├── dataclient/      # Model classes and service layer for MediaWiki and Wikipedia APIs
+│   └── theme/       # NITCWikiTheme, NITCWikiColor (access via LocalNITCWikiColor.current)
+├── dataclient/      # Model classes and service layer for MediaWiki and NITCWiki APIs
 ├── analytics/       # Model classes and service logic for our current analytics engine (Event Platform)
 ├── feed/            # Fragments and Views related to the Explore Feed
-├── talk/            # Activities and Views related to Wikipedia Talk pages
-├── page/            # Activities and Views for browsing Wikipedia articles in a WebView
-├── edit/            # Activities and Views for editing Wikipedia articles
-├── games/           # Wikipedia Games hub and individual games (e.g. OnThisDay game)
+├── talk/            # Activities and Views related to NITCWiki Talk pages
+├── page/            # Activities and Views for browsing NITCWiki articles in a WebView
+├── edit/            # Activities and Views for editing NITCWiki articles
+├── games/           # NITCWiki Games hub and individual games (e.g. OnThisDay game)
 ├── donate/          # Donation flow and donation reminder A/B test
 ├── places/          # Nearby articles map feature (backed by MapLibre)
 ├── topics/          # Article topics tagging
@@ -48,7 +48,7 @@ Classes and packages are organized roughly by "feature":
 
 - Jetpack Compose for any new features. View Bindings for legacy features.
   - Since the app offers four different color themes (Light, Dark, Black, Sepia), always wrap Compose screens in `BaseTheme` (`org.wikipedia.compose.theme`).
-  - Access theme colors inside composables with `LocalWikipediaColor.current` (defined in `compose/theme/WikipediaColor.kt`).
+  - Access theme colors inside composables with `LocalNITCWikiColor.current` (defined in `compose/theme/WikipediaColor.kt`).
   - Whenever possible, translate a legacy feature to Jetpack Compose before adding new functionality.
 - Navigation Compose (`androidx.navigation:navigation-compose`) for in-app Compose navigation.
 - Retrofit for network calls, with occasional direct usages of OkHttp.
@@ -86,5 +86,5 @@ Classes and packages are organized roughly by "feature":
 - To get the hash of the last release tag: git show-ref -s <last-release-tag>
 - To get a list of commits since last release: git log <last-release-hash>..HEAD --oneline --no-merges
 - Do NOT include dependency updates, localization updates, or static data updates.
-- Release notes should be terse, but understandable by a general audience.
+- Release notes should be terse, but understandable by a other audience.
 - Release notes must be a single paragraph of natural, friendly text. It should NOT be a list of bullet points.

@@ -25,7 +25,7 @@ import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource.TALK_TOPICS_ACTIVITY
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.databinding.ActivityTalkTopicsBinding
@@ -48,8 +48,8 @@ import org.wikipedia.page.PageTitle
 import org.wikipedia.page.action.PageActionItem
 import org.wikipedia.page.edithistory.EditHistoryListActivity
 import org.wikipedia.settings.Prefs
-import org.wikipedia.settings.languages.WikipediaLanguagesActivity
-import org.wikipedia.settings.languages.WikipediaLanguagesFragment
+import org.wikipedia.settings.languages.NITCWikiLanguagesActivity
+import org.wikipedia.settings.languages.NITCWikiLanguagesFragment
 import org.wikipedia.staticdata.TalkAliasData
 import org.wikipedia.staticdata.UserAliasData
 import org.wikipedia.staticdata.UserTalkAliasData
@@ -83,22 +83,22 @@ class TalkTopicsActivity : BaseActivity(), WatchlistExpiryDialog.Callback {
     private val requestLanguageChange = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         if (it.resultCode == RESULT_OK) {
             it.data?.let { intent ->
-                if (intent.hasExtra(WikipediaLanguagesFragment.ACTIVITY_RESULT_LANG_POSITION_DATA)) {
-                    val pos = intent.getIntExtra(WikipediaLanguagesFragment.ACTIVITY_RESULT_LANG_POSITION_DATA, 0)
-                    if (pos < WikipediaApp.instance.languageState.appLanguageCodes.size) {
+                if (intent.hasExtra(NITCWikiLanguagesFragment.ACTIVITY_RESULT_LANG_POSITION_DATA)) {
+                    val pos = intent.getIntExtra(NITCWikiLanguagesFragment.ACTIVITY_RESULT_LANG_POSITION_DATA, 0)
+                    if (pos < NITCWikiApp.instance.languageState.appLanguageCodes.size) {
 
                         val newNamespace = when {
                             viewModel.pageTitle.namespace() == Namespace.USER -> {
-                                UserAliasData.valueFor(WikipediaApp.instance.languageState.appLanguageCodes[pos])
+                                UserAliasData.valueFor(NITCWikiApp.instance.languageState.appLanguageCodes[pos])
                             }
                             viewModel.pageTitle.namespace() == Namespace.USER_TALK -> {
-                                UserTalkAliasData.valueFor(WikipediaApp.instance.languageState.appLanguageCodes[pos])
+                                UserTalkAliasData.valueFor(NITCWikiApp.instance.languageState.appLanguageCodes[pos])
                             }
                             else -> viewModel.pageTitle.namespace
                         }
 
                         val newPageTitle = PageTitle(newNamespace, StringUtil.removeNamespace(viewModel.pageTitle.prefixedText),
-                            WikiSite.forLanguageCode(WikipediaApp.instance.languageState.appLanguageCodes[pos]))
+                            WikiSite.forLanguageCode(NITCWikiApp.instance.languageState.appLanguageCodes[pos]))
 
                         resetViews()
                         viewModel.updatePageTitle(newPageTitle)
@@ -273,7 +273,7 @@ class TalkTopicsActivity : BaseActivity(), WatchlistExpiryDialog.Callback {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.menu_change_language -> {
-                requestLanguageChange.launch(WikipediaLanguagesActivity.newIntent(this, Constants.InvokeSource.TALK_TOPICS_ACTIVITY))
+                requestLanguageChange.launch(NITCWikiLanguagesActivity.newIntent(this, Constants.InvokeSource.TALK_TOPICS_ACTIVITY))
                 true
             }
             R.id.menu_read_article, R.id.menu_view_user_page -> {

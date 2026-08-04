@@ -6,7 +6,7 @@ import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
 import android.os.Build
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.EventPlatformClient
 import org.wikipedia.savedpages.SavedPageSyncService
 import java.util.concurrent.TimeUnit
@@ -61,7 +61,7 @@ class ConnectionStateMonitor : ConnectivityManager.NetworkCallback() {
             return
         }
         try {
-            val connectivityManager = WikipediaApp.instance.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+            val connectivityManager = NITCWikiApp.instance.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 connectivityManager.registerDefaultNetworkCallback(this)
             } else {
@@ -84,7 +84,7 @@ class ConnectionStateMonitor : ConnectivityManager.NetworkCallback() {
             online = state
             lastCheckedMillis = System.currentTimeMillis()
         } else {
-            val connectivityManager = WikipediaApp.instance.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+            val connectivityManager = NITCWikiApp.instance.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
             online = try {
                 connectivityManager.getNetworkCapabilities(connectivityManager.activeNetwork)
                     ?.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) == true
@@ -100,12 +100,12 @@ class ConnectionStateMonitor : ConnectivityManager.NetworkCallback() {
 
         if (online != prevOnline) {
             if (online) {
-                WikipediaApp.instance.mainThreadHandler.post {
+                NITCWikiApp.instance.mainThreadHandler.post {
                     callbacks.forEach { it.onGoOnline() }
                 }
                 SavedPageSyncService.enqueue()
             } else {
-                WikipediaApp.instance.mainThreadHandler.post {
+                NITCWikiApp.instance.mainThreadHandler.post {
                     callbacks.forEach { it.onGoOffline() }
                 }
             }

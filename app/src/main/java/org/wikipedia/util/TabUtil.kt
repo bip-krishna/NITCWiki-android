@@ -1,7 +1,7 @@
 package org.wikipedia.util
 
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.history.HistoryEntry
 import org.wikipedia.page.PageBackStackItem
 import org.wikipedia.page.tabs.Tab
@@ -9,7 +9,7 @@ import org.wikipedia.page.tabs.Tab
 object TabUtil {
 
     fun openInNewBackgroundTab(entry: HistoryEntry) {
-        val app = WikipediaApp.instance
+        val app = NITCWikiApp.instance
         val tab = if (app.tabCount == 0) app.tabList[0] else Tab()
         if (app.tabCount > 0) {
             app.tabList.add(0, tab)

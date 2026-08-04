@@ -11,7 +11,7 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.textfield.TextInputLayout
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.auth.AccountUtil.updateAccount
 import org.wikipedia.createaccount.CreateAccountActivity.Companion.validateInput
@@ -107,10 +107,10 @@ class ResetPasswordActivity : BaseActivity() {
             loginClient = LoginClient()
         }
         if (uiPromptResult == null) {
-            loginClient?.login(lifecycleScope, WikipediaApp.instance.wikiSite, userName, password, retypedPassword = retypedPassword,
+            loginClient?.login(lifecycleScope, NITCWikiApp.instance.wikiSite, userName, password, retypedPassword = retypedPassword,
                 token = firstStepToken, isContinuation = true, cb = loginCallback)
         } else {
-            loginClient?.login(lifecycleScope, WikipediaApp.instance.wikiSite, userName, password, retypedPassword = retypedPassword,
+            loginClient?.login(lifecycleScope, NITCWikiApp.instance.wikiSite, userName, password, retypedPassword = retypedPassword,
                 twoFactorCode = if (uiPromptResult is LoginOATHResult) twoFactorCode else null,
                 emailAuthCode = if (uiPromptResult is LoginEmailAuthResult) twoFactorCode else null,
                 token = firstStepToken, isContinuation = true, cb = loginCallback)

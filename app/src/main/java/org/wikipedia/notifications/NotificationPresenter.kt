@@ -25,7 +25,7 @@ import androidx.core.graphics.createBitmap
 import androidx.core.net.toUri
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.diff.ArticleEditDetailsActivity
@@ -88,7 +88,7 @@ object NotificationPresenter {
             }
         }
 
-        val themedContext = ContextThemeWrapper(context, if (WikipediaApp.instance.currentTheme == Theme.LIGHT) R.style.AppTheme else WikipediaApp.instance.currentTheme.resourceId)
+        val themedContext = ContextThemeWrapper(context, if (NITCWikiApp.instance.currentTheme == Theme.LIGHT) R.style.AppTheme else NITCWikiApp.instance.currentTheme.resourceId)
 
         showNotification(context, builder, id, n.agent?.name ?: wikiSiteName, title, title, lang,
                 notificationCategory.iconResId, ResourceUtil.getThemedAttributeId(themedContext, notificationCategory.iconColor), activityIntent)

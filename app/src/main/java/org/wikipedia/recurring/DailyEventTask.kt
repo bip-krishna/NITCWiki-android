@@ -1,14 +1,14 @@
 package org.wikipedia.recurring
 
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.DailyStatsEvent
 import org.wikipedia.analytics.eventplatform.EventPlatformClient
 import org.wikipedia.analytics.eventplatform.RecommendedReadingListEvent
 import java.util.Date
 import java.util.concurrent.TimeUnit
 
-class DailyEventTask(private val app: WikipediaApp) : RecurringTask() {
+class DailyEventTask(private val app: NITCWikiApp) : RecurringTask() {
     override val name = app.getString(R.string.preference_key_daily_event_time_task_name)
 
     override fun shouldRun(lastRun: Date): Boolean {

@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.dp
 import org.wikipedia.R
 import org.wikipedia.compose.components.WikiCard
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.UiState
 
@@ -30,7 +30,7 @@ fun DonationModule(
         elevation = 0.dp,
         border = BorderStroke(
             width = 1.dp,
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         ),
         onClick = onClick
     ) {
@@ -51,7 +51,7 @@ fun DonationModule(
                     modifier = Modifier.padding(top = 16.dp),
                     text = lastDonationTime,
                     style = MaterialTheme.typography.titleLarge,
-                    color = WikipediaTheme.colors.progressiveColor,
+                    color = NITCWikiTheme.colors.progressiveColor,
                     fontWeight = FontWeight.Medium
                 )
             }

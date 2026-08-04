@@ -2,7 +2,7 @@ package org.wikipedia.analytics.testkitchen
 
 import android.widget.Toast
 import org.wikimedia.testkitchen.LogAdapter
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.okhttp.HttpStatusException
 import org.wikipedia.util.ReleaseUtil
 import org.wikipedia.util.log.L
@@ -23,8 +23,8 @@ class LogAdapterImpl : LogAdapter {
             L.e(args[0] as Exception)
             if (ReleaseUtil.isPreBetaRelease && args[0] is HttpStatusException && (args[0] as HttpStatusException).code != HttpURLConnection.HTTP_FORBIDDEN) {
                 // Display the error very loudly to alert about potential Test Kitchen issues.
-                WikipediaApp.instance.mainThreadHandler.post {
-                    Toast.makeText(WikipediaApp.instance, args[0].toString(), Toast.LENGTH_LONG).show()
+                NITCWikiApp.instance.mainThreadHandler.post {
+                    Toast.makeText(NITCWikiApp.instance, args[0].toString(), Toast.LENGTH_LONG).show()
                 }
             }
         }

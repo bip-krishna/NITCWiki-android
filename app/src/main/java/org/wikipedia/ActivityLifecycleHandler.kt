@@ -24,7 +24,7 @@ class ActivityLifecycleHandler : ActivityLifecycleCallbacks, ComponentCallbacks2
     }
 
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
-        val app = WikipediaApp.instance
+        val app = NITCWikiApp.instance
         currentActivity = activity
         if (activity is MainActivity) {
             haveMainActivity = true

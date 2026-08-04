@@ -3,7 +3,7 @@ package org.wikipedia.analytics.eventplatform
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.dataclient.SharedPreferenceCookieManager
 import org.wikipedia.dataclient.WikiSite
@@ -43,8 +43,8 @@ class EditAttemptStepEvent(private val event: EditAttemptStepInteractionEvent) :
 
         private fun submitEditAttemptEvent(action: String, editorInterface: String, pageTitle: PageTitle) {
             EventPlatformClient.submit(EditAttemptStepEvent(EditAttemptStepInteractionEvent(action,
-                WikipediaApp.instance.appInstallID, "", editorInterface,
-                INTEGRATION_ID, "", WikipediaApp.instance.getString(R.string.device_type).lowercase(), 0, getUserIdForWikiSite(pageTitle.wikiSite),
+                NITCWikiApp.instance.appInstallID, "", editorInterface,
+                INTEGRATION_ID, "", NITCWikiApp.instance.getString(R.string.device_type).lowercase(), 0, getUserIdForWikiSite(pageTitle.wikiSite),
                 !AccountUtil.isLoggedIn, AccountUtil.isTemporaryAccount, 1, pageTitle.prefixedText,
                 pageTitle.namespace().code(), pageTitle.wikiSite.dbName())))
         }

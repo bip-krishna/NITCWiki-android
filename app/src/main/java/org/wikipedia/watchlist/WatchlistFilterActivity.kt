@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.WatchlistAnalyticsHelper
 import org.wikipedia.databinding.ActivityWatchlistFiltersBinding
@@ -77,7 +77,7 @@ class WatchlistFilterActivity : BaseActivity() {
         val filterListWithHeaders = mutableListOf<Any>()
         filterListWithHeaders.add(getString(R.string.watchlist_filter_wiki_filter_header))
         filterListWithHeaders.add(Filter(FILTER_TYPE_WIKI, getString(R.string.watchlist_filter_all_text), true))
-        WikipediaApp.instance.languageState.appLanguageCodes.forEach {
+        NITCWikiApp.instance.languageState.appLanguageCodes.forEach {
             filterListWithHeaders.add(Filter(FILTER_TYPE_WIKI, it, true))
         }
         filterListWithHeaders.add(getString(R.string.notifications_filter_update_app_languages))
@@ -180,7 +180,7 @@ class WatchlistFilterActivity : BaseActivity() {
                 context.getString(R.string.watchlist_filter_all_text) -> {
                     if (filter.type == FILTER_TYPE_WIKI) {
                         if (excludedWikiCodes.isEmpty()) {
-                            excludedWikiCodes.addAll(WikipediaApp.instance.languageState.appLanguageCodes)
+                            excludedWikiCodes.addAll(NITCWikiApp.instance.languageState.appLanguageCodes)
                         } else {
                             excludedWikiCodes.clear()
                         }
@@ -215,7 +215,7 @@ class WatchlistFilterActivity : BaseActivity() {
         fun isEnabled(): Boolean {
             val excludedWikiCodes = Prefs.watchlistExcludedWikiCodes
             if (filterCode == getString(R.string.watchlist_filter_all_text) && type == FILTER_TYPE_WIKI) {
-                return WikipediaApp.instance.languageState.appLanguageCodes.find { excludedWikiCodes.contains(it) } == null
+                return NITCWikiApp.instance.languageState.appLanguageCodes.find { excludedWikiCodes.contains(it) } == null
             }
             return if (type == FILTER_TYPE_WIKI) {
                 !excludedWikiCodes.contains(filterCode)

@@ -42,7 +42,7 @@ import com.google.android.material.tabs.TabLayout
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.databinding.ActivityNotificationsBinding
 import org.wikipedia.databinding.ItemNotificationBinding
@@ -294,7 +294,7 @@ class NotificationActivity : BaseActivity() {
     }
 
     private fun markReadItems(items: List<NotificationListItemContainer>, markUnread: Boolean, fromUndoOrClick: Boolean = false, position: Int? = null) {
-        if (!WikipediaApp.instance.isOnline) {
+        if (!NITCWikiApp.instance.isOnline) {
             if (fromUndoOrClick && position != null) {
                 // Skip if the action is from onClick.
                 return
@@ -456,7 +456,7 @@ class NotificationActivity : BaseActivity() {
                 binding.notificationItemSelectedImage.visibility = View.VISIBLE
                 binding.notificationItemImage.visibility = View.INVISIBLE
                 itemView.setBackgroundColor(ResourceUtil.getThemedColor(this@NotificationActivity, R.attr.background_color))
-                if (WikipediaApp.instance.currentTheme.isDark) {
+                if (NITCWikiApp.instance.currentTheme.isDark) {
                     binding.notificationTitle.setTextColor(Color.WHITE)
                 }
             } else {
@@ -480,8 +480,8 @@ class NotificationActivity : BaseActivity() {
         }
 
         private fun isValidAppLanguageCode(langCode: String): Boolean {
-            return WikipediaApp.instance.languageState.getLanguageCodeIndex(langCode) >= 0 ||
-                    WikipediaApp.instance.languageState.getLanguageVariants(langCode) != null
+            return NITCWikiApp.instance.languageState.getLanguageCodeIndex(langCode) >= 0 ||
+                    NITCWikiApp.instance.languageState.getLanguageVariants(langCode) != null
         }
 
         override fun onClick(v: View) {

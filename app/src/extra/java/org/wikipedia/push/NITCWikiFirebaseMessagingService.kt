@@ -11,7 +11,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.csrf.CsrfTokenClient
 import org.wikipedia.dataclient.ServiceFactory
@@ -21,7 +21,7 @@ import org.wikipedia.notifications.PollNotificationWorker
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.log.L
 
-class WikipediaFirebaseMessagingService : FirebaseMessagingService() {
+class NITCWikiFirebaseMessagingService : FirebaseMessagingService() {
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         L.d("Message from: ${remoteMessage.from}")
 
@@ -58,7 +58,7 @@ class WikipediaFirebaseMessagingService : FirebaseMessagingService() {
         private var subscriptionJob: Job? = null
 
         fun isUsingPush(): Boolean {
-            return GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(WikipediaApp.instance) == ConnectionResult.SUCCESS &&
+            return GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(NITCWikiApp.instance) == ConnectionResult.SUCCESS &&
                     Prefs.pushNotificationToken.isNotEmpty() &&
                     Prefs.isPushNotificationTokenSubscribed
         }
@@ -84,7 +84,7 @@ class WikipediaFirebaseMessagingService : FirebaseMessagingService() {
                 return
             }
 
-            val csrfToken = CsrfTokenClient.getToken(WikipediaApp.instance.wikiSite)
+            val csrfToken = CsrfTokenClient.getToken(NITCWikiApp.instance.wikiSite)
 
             val token = Prefs.pushNotificationToken
             val oldToken = Prefs.pushNotificationTokenOld
@@ -114,7 +114,7 @@ class WikipediaFirebaseMessagingService : FirebaseMessagingService() {
             withContext(Dispatchers.IO) {
                 for (i in 0 until SUBSCRIBE_RETRY_COUNT) {
                     try {
-                        ServiceFactory.get(WikipediaApp.instance.wikiSite).subscribePush(csrfToken, token)
+                        ServiceFactory.get(NITCWikiApp.instance.wikiSite).subscribePush(csrfToken, token)
                         L.d("Token subscribed successfully.")
                         Prefs.isPushNotificationTokenSubscribed = true
                     } catch (e: Exception) {
@@ -140,7 +140,7 @@ class WikipediaFirebaseMessagingService : FirebaseMessagingService() {
             return withContext(Dispatchers.IO) {
                 for (i in 0 until UNSUBSCRIBE_RETRY_COUNT) {
                     try {
-                        return@withContext ServiceFactory.get(WikipediaApp.instance.wikiSite).unsubscribePush(csrfToken, pushToken)
+                        return@withContext ServiceFactory.get(NITCWikiApp.instance.wikiSite).unsubscribePush(csrfToken, pushToken)
                     } catch (e: Exception) {
                         if (e is CancellationException) {
                             throw e

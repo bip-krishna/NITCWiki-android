@@ -2,7 +2,7 @@ package org.wikipedia.push
 
 import org.wikipedia.dataclient.mwapi.MwQueryResponse
 
-class WikipediaFirebaseMessagingService {
+class NITCWikiFirebaseMessagingService {
     companion object {
         fun isUsingPush(): Boolean {
             return false

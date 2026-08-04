@@ -1,6 +1,6 @@
 package org.wikipedia.notifications
 
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.notifications.db.Notification
@@ -15,14 +15,14 @@ class NotificationRepository(private val notificationDao: NotificationDao) {
     }
 
     suspend fun fetchUnreadWikiDbNames(): Map<String, WikiSite> {
-        val response = ServiceFactory.get(WikipediaApp.instance.wikiSite).unreadNotificationWikis()
+        val response = ServiceFactory.get(NITCWikiApp.instance.wikiSite).unreadNotificationWikis()
         return response.query?.unreadNotificationWikis!!
             .mapNotNull { (key, wiki) -> wiki.source?.let { key to WikiSite(it.base) } }.toMap()
     }
 
     suspend fun fetchAndSave(filter: String?, continueStr: String? = null): String? {
         var newContinueStr: String? = null
-        val response = ServiceFactory.get(WikipediaApp.instance.wikiSite).getAllNotifications(filter, continueStr)
+        val response = ServiceFactory.get(NITCWikiApp.instance.wikiSite).getAllNotifications(filter, continueStr)
         response.query?.notifications?.let {
             notificationDao.insertNotifications(it.list.orEmpty())
             newContinueStr = it.continueStr

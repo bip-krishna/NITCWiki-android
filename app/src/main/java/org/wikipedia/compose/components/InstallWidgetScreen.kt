@@ -30,7 +30,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import org.wikipedia.R
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 
 @Composable
@@ -55,7 +55,7 @@ fun InstallWidgetScreen(
                     .padding(end = 40.dp),
                 text = title,
                 style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Medium),
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
             IconButton(
                     modifier = Modifier
@@ -66,7 +66,7 @@ fun InstallWidgetScreen(
                     Icon(
                         painter = painterResource(R.drawable.ic_close_black_24dp),
                         contentDescription = stringResource(R.string.dialog_close_description),
-                        tint = WikipediaTheme.colors.primaryColor
+                        tint = NITCWikiTheme.colors.primaryColor
                     )
                 }
         }
@@ -80,7 +80,7 @@ fun InstallWidgetScreen(
                 modifier = Modifier.fillMaxWidth(),
                 text = message,
                 style = MaterialTheme.typography.bodyLarge,
-                color = WikipediaTheme.colors.secondaryColor
+                color = NITCWikiTheme.colors.secondaryColor
             )
 
             Box(

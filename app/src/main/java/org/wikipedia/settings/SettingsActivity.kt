@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.json.JsonUtil
 
 class SettingsActivity : BaseSettingsActivity<SettingsFragment>() {
@@ -13,7 +13,7 @@ class SettingsActivity : BaseSettingsActivity<SettingsFragment>() {
     private lateinit var initialFeedCardsEnabled: List<Boolean>
     private lateinit var initialFeedCardsLangDisabled: Map<Int, List<String>>
     private lateinit var initialFeedCardsOrder: List<Int>
-    private val app = WikipediaApp.instance
+    private val app = NITCWikiApp.instance
 
     public override fun createFragment() = SettingsFragment.newInstance()
     override val title = R.string.settings_activity_title

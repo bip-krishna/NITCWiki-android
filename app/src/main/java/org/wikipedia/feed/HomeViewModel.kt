@@ -30,7 +30,7 @@ import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.compose.components.NotificationBellState
 import org.wikipedia.concurrency.FlowEventBus
@@ -317,7 +317,7 @@ class HomeViewModel : ViewModel() {
     // Batch counter for "For you" recommendations.
     private var forYouBatchIndex = 0
 
-    private val _tabsState = MutableStateFlow(TabsState(WikipediaApp.instance.tabCount, pulse = false))
+    private val _tabsState = MutableStateFlow(TabsState(NITCWikiApp.instance.tabCount, pulse = false))
     val tabsState = _tabsState.asStateFlow()
 
     private val communityHandler = CoroutineExceptionHandler { _, throwable ->
@@ -393,12 +393,12 @@ class HomeViewModel : ViewModel() {
     }
 
     fun updateTabCount(pulse: Boolean = false) {
-        _tabsState.value = TabsState(WikipediaApp.instance.tabCount, pulse)
+        _tabsState.value = TabsState(NITCWikiApp.instance.tabCount, pulse)
     }
 
     fun updateSelectedLanguageIfNeeded() {
-        if (!WikipediaApp.instance.languageState.appLanguageCodes.contains(wikiSite.value.languageCode)) {
-            updateLanguage(WikipediaApp.instance.languageState.appLanguageCode)
+        if (!NITCWikiApp.instance.languageState.appLanguageCodes.contains(wikiSite.value.languageCode)) {
+            updateLanguage(NITCWikiApp.instance.languageState.appLanguageCode)
         }
     }
 
@@ -623,7 +623,7 @@ class HomeViewModel : ViewModel() {
             val lastReadEntries = AppDatabase.instance.historyEntryWithImageDao().findEntryForReadMore(age + 1, 30, wikiSite.value.languageCode)
             if (lastReadEntries.size > age) {
                 val entry = lastReadEntries[age]
-                val hasParentLanguageCode = !WikipediaApp.instance.languageState.getDefaultLanguageCode(wikiSite.value.languageCode).isNullOrEmpty()
+                val hasParentLanguageCode = !NITCWikiApp.instance.languageState.getDefaultLanguageCode(wikiSite.value.languageCode).isNullOrEmpty()
                 val searchTerm = StringUtil.removeUnderscores(entry.title.prefixedText)
 
                 var moreLikeMaxAge = 86400
@@ -792,7 +792,7 @@ class HomeViewModel : ViewModel() {
     }
 
     private fun hasLocationPermission(): Boolean {
-        val context = WikipediaApp.instance
+        val context = NITCWikiApp.instance
         return ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
                 ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
     }

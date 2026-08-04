@@ -21,7 +21,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.compose.components.AppButton
 import org.wikipedia.compose.components.InstallWidgetScreen
@@ -106,7 +106,7 @@ class SearchWidgetInstallDialog : ExtendedBottomSheetDialogFragment(startExpande
 
     companion object {
         fun isWidgetInstalled(): Boolean {
-            val context = WikipediaApp.instance
+            val context = NITCWikiApp.instance
             return AppWidgetManager.getInstance(context).getAppWidgetIds(
                 ComponentName(context, WidgetProviderSearch::class.java)
             ).isNotEmpty()

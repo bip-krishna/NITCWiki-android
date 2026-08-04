@@ -49,7 +49,7 @@ import org.wikipedia.compose.components.WikiCard
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.growthtasks.GrowthUserImpact
 import org.wikipedia.dataclient.growthtasks.GrowthUserImpact.ArticleViews
@@ -133,13 +133,13 @@ fun MostViewedCard(
     WikiCard(
         modifier = modifier,
         colors = CardDefaults.cardColors(
-            containerColor = WikipediaTheme.colors.paperColor,
-            contentColor = WikipediaTheme.colors.paperColor
+            containerColor = NITCWikiTheme.colors.paperColor,
+            contentColor = NITCWikiTheme.colors.paperColor
         ),
         elevation = 0.dp,
         border = BorderStroke(
             width = 1.dp,
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         )
     ) {
         Column {
@@ -176,7 +176,7 @@ fun MostViewedCard(
                             Icon(
                                 modifier = Modifier.size(24.dp),
                                 painter = painterResource(it),
-                                tint = WikipediaTheme.colors.primaryColor,
+                                tint = NITCWikiTheme.colors.primaryColor,
                                 contentDescription = null
                             )
                         }
@@ -189,13 +189,13 @@ fun MostViewedCard(
                                 style = MaterialTheme.typography.titleMedium.copy(
                                     fontFamily = FontFamily.Serif
                                 ),
-                                color = WikipediaTheme.colors.primaryColor,
+                                color = NITCWikiTheme.colors.primaryColor,
                             )
                             pageTitle.description?.let { description ->
                                 Text(
                                     text = description,
                                     style = MaterialTheme.typography.bodyMedium,
-                                    color = WikipediaTheme.colors.secondaryColor
+                                    color = NITCWikiTheme.colors.secondaryColor
                                 )
                             }
                             Row(
@@ -211,7 +211,7 @@ fun MostViewedCard(
                                         .height(6.dp),
                                     chartSampleSize = 10,
                                     strokeWidth = 1.dp,
-                                    strokeColor = WikipediaTheme.colors.progressiveColor
+                                    strokeColor = NITCWikiTheme.colors.progressiveColor
                                 )
                                 Text(
                                     modifier = Modifier
@@ -219,7 +219,7 @@ fun MostViewedCard(
                                         .padding(start = 8.dp),
                                     text = formatter.format(articleViews.viewsCount),
                                     style = MaterialTheme.typography.labelSmall,
-                                    color = WikipediaTheme.colors.progressiveColor
+                                    color = NITCWikiTheme.colors.progressiveColor
                                 )
                             }
                         }
@@ -231,8 +231,8 @@ fun MostViewedCard(
                                 )
                             AsyncImage(
                                 model = request,
-                                placeholder = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
-                                error = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
+                                placeholder = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
+                                error = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
                                 contentScale = ContentScale.Crop,
                                 contentDescription = null,
                                 modifier = Modifier
@@ -244,7 +244,7 @@ fun MostViewedCard(
                 }
                 if (index < data.size - 1) {
                     HorizontalDivider(
-                        color = WikipediaTheme.colors.borderColor
+                        color = NITCWikiTheme.colors.borderColor
                     )
                 }
             }
@@ -264,13 +264,13 @@ fun ContributionCard(
     WikiCard(
         modifier = modifier,
         colors = CardDefaults.cardColors(
-            containerColor = WikipediaTheme.colors.paperColor,
-            contentColor = WikipediaTheme.colors.paperColor
+            containerColor = NITCWikiTheme.colors.paperColor,
+            contentColor = NITCWikiTheme.colors.paperColor
         ),
         elevation = 0.dp,
         border = BorderStroke(
             width = 1.dp,
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         ),
         onClick = onContributionClick
     ) {
@@ -300,7 +300,7 @@ fun ContributionCard(
                     ).lowercase(),
                     edits = editsThisMonth,
                     maxEdits = maxEditsCount,
-                    barColor = WikipediaTheme.colors.successColor
+                    barColor = NITCWikiTheme.colors.successColor
                 )
 
                 ContributionEditsView(
@@ -313,7 +313,7 @@ fun ContributionCard(
                     ).lowercase(),
                     edits = editsLastMonth,
                     maxEdits = maxEditsCount,
-                    barColor = WikipediaTheme.colors.borderColor
+                    barColor = NITCWikiTheme.colors.borderColor
                 )
             }
 
@@ -321,7 +321,7 @@ fun ContributionCard(
 
                 HorizontalDivider(
                     Modifier.padding(horizontal = 16.dp),
-                    color = WikipediaTheme.colors.borderColor
+                    color = NITCWikiTheme.colors.borderColor
                 )
 
                 SuggestedEditsView(
@@ -352,19 +352,19 @@ fun SuggestedEditsView(
             style = MaterialTheme.typography.titleSmall.copy(
                 fontWeight = FontWeight.Medium
             ),
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         Text(
             textAlign = TextAlign.Center,
             text = stringResource(R.string.activity_tab_impact_suggested_edits_message),
             style = MaterialTheme.typography.bodyMedium,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         Button(
             modifier = Modifier.padding(top = 16.dp).align(Alignment.CenterHorizontally),
             contentPadding = PaddingValues(horizontal = 18.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = WikipediaTheme.colors.progressiveColor,
+                containerColor = NITCWikiTheme.colors.progressiveColor,
                 contentColor = Color.White,
             ),
             onClick = { onClick?.invoke() },
@@ -402,7 +402,7 @@ fun ContributionEditsView(
             modifier = Modifier.padding(start = 16.dp).align(Alignment.Bottom),
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Medium,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         Text(
             text = text,
@@ -410,7 +410,7 @@ fun ContributionEditsView(
                 fontWeight = FontWeight.Medium,
                 lineHeight = 22.sp
             ),
-            color = WikipediaTheme.colors.secondaryColor
+            color = NITCWikiTheme.colors.secondaryColor
         )
     }
 

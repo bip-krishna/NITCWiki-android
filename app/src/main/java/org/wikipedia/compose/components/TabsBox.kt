@@ -21,17 +21,17 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 
 @Composable
 fun TabsBox(
     modifier: Modifier = Modifier,
     count: Int,
-    backgroundColor: Color = WikipediaTheme.colors.paperColor,
-    borderColor: Color = WikipediaTheme.colors.primaryColor,
+    backgroundColor: Color = NITCWikiTheme.colors.paperColor,
+    borderColor: Color = NITCWikiTheme.colors.primaryColor,
     shape: RoundedCornerShape = RoundedCornerShape(5.dp),
-    textColor: Color = WikipediaTheme.colors.primaryColor,
+    textColor: Color = NITCWikiTheme.colors.primaryColor,
 ) {
     Box(
         modifier = modifier

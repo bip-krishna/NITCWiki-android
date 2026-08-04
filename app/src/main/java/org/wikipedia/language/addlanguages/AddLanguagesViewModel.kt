@@ -10,16 +10,16 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import org.apache.commons.lang3.StringUtils
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.mwapi.SiteMatrix
 import org.wikipedia.util.UiState
 import org.wikipedia.util.log.L
 
 class AddLanguagesViewModel : ViewModel() {
-    private val suggestedLanguageCodes = WikipediaApp.instance.languageState.remainingSuggestedLanguageCodes
-    private val nonSuggestedLanguageCodes = WikipediaApp.instance.languageState.appMruLanguageCodes.filterNot {
-        suggestedLanguageCodes.contains(it) || WikipediaApp.instance.languageState.appLanguageCodes.contains(it)
+    private val suggestedLanguageCodes = NITCWikiApp.instance.languageState.remainingSuggestedLanguageCodes
+    private val nonSuggestedLanguageCodes = NITCWikiApp.instance.languageState.appMruLanguageCodes.filterNot {
+        suggestedLanguageCodes.contains(it) || NITCWikiApp.instance.languageState.appLanguageCodes.contains(it)
     }
 
     private val _siteInfoList = MutableStateFlow<List<SiteMatrix.SiteInfo>>(emptyList())
@@ -48,7 +48,7 @@ class AddLanguagesViewModel : ViewModel() {
         // fetch site matrix
         fetchJob = viewModelScope.launch(handler) {
             _uiState.value = UiState.Loading
-            val siteMatrix = ServiceFactory.get(WikipediaApp.instance.wikiSite).getSiteMatrix()
+            val siteMatrix = ServiceFactory.get(NITCWikiApp.instance.wikiSite).getSiteMatrix()
             val sites = SiteMatrix.getSites(siteMatrix)
             _siteInfoList.value = sites
 
@@ -75,14 +75,14 @@ class AddLanguagesViewModel : ViewModel() {
         addFilteredLanguageListItems(
             filter,
             suggestedLanguageCodes,
-            WikipediaApp.instance.getString(R.string.languages_list_suggested_text),
+            NITCWikiApp.instance.getString(R.string.languages_list_suggested_text),
             results
         )
 
         addFilteredLanguageListItems(
             filter,
             nonSuggestedLanguageCodes,
-            WikipediaApp.instance.getString(R.string.languages_list_all_text),
+            NITCWikiApp.instance.getString(R.string.languages_list_all_text),
             results
         )
 
@@ -97,7 +97,7 @@ class AddLanguagesViewModel : ViewModel() {
     ) {
         var first = true
         for (code in codes) {
-            val localizedName = WikipediaApp.instance.languageState.getAppLanguageLocalizedName(code).orEmpty()
+            val localizedName = NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(code).orEmpty()
             val canonicalName = getCanonicalName(code)
 
             if (filter.isEmpty() || code.contains(filter, true) ||
@@ -127,7 +127,7 @@ class AddLanguagesViewModel : ViewModel() {
     private fun getCanonicalName(code: String): String {
         // Only attempt to get canonical name if the site is available
         return _siteInfoList.value.find { it.code == code }?.localname.orEmpty()
-            .ifEmpty { WikipediaApp.instance.languageState.getAppLanguageCanonicalName(code).orEmpty() }
+            .ifEmpty { NITCWikiApp.instance.languageState.getAppLanguageCanonicalName(code).orEmpty() }
     }
 }
 

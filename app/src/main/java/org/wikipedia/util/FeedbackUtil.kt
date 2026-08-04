@@ -26,7 +26,7 @@ import com.skydoves.balloon.Balloon
 import com.skydoves.balloon.BalloonSizeSpec
 import com.skydoves.balloon.createBalloon
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
 import org.wikipedia.databinding.ViewPlainTextTooltipBinding
@@ -51,7 +51,7 @@ object FeedbackUtil {
         showToastOverView(v, v.contentDescription, LENGTH_SHORT)
     }
 
-    fun showError(activity: Activity, e: Throwable, wikiSite: WikiSite = WikipediaApp.instance.wikiSite) {
+    fun showError(activity: Activity, e: Throwable, wikiSite: WikiSite = NITCWikiApp.instance.wikiSite) {
         val error = ThrowableUtil.getAppError(activity, e)
         val isIndefinite = error.error.length > 200
         makeSnackbar(activity, error.error, duration = if (isIndefinite) Snackbar.LENGTH_INDEFINITE else LENGTH_DEFAULT, wikiSite = wikiSite).also {
@@ -144,7 +144,7 @@ object FeedbackUtil {
         views.forEach { it.setOnClickListener(TOOLBAR_ON_CLICK_LISTENER) }
     }
 
-    fun makeSnackbar(view: View, text: CharSequence, duration: Int = LENGTH_DEFAULT, wikiSite: WikiSite = WikipediaApp.instance.wikiSite): Snackbar {
+    fun makeSnackbar(view: View, text: CharSequence, duration: Int = LENGTH_DEFAULT, wikiSite: WikiSite = NITCWikiApp.instance.wikiSite): Snackbar {
         val snackbar = Snackbar.make(view, StringUtil.fromHtml(text.toString()).trim(), duration)
         val textView = snackbar.view.findViewById<TextView>(com.google.android.material.R.id.snackbar_text)
         textView.setLinkTextColor(ResourceUtil.getThemedColor(view.context, R.attr.progressive_color))
@@ -156,7 +156,7 @@ object FeedbackUtil {
         return snackbar
     }
 
-    fun makeSnackbar(activity: Activity, text: CharSequence, duration: Int = LENGTH_DEFAULT, wikiSite: WikiSite = WikipediaApp.instance.wikiSite): Snackbar {
+    fun makeSnackbar(activity: Activity, text: CharSequence, duration: Int = LENGTH_DEFAULT, wikiSite: WikiSite = NITCWikiApp.instance.wikiSite): Snackbar {
         return makeSnackbar(findBestView(activity), text, duration, wikiSite)
     }
 

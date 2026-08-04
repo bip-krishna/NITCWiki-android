@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.dataclient.ServiceFactory
@@ -64,7 +64,7 @@ class TalkTopicViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
 
             topic = discussionToolsInfoResponse.pageInfo?.threads.orEmpty().find { it.id == topicId }
 
-            if (WikipediaApp.instance.isOnline) {
+            if (NITCWikiApp.instance.isOnline) {
                 subscribed = ServiceFactory.get(pageTitle.wikiSite).getTalkPageTopicSubscriptions(topicName).subscriptions[topicName] == 1
             }
 

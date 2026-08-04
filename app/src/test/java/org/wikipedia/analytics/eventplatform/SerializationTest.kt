@@ -9,7 +9,7 @@ import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.json.JsonUtil
 import org.wikipedia.settings.Prefs
@@ -19,12 +19,12 @@ class SerializationTest {
     @Before
     fun setup() {
         val testInstant = Instant.parse("2026-03-06T14:00:00Z")
-        mockkObject(WikipediaApp, Prefs, AccountUtil)
+        mockkObject(NITCWikiApp, Prefs, AccountUtil)
         every { AccountUtil.isLoggedIn } returns false
         every { AccountUtil.isTemporaryAccount } returns true
         every { Prefs.eventPlatformSessionId } returns "12345"
-        every { WikipediaApp.instance } returns WikipediaApp()
-        every { WikipediaApp.instance.appInstallID } returns "abcde"
+        every { NITCWikiApp.instance } returns NITCWikiApp()
+        every { NITCWikiApp.instance.appInstallID } returns "abcde"
         mockkStatic(Instant::class)
         every { Instant.now() } returns testInstant
     }
@@ -32,7 +32,7 @@ class SerializationTest {
     @After
     fun tearDown() {
         unmockkStatic(Instant::class)
-        unmockkObject(WikipediaApp, Prefs, AccountUtil)
+        unmockkObject(NITCWikiApp, Prefs, AccountUtil)
     }
 
     @Test

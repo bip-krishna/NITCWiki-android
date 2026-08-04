@@ -17,7 +17,7 @@ import okio.buffer
 import okio.sink
 import okio.source
 import okio.use
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.offline.db.OfflineObject
 import org.wikipedia.util.StringUtil
@@ -119,7 +119,7 @@ class OfflineCacheInterceptor : Interceptor {
     private fun getCacheWritingResponse(request: Request, response: Response, lang: String, title: String): Response {
         val contentType = response.header("Content-Type", "*/*")!!
         val contentLength = response.header("Content-Length", "-1")!!.toLong()
-        val cachePath = WikipediaApp.instance.filesDir.absolutePath + File.separator + OFFLINE_PATH
+        val cachePath = NITCWikiApp.instance.filesDir.absolutePath + File.separator + OFFLINE_PATH
 
         File(cachePath).mkdirs()
 

@@ -22,7 +22,7 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.ActivityTabEvent
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.concurrency.FlowEventBus
@@ -39,7 +39,7 @@ import org.wikipedia.language.AppLanguageLookUpTable
 import org.wikipedia.login.LoginActivity
 import org.wikipedia.notifications.NotificationActivity
 import org.wikipedia.settings.Prefs
-import org.wikipedia.settings.languages.WikipediaLanguagesActivity
+import org.wikipedia.settings.languages.NITCWikiLanguagesActivity
 import org.wikipedia.usercontrib.UserContribStats
 import org.wikipedia.util.DateUtil
 import org.wikipedia.util.FeedbackUtil
@@ -270,13 +270,13 @@ class SuggestedEditsTasksFragment : Fragment(), MenuProvider {
     }
 
     private fun maybeSetPausedOrDisabled(): Boolean {
-        if (WikipediaApp.instance.appOrSystemLanguageCode.startsWith(AppLanguageLookUpTable.TEST_LANGUAGE_CODE)) {
+        if (NITCWikiApp.instance.appOrSystemLanguageCode.startsWith(AppLanguageLookUpTable.TEST_LANGUAGE_CODE)) {
             return false
         }
 
         val pauseEndDate = UserContribStats.maybePauseAndGetEndDate()
 
-        if (viewModel.totalContributions < MIN_CONTRIBUTIONS_FOR_SUGGESTED_EDITS && WikipediaApp.instance.appOrSystemLanguageCode == "en") {
+        if (viewModel.totalContributions < MIN_CONTRIBUTIONS_FOR_SUGGESTED_EDITS && NITCWikiApp.instance.appOrSystemLanguageCode == "en") {
             clearContents()
             binding.messageCard.setDisabled(getString(R.string.suggested_edits_gate_message, AccountUtil.userName))
             binding.messageCard.setPositiveButton(R.string.suggested_edits_learn_more, {
@@ -350,11 +350,11 @@ class SuggestedEditsTasksFragment : Fragment(), MenuProvider {
         vandalismPatrolTask.new = !Prefs.recentEditsOnboardingShown
 
         if (viewModel.allowToPatrolEdits && viewModel.blockMessageWikipedia.isNullOrEmpty()) {
-            Prefs.recentEditsWikiCode = WikipediaApp.instance.appOrSystemLanguageCode
+            Prefs.recentEditsWikiCode = NITCWikiApp.instance.appOrSystemLanguageCode
             displayedTasks.add(vandalismPatrolTask)
         }
 
-        val usesLocalDescriptions = DescriptionEditUtil.wikiUsesLocalDescriptions(WikipediaApp.instance.wikiSite.languageCode)
+        val usesLocalDescriptions = DescriptionEditUtil.wikiUsesLocalDescriptions(NITCWikiApp.instance.wikiSite.languageCode)
         val sufficientContributionsForArticleDescription = viewModel.totalContributions > (if (usesLocalDescriptions) 50 else 3)
         if (usesLocalDescriptions && viewModel.blockMessageWikipedia.isNullOrEmpty() ||
             !usesLocalDescriptions && viewModel.blockMessageWikidata.isNullOrEmpty()) {
@@ -362,15 +362,15 @@ class SuggestedEditsTasksFragment : Fragment(), MenuProvider {
                 displayedTasks.add(addDescriptionsTask)
 
                 // Disable translating descriptions if the user has <50 edits, and they have English as a secondary language.
-                if (viewModel.totalContributions < 50 && WikipediaApp.instance.languageState.appLanguageCodes.contains("en")) {
+                if (viewModel.totalContributions < 50 && NITCWikiApp.instance.languageState.appLanguageCodes.contains("en")) {
                     addDescriptionsTask.secondaryAction = null
                 }
             }
         }
 
         // If app language is `de`, the local edits need to be > 50 edits. See https://phabricator.wikimedia.org/T351275
-        if (((WikipediaApp.instance.wikiSite.languageCode == "de" && viewModel.homeContributions > 50) ||
-            (WikipediaApp.instance.wikiSite.languageCode != "de" && viewModel.totalContributions > 50)) &&
+        if (((NITCWikiApp.instance.wikiSite.languageCode == "de" && viewModel.homeContributions > 50) ||
+            (NITCWikiApp.instance.wikiSite.languageCode != "de" && viewModel.totalContributions > 50)) &&
             viewModel.wikiSupportsImageRecommendations && viewModel.blockMessageWikipedia.isNullOrEmpty()) {
             displayedTasks.add(imageRecommendationsTask)
         }
@@ -383,8 +383,8 @@ class SuggestedEditsTasksFragment : Fragment(), MenuProvider {
 
     private inner class TaskViewCallback : SuggestedEditsTaskView.Callback {
         override fun onViewClick(task: SuggestedEditsTask, secondary: Boolean) {
-            if (WikipediaApp.instance.languageState.appLanguageCodes.size < Constants.MIN_LANGUAGES_TO_UNLOCK_TRANSLATION && secondary) {
-                requestAddLanguage.launch(WikipediaLanguagesActivity.newIntent(requireActivity(), Constants.InvokeSource.SUGGESTED_EDITS))
+            if (NITCWikiApp.instance.languageState.appLanguageCodes.size < Constants.MIN_LANGUAGES_TO_UNLOCK_TRANSLATION && secondary) {
+                requestAddLanguage.launch(NITCWikiLanguagesActivity.newIntent(requireActivity(), Constants.InvokeSource.SUGGESTED_EDITS))
                 return
             }
 

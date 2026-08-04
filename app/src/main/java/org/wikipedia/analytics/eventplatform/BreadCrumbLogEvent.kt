@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.json.JsonUtil
 import org.wikipedia.settings.SettingsActivity
 import org.wikipedia.util.log.L
@@ -27,7 +27,7 @@ class BreadCrumbLogEvent(
     private val app_primary_language_code: String
 
     init {
-        app_primary_language_code = WikipediaApp.instance.languageState.appLanguageCode
+        app_primary_language_code = NITCWikiApp.instance.languageState.appLanguageCode
         L.d(">>> $screen_name.$action")
     }
 

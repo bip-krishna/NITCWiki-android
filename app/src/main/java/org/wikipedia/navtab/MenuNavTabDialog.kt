@@ -8,7 +8,7 @@ import androidx.core.view.isVisible
 import androidx.core.widget.ImageViewCompat
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.analytics.eventplatform.ActivityTabEvent
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
@@ -171,7 +171,7 @@ class MenuNavTabDialog : ExtendedBottomSheetDialogFragment() {
             binding.mainDrawerContribsContainer.isVisible = false
             binding.mainDrawerEditContainer.isVisible = false
         }
-        binding.mainDrawerGamesHubContainer.isVisible = WikiGames.WHICH_CAME_FIRST.isLangSupported(*WikipediaApp.instance.languageState.appLanguageCodes.toTypedArray())
+        binding.mainDrawerGamesHubContainer.isVisible = WikiGames.WHICH_CAME_FIRST.isLangSupported(*NITCWikiApp.instance.languageState.appLanguageCodes.toTypedArray())
     }
 
     private fun callback(): Callback? {

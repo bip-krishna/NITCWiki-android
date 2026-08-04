@@ -6,7 +6,7 @@ import com.hcaptcha.sdk.HCaptcha
 import com.hcaptcha.sdk.HCaptchaConfig
 import com.hcaptcha.sdk.HCaptchaDialogFragment
 import com.hcaptcha.sdk.HCaptchaTheme
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.settings.RemoteConfig
 import org.wikipedia.util.log.L
 import kotlin.String
@@ -42,7 +42,7 @@ class HCaptchaHelper(
             hCaptcha = HCaptcha.getClient(activity)
             hCaptcha?.setup(
                 HCaptchaConfig.builder()
-                    .theme(if (WikipediaApp.instance.currentTheme.isDark) HCaptchaTheme.DARK else HCaptchaTheme.LIGHT)
+                    .theme(if (NITCWikiApp.instance.currentTheme.isDark) HCaptchaTheme.DARK else HCaptchaTheme.LIGHT)
                     .siteKey(config.siteKey)
                     .host(config.baseURL.toUri().host)
                     .jsSrc(config.jsSrc)

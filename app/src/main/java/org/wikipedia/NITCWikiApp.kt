@@ -31,7 +31,7 @@ import org.wikipedia.language.AppLanguageState
 import org.wikipedia.notifications.NotificationCategory
 import org.wikipedia.notifications.NotificationPollBroadcastReceiver
 import org.wikipedia.page.tabs.Tab
-import org.wikipedia.push.WikipediaFirebaseMessagingService
+import org.wikipedia.push.NITCWikiFirebaseMessagingService
 import org.wikipedia.settings.Prefs
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.DimenUtil
@@ -41,7 +41,7 @@ import org.wikipedia.views.imageservice.CoilImageServiceLoader
 import org.wikipedia.views.imageservice.ImageService
 import java.util.UUID
 
-class WikipediaApp : Application() {
+class NITCWikiApp : Application() {
     init {
         instance = this
     }
@@ -53,7 +53,7 @@ class WikipediaApp : Application() {
     val userAgent by lazy {
         var channel = ReleaseUtil.getChannel(this)
         channel = if (channel.isBlank()) "" else " $channel"
-        String.format("WikipediaApp/%s (Android %s; %s; %s Build/%s)%s",
+        String.format("NITCWikiApp/%s (Android %s; %s; %s Build/%s)%s",
             BuildConfig.VERSION_NAME,
             Build.VERSION.RELEASE,
             getString(R.string.device_type),
@@ -163,7 +163,7 @@ class WikipediaApp : Application() {
 
         // For good measure, explicitly call our token subscription function, in case the
         // API failed in previous attempts.
-        WikipediaFirebaseMessagingService.updateSubscription()
+        NITCWikiFirebaseMessagingService.updateSubscription()
 
         EventPlatformClient.setUpStreamConfigs()
 
@@ -239,7 +239,7 @@ class WikipediaApp : Application() {
         }) {
             L.d("Logging out")
             ServiceFactory.get(wikiSite).getToken().query?.csrfToken()?.let { token ->
-                WikipediaFirebaseMessagingService.unsubscribePushToken(token, Prefs.pushNotificationToken)
+                NITCWikiFirebaseMessagingService.unsubscribePushToken(token, Prefs.pushNotificationToken)
                 ServiceFactory.get(wikiSite).postLogout(token)
             }
         }.invokeOnCompletion {
@@ -291,7 +291,7 @@ class WikipediaApp : Application() {
     }
 
     companion object {
-        lateinit var instance: WikipediaApp
+        lateinit var instance: NITCWikiApp
             private set
     }
 }

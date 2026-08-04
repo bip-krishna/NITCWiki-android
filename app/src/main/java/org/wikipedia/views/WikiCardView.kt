@@ -7,7 +7,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.res.use
 import com.google.android.material.card.MaterialCardView
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
 
@@ -33,7 +33,7 @@ open class WikiCardView(context: Context, attrs: AttributeSet? = null) : Materia
             setDefaultBorder()
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            if (WikipediaApp.instance.currentTheme.isDark) {
+            if (NITCWikiApp.instance.currentTheme.isDark) {
                 cardElevation = 0f
             } else {
                 cardElevation = elevation

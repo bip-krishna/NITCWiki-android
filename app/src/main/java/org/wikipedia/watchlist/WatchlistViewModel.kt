@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.WatchlistAnalyticsHelper
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
@@ -37,7 +37,7 @@ class WatchlistViewModel : ViewModel() {
     var currentSearchQuery: String? = null
         private set
     var finalList = mutableListOf<Any>()
-    var displayLanguages = WikipediaApp.instance.languageState.appLanguageCodes.filterNot { Prefs.watchlistExcludedWikiCodes.contains(it) }
+    var displayLanguages = NITCWikiApp.instance.languageState.appLanguageCodes.filterNot { Prefs.watchlistExcludedWikiCodes.contains(it) }
 
     private val _uiState = MutableStateFlow(Resource<Unit>())
     val uiState = _uiState.asStateFlow()
@@ -123,7 +123,7 @@ class WatchlistViewModel : ViewModel() {
         val defaultOthersSet = WatchlistFilterTypes.DEFAULT_FILTER_OTHERS.map { it.id }.toSet()
         val nonDefaultOthers = defaultOthersSet.subtract(findSelectedOthers)
 
-        return WikipediaApp.instance.languageState.appLanguageCodes.count { excludedWikiCodes.contains(it) } + nonDefaultChangeTypes.size + nonDefaultOthers.size
+        return NITCWikiApp.instance.languageState.appLanguageCodes.count { excludedWikiCodes.contains(it) } + nonDefaultChangeTypes.size + nonDefaultOthers.size
     }
 
     private fun latestRevisions(): String? {
@@ -213,7 +213,7 @@ class WatchlistViewModel : ViewModel() {
             }
             val messageCall = scope.async {
                 val unparsedMessage = ServiceFactory.get(pageTitle.wikiSite).getMessages(whichMessage, "${StringUtil.removeUnderscores(pageTitle.prefixedText)}|${L10nUtil.getString(expiry.stringId)}",
-                    WikipediaApp.instance.appOrSystemLanguageCode)
+                    NITCWikiApp.instance.appOrSystemLanguageCode)
                     .query?.allmessages?.firstOrNull { it.name == whichMessage }?.content.orEmpty()
                 ServiceFactory.get(pageTitle.wikiSite).parseText(unparsedMessage)
             }

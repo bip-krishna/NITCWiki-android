@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.decodeFromJsonElement
 import okhttp3.Request
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.okhttp.OkHttpConnectionFactory
 import org.wikipedia.donate.DonationResult
 import org.wikipedia.json.JsonUtil
@@ -53,7 +53,7 @@ object CampaignCollection {
     }
 
     fun getFormattedCampaignId(campaignId: String): String {
-        return "${WikipediaApp.instance.appOrSystemLanguageCode}${GeoUtil.geoIPCountry.orEmpty()}_${campaignId}_${CAMPAIGN_PLATFORM}"
+        return "${NITCWikiApp.instance.appOrSystemLanguageCode}${GeoUtil.geoIPCountry.orEmpty()}_${campaignId}_${CAMPAIGN_PLATFORM}"
     }
 
     fun addDonationResult(fromWeb: Boolean = false, amount: Float, currency: String, recurring: Boolean) {
@@ -82,7 +82,7 @@ object CampaignCollection {
             .replace("\$platform;", CAMPAIGN_PLATFORM)
             .replace("\$formattedId;", getFormattedCampaignId(campaignId))
             .replace("\$country;", GeoUtil.geoIPCountry.orEmpty())
-            .replace("\$language;", WikipediaApp.instance.appOrSystemLanguageCode)
+            .replace("\$language;", NITCWikiApp.instance.appOrSystemLanguageCode)
     }
 
     @Serializable

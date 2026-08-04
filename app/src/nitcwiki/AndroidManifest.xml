@@ -17,7 +17,7 @@
 
         <!-- Remove Firebase messaging service — stubbed out -->
         <service
-            android:name=".push.WikipediaFirebaseMessagingService"
+            android:name=".push.NITCWikiFirebaseMessagingService"
             tools:node="remove" />
 
         <!-- Remove Google Pay donate activity — not applicable -->

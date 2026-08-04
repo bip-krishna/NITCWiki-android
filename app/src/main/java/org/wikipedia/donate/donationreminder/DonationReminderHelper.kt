@@ -3,7 +3,7 @@ package org.wikipedia.donate.donationreminder
 import android.app.Activity
 import kotlinx.serialization.Serializable
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.donate.DonateUtil
 import org.wikipedia.donate.donationreminder.DonationReminderHelper.MAX_REMINDER_PROMPTS
 import org.wikipedia.settings.Prefs
@@ -40,7 +40,7 @@ object DonationReminderHelper {
     }
 
     fun thankYouMessageForSettings(): String {
-        val context = WikipediaApp.instance
+        val context = NITCWikiApp.instance
         val donationAmount =
             DonateUtil.currencyFormat.format(Prefs.donationReminderConfig.donateAmount)
         val readFrequency = Prefs.donationReminderConfig.articleFrequency

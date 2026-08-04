@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.distinctUntilChanged
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.settings.Prefs
 import java.time.LocalDate
@@ -165,7 +165,7 @@ class ReadingChallengeWidgetRepository(private val context: Context) {
             get() = !LocalDate.now().isBefore(START_DATE) && !LocalDate.now().isAfter(END_DATE)
 
         fun isWidgetInstalled(): Boolean {
-            val context = WikipediaApp.instance
+            val context = NITCWikiApp.instance
             val ids = AppWidgetManager.getInstance(context).getAppWidgetIds(
                 ComponentName(context, ReadingChallengeWidgetReceiver::class.java)
             )

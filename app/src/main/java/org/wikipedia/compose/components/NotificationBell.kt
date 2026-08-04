@@ -34,7 +34,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import org.wikipedia.R
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 import kotlin.math.min
 
@@ -74,7 +74,7 @@ fun NotificationBell(
         Icon(
             painter = painterResource(iconRes),
             contentDescription = null,
-            tint = WikipediaTheme.colors.primaryColor,
+            tint = NITCWikiTheme.colors.primaryColor,
             modifier = Modifier.size(24.dp)
         )
         AnimatedVisibility(
@@ -94,7 +94,7 @@ fun NotificationBell(
 fun CircleWithNumber(
     number: Int,
     modifier: Modifier = Modifier,
-    backgroundColor: Color = WikipediaTheme.colors.destructiveColor,
+    backgroundColor: Color = NITCWikiTheme.colors.destructiveColor,
 ) {
     val displayNumber = min(number, 99).toString()
     Box(

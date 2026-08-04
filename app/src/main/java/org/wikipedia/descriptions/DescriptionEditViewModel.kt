@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.csrf.CsrfTokenClient
 import org.wikipedia.dataclient.ServiceFactory
@@ -84,7 +84,7 @@ class DescriptionEditViewModel(savedStateHandle: SavedStateHandle) : ViewModel()
             _requestSuggestionState.value = Resource.Loading()
             val responseCall = async { ServiceFactory[pageTitle.wikiSite, LiftWingModelService.API_URL, LiftWingModelService::class.java]
                 .getDescriptionSuggestion(DescriptionSuggestion.Request(pageTitle.wikiSite.languageCode, pageTitle.prefixedText, 2)) }
-            val userInfoCall = async { ServiceFactory.get(WikipediaApp.instance.wikiSite)
+            val userInfoCall = async { ServiceFactory.get(NITCWikiApp.instance.wikiSite)
                 .globalUserInfo(AccountUtil.userName) }
 
             val response = responseCall.await()

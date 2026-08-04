@@ -17,7 +17,7 @@ import okio.Buffer
 import okio.Sink
 import okio.Timeout
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.concurrency.FlowEventBus
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.dataclient.RestService
@@ -295,7 +295,7 @@ class SavedPageSyncService(context: Context, params: WorkerParameters) : Corouti
 
     private fun makeUrlRequest(wiki: WikiSite, url: String, pageTitle: PageTitle): Request.Builder {
         return Request.Builder().cacheControl(OkHttpConnectionFactory.CACHE_CONTROL_FORCE_NETWORK).url(UriUtil.resolveProtocolRelativeUrl(wiki, url))
-                .addHeader("Accept-Language", WikipediaApp.instance.getAcceptLanguage(pageTitle.wikiSite))
+                .addHeader("Accept-Language", NITCWikiApp.instance.getAcceptLanguage(pageTitle.wikiSite))
                 .addHeader(OfflineCacheInterceptor.SAVE_HEADER, OfflineCacheInterceptor.SAVE_HEADER_SAVE)
                 .addHeader(OfflineCacheInterceptor.LANG_HEADER, pageTitle.wikiSite.languageCode)
                 .addHeader(OfflineCacheInterceptor.TITLE_HEADER, UriUtil.encodeURL(pageTitle.prefixedText))
@@ -328,7 +328,7 @@ class SavedPageSyncService(context: Context, params: WorkerParameters) : Corouti
                 .setInitialDelay(ENQUEUE_DELAY, TimeUnit.SECONDS)
                 .setConstraints(constraints)
                 .build()
-            WorkManager.getInstance(WikipediaApp.instance)
+            WorkManager.getInstance(NITCWikiApp.instance)
                 .enqueueUniqueWork(WORK_NAME, ExistingWorkPolicy.REPLACE, workRequest)
         }
 

@@ -12,7 +12,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceViewHolder
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.SingleWebViewActivity
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.auth.AccountUtil
@@ -60,7 +60,7 @@ class LogoutPreference : Preference {
                         }
                         .setPositiveButton(if (AccountUtil.isTemporaryAccount) R.string.temp_account_end_session else R.string.preference_title_logout) { _, _ ->
                             instrument.submitInteraction("click", actionSource = "logout_warning", elementId = "confirm_button")
-                            WikipediaApp.instance.logOut()
+                            NITCWikiApp.instance.logOut()
                             Prefs.readingListsLastSyncTime = null
                             Prefs.isReadingListSyncEnabled = false
                             Prefs.isSuggestedEditsHighestPriorityEnabled = false

@@ -3,7 +3,7 @@ package org.wikipedia.recurring
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.alphaupdater.AlphaUpdateChecker
 import org.wikipedia.settings.RemoteConfigRefreshTask
 import org.wikipedia.util.ReleaseUtil
@@ -11,7 +11,7 @@ import org.wikipedia.util.log.L
 
 class RecurringTasksExecutor() {
     fun run() {
-        val app = WikipediaApp.instance
+        val app = NITCWikiApp.instance
 
         mutableListOf(
             RemoteConfigRefreshTask(),

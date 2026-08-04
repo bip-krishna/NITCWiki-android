@@ -17,7 +17,7 @@ import androidx.core.widget.ImageViewCompat
 import androidx.core.widget.addTextChangedListener
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.MachineGeneratedArticleDescriptionsAnalyticsHelper
 import org.wikipedia.databinding.GroupCaptchaBinding
 import org.wikipedia.databinding.ViewDescriptionEditBinding
@@ -112,7 +112,7 @@ class DescriptionEditView(context: Context, attrs: AttributeSet?) : LinearLayout
         }
 
         binding.learnMoreButton.setOnClickListener {
-            UriUtil.visitInExternalBrowser(context, WikipediaApp.instance.getString(if (action == DescriptionEditActivity.Action.ADD_DESCRIPTION ||
+            UriUtil.visitInExternalBrowser(context, NITCWikiApp.instance.getString(if (action == DescriptionEditActivity.Action.ADD_DESCRIPTION ||
                 action == DescriptionEditActivity.Action.TRANSLATE_DESCRIPTION)
                 if (pageTitle.wikiSite.languageCode == "en") R.string.short_description_help_url_en else R.string.description_edit_description_learn_more_url
             else R.string.description_edit_image_caption_learn_more_url).toUri())
@@ -140,7 +140,7 @@ class DescriptionEditView(context: Context, attrs: AttributeSet?) : LinearLayout
     }
 
     private fun setVoiceInput() {
-        binding.viewDescriptionEditTextLayout.isEndIconVisible = WikipediaApp.instance.voiceRecognitionAvailable
+        binding.viewDescriptionEditTextLayout.isEndIconVisible = NITCWikiApp.instance.voiceRecognitionAvailable
         binding.viewDescriptionEditTextLayout.setEndIconOnClickListener {
             callback?.onVoiceInputClick()
         }
@@ -180,11 +180,11 @@ class DescriptionEditView(context: Context, attrs: AttributeSet?) : LinearLayout
         return when (action) {
             DescriptionEditActivity.Action.TRANSLATE_DESCRIPTION -> {
                 context.getString(R.string.description_edit_translate_article_description_label_per_language,
-                    WikipediaApp.instance.languageState.getAppLanguageLocalizedName(lang))
+                    NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(lang))
             }
             DescriptionEditActivity.Action.TRANSLATE_CAPTION -> {
                 context.getString(R.string.description_edit_translate_caption_label_per_language,
-                    WikipediaApp.instance.languageState.getAppLanguageLocalizedName(lang))
+                    NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(lang))
             }
             DescriptionEditActivity.Action.ADD_CAPTION -> context.getString(R.string.description_edit_add_caption_label)
             else -> context.getString(R.string.description_edit_article_description_label)
@@ -195,11 +195,11 @@ class DescriptionEditView(context: Context, attrs: AttributeSet?) : LinearLayout
         return when (action) {
             DescriptionEditActivity.Action.TRANSLATE_DESCRIPTION -> {
                 context.getString(R.string.description_edit_translate_article_description_hint_per_language,
-                    WikipediaApp.instance.languageState.getAppLanguageLocalizedName(lang))
+                    NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(lang))
             }
             DescriptionEditActivity.Action.ADD_CAPTION, DescriptionEditActivity.Action.TRANSLATE_CAPTION -> {
                 context.getString(R.string.description_edit_translate_caption_hint_per_language,
-                    WikipediaApp.instance.languageState.getAppLanguageLocalizedName(lang))
+                    NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(lang))
             }
             else -> {
                 context.getString(R.string.description_edit_text_hint)
@@ -353,7 +353,7 @@ class DescriptionEditView(context: Context, attrs: AttributeSet?) : LinearLayout
             pageTitle.wikiSite.languageCode == "en" && Character.isLowerCase(binding.viewDescriptionEditText.text.toString()[0])) {
             setWarning(context.getString(R.string.description_starts_with_lowercase))
         } else if (isLanguageWrong) {
-            val localizedName = WikipediaApp.instance.languageState.getAppLanguageLocalizedName(pageSummaryForEdit.lang)
+            val localizedName = NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(pageSummaryForEdit.lang)
             setWarning(context.getString(R.string.description_verification_notice, localizedName, localizedName))
         } else {
             clearError()
@@ -414,7 +414,7 @@ class DescriptionEditView(context: Context, attrs: AttributeSet?) : LinearLayout
 
     override fun onLanguageDetectionSuccess(languageCodes: List<String>) {
         if (!languageCodes.contains(pageSummaryForEdit.lang) &&
-            !languageCodes.contains(WikipediaApp.instance.languageState.getDefaultLanguageCode(pageSummaryForEdit.lang))) {
+            !languageCodes.contains(NITCWikiApp.instance.languageState.getDefaultLanguageCode(pageSummaryForEdit.lang))) {
             isLanguageWrong = true
             enqueueValidateText()
         }

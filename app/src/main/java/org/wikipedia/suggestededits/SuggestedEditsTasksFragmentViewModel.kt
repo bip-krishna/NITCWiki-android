@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.settings.Prefs
@@ -55,8 +55,8 @@ class SuggestedEditsTasksFragmentViewModel : ViewModel() {
             blockMessageCommons = null
             totalContributions = 0
 
-            val homeSiteCall = async { ServiceFactory.get(WikipediaApp.instance.wikiSite).getUserContributions(AccountUtil.userName, 50, null, null) }
-            // val homeSiteParamCall = async { ServiceFactory.get(WikipediaApp.instance.wikiSite).getParamInfo("query+growthtasks") }
+            val homeSiteCall = async { ServiceFactory.get(NITCWikiApp.instance.wikiSite).getUserContributions(AccountUtil.userName, 50, null, null) }
+            // val homeSiteParamCall = async { ServiceFactory.get(NITCWikiApp.instance.wikiSite).getParamInfo("query+growthtasks") }
             val commonsCall = async { ServiceFactory.get(Constants.commonsWikiSite).getUserContributions(AccountUtil.userName, 10, null, null) }
             val wikidataCall = async { ServiceFactory.get(Constants.wikidataWikiSite).getUserContributions(AccountUtil.userName, 10, 0, null) }
 
@@ -79,14 +79,14 @@ class SuggestedEditsTasksFragmentViewModel : ViewModel() {
             homeSiteResponse.query?.userInfo?.let {
                 // T371442: In the case of Igbo Wikipedia, allow patrolling if the user has 500 or more edits, and 30 days of tenure.
                 // For all other wikis, allow patrolling if the user has rollback rights or is an admin.
-                if (WikipediaApp.instance.wikiSite.languageCode == "ig") {
+                if (NITCWikiApp.instance.wikiSite.languageCode == "ig") {
                     allowToPatrolEdits = it.editCount >= 500 && it.registrationDate.toInstant().plus(30, ChronoUnit.DAYS).isBefore(Instant.now())
                 } else {
                     allowToPatrolEdits = it.rights.contains("rollback") || it.groups().contains("sysop")
                 }
 
                 if (it.isBlocked) {
-                    blockMessageWikipedia = ThrowableUtil.getBlockMessageHtml(it, WikipediaApp.instance.wikiSite)
+                    blockMessageWikipedia = ThrowableUtil.getBlockMessageHtml(it, NITCWikiApp.instance.wikiSite)
                 }
             }
             wikidataResponse.query?.userInfo?.let {

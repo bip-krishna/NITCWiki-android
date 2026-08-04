@@ -9,7 +9,7 @@ import android.view.MotionEvent
 import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.core.text.getSpans
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.util.UriUtil
@@ -89,20 +89,20 @@ class LinkMovementMethodExt : LinkMovementMethod {
         return super.onTouchEvent(widget, buffer, event)
     }
 
-    internal class ErrorLinkHandler internal constructor(override var wikiSite: WikiSite) : LinkHandler(WikipediaApp.instance) {
+    internal class ErrorLinkHandler internal constructor(override var wikiSite: WikiSite) : LinkHandler(NITCWikiApp.instance) {
         override fun onMediaLinkClicked(title: PageTitle) {}
         override fun onDiffLinkClicked(title: PageTitle, revisionId: Long) {}
         override fun onPageLinkClicked(anchor: String, linkText: String) {}
         override fun onInternalLinkClicked(title: PageTitle) {
             // Explicitly send everything to an external browser, since the error might be shown in
             // a child activity of PageActivity, and we don't want to lose our place.
-            UriUtil.visitInExternalBrowser(WikipediaApp.instance,
+            UriUtil.visitInExternalBrowser(NITCWikiApp.instance,
                 UriUtil.resolveProtocolRelativeUrl(title.wikiSite, title.uri).toUri())
         }
     }
 
     companion object {
-        fun getExternalLinkMovementMethod(wikiSite: WikiSite = WikipediaApp.instance.wikiSite): LinkMovementMethodExt {
+        fun getExternalLinkMovementMethod(wikiSite: WikiSite = NITCWikiApp.instance.wikiSite): LinkMovementMethodExt {
             return LinkMovementMethodExt(ErrorLinkHandler(wikiSite))
         }
     }

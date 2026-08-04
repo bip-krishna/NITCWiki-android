@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.feed.personalization.homepreference.HomeContentState
@@ -368,7 +368,7 @@ class PersonalizationViewModel(
         val Factory = viewModelFactory {
             initializer {
                 val appDatabase = AppDatabase.instance
-                val instance = WikipediaApp.instance
+                val instance = NITCWikiApp.instance
                 val wikiSite = WikiSite.forLanguageCode(Prefs.homeLanguageCode)
                 PersonalizationViewModel(
                     interestSelectionRepository = InterestSelectionRepository(

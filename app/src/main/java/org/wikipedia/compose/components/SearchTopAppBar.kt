@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -59,8 +59,8 @@ fun SearchTopAppBar(
                 colors = OutlinedTextFieldDefaults.colors(
                     unfocusedBorderColor = Color.Transparent,
                     focusedBorderColor = Color.Transparent,
-                    focusedTextColor = WikipediaTheme.colors.primaryColor,
-                    cursorColor = WikipediaTheme.colors.progressiveColor
+                    focusedTextColor = NITCWikiTheme.colors.primaryColor,
+                    cursorColor = NITCWikiTheme.colors.progressiveColor
                 ),
                 textStyle = TextStyle(
                     fontSize = 16.sp
@@ -76,14 +76,14 @@ fun SearchTopAppBar(
                 Icon(
                     painter = painterResource(R.drawable.ic_arrow_back_black_24dp),
                     contentDescription = stringResource(R.string.search_back_button_content_description),
-                    tint = WikipediaTheme.colors.primaryColor
+                    tint = NITCWikiTheme.colors.primaryColor
                 )
             }
         },
         actions = actions,
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = WikipediaTheme.colors.paperColor,
-            titleContentColor = WikipediaTheme.colors.primaryColor
+            containerColor = NITCWikiTheme.colors.paperColor,
+            titleContentColor = NITCWikiTheme.colors.primaryColor
         ),
     )
 

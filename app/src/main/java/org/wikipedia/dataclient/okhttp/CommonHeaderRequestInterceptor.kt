@@ -2,14 +2,14 @@ package org.wikipedia.dataclient.okhttp
 
 import okhttp3.Interceptor
 import okhttp3.Response
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.RestService
 import java.io.IOException
 
 internal class CommonHeaderRequestInterceptor : Interceptor {
     @Throws(IOException::class)
     override fun intercept(chain: Interceptor.Chain): Response {
-        val app = WikipediaApp.instance
+        val app = NITCWikiApp.instance
         val url = chain.request().url.toString()
         val builder = chain.request().newBuilder()
                 .header("User-Agent", app.userAgent)

@@ -2,7 +2,7 @@ package org.wikipedia.util.log
 
 import android.util.Log
 import org.wikipedia.BuildConfig
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.util.ReleaseUtil
 
 /** Logging utility like [Log] but with implied tags.  */
@@ -106,7 +106,7 @@ object L {
     fun logRemoteError(t: Throwable) {
         LEVEL_E.log("", t)
         if (!ReleaseUtil.isPreBetaRelease) {
-            WikipediaApp.instance.logError(t)
+            NITCWikiApp.instance.logError(t)
         }
     }
 

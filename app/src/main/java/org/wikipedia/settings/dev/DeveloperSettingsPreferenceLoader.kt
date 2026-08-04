@@ -15,7 +15,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.donate.donationreminder.DonationReminderConfig
@@ -136,12 +136,12 @@ internal class DeveloperSettingsPreferenceLoader(fragment: PreferenceFragmentCom
                     .setPositiveButton(android.R.string.ok, null)
                     .show()
             }) {
-                val summary = EditingSuggestionsProvider.getNextArticleWithMissingDescription(WikipediaApp.instance.wikiSite)
+                val summary = EditingSuggestionsProvider.getNextArticleWithMissingDescription(NITCWikiApp.instance.wikiSite)
                 MaterialAlertDialogBuilder(fragment.requireActivity())
                         .setTitle(fromHtml(summary.displayTitle))
                         .setMessage(fromHtml(summary.extract))
                         .setPositiveButton("Go") { _: DialogInterface, _: Int ->
-                            val title = summary.getPageTitle(WikipediaApp.instance.wikiSite)
+                            val title = summary.getPageTitle(NITCWikiApp.instance.wikiSite)
                             fragment.requireActivity().startActivity(PageActivity.newIntentForNewTab(fragment.requireActivity(), HistoryEntry(title, HistoryEntry.SOURCE_INTERNAL_LINK), title))
                         }
                         .setNegativeButton(android.R.string.cancel, null)
@@ -156,13 +156,13 @@ internal class DeveloperSettingsPreferenceLoader(fragment: PreferenceFragmentCom
                     .setPositiveButton(android.R.string.ok, null)
                     .show()
             }) {
-                val summary = EditingSuggestionsProvider.getNextArticleWithMissingDescription(WikipediaApp.instance.wikiSite,
-                    WikipediaApp.instance.languageState.appLanguageCodes[1])
+                val summary = EditingSuggestionsProvider.getNextArticleWithMissingDescription(NITCWikiApp.instance.wikiSite,
+                    NITCWikiApp.instance.languageState.appLanguageCodes[1])
                 MaterialAlertDialogBuilder(fragment.requireActivity())
                         .setTitle(fromHtml(summary.second.displayTitle))
                         .setMessage(fromHtml(summary.second.extract))
                         .setPositiveButton("Go") { _: DialogInterface, _: Int ->
-                            val title = summary.second.getPageTitle(WikipediaApp.instance.wikiSite)
+                            val title = summary.second.getPageTitle(NITCWikiApp.instance.wikiSite)
                             fragment.requireActivity().startActivity(PageActivity.newIntentForNewTab(fragment.requireActivity(), HistoryEntry(title, HistoryEntry.SOURCE_INTERNAL_LINK), title))
                         }
                         .setNegativeButton(android.R.string.cancel, null)
@@ -305,7 +305,7 @@ internal class DeveloperSettingsPreferenceLoader(fragment: PreferenceFragmentCom
     }
 
     private fun resetMediaWikiSettings() {
-        WikipediaApp.instance.resetWikiSite()
+        NITCWikiApp.instance.resetWikiSite()
     }
 
     private fun createTestReadingList(listName: String, numOfLists: Int, numOfArticles: Int) {
@@ -327,7 +327,7 @@ internal class DeveloperSettingsPreferenceLoader(fragment: PreferenceFragmentCom
                 index += 1
                 val list = AppDatabase.instance.readingListDao().createList("$listName $index", "")
                 val pages = (0 until numOfArticles).map {
-                    ReadingListPage(PageTitle("${it + 1}", WikipediaApp.instance.wikiSite))
+                    ReadingListPage(PageTitle("${it + 1}", NITCWikiApp.instance.wikiSite))
                 }
                 AppDatabase.instance.readingListPageDao().addPagesToList(list, pages, true)
             }

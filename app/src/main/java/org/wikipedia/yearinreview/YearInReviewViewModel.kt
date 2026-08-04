@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.maplibre.android.geometry.LatLng
 import org.maplibre.android.geometry.LatLngBounds
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.dataclient.Service
@@ -56,7 +56,7 @@ class YearInReviewViewModel : ViewModel() {
 
             _uiScreenListState.value = UiState.Loading
 
-            val remoteConfig = ServiceFactory.getRest(WikipediaApp.instance.wikiSite).getConfiguration().commonv1?.getYirForYear(YIR_YEAR)!!
+            val remoteConfig = ServiceFactory.getRest(NITCWikiApp.instance.wikiSite).getConfiguration().commonv1?.getYirForYear(YIR_YEAR)!!
             val dataStartInstant = remoteConfig.dataStartDate.toInstant(ZoneOffset.UTC)
             val dataEndInstant = remoteConfig.dataEndDate.toInstant(ZoneOffset.UTC)
             val dataStartMillis = dataStartInstant.toEpochMilli()
@@ -109,7 +109,7 @@ class YearInReviewViewModel : ViewModel() {
                 var totalPageViews = 0L
                 var editCount = 0
                 if (AccountUtil.isLoggedIn) {
-                    val wikiSite = WikipediaApp.instance.wikiSite
+                    val wikiSite = NITCWikiApp.instance.wikiSite
                     val userInfoResponse = ServiceFactory.get(wikiSite).getLocalAndGlobalUserInfo()
 
                     val totalPageViewsJob = async {
@@ -206,7 +206,7 @@ class YearInReviewViewModel : ViewModel() {
                             largestClusterTopLeft = Pair(bounds.latitudeNorth, bounds.longitudeEast)
                             largestClusterBottomRight = Pair(bounds.latitudeSouth, bounds.longitudeWest)
 
-                            val geocoder = Geocoder(WikipediaApp.instance)
+                            val geocoder = Geocoder(NITCWikiApp.instance)
                             val results = geocoder.getFromLocation(largestClusterLatitude, largestClusterLongitude, 2)
                             if (!results.isNullOrEmpty()) {
                                 largestClusterCountryName = results.first().countryName.orEmpty()
@@ -247,11 +247,11 @@ class YearInReviewViewModel : ViewModel() {
             val yearInReviewModel = yearInReviewModelMap[YIR_YEAR]!!
 
             val finalRoute = YearInReviewSlides(
-                context = WikipediaApp.instance,
+                context = NITCWikiApp.instance,
                 currentYear = YIR_YEAR,
                 isEditor = yearInReviewModel.userEditsCount > 0,
                 isLoggedIn = AccountUtil.isLoggedIn,
-                isEnglishWiki = WikipediaApp.instance.wikiSite.languageCode == "en",
+                isEnglishWiki = NITCWikiApp.instance.wikiSite.languageCode == "en",
                 isFundraisingAllowed = !remoteConfig.hideDonateCountryCodes.contains(GeoUtil.geoIPCountry.orEmpty()),
                 config = remoteConfig,
                 pagesWithCoordinates = pagesWithCoordinates,

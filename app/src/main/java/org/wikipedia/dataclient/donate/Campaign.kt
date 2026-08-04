@@ -2,7 +2,7 @@ package org.wikipedia.dataclient.donate
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.json.LocalDateTimeSerializer
 import java.time.LocalDateTime
 import kotlin.random.Random
@@ -45,7 +45,7 @@ class Campaign(
         if (assets.size <= 1) {
             return 0
         }
-        val random = Random(WikipediaApp.instance.appInstallID.hashCode() + id.hashCode())
+        val random = Random(NITCWikiApp.instance.appInstallID.hashCode() + id.hashCode())
         val f = random.nextFloat()
         var sum = 0f
         for (i in assets.indices) {

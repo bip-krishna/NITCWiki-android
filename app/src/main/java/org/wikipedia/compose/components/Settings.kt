@@ -31,7 +31,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.wikipedia.R
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.settings.homefeed.CommunityModuleType
 import org.wikipedia.settings.homefeed.ForYouModuleType
 import org.wikipedia.theme.Theme
@@ -57,13 +57,13 @@ fun SettingsRow(
             Text(
                 text = title,
                 style = MaterialTheme.typography.bodyLarge,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
             if (subtitle != null) {
                 HtmlText(
                     text = subtitle,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = WikipediaTheme.colors.secondaryColor,
+                    color = NITCWikiTheme.colors.secondaryColor,
                     modifier = Modifier.padding(top = 4.dp),
                     linkInteractionListener = { link ->
                         val url = (link as LinkAnnotation.Url).url
@@ -71,7 +71,7 @@ fun SettingsRow(
                     },
                     linkStyle = TextLinkStyles(
                         style = SpanStyle(
-                            color = WikipediaTheme.colors.progressiveColor,
+                            color = NITCWikiTheme.colors.progressiveColor,
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Medium,
                             letterSpacing = 0.25.sp
@@ -98,7 +98,7 @@ fun SettingsSection(
         Text(
             text = title,
             style = MaterialTheme.typography.labelLarge,
-            color = WikipediaTheme.colors.progressiveColor,
+            color = NITCWikiTheme.colors.progressiveColor,
             modifier = Modifier.padding(horizontal = 16.dp)
         )
         Spacer(modifier = Modifier.height(8.dp))
@@ -123,7 +123,7 @@ fun ToggleListScreen(
                 onNavigationClick = onBack,
             )
         },
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
     ) { paddingValues ->
         Column(
             modifier = Modifier
@@ -138,7 +138,7 @@ fun ToggleListScreen(
                     .padding(vertical = 8.dp),
                 text = description,
                 style = MaterialTheme.typography.bodyMedium,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
 
             modules.forEach { module ->
@@ -153,11 +153,11 @@ fun ToggleListScreen(
                                 onToggle(module.key, newChecked)
                             },
                             colors = SwitchDefaults.colors(
-                                uncheckedTrackColor = WikipediaTheme.colors.paperColor,
+                                uncheckedTrackColor = NITCWikiTheme.colors.paperColor,
                                 uncheckedThumbColor = MaterialTheme.colorScheme.outline,
                                 uncheckedBorderColor = MaterialTheme.colorScheme.outline,
-                                checkedTrackColor = WikipediaTheme.colors.progressiveColor,
-                                checkedThumbColor = WikipediaTheme.colors.paperColor,
+                                checkedTrackColor = NITCWikiTheme.colors.progressiveColor,
+                                checkedThumbColor = NITCWikiTheme.colors.paperColor,
                             ),
                         )
                     },

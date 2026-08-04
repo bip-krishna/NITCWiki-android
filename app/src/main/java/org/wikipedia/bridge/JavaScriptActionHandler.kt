@@ -4,7 +4,7 @@ import android.content.Context
 import kotlinx.serialization.Serializable
 import org.wikipedia.BuildConfig
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.extensions.getStrings
 import org.wikipedia.json.JsonUtil
@@ -78,7 +78,7 @@ object JavaScriptActionHandler {
     }
 
     fun setUp(context: Context, title: PageTitle, isPreview: Boolean, toolbarMargin: Int, messageCardHeight: Int): String {
-        val app = WikipediaApp.instance
+        val app = NITCWikiApp.instance
         val topActionBarHeight = if (isPreview) 0 else DimenUtil.roundedPxToDp(toolbarMargin.toFloat())
         val res = context.getStrings(title, intArrayOf(R.string.description_edit_add_description,
                 R.string.table_infobox, R.string.table_other, R.string.table_close))
@@ -125,7 +125,7 @@ object JavaScriptActionHandler {
         val showTalkLink = model.page!!.title.namespace() !== Namespace.TALK
         val showMapLink = model.page!!.pageProperties.geo != null
         val editedDaysAgo = TimeUnit.MILLISECONDS.toDays(Date().time - model.page!!.pageProperties.lastModified.time)
-        val langCode = model.title?.wikiSite?.languageCode ?: WikipediaApp.instance.appOrSystemLanguageCode
+        val langCode = model.title?.wikiSite?.languageCode ?: NITCWikiApp.instance.appOrSystemLanguageCode
 
         // TODO: page-library also supports showing disambiguation ("similar pages") links and
         // "page issues". We should be mindful that they exist, even if we don't want them for now.
@@ -157,7 +157,7 @@ object JavaScriptActionHandler {
             return ""
         }
         val apiBaseURL = model.title?.wikiSite!!.scheme() + "://" + model.title?.wikiSite!!.uri.authority!!.trimEnd('/')
-        val langCode = model.title?.wikiSite?.languageCode ?: WikipediaApp.instance.appOrSystemLanguageCode
+        val langCode = model.title?.wikiSite?.languageCode ?: NITCWikiApp.instance.appOrSystemLanguageCode
         return "pcs.c1.Footer.appendReadMore({" +
                 "   platform: \"android\"," +
                 "   clientVersion: \"${BuildConfig.VERSION_NAME}\"," +

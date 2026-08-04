@@ -10,7 +10,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.ReadingListsAnalyticsHelper
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
@@ -51,9 +51,9 @@ object ReadingListsShareHelper {
             }
 
             val param = readingListToUrlParam(readingList, wikiPageIdsMap)
-            val url = WikipediaApp.instance.wikiSite.url() + "/wiki/Special:ReadingLists?limport=$param&wprov=$PROVENANCE_PARAM"
+            val url = NITCWikiApp.instance.wikiSite.url() + "/wiki/Special:ReadingLists?limport=$param&wprov=$PROVENANCE_PARAM"
 
-            val finalUrl = if (Prefs.useUrlShortenerForSharing) ServiceFactory.get(WikipediaApp.instance.wikiSite).shortenUrl(url).shortenUrl?.shortUrl.orEmpty() else url
+            val finalUrl = if (Prefs.useUrlShortenerForSharing) ServiceFactory.get(NITCWikiApp.instance.wikiSite).shortenUrl(url).shortenUrl?.shortUrl.orEmpty() else url
 
             ReadingListsAnalyticsHelper.logShareList(activity, readingList)
 

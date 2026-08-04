@@ -27,7 +27,7 @@ import androidx.viewpager2.widget.ViewPager2
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.PatrollerExperienceEvent
 import org.wikipedia.databinding.FragmentSuggestedEditsCardsBinding
 import org.wikipedia.dataclient.mwapi.MwQueryPage
@@ -52,7 +52,7 @@ class SuggestedEditsCardsFragment : Fragment(), MenuProvider, SuggestedEditsItem
 
     private val viewModel: SuggestedEditsCardsViewModel by viewModels()
     private val viewPagerListener = ViewPagerListener()
-    private val app = WikipediaApp.instance
+    private val app = NITCWikiApp.instance
     private var swappingLanguageSpinners: Boolean = false
     private var resettingViewPager: Boolean = false
 

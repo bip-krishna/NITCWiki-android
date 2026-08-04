@@ -20,7 +20,7 @@ import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.PlacesEvent
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.databinding.FragmentSearchBinding
@@ -45,7 +45,7 @@ import java.util.Locale
 class SearchFragment : Fragment(), SearchResultCallback, RecentSearchesFragment.Callback, LanguageScrollView.Callback {
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
-    private var app = WikipediaApp.instance
+    private var app = NITCWikiApp.instance
     private var langBtnClicked = false
     private var isSearchActive = false
     private var articleTitle: String? = null
@@ -346,7 +346,7 @@ class SearchFragment : Fragment(), SearchResultCallback, RecentSearchesFragment.
         binding.searchCabView.queryHint =
             if (invokeSource == InvokeSource.PLACES) {
                 getString(R.string.places_search_hint)
-            } else if (Prefs.isHybridSearchOnboardingShown && HybridSearchAbCTest().isHybridSearchEnabled(WikipediaApp.instance.languageState.appLanguageCode)) {
+            } else if (Prefs.isHybridSearchOnboardingShown && HybridSearchAbCTest().isHybridSearchEnabled(NITCWikiApp.instance.languageState.appLanguageCode)) {
                 if (articleTitle.isNullOrEmpty()) {
                     getString(R.string.hybrid_search_search_hint)
                 } else {

@@ -34,7 +34,7 @@ import org.wikipedia.compose.components.WikiCard
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.growthtasks.GrowthUserImpact
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.DateUtil
@@ -109,13 +109,13 @@ fun AllTimeImpactCard(
     WikiCard(
         modifier = modifier,
         colors = CardDefaults.cardColors(
-            containerColor = WikipediaTheme.colors.paperColor,
-            contentColor = WikipediaTheme.colors.paperColor
+            containerColor = NITCWikiTheme.colors.paperColor,
+            contentColor = NITCWikiTheme.colors.paperColor
         ),
         elevation = 0.dp,
         border = BorderStroke(
             width = 1.dp,
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         )
     ) {
         Column(
@@ -126,7 +126,7 @@ fun AllTimeImpactCard(
                 style = MaterialTheme.typography.labelMedium.copy(
                     fontWeight = FontWeight.SemiBold
                 ),
-                color = WikipediaTheme.colors.primaryColor,
+                color = NITCWikiTheme.colors.primaryColor,
                 lineHeight = MaterialTheme.typography.labelMedium.lineHeight
             )
             Row(
@@ -181,7 +181,7 @@ fun AllTimeImpactCard(
             if (totalEdits > 0) {
                 HorizontalDivider(
                     modifier = Modifier.padding(top = 16.dp),
-                    color = WikipediaTheme.colors.borderColor
+                    color = NITCWikiTheme.colors.borderColor
                 )
 
                 Column(
@@ -192,7 +192,7 @@ fun AllTimeImpactCard(
                         style = MaterialTheme.typography.labelMedium.copy(
                             fontWeight = FontWeight.SemiBold
                         ),
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         lineHeight = MaterialTheme.typography.labelMedium.lineHeight
                     )
                     Row(
@@ -208,7 +208,7 @@ fun AllTimeImpactCard(
                             modifier = Modifier.align(Alignment.Bottom),
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Medium,
-                            color = WikipediaTheme.colors.primaryColor
+                            color = NITCWikiTheme.colors.primaryColor
                         )
                         Text(
                             text = pluralStringResource(
@@ -219,7 +219,7 @@ fun AllTimeImpactCard(
                                 fontWeight = FontWeight.Medium,
                                 lineHeight = 22.sp
                             ),
-                            color = WikipediaTheme.colors.secondaryColor
+                            color = NITCWikiTheme.colors.secondaryColor
                         )
                     }
                     Row(
@@ -230,9 +230,9 @@ fun AllTimeImpactCard(
                         val totalSize = lastThirtyDaysEdits.size
                         lastThirtyDaysEdits.forEach { (_, editCount) ->
                             val pileColor = if (editCount > 0) {
-                                WikipediaTheme.colors.progressiveColor
+                                NITCWikiTheme.colors.progressiveColor
                             } else {
-                                WikipediaTheme.colors.borderColor
+                                NITCWikiTheme.colors.borderColor
                             }
                             Box(
                                 modifier = Modifier
@@ -252,18 +252,18 @@ fun AllTimeImpactCard(
                             modifier = Modifier.weight(1f),
                             text = DateUtil.getMonthOnlyDateStringFromTimeString(lastThirtyDaysEdits.keys.first()),
                             style = MaterialTheme.typography.bodySmall,
-                            color = WikipediaTheme.colors.secondaryColor
+                            color = NITCWikiTheme.colors.secondaryColor
                         )
                         Text(
                             text = DateUtil.getMonthOnlyDateStringFromTimeString(lastThirtyDaysEdits.keys.last()),
                             style = MaterialTheme.typography.bodySmall,
-                            color = WikipediaTheme.colors.secondaryColor
+                            color = NITCWikiTheme.colors.secondaryColor
                         )
                     }
 
                     HorizontalDivider(
                         modifier = Modifier.padding(top = 16.dp),
-                        color = WikipediaTheme.colors.borderColor
+                        color = NITCWikiTheme.colors.borderColor
                     )
 
                     Row(
@@ -278,7 +278,7 @@ fun AllTimeImpactCard(
                             modifier = Modifier.align(Alignment.Bottom),
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Medium,
-                            color = WikipediaTheme.colors.primaryColor
+                            color = NITCWikiTheme.colors.primaryColor
                         )
                         Text(
                             text = pluralStringResource(
@@ -289,7 +289,7 @@ fun AllTimeImpactCard(
                                 fontWeight = FontWeight.Medium,
                                 lineHeight = 22.sp
                             ),
-                            color = WikipediaTheme.colors.secondaryColor
+                            color = NITCWikiTheme.colors.secondaryColor
                         )
                     }
 
@@ -301,7 +301,7 @@ fun AllTimeImpactCard(
                             .padding(top = 8.dp),
                         chartSampleSize = 90,
                         strokeWidth = 2.dp,
-                        strokeColor = WikipediaTheme.colors.progressiveColor
+                        strokeColor = NITCWikiTheme.colors.progressiveColor
                     )
                 }
             }
@@ -319,7 +319,7 @@ fun TotalEditsCard(
     WikiCard(
         modifier = modifier,
         elevation = 0.dp,
-        border = BorderStroke(width = 1.dp, color = WikipediaTheme.colors.borderColor),
+        border = BorderStroke(width = 1.dp, color = NITCWikiTheme.colors.borderColor),
         onClick = onClickListener
     ) {
         Column(
@@ -335,7 +335,7 @@ fun TotalEditsCard(
                 modifier = Modifier.padding(top = 16.dp),
                 text = formatter.format(totalEdits),
                 style = MaterialTheme.typography.titleLarge,
-                color = WikipediaTheme.colors.primaryColor,
+                color = NITCWikiTheme.colors.primaryColor,
                 fontWeight = FontWeight.Medium
             )
         }
@@ -355,7 +355,7 @@ fun ImpactStatView(
         Icon(
             modifier = Modifier.size(28.dp),
             painter = painterResource(iconResource),
-            tint = WikipediaTheme.colors.progressiveColor,
+            tint = NITCWikiTheme.colors.progressiveColor,
             contentDescription = null
         )
         Column(
@@ -366,12 +366,12 @@ fun ImpactStatView(
                 style = MaterialTheme.typography.labelLarge.copy(
                     fontWeight = FontWeight.SemiBold
                 ),
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
             Text(
                 text = statLabel.lowercase(),
                 style = MaterialTheme.typography.bodySmall,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         }
     }

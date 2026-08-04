@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.databinding.ActivityUserContribWikiSelectBinding
 import org.wikipedia.page.Namespace
@@ -27,10 +27,10 @@ class UserContribFilterActivity : BaseActivity() {
     private lateinit var binding: ActivityUserContribWikiSelectBinding
 
     private val langUpdateLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-        if (!WikipediaApp.instance.languageState.appLanguageCodes.contains(Prefs.userContribFilterLangCode) &&
+        if (!NITCWikiApp.instance.languageState.appLanguageCodes.contains(Prefs.userContribFilterLangCode) &&
             Prefs.userContribFilterLangCode != Constants.WIKI_CODE_COMMONS &&
             Prefs.userContribFilterLangCode != Constants.WIKI_CODE_WIKIDATA) {
-            Prefs.userContribFilterLangCode = WikipediaApp.instance.appOrSystemLanguageCode
+            Prefs.userContribFilterLangCode = NITCWikiApp.instance.appOrSystemLanguageCode
         }
         binding.recyclerView.adapter = ItemAdapter(this)
     }
@@ -79,16 +79,16 @@ class UserContribFilterActivity : BaseActivity() {
 
         init {
             itemList.add(getString(R.string.notifications_wiki_filter_header))
-            WikipediaApp.instance.languageState.appLanguageCodes.forEach { itemList.add(Item(FILTER_TYPE_WIKI, it, null)) }
+            NITCWikiApp.instance.languageState.appLanguageCodes.forEach { itemList.add(Item(FILTER_TYPE_WIKI, it, null)) }
             itemList.add(Item(FILTER_TYPE_WIKI, Constants.WIKI_CODE_COMMONS, R.drawable.ic_commons_logo))
             itemList.add(Item(FILTER_TYPE_WIKI, Constants.WIKI_CODE_WIKIDATA, R.drawable.ic_wikidata_logo))
             itemList.add(getString(R.string.notifications_filter_update_app_languages))
             itemList.add(getString(R.string.user_contrib_filter_ns_header))
             itemList.add(Item(FILTER_TYPE_NAMESPACE, getString(R.string.user_contrib_filter_all), null))
             itemList.add(Item(FILTER_TYPE_NAMESPACE, getString(R.string.namespace_article), R.drawable.ic_article_ltr_ooui))
-            itemList.add(Item(FILTER_TYPE_NAMESPACE, TalkAliasData.valueFor(WikipediaApp.instance.appOrSystemLanguageCode), R.drawable.ic_notification_article_talk))
-            itemList.add(Item(FILTER_TYPE_NAMESPACE, UserAliasData.valueFor(WikipediaApp.instance.appOrSystemLanguageCode), R.drawable.ic_user_avatar))
-            itemList.add(Item(FILTER_TYPE_NAMESPACE, UserTalkAliasData.valueFor(WikipediaApp.instance.appOrSystemLanguageCode), R.drawable.ic_notification_user_talk))
+            itemList.add(Item(FILTER_TYPE_NAMESPACE, TalkAliasData.valueFor(NITCWikiApp.instance.appOrSystemLanguageCode), R.drawable.ic_notification_article_talk))
+            itemList.add(Item(FILTER_TYPE_NAMESPACE, UserAliasData.valueFor(NITCWikiApp.instance.appOrSystemLanguageCode), R.drawable.ic_user_avatar))
+            itemList.add(Item(FILTER_TYPE_NAMESPACE, UserTalkAliasData.valueFor(NITCWikiApp.instance.appOrSystemLanguageCode), R.drawable.ic_notification_user_talk))
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, type: Int): DefaultViewHolder<*> {
@@ -157,9 +157,9 @@ class UserContribFilterActivity : BaseActivity() {
     private fun getNamespaceCode(text: String): Int {
         return when (text) {
             getString(R.string.namespace_article) -> Namespace.MAIN.code()
-            TalkAliasData.valueFor(WikipediaApp.instance.appOrSystemLanguageCode) -> Namespace.TALK.code()
-            UserAliasData.valueFor(WikipediaApp.instance.appOrSystemLanguageCode) -> Namespace.USER.code()
-            UserTalkAliasData.valueFor(WikipediaApp.instance.appOrSystemLanguageCode) -> Namespace.USER_TALK.code()
+            TalkAliasData.valueFor(NITCWikiApp.instance.appOrSystemLanguageCode) -> Namespace.TALK.code()
+            UserAliasData.valueFor(NITCWikiApp.instance.appOrSystemLanguageCode) -> Namespace.USER.code()
+            UserTalkAliasData.valueFor(NITCWikiApp.instance.appOrSystemLanguageCode) -> Namespace.USER_TALK.code()
             else -> -1
         }
     }

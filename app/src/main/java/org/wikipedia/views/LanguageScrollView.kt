@@ -11,7 +11,7 @@ import androidx.core.view.isNotEmpty
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.databinding.ViewLanguageScrollBinding
 import org.wikipedia.util.ResourceUtil
 
@@ -100,7 +100,7 @@ class LanguageScrollView(context: Context, attrs: AttributeSet? = null) : Constr
     private fun updateTabLanguageLabel(customView: View, languageCode: String? = null, @ColorInt textColor: Int? = null) {
         val languageLabelTextView = customView.findViewById<TextView>(R.id.language_label)
         if (!languageCode.isNullOrEmpty()) {
-            languageLabelTextView.text = WikipediaApp.instance.languageState.getAppLanguageLocalizedName(languageCode)
+            languageLabelTextView.text = NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(languageCode)
         }
         textColor?.let {
             languageLabelTextView.setTextColor(textColor)

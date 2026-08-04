@@ -18,7 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 import kotlin.math.absoluteValue
 
@@ -29,8 +29,8 @@ fun PageIndicator(
     animationDuration: Int = 500,
     indicatorSpacing: Dp = 12.dp,
     maxIndicatorSize: Dp = 8.dp,
-    activeColor: Color = WikipediaTheme.colors.progressiveColor,
-    inactiveColor: Color = WikipediaTheme.colors.inactiveColor
+    activeColor: Color = NITCWikiTheme.colors.progressiveColor,
+    inactiveColor: Color = NITCWikiTheme.colors.inactiveColor
 ) {
     Row(
         modifier = modifier,

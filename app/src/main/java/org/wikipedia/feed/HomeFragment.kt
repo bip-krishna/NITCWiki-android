@@ -21,7 +21,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.compose.components.WikipediaAlertDialog
 import org.wikipedia.compose.components.menu.PageOverflowMenuViewModel
@@ -55,7 +55,7 @@ import org.wikipedia.readinglist.recommended.RecommendedReadingListSettingsActiv
 import org.wikipedia.settings.Prefs
 import org.wikipedia.settings.homefeed.HomeFeedSettingsActivity
 import org.wikipedia.settings.homefeed.HomeFeedSettingsStartDestination
-import org.wikipedia.settings.languages.WikipediaLanguagesActivity
+import org.wikipedia.settings.languages.NITCWikiLanguagesActivity
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.ShareUtil
@@ -102,10 +102,10 @@ class HomeFragment : Fragment() {
                 val communityContentState by viewModel.communityState.collectAsState()
                 var swipeToExplorePromptShown by remember { mutableStateOf(Prefs.isHomeSwipeToExplorePromptShown) }
 
-                BaseTheme(currentTheme = if (selectedTab == HomeTab.FOR_YOU) Theme.BLACK else WikipediaApp.instance.currentTheme) {
+                BaseTheme(currentTheme = if (selectedTab == HomeTab.FOR_YOU) Theme.BLACK else NITCWikiApp.instance.currentTheme) {
                     HomeScreen(
                         wikiSite = wikiSite,
-                        languageState = WikipediaApp.instance.languageState,
+                        languageState = NITCWikiApp.instance.languageState,
                         selectedTab = selectedTab,
                         communityContentState = communityContentState,
                         forYouContentState = forYouContentState,
@@ -230,7 +230,7 @@ class HomeFragment : Fragment() {
                         },
                         onManageLanguagesClick = {
                             instrument.submitInteraction("click", "language_menu", elementId = "manage_languages", actionContext = mapOf("selected_tab" to selectedTab.name))
-                            requireActivity().startActivity(WikipediaLanguagesActivity.newIntent(requireContext(), invokeSource = InvokeSource.FEED))
+                            requireActivity().startActivity(NITCWikiLanguagesActivity.newIntent(requireContext(), invokeSource = InvokeSource.FEED))
                         },
                         onCustomizeClick = { card ->
                             if (card != null) {

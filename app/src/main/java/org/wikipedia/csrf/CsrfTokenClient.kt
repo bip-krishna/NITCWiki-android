@@ -3,7 +3,7 @@ package org.wikipedia.csrf
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.concurrency.FlowEventBus
 import org.wikipedia.dataclient.Service
@@ -40,7 +40,7 @@ object CsrfTokenClient {
                             L.d("App believes we're logged in, but got anonymous token. Logging in explicitly...")
                             // Regardless of which WikiSite the token is being requested from, the login call
                             // should be done on the primary WikiSite of the app itself.
-                            val loginResult = LoginClient().loginBlocking(WikipediaApp.instance.wikiSite, AccountUtil.userName, AccountUtil.password!!)
+                            val loginResult = LoginClient().loginBlocking(NITCWikiApp.instance.wikiSite, AccountUtil.userName, AccountUtil.password!!)
                             // If the login sequence results in anything but PASS, then don't bother retrying.
                             // Retrying is intended only for network errors, which would result in an exception, which is caught below.
                             if (!loginResult.pass()) {
@@ -75,7 +75,7 @@ object CsrfTokenClient {
 
     private fun bailWithLogout() {
         // Signal to the rest of the app that we're explicitly logging out in the background.
-        WikipediaApp.instance.resetAfterLogOut()
+        NITCWikiApp.instance.resetAfterLogOut()
         Prefs.loggedOutInBackground = true
         FlowEventBus.post(LoggedOutInBackgroundEvent())
     }

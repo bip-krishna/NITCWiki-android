@@ -7,7 +7,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import okhttp3.Request
 import okhttp3.Response
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.dataclient.RestService
 import org.wikipedia.page.LinkHandler
 import org.wikipedia.page.PageViewModel
@@ -55,11 +55,11 @@ abstract class OkHttpWebViewClient : WebViewClient() {
         try {
             val shouldLogLatency = request.url.encodedPath?.contains(RestService.PAGE_HTML_ENDPOINT) == true
             if (shouldLogLatency) {
-                WikipediaApp.instance.appSessionEvent.pageFetchStart()
+                NITCWikiApp.instance.appSessionEvent.pageFetchStart()
             }
             val rsp = request(request)
             if (rsp.networkResponse != null && shouldLogLatency) {
-                WikipediaApp.instance.appSessionEvent.pageFetchEnd()
+                NITCWikiApp.instance.appSessionEvent.pageFetchEnd()
             }
             val contentType = rsp.header(HEADER_CONTENT_TYPE).orEmpty()
             response = if (contentType.startsWith("audio") || contentType.startsWith("video")) {
@@ -111,7 +111,7 @@ abstract class OkHttpWebViewClient : WebViewClient() {
     private fun addHeaders(request: WebResourceRequest, builder: Request.Builder): Request.Builder {
         model.title?.let { title ->
             // TODO: Find a common way to set this header between here and RetrofitFactory.
-            builder.header("Accept-Language", WikipediaApp.instance.getAcceptLanguage(title.wikiSite))
+            builder.header("Accept-Language", NITCWikiApp.instance.getAcceptLanguage(title.wikiSite))
             if (model.isInReadingList) {
                 builder.header(OfflineCacheInterceptor.SAVE_HEADER, OfflineCacheInterceptor.SAVE_HEADER_SAVE)
             }

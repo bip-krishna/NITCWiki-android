@@ -12,7 +12,7 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextLinkStyles
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withLink
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.settings.LicenseActivity
 
 data class LinkTextData(
@@ -34,7 +34,7 @@ fun LicenseLinkText(
                 link = LinkAnnotation.Url(
                     url = linkTextData.url ?: "",
                     styles = TextLinkStyles(
-                        style = SpanStyle(color = WikipediaTheme.colors.progressiveColor)
+                        style = SpanStyle(color = NITCWikiTheme.colors.progressiveColor)
                     ),
                     linkInteractionListener = {
                         if (linkTextData.asset != null) {

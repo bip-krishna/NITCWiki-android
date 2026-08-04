@@ -8,7 +8,7 @@ import android.view.MenuItem
 import androidx.core.net.toUri
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.SingleFragmentActivity
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.auth.AccountUtil
@@ -67,13 +67,13 @@ class GamesHubActivity : SingleFragmentActivity<GamesHubFragment>() {
         return when (item.itemId) {
             R.id.menu_game_stats -> {
                 WikiGamesEvent.submit(action = "game_stats_click", activeInterface = "games_hub")
-                val primaryLangCodeSupported = WikiGames.WHICH_CAME_FIRST.isLangSupported(WikipediaApp.instance.languageState.appLanguageCode)
+                val primaryLangCodeSupported = WikiGames.WHICH_CAME_FIRST.isLangSupported(NITCWikiApp.instance.languageState.appLanguageCode)
                 val intent = MainActivity.newIntent(this)
                     .apply {
                         addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
                         putExtra(Constants.INTENT_EXTRA_GO_TO_SE_TAB, NavTab.EDITS.code())
                         putExtra(Constants.INTENT_EXTRA_SCROLL_TO_GAMES, primaryLangCodeSupported)
-                        if (!WikipediaApp.instance.languageState.appLanguageCode.equals(fragment.viewModel.selectedLanguage, true) || !primaryLangCodeSupported) {
+                        if (!NITCWikiApp.instance.languageState.appLanguageCode.equals(fragment.viewModel.selectedLanguage, true) || !primaryLangCodeSupported) {
                             putExtra(Constants.INTENT_EXTRA_SNACKBAR_MESSAGE, getString(R.string.activity_tab_snackbar_label))
                         }
                     }

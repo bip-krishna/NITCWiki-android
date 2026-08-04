@@ -1,12 +1,12 @@
 package org.wikipedia.analytics.eventplatform
 
 import android.content.Context
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.page.PageTitle
 
 object WatchlistAnalyticsHelper {
 
-    fun logWatchlistItemCountOnLoad(context: Context = WikipediaApp.instance, itemsCount: Int) {
+    fun logWatchlistItemCountOnLoad(context: Context = NITCWikiApp.instance, itemsCount: Int) {
         EventPlatformClient.submit(
             BreadCrumbLogEvent(
                 BreadCrumbViewUtil.getReadableScreenName(context),
@@ -15,7 +15,7 @@ object WatchlistAnalyticsHelper {
         )
     }
 
-    fun logAddedToWatchlist(title: PageTitle?, context: Context = WikipediaApp.instance) {
+    fun logAddedToWatchlist(title: PageTitle?, context: Context = NITCWikiApp.instance) {
         EventPlatformClient.submit(
             BreadCrumbLogEvent(
                 BreadCrumbViewUtil.getReadableScreenName(context),
@@ -24,7 +24,7 @@ object WatchlistAnalyticsHelper {
         )
     }
 
-    fun logRemovedFromWatchlist(title: PageTitle?, context: Context = WikipediaApp.instance) {
+    fun logRemovedFromWatchlist(title: PageTitle?, context: Context = NITCWikiApp.instance) {
         EventPlatformClient.submit(
             BreadCrumbLogEvent(
                 BreadCrumbViewUtil.getReadableScreenName(context),
@@ -33,7 +33,7 @@ object WatchlistAnalyticsHelper {
         )
     }
 
-    fun logAddedToWatchlistSuccess(title: PageTitle?, context: Context = WikipediaApp.instance) {
+    fun logAddedToWatchlistSuccess(title: PageTitle?, context: Context = NITCWikiApp.instance) {
         EventPlatformClient.submit(
             BreadCrumbLogEvent(
                 BreadCrumbViewUtil.getReadableScreenName(context),
@@ -42,7 +42,7 @@ object WatchlistAnalyticsHelper {
         )
     }
 
-    fun logRemovedFromWatchlistSuccess(title: PageTitle?, context: Context = WikipediaApp.instance) {
+    fun logRemovedFromWatchlistSuccess(title: PageTitle?, context: Context = NITCWikiApp.instance) {
         EventPlatformClient.submit(
             BreadCrumbLogEvent(
                 BreadCrumbViewUtil.getReadableScreenName(context),
@@ -55,7 +55,7 @@ object WatchlistAnalyticsHelper {
         EventPlatformClient.submit(
             BreadCrumbLogEvent(
                 BreadCrumbViewUtil.getReadableScreenName(context),
-                "WatchlistFilterSelection.appWikis:${WikipediaApp.instance.languageState.appLanguageCodes}.excludedWikiCodes:$excludedWikiCodes.includedTypeCodes:$includedTypeCodes"
+                "WatchlistFilterSelection.appWikis:${NITCWikiApp.instance.languageState.appLanguageCodes}.excludedWikiCodes:$excludedWikiCodes.includedTypeCodes:$includedTypeCodes"
             )
         )
     }

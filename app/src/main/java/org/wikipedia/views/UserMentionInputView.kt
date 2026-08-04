@@ -16,7 +16,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.databinding.ViewUserMentionInputBinding
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.edit.richtext.SyntaxHighlighter
@@ -34,7 +34,7 @@ class UserMentionInputView(context: Context, attrs: AttributeSet? = null) :
 
     val editText get() = binding.inputEditText
     val textInputLayout get() = binding.inputTextLayout
-    var wikiSite = WikipediaApp.instance.wikiSite
+    var wikiSite = NITCWikiApp.instance.wikiSite
     var listener: Listener? = null
     var userNameHints: Set<String> = emptySet()
 

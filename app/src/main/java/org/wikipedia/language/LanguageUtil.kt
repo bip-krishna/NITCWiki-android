@@ -5,7 +5,7 @@ import android.os.Build
 import android.view.inputmethod.InputMethodManager
 import androidx.core.os.LocaleListCompat
 import org.apache.commons.lang3.StringUtils
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.util.StringUtil
 import java.util.Locale
 
@@ -33,7 +33,7 @@ object LanguageUtil {
             }
 
             // Query the installed keyboard languages, and add them to the list, if they don't exist.
-            val imm = WikipediaApp.instance.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            val imm = NITCWikiApp.instance.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             val ims = imm.enabledInputMethodList
             val langTagList = mutableListOf<String>()
             for (method in ims) {
@@ -118,7 +118,7 @@ object LanguageUtil {
 
     fun getSupportedLanguageCodes(list: List<String>): List<String> {
         return list.flatMap { langCode ->
-            WikipediaApp.instance.languageState.getLanguageVariants(langCode) ?: listOf(langCode)
+            NITCWikiApp.instance.languageState.getLanguageVariants(langCode) ?: listOf(langCode)
         }
     }
 }

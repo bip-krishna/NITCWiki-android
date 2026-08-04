@@ -5,7 +5,7 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.withContext
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
@@ -62,7 +62,7 @@ class StandardSearchRepository : SearchRepository<StandardSearchResults> {
 
         if (resultList.isEmpty() && response?.continuation == null) {
             countsPerLanguageCode.clear()
-            WikipediaApp.instance.languageState.appLanguageCodes.forEach { langCode ->
+            NITCWikiApp.instance.languageState.appLanguageCodes.forEach { langCode ->
                 var countResultSize = 0
                 if (langCode != languageCode) {
                     val prefixSearchResponse = ServiceFactory.get(WikiSite.forLanguageCode(langCode))
@@ -89,7 +89,7 @@ class StandardSearchRepository : SearchRepository<StandardSearchResults> {
     }
 
     private fun getSearchResultsFromTabs(wikiSite: WikiSite, searchTerm: String): SearchResults {
-        WikipediaApp.instance.tabList.forEach { tab ->
+        NITCWikiApp.instance.tabList.forEach { tab ->
             tab.backStackPositionTitle?.let {
                 if (wikiSite == it.wikiSite && StringUtil.fromHtml(it.displayText).contains(searchTerm, true)) {
                     return SearchResults(mutableListOf(SearchResult(it, SearchResult.SearchResultType.TAB_LIST)))

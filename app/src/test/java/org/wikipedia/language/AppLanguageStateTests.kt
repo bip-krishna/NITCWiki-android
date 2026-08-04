@@ -4,12 +4,12 @@ import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 
 @RunWith(RobolectricTestRunner::class)
 class AppLanguageStateTests {
 
-    private val languageState get() = WikipediaApp.instance.languageState
+    private val languageState get() = NITCWikiApp.instance.languageState
 
     @Test
     fun testInitAppLanguages() {

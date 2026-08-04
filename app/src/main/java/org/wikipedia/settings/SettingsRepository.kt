@@ -4,7 +4,7 @@ import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringSetPreferencesKey
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.extensions.dataStore
 
 object SettingsRepository {
@@ -12,7 +12,7 @@ object SettingsRepository {
 
     private val hiddenModulesKey = stringSetPreferencesKey("home_hidden_modules")
     private val hiddenCardsKey = stringSetPreferencesKey("home_hidden_cards")
-    private val dataStore = WikipediaApp.instance.dataStore
+    private val dataStore = NITCWikiApp.instance.dataStore
 
     val hiddenModules: Flow<Set<String>> = dataStore.data
         .map { preferences ->

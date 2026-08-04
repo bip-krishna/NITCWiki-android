@@ -35,7 +35,7 @@ import org.wikipedia.BackPressedHandler
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.activity.FragmentUtil.getCallback
 import org.wikipedia.activitytab.ActivityTabFragment
@@ -247,14 +247,14 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, HistoryFragme
             refreshContents()
             FeedbackUtil.showMessage(this, R.string.login_success_toast)
         } else if (requestCode == Constants.ACTIVITY_REQUEST_BROWSE_TABS) {
-            if (WikipediaApp.instance.tabCount == 0) {
+            if (NITCWikiApp.instance.tabCount == 0) {
                 // They browsed the tabs and cleared all of them, without wanting to open a new tab.
                 return
             }
             if (resultCode == TabActivity.RESULT_NEW_TAB) {
                 val entry = HistoryEntry(PageTitle(
-                    MainPageNameData.valueFor(WikipediaApp.instance.appOrSystemLanguageCode),
-                        WikipediaApp.instance.wikiSite), HistoryEntry.SOURCE_MAIN_PAGE)
+                    MainPageNameData.valueFor(NITCWikiApp.instance.appOrSystemLanguageCode),
+                        NITCWikiApp.instance.wikiSite), HistoryEntry.SOURCE_MAIN_PAGE)
                 startActivity(PageActivity.newIntentForNewTab(requireContext(), entry, entry.title))
             } else if (resultCode == TabActivity.RESULT_LOAD_FROM_BACKSTACK) {
                 startActivity(PageActivity.newIntent(requireContext()))
@@ -301,14 +301,14 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, HistoryFragme
         menu.findItem(R.id.menu_overflow_button).isVisible = currentFragment is ReadingListsFragment
 
         val tabsItem = menu.findItem(R.id.menu_tabs)
-        if (WikipediaApp.instance.tabCount < 1 || currentFragment is SuggestedEditsTasksFragment) {
+        if (NITCWikiApp.instance.tabCount < 1 || currentFragment is SuggestedEditsTasksFragment) {
             tabsItem.isVisible = false
             tabCountsView = null
         } else {
             tabsItem.isVisible = true
             tabCountsView = TabCountsView(requireActivity(), null)
             tabCountsView!!.setOnClickListener {
-                if (WikipediaApp.instance.tabCount == 1) {
+                if (NITCWikiApp.instance.tabCount == 1) {
                     startActivity(PageActivity.newIntent(requireActivity()))
                 } else {
                     startActivityForResult(TabActivity.newIntent(requireActivity()), Constants.ACTIVITY_REQUEST_BROWSE_TABS)
@@ -342,7 +342,7 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, HistoryFragme
 
     fun handleIntent(intent: Intent) {
         if (intent.hasExtra(Constants.INTENT_APP_SHORTCUT_RANDOMIZER)) {
-            startActivity(RandomActivity.newIntent(requireActivity(), WikipediaApp.instance.wikiSite, InvokeSource.APP_SHORTCUTS))
+            startActivity(RandomActivity.newIntent(requireActivity(), NITCWikiApp.instance.wikiSite, InvokeSource.APP_SHORTCUTS))
         } else if (intent.hasExtra(Constants.INTENT_APP_SHORTCUT_SEARCH)) {
             openSearchActivity(InvokeSource.APP_SHORTCUTS, null, null)
         } else if (intent.hasExtra(Constants.INTENT_APP_SHORTCUT_CONTINUE_READING)) {
@@ -359,7 +359,7 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, HistoryFragme
             onNavigateTo(NavTab.of(intent.getIntExtra(Constants.INTENT_EXTRA_GO_TO_SE_TAB, NavTab.EDITS.code())))
         } else if (intent.hasExtra(Constants.INTENT_EXTRA_PREVIEW_SAVED_READING_LISTS)) {
             onNavigateTo(NavTab.READING_LISTS)
-        } else if (lastPageViewedWithin(1) && !intent.hasExtra(Constants.INTENT_RETURN_TO_MAIN) && WikipediaApp.instance.tabCount > 0) {
+        } else if (lastPageViewedWithin(1) && !intent.hasExtra(Constants.INTENT_RETURN_TO_MAIN) && NITCWikiApp.instance.tabCount > 0) {
             startActivity(PageActivity.newIntent(requireContext()))
         }
     }
@@ -466,7 +466,7 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, HistoryFragme
     }
 
     override fun usernameClick() {
-        val pageTitle = PageTitle(UserAliasData.valueFor(WikipediaApp.instance.languageState.appLanguageCode), AccountUtil.userName, WikipediaApp.instance.wikiSite)
+        val pageTitle = PageTitle(UserAliasData.valueFor(NITCWikiApp.instance.languageState.appLanguageCode), AccountUtil.userName, NITCWikiApp.instance.wikiSite)
         val entry = HistoryEntry(pageTitle, HistoryEntry.SOURCE_MAIN_PAGE)
         startActivity(PageActivity.newIntentForNewTab(requireContext(), entry, pageTitle))
     }
@@ -478,8 +478,8 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, HistoryFragme
     override fun talkClick() {
         if (AccountUtil.isLoggedIn) {
             startActivity(TalkTopicsActivity.newIntent(requireActivity(),
-                PageTitle(UserTalkAliasData.valueFor(WikipediaApp.instance.languageState.appLanguageCode), AccountUtil.userName,
-                    WikiSite.forLanguageCode(WikipediaApp.instance.appOrSystemLanguageCode)), InvokeSource.NAV_MENU))
+                PageTitle(UserTalkAliasData.valueFor(NITCWikiApp.instance.languageState.appLanguageCode), AccountUtil.userName,
+                    WikiSite.forLanguageCode(NITCWikiApp.instance.appOrSystemLanguageCode)), InvokeSource.NAV_MENU))
         }
     }
 

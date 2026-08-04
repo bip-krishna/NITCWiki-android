@@ -28,10 +28,10 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import androidx.core.net.toUri
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.compose.extensions.composeFromHtml
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.UriUtil
@@ -43,12 +43,12 @@ fun HtmlText(
     modifier: Modifier = Modifier,
     linkStyle: TextLinkStyles = TextLinkStyles(
         style = SpanStyle(
-            color = WikipediaTheme.colors.progressiveColor,
+            color = NITCWikiTheme.colors.progressiveColor,
             fontSize = 14.sp
         )
     ),
     style: TextStyle = TextStyle(
-        color = WikipediaTheme.colors.primaryColor,
+        color = NITCWikiTheme.colors.primaryColor,
         fontSize = 14.sp
     ),
     color: Color = Color.Unspecified,
@@ -131,7 +131,7 @@ fun HtmlText(
 fun defaultLinkInteractionListener(wikiSite: WikiSite? = null): LinkInteractionListener {
     return LinkInteractionListener { linkAnnotation ->
         (linkAnnotation as? LinkAnnotation.Url)?.url?.let { url ->
-            UriUtil.visitInExternalBrowser(WikipediaApp.instance,
+            UriUtil.visitInExternalBrowser(NITCWikiApp.instance,
                 (if (wikiSite == null) UriUtil.resolveProtocolRelativeUrl(url) else
                     UriUtil.resolveProtocolRelativeUrl(wikiSite, url)).toUri()
             )

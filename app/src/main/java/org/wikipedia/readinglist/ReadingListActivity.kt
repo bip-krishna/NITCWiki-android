@@ -8,7 +8,7 @@ import androidx.activity.OnBackPressedCallback
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.activity.SingleFragmentActivity
 import org.wikipedia.analytics.eventplatform.ReadingListsAnalyticsHelper
@@ -55,7 +55,7 @@ class ReadingListActivity : SingleFragmentActivity<ReadingListFragment>(), BaseA
             if (readingListMode == ReadingListMode.DEFAULT) {
                 ReadingListsAnalyticsHelper.logReceiveCancel(this@ReadingListActivity, fragment.readingList)
             }
-            if (!WikipediaApp.instance.haveMainActivity) {
+            if (!NITCWikiApp.instance.haveMainActivity) {
                 startActivity(MainActivity.newIntent(this@ReadingListActivity)
                     .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                     .putExtra(Constants.INTENT_RETURN_TO_MAIN, true)

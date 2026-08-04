@@ -12,7 +12,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isVisible
 import androidx.core.widget.ImageViewCompat
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.databinding.ItemSuggestedEditsRecentEditsFilterBinding
 import org.wikipedia.util.ResourceUtil
 
@@ -50,7 +50,7 @@ class SuggestedEditsRecentEditsFilterItemView(context: Context, attrs: Attribute
         } else {
             titleText = when (filter.filterCode) {
                 context.getString(R.string.notifications_all_wikis_text) -> filter.filterCode
-                else -> WikipediaApp.instance.languageState.getAppLanguageLocalizedName(filter.filterCode).orEmpty()
+                else -> NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(filter.filterCode).orEmpty()
             }
         }
 

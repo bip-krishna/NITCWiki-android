@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.csrf.CsrfTokenClient
 import org.wikipedia.database.AppDatabase
@@ -113,7 +113,7 @@ class TalkTopicsViewModel(var pageTitle: PageTitle) : ViewModel() {
             val shaList = threadItems.mapNotNull { threadSha(it) }
             seenThreadItemsSha.addAll(talkPageDao.getFor(shaList).map { it.sha })
 
-            val watchStatus = if (WikipediaApp.instance.isOnline && AccountUtil.isLoggedIn) ServiceFactory.get(pageTitle.wikiSite)
+            val watchStatus = if (NITCWikiApp.instance.isOnline && AccountUtil.isLoggedIn) ServiceFactory.get(pageTitle.wikiSite)
                     .getWatchedStatus(pageTitle.prefixedText).query?.firstPage()!! else MwQueryPage()
             isWatched = watchStatus.watched
             hasWatchlistExpiry = watchStatus.hasWatchlistExpiry()
@@ -206,7 +206,7 @@ class TalkTopicsViewModel(var pageTitle: PageTitle) : ViewModel() {
     }
 
     suspend fun isSubscribed(commentName: String): Boolean {
-        if (!WikipediaApp.instance.isOnline) {
+        if (!NITCWikiApp.instance.isOnline) {
             return false
         }
         val response = ServiceFactory.get(pageTitle.wikiSite).getTalkPageTopicSubscriptions(commentName)

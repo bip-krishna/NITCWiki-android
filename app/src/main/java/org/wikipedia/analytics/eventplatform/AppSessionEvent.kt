@@ -3,7 +3,7 @@ package org.wikipedia.analytics.eventplatform
 import android.text.format.DateUtils
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.SessionData
 import org.wikipedia.history.HistoryEntry
 import org.wikipedia.settings.Prefs
@@ -76,7 +76,7 @@ class AppSessionEvent {
 
     private fun logSessionData() {
         val sessionLength = (sessionData.lastTouchTime - sessionData.startTime).toInt()
-        EventPlatformClient.submit(AppSessionEventImpl(sessionLength, sessionData, WikipediaApp.instance.languageState.appLanguageCodes))
+        EventPlatformClient.submit(AppSessionEventImpl(sessionLength, sessionData, NITCWikiApp.instance.languageState.appLanguageCodes))
     }
 
     companion object {

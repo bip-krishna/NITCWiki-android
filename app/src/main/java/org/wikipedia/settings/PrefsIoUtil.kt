@@ -3,7 +3,7 @@ package org.wikipedia.settings
 import android.content.SharedPreferences
 import androidx.annotation.StringRes
 import androidx.preference.PreferenceManager
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 
 object PrefsIoUtil {
 
@@ -90,12 +90,12 @@ object PrefsIoUtil {
     /** @return Key String resource from preference_keys.xml.
      */
     fun getKey(@StringRes id: Int, vararg formatArgs: Any?): String {
-        return WikipediaApp.instance.resources.getString(id, *formatArgs)
+        return NITCWikiApp.instance.resources.getString(id, *formatArgs)
     }
 
     private fun edit(): SharedPreferences.Editor {
         return preferences.edit()
     }
 
-    private val preferences get() = PreferenceManager.getDefaultSharedPreferences(WikipediaApp.instance)
+    private val preferences get() = PreferenceManager.getDefaultSharedPreferences(NITCWikiApp.instance)
 }

@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.concurrency.FlowEventBus
 import org.wikipedia.csrf.CsrfTokenClient
@@ -29,7 +29,7 @@ import org.wikipedia.games.onthisday.OnThisDayGameNotificationManager
 import org.wikipedia.main.MainActivity
 import org.wikipedia.notifications.db.Notification
 import org.wikipedia.page.PageTitle
-import org.wikipedia.push.WikipediaFirebaseMessagingService
+import org.wikipedia.push.NITCWikiFirebaseMessagingService
 import org.wikipedia.readinglist.recommended.RecommendedReadingListNotificationManager
 import org.wikipedia.readinglist.recommended.RecommendedReadingListUpdateFrequency
 import org.wikipedia.settings.Prefs
@@ -62,7 +62,7 @@ class NotificationPollBroadcastReceiver : BroadcastReceiver() {
                 maybeShowLocalNotificationForEditorReactivation(context)
 
                 // If push notifications are active, then don't actually do any polling.
-                if (WikipediaFirebaseMessagingService.isUsingPush()) {
+                if (NITCWikiFirebaseMessagingService.isUsingPush()) {
                     return
                 }
                 PollNotificationWorker.schedulePollNotificationJob(context)
@@ -171,7 +171,7 @@ class NotificationPollBroadcastReceiver : BroadcastReceiver() {
                         // Record that there is an incoming notification to track/compare further actions on it.
                         NotificationPresenter.showNotification(context, n,
                             dbWikiNameMap.getOrElse(n.wiki) { n.wiki },
-                            (dbWikiSiteMap.getOrElse(n.wiki) { WikipediaApp.instance.wikiSite }).languageCode)
+                            (dbWikiSiteMap.getOrElse(n.wiki) { NITCWikiApp.instance.wikiSite }).languageCode)
                     }
                 }
             }
@@ -188,7 +188,7 @@ class NotificationPollBroadcastReceiver : BroadcastReceiver() {
         }
 
         private fun maybeShowLocalNotificationForEditorReactivation(context: Context) {
-            if (Prefs.lastDescriptionEditTime == 0L || WikipediaApp.instance.currentResumedActivity != null) {
+            if (Prefs.lastDescriptionEditTime == 0L || NITCWikiApp.instance.currentResumedActivity != null) {
                 return
             }
             var days = TimeUnit.MILLISECONDS.toDays(System.currentTimeMillis() - Prefs.lastDescriptionEditTime)

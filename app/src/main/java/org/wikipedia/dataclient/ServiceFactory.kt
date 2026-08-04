@@ -7,7 +7,7 @@ import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import org.wikimedia.testkitchen.config.DestinationEventService
 import org.wikipedia.BuildConfig
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.EventService
 import org.wikipedia.dataclient.okhttp.OkHttpConnectionFactory
 import org.wikipedia.json.JsonUtil
@@ -98,7 +98,7 @@ object ServiceFactory {
         @Throws(IOException::class)
         override fun intercept(chain: Interceptor.Chain): Response {
             var request = chain.request().newBuilder()
-                .header("Accept-Language", WikipediaApp.instance.getAcceptLanguage(wiki))
+                .header("Accept-Language", NITCWikiApp.instance.getAcceptLanguage(wiki))
                 .build()
             return chain.proceed(request)
         }

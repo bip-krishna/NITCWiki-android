@@ -15,7 +15,7 @@ import androidx.work.WorkerParameters
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.concurrency.FlowEventBus
 import org.wikipedia.csrf.CsrfTokenClient
@@ -55,7 +55,7 @@ class ReadingListSyncAdapter(context: Context, params: WorkerParameters) : Corou
             val listIdsDeleted = Prefs.readingListsDeletedIds.toMutableSet()
             val pageIdsDeleted = Prefs.readingListPagesDeletedIds.toMutableSet()
             var allLocalLists: MutableList<ReadingList>? = null
-            val wiki = WikipediaApp.instance.wikiSite
+            val wiki = NITCWikiApp.instance.wikiSite
             val client = ReadingListClient(wiki)
             val readingListSyncNotification = ReadingListSyncNotification.instance
             val lastSyncTime = Prefs.readingListsLastSyncTime.orEmpty()
@@ -551,7 +551,7 @@ class ReadingListSyncAdapter(context: Context, params: WorkerParameters) : Corou
             if (inProgress()) {
                 return
             }
-            if (AccountUtil.account() == null || !WikipediaApp.instance.isOnline) {
+            if (AccountUtil.account() == null || !NITCWikiApp.instance.isOnline) {
                 if (extras.containsKey(SYNC_EXTRAS_REFRESHING)) {
                     SavedPageSyncService.sendSyncEvent()
                 }
@@ -573,7 +573,7 @@ class ReadingListSyncAdapter(context: Context, params: WorkerParameters) : Corou
                 .setConstraints(constraints)
                 .setInputData(dataBuilder.build())
                 .build()
-            WorkManager.getInstance(WikipediaApp.instance)
+            WorkManager.getInstance(NITCWikiApp.instance)
                 .enqueueUniqueWork(WORK_NAME, ExistingWorkPolicy.REPLACE, workRequest)
         }
     }

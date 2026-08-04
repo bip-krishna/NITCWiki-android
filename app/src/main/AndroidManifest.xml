@@ -67,7 +67,7 @@
         android:supportsRtl="true"
         android:icon="@mipmap/launcher"
         android:label="@string/app_name"
-        android:name=".WikipediaApp"
+        android:name=".NITCWikiApp"
         android:theme="@style/AppTheme">
 
         <!-- Multi-window support on Samsung devices -->
@@ -105,8 +105,8 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="wikipedia" />
-                <data android:host="*.wikipedia.org" />
+                <data android:scheme="nitcwiki" />
+                <data android:host="*.fosscell.org" />
                 <!-- Add more deeplink hosts as needed -->
             </intent-filter>
         </activity-alias>
@@ -125,8 +125,8 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="wikipedia" />
-                <data android:host="*.wikipedia.org" />
+                <data android:scheme="nitcwiki" />
+                <data android:host="*.fosscell.org" />
                 <!-- Add more deeplink hosts as needed -->
             </intent-filter>
         </activity-alias>
@@ -152,9 +152,9 @@
                      so http and https apply to all prefixes-->
                 <data android:scheme="http" />
                 <data android:scheme="https" />
-                <data android:host="*.wikipedia.org" android:pathPrefix="/wiki/" />
-                <data android:host="*.wikipedia.org" android:pathPattern="/zh.*" />
-                <data android:host="*.wikipedia.org" android:pathPattern="/sr.*" />
+                <data android:host="*.fosscell.org" android:pathPrefix="/wiki/" />
+                <data android:host="*.fosscell.org" android:pathPattern="/zh.*" />
+                <data android:host="*.fosscell.org" android:pathPattern="/sr.*" />
             </intent-filter>
         </activity>
         <activity
@@ -165,7 +165,7 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize" />
         <activity
             android:name=".settings.NotificationSettingsActivity" />
-        <activity android:name=".settings.languages.WikipediaLanguagesActivity"
+        <activity android:name=".settings.languages.NITCWikiLanguagesActivity"
             android:label="@string/wikipedia_languages_title"/>
         <activity android:name=".language.LangLinksActivity"
             android:windowSoftInputMode="adjustResize"
@@ -429,7 +429,7 @@
         <activity android:name=".settings.homefeed.HomeFeedSettingsActivity"/>
 
         <provider
-            android:name=".WikipediaFileProvider"
+            android:name=".NITCWikiFileProvider"
             android:authorities="${applicationId}.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
@@ -503,7 +503,7 @@
         <receiver android:name=".savedpages.SavedPageSyncNotification" />
 
         <service
-            android:name=".push.WikipediaFirebaseMessagingService"
+            android:name=".push.NITCWikiFirebaseMessagingService"
             android:exported="false"
             tools:ignore="Instantiatable">
             <intent-filter>

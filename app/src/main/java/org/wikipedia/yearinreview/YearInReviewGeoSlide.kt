@@ -50,7 +50,7 @@ import org.maplibre.android.module.http.HttpRequestImpl
 import org.maplibre.android.plugins.annotation.SymbolManager
 import org.maplibre.android.plugins.annotation.SymbolOptions
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.theme.WikipediaTheme
 import org.wikipedia.dataclient.WikiSite
@@ -126,7 +126,7 @@ fun GeoScreenContent(
                             bitmap = bitmap.asImageBitmap(),
                             contentDescription = null
                         )
-                        WikipediaApp.instance.mainThreadHandler.post {
+                        NITCWikiApp.instance.mainThreadHandler.post {
                             isImageResourceLoaded?.invoke(true)
                         }
                     }

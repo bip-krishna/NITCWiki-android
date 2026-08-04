@@ -32,7 +32,7 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
 import org.wikipedia.analytics.eventplatform.EditAttemptStepEvent
@@ -616,7 +616,7 @@ class EditSectionActivity : BaseActivity(), ThemeChooserDialog.Callback, EditPre
     }
 
     private fun updateTextSize() {
-        binding.editSectionText.textSize = WikipediaApp.instance.getFontSize(editing = true)
+        binding.editSectionText.textSize = NITCWikiApp.instance.getFontSize(editing = true)
     }
 
     private fun resetToStart() {

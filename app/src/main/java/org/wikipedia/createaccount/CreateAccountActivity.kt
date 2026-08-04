@@ -21,7 +21,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.coroutines.launch
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.YearInReviewEvent
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
@@ -49,7 +49,7 @@ class CreateAccountActivity : BaseActivity() {
 
     private lateinit var binding: ActivityCreateAccountBinding
     private lateinit var captchaHandler: CaptchaHandler
-    private var wiki = WikipediaApp.instance.wikiSite
+    private var wiki = NITCWikiApp.instance.wikiSite
     private var userNameTextWatcher: TextWatcher? = null
     private var requestSource: String = ""
     private val viewModel: CreateAccountActivityViewModel by viewModels()
@@ -240,7 +240,7 @@ class CreateAccountActivity : BaseActivity() {
         }
         binding.footerContainer.forgotPasswordLink.setOnClickListener {
             instrument?.submitInteraction("click", elementId = "forgot_password_link")
-            val forgotPasswordUrl = WikipediaApp.instance.getString(R.string.forget_password_link, wiki.languageCode)
+            val forgotPasswordUrl = NITCWikiApp.instance.getString(R.string.forget_password_link, wiki.languageCode)
             UriUtil.visitInExternalBrowser(this, forgotPasswordUrl.toUri())
         }
         // Add listener so that when the user taps enter, it submits the captcha

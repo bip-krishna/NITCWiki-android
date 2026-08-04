@@ -9,7 +9,7 @@ import android.view.animation.AnimationUtils
 import android.widget.FrameLayout
 import androidx.core.widget.TextViewCompat
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.databinding.ViewTabsCountBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
@@ -25,7 +25,7 @@ class TabCountsView(context: Context, attrs: AttributeSet? = null) : FrameLayout
     }
 
     fun updateTabCount(animation: Boolean) {
-        val count = WikipediaApp.instance.tabCount
+        val count = NITCWikiApp.instance.tabCount
         binding.tabsCountText.text = count.toString()
         TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(binding.tabsCountText, 7, 10, 1, TypedValue.COMPLEX_UNIT_SP)
         if (animation) {

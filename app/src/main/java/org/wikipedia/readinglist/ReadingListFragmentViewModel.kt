@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.wikipedia.R
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.readinglist.database.ReadingList
 import org.wikipedia.readinglist.database.ReadingListPage
@@ -102,7 +102,7 @@ class ReadingListFragmentViewModel : ViewModel() {
         }) {
             _recommendedListFlow.value = Resource.Loading()
             RecommendedReadingListHelper.generateRecommendedReadingList(shouldExpireOldPages = Prefs.resetRecommendedReadingList).let { list ->
-                val context = WikipediaApp.instance
+                val context = NITCWikiApp.instance
                 if (list.isNotEmpty()) {
                     val description = when (Prefs.recommendedReadingListUpdateFrequency) {
                         RecommendedReadingListUpdateFrequency.DAILY -> R.string.recommended_reading_list_page_description_daily

@@ -13,7 +13,7 @@ import org.wikimedia.testkitchen.config.DestinationEventService
 import org.wikimedia.testkitchen.config.StreamConfig
 import org.wikimedia.testkitchen.config.sampling.SampleConfig
 import org.wikipedia.BuildConfig
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.dataclient.Service
 import org.wikipedia.dataclient.ServiceFactory
@@ -46,7 +46,7 @@ object EventPlatformClient {
      * Inputs: network connection state on/off, connection state bad y/n?
      * Taken out of iOS client, but flag can be set on the request object to wait until connected to send
      */
-    private var ENABLED = WikipediaApp.instance.isOnline
+    private var ENABLED = NITCWikiApp.instance.isOnline
 
     private val coroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
@@ -175,7 +175,7 @@ object EventPlatformClient {
         private val MAX_QUEUE_SIZE get() = Prefs.analyticsQueueSize
 
         fun sendAllScheduled() {
-            WikipediaApp.instance.mainThreadHandler.removeCallbacksAndMessages(TOKEN)
+            NITCWikiApp.instance.mainThreadHandler.removeCallbacksAndMessages(TOKEN)
             if (ENABLED) {
                 val eventsByStream: Map<String, List<Event>>
                 synchronized(QUEUE) {
@@ -202,8 +202,8 @@ object EventPlatformClient {
                     sendAllScheduled()
                 } else {
                     // The arrival of a new item interrupts the timer and resets the countdown.
-                    WikipediaApp.instance.mainThreadHandler.removeCallbacksAndMessages(TOKEN)
-                    WikipediaApp.instance.mainThreadHandler.postDelayed(WAIT_MS, TOKEN) {
+                    NITCWikiApp.instance.mainThreadHandler.removeCallbacksAndMessages(TOKEN)
+                    NITCWikiApp.instance.mainThreadHandler.postDelayed(WAIT_MS, TOKEN) {
                         sendAllScheduled()
                     }
                 }
@@ -234,8 +234,8 @@ object EventPlatformClient {
                         if (ReleaseUtil.isPreBetaRelease && caught.code != HttpURLConnection.HTTP_FORBIDDEN) {
                             // If it's a pre-beta release, show a loud toast to signal that
                             // a potential issue should be investigated.
-                            WikipediaApp.instance.mainThreadHandler.post {
-                                Toast.makeText(WikipediaApp.instance, caught.message, Toast.LENGTH_LONG).show()
+                            NITCWikiApp.instance.mainThreadHandler.post {
+                                Toast.makeText(NITCWikiApp.instance, caught.message, Toast.LENGTH_LONG).show()
                             }
                         }
                     }
@@ -382,7 +382,7 @@ object EventPlatformClient {
                 return AssociationController.pageViewId
             }
             if (unit == SampleConfig.UNIT_DEVICE) {
-                return WikipediaApp.instance.appInstallID
+                return NITCWikiApp.instance.appInstallID
             }
             L.e("Bad identifier type")
             return UUID.randomUUID().toString()

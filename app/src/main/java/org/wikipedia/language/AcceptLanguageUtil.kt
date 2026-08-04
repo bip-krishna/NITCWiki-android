@@ -1,12 +1,12 @@
 package org.wikipedia.language
 
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import java.util.Locale
 
 object AcceptLanguageUtil {
 
     fun getAcceptLanguage(wikiLanguageCode: String, appLanguageCode: String, systemLanguageCode: String): String {
-        val languageState = WikipediaApp.instance.languageState
+        val languageState = NITCWikiApp.instance.languageState
         var quality = 1f
 
         // Compose a list of accepted languages, with descending quality values.

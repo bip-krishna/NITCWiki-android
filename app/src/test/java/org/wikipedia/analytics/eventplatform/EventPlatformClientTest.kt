@@ -13,7 +13,7 @@ import org.wikimedia.testkitchen.config.DestinationEventService
 import org.wikimedia.testkitchen.config.StreamConfig
 import org.wikimedia.testkitchen.config.StreamConfigCollection
 import org.wikimedia.testkitchen.config.sampling.SampleConfig
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.EventPlatformClient.SamplingController
 import org.wikipedia.dataclient.ServiceFactory.getAnalyticsRest
 import org.wikipedia.json.JsonUtil
@@ -27,7 +27,7 @@ class EventPlatformClientTest {
         EventPlatformClient.AssociationController.beginNewSession()
 
         // Set app install ID
-        WikipediaApp.instance.appInstallID
+        NITCWikiApp.instance.appInstallID
     }
 
     @Test

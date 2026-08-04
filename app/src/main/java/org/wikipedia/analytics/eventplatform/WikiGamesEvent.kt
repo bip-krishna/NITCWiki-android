@@ -2,7 +2,7 @@ package org.wikipedia.analytics.eventplatform
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.json.JsonUtil
 
 object WikiGamesEvent {
@@ -16,7 +16,7 @@ object WikiGamesEvent {
         langCode: String? = null,
         cardType: String? = null,
         position: Int? = null,
-        wikiId: String = WikipediaApp.instance.appOrSystemLanguageCode
+        wikiId: String = NITCWikiApp.instance.appOrSystemLanguageCode
     ) {
         EventPlatformClient.submit(
             AppInteractionEvent(
@@ -31,7 +31,7 @@ object WikiGamesEvent {
                     cardType = cardType,
                     position = position
                 )).orEmpty(),
-                WikipediaApp.instance.languageState.appLanguageCode,
+                NITCWikiApp.instance.languageState.appLanguageCode,
                 wikiId,
                 "app_game_interaction"
             )

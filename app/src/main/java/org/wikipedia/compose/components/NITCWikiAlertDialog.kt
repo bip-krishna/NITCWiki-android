@@ -8,10 +8,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 
 @Composable
-fun WikipediaAlertDialog(
+fun NITCWikiAlertDialog(
     modifier: Modifier = Modifier,
     title: String,
     titleModifier: Modifier = Modifier,
@@ -21,22 +21,22 @@ fun WikipediaAlertDialog(
     messageTextAlign: TextAlign = TextAlign.Start,
     image: @Composable (() -> Unit)? = null,
     confirmButtonText: String,
-    confirmButtonColor: Color = WikipediaTheme.colors.progressiveColor,
+    confirmButtonColor: Color = NITCWikiTheme.colors.progressiveColor,
     dismissButtonText: String? = null,
-    dismissButtonColor: Color = WikipediaTheme.colors.progressiveColor,
+    dismissButtonColor: Color = NITCWikiTheme.colors.progressiveColor,
     onDismissRequest: () -> Unit,
     onConfirmButtonClick: () -> Unit,
     onDismissButtonClick: () -> Unit = { onDismissRequest() },
 ) {
     AlertDialog(
         modifier = modifier,
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
         icon = image,
         title = {
             Text(
                 modifier = titleModifier,
                 text = title,
-                color = WikipediaTheme.colors.primaryColor,
+                color = NITCWikiTheme.colors.primaryColor,
                 textAlign = titleTextAlign
             )
         },
@@ -44,7 +44,7 @@ fun WikipediaAlertDialog(
             Text(
                 modifier = messageModifier,
                 text = message,
-                color = WikipediaTheme.colors.secondaryColor,
+                color = NITCWikiTheme.colors.secondaryColor,
                 textAlign = messageTextAlign
             )
         },

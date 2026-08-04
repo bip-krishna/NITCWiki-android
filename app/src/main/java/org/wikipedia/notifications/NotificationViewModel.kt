@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.WikipediaApp
+import org.wikipedia.NITCWikiApp
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.notifications.db.Notification
@@ -125,7 +125,7 @@ class NotificationViewModel : ViewModel() {
         }
 
         viewModelScope.launch(handler) {
-            if (WikipediaApp.instance.isOnline) {
+            if (NITCWikiApp.instance.isOnline) {
                 currentContinueStr = notificationRepository.fetchAndSave("read|!read", currentContinueStr)
             }
             filterAndPostNotifications()
@@ -157,7 +157,7 @@ class NotificationViewModel : ViewModel() {
                     Constants.WIKIDATA_DB_NAME -> Constants.wikidataWikiSite
                     else -> {
                         val langCode = StringUtil.dbNameToLangCode(notification.wiki)
-                        WikiSite.forLanguageCode(WikipediaApp.instance.languageState.getDefaultLanguageCode(langCode) ?: langCode)
+                        WikiSite.forLanguageCode(NITCWikiApp.instance.languageState.getDefaultLanguageCode(langCode) ?: langCode)
                     }
                 }
             }
