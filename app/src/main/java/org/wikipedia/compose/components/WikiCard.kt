@@ -27,7 +27,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 
 @Composable
@@ -35,15 +35,15 @@ fun WikiCard(
     modifier: Modifier = Modifier,
     elevation: Dp = 8.dp,
     colors: CardColors = CardDefaults.cardColors(
-        containerColor = WikipediaTheme.colors.paperColor,
-        contentColor = WikipediaTheme.colors.paperColor
+        containerColor = NITCWikiTheme.colors.paperColor,
+        contentColor = NITCWikiTheme.colors.paperColor
     ),
     border: BorderStroke? = null,
     onClick: (() -> Unit)? = null,
     shape: Shape = RoundedCornerShape(12.dp),
     content: @Composable () -> Unit
 ) {
-    val isDarkTheme = WikipediaTheme.colors.isDarkTheme
+    val isDarkTheme = NITCWikiTheme.colors.isDarkTheme
     val cardElevation = remember(elevation) {
         if (isDarkTheme) {
             0.dp
@@ -110,7 +110,7 @@ fun MessageCard(
                     Text(
                         text = title,
                         style = MaterialTheme.typography.titleLarge,
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         modifier = Modifier.padding(bottom = 12.dp)
                     )
                 }
@@ -119,10 +119,10 @@ fun MessageCard(
                     modifier = Modifier.padding(bottom = 12.dp),
                     text = message,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = WikipediaTheme.colors.secondaryColor,
+                    color = NITCWikiTheme.colors.secondaryColor,
                     linkStyle = TextLinkStyles(
                         style = SpanStyle(
-                            color = WikipediaTheme.colors.progressiveColor
+                            color = NITCWikiTheme.colors.progressiveColor
                         )
                     )
                 )
@@ -136,8 +136,8 @@ fun MessageCard(
                         AppButton(
                             onClick = { onPositiveButtonClick?.invoke() },
                             modifier = Modifier.padding(end = 8.dp),
-                            backgroundColor = WikipediaTheme.colors.backgroundColor,
-                            contentColor = WikipediaTheme.colors.progressiveColor
+                            backgroundColor = NITCWikiTheme.colors.backgroundColor,
+                            contentColor = NITCWikiTheme.colors.progressiveColor
                         ) {
                             Text(
                                 text = positiveButtonText
@@ -174,7 +174,7 @@ private fun WikiCardSimpleWikiTextPreview() {
                 modifier = Modifier
                     .padding(16.dp),
                 text = "Text example in a WikiCard",
-                color = WikipediaTheme.colors.progressiveColor
+                color = NITCWikiTheme.colors.progressiveColor
             )
         }
     }
@@ -189,14 +189,14 @@ private fun BorderAndElevationWikiTextPreview() {
         WikiCard(
             modifier = Modifier
                 .padding(20.dp),
-            border = BorderStroke(width = 0.5.dp, color = WikipediaTheme.colors.progressiveColor),
+            border = BorderStroke(width = 0.5.dp, color = NITCWikiTheme.colors.progressiveColor),
             elevation = 4.dp
         ) {
             Text(
                 modifier = Modifier
                     .padding(16.dp),
                 text = "Text example in a WikiCard",
-                color = WikipediaTheme.colors.progressiveColor
+                color = NITCWikiTheme.colors.progressiveColor
             )
         }
     }

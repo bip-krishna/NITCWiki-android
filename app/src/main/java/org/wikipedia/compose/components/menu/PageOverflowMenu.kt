@@ -14,7 +14,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 
 @Composable
 fun PageOverflowMenu(
@@ -46,7 +46,7 @@ fun PageOverflowMenu(
         modifier = modifier,
         expanded = animatedExpanded,
         onDismissRequest = { animatedExpanded = false },
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
     ) {
         items.forEach { (label, action) ->
             DropdownMenuItem(
@@ -54,7 +54,7 @@ fun PageOverflowMenu(
                     Text(
                         text = label,
                         style = MaterialTheme.typography.bodyLarge,
-                        color = WikipediaTheme.colors.primaryColor
+                        color = NITCWikiTheme.colors.primaryColor
                     )
                 },
                 onClick = {

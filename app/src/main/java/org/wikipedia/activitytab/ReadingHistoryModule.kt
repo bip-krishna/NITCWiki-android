@@ -52,7 +52,7 @@ import org.wikipedia.compose.components.WikiCard
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.page.PageTitle
 import org.wikipedia.theme.Theme
@@ -82,13 +82,13 @@ fun ReadingHistoryModule(
         style = MaterialTheme.typography.titleLarge,
         fontWeight = FontWeight.Medium,
         textAlign = TextAlign.Center,
-        color = WikipediaTheme.colors.primaryColor
+        color = NITCWikiTheme.colors.primaryColor
     )
     Box(
         modifier = modifier
             .padding(horizontal = 8.dp, vertical = 4.dp)
             .background(
-                color = WikipediaTheme.colors.additionColor,
+                color = NITCWikiTheme.colors.additionColor,
                 shape = RoundedCornerShape(8.dp)
             )
     ) {
@@ -99,7 +99,7 @@ fun ReadingHistoryModule(
             fontFamily = FontFamily.Monospace,
             letterSpacing = TextUnit(0.8f, TextUnitType.Sp),
             textAlign = TextAlign.Center,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
     }
     if (readingHistoryState is UiState.Loading) {
@@ -132,7 +132,7 @@ fun ReadingHistoryModule(
                         )
                     )
                 ),
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
             Text(
                 text = stringResource(R.string.activity_tab_weekly_time_spent),
@@ -140,7 +140,7 @@ fun ReadingHistoryModule(
                     .padding(top = 8.dp),
                 style = MaterialTheme.typography.labelLarge,
                 textAlign = TextAlign.Center,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         }
 
@@ -190,13 +190,13 @@ fun ReadingHistoryModule(
                 modifier = modifier.padding(horizontal = 16.dp, vertical = 8.dp),
                 fontWeight = FontWeight.Medium,
                 fontSize = 14.sp,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
             Button(
                 modifier = modifier.padding(top = 8.dp, bottom = 16.dp),
                 contentPadding = PaddingValues(horizontal = 18.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = WikipediaTheme.colors.progressiveColor,
+                    containerColor = NITCWikiTheme.colors.progressiveColor,
                     contentColor = Color.White,
                 ),
                 onClick = {
@@ -239,7 +239,7 @@ private fun ArticleReadThisMonthCard(
         elevation = 0.dp,
         border = BorderStroke(
             width = 1.dp,
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         ),
         onClick = onClick
     ) {
@@ -277,7 +277,7 @@ private fun ArticleReadThisMonthCard(
                     modifier = Modifier.align(Alignment.Bottom),
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Medium,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
                 Spacer(modifier = Modifier.weight(1f))
 
@@ -307,7 +307,7 @@ private fun ArticleSavedThisMonthCard(
         elevation = 0.dp,
         border = BorderStroke(
             width = 1.dp,
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         ),
         onClick = onClick
     ) {
@@ -345,7 +345,7 @@ private fun ArticleSavedThisMonthCard(
                     modifier = Modifier.align(Alignment.Bottom),
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Medium,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
                 Spacer(modifier = Modifier.weight(1f))
                 Row {
@@ -363,7 +363,7 @@ private fun ArticleSavedThisMonthCard(
                                         shape = RoundedCornerShape(19.dp)
                                     ).border(
                                         0.5.dp,
-                                        WikipediaTheme.colors.borderColor,
+                                        NITCWikiTheme.colors.borderColor,
                                         RoundedCornerShape(19.dp)
                                     )
                             ) {
@@ -379,8 +379,8 @@ private fun ArticleSavedThisMonthCard(
                                 ImageService.getRequest(LocalContext.current, url = url)
                             AsyncImage(
                                 model = request,
-                                placeholder = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
-                                error = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
+                                placeholder = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
+                                error = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
                                 contentScale = ContentScale.Crop,
                                 contentDescription = null,
                                 modifier = Modifier.padding(start = 4.dp).size(38.dp)
@@ -393,7 +393,7 @@ private fun ArticleSavedThisMonthCard(
                         Box(
                             modifier = Modifier.padding(start = 4.dp).size(38.dp)
                                 .background(
-                                    color = WikipediaTheme.colors.placeholderColor,
+                                    color = NITCWikiTheme.colors.placeholderColor,
                                     shape = RoundedCornerShape(19.dp)
                                 )
                         ) {
@@ -427,7 +427,7 @@ fun TopCategoriesCard(
         elevation = 0.dp,
         border = BorderStroke(
             width = 1.dp,
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         )
     ) {
         Column {
@@ -448,14 +448,14 @@ fun TopCategoriesCard(
                             .padding(horizontal = 32.dp, vertical = 16.dp),
                         text = StringUtil.removeNamespace(value.title),
                         style = MaterialTheme.typography.bodyLarge,
-                        color = WikipediaTheme.colors.primaryColor
+                        color = NITCWikiTheme.colors.primaryColor
                     )
                 }
 
                 if (index < categories.size - 1) {
                     HorizontalDivider(
                         modifier = Modifier.padding(horizontal = 16.dp),
-                        color = WikipediaTheme.colors.borderColor
+                        color = NITCWikiTheme.colors.borderColor
                     )
                 }
             }

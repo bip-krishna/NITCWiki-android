@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 
 @Composable
@@ -28,7 +28,7 @@ fun Snackbar(
                 ) {
                     Text(
                         text = actionLabel,
-                        color = WikipediaTheme.colors.progressiveColor,
+                        color = NITCWikiTheme.colors.progressiveColor,
                         style = MaterialTheme.typography.labelLarge
                     )
                 }
@@ -36,12 +36,12 @@ fun Snackbar(
         },
         modifier = modifier
             .padding(horizontal = 16.dp, vertical = 8.dp),
-        containerColor = WikipediaTheme.colors.borderColor
+        containerColor = NITCWikiTheme.colors.borderColor
     ) {
         HtmlText(
             text = message,
             style = MaterialTheme.typography.bodyMedium,
-            color = WikipediaTheme.colors.primaryColor,
+            color = NITCWikiTheme.colors.primaryColor,
             maxLines = 10
         )
     }

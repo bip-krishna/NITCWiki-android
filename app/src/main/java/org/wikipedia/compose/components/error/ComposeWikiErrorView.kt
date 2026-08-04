@@ -33,7 +33,7 @@ import androidx.compose.ui.unit.sp
 import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.mwapi.MwException
 import org.wikipedia.page.Namespace
 import org.wikipedia.page.PageTitle
@@ -86,7 +86,7 @@ fun WikiErrorView(
             modifier = Modifier
                 .size(72.dp),
             painter = painterResource(errorType.icon),
-            colorFilter = ColorFilter.tint(color = WikipediaTheme.colors.placeholderColor),
+            colorFilter = ColorFilter.tint(color = NITCWikiTheme.colors.placeholderColor),
             contentDescription = null
         )
         Spacer(
@@ -100,7 +100,7 @@ fun WikiErrorView(
                     htmlString = errorMessage,
                     linkStyles = TextLinkStyles(
                         style = SpanStyle(
-                            color = WikipediaTheme.colors.progressiveColor,
+                            color = NITCWikiTheme.colors.progressiveColor,
                             fontSize = 14.sp
                         )
                     )
@@ -109,7 +109,7 @@ fun WikiErrorView(
                     textAlign = TextAlign.Center,
                     fontSize = 16.sp,
                     lineHeight = 19.2.sp,
-                    color = WikipediaTheme.colors.placeholderColor
+                    color = NITCWikiTheme.colors.placeholderColor
                 )
             )
         }
@@ -127,8 +127,8 @@ fun WikiErrorView(
                 getClickEventForErrorType(errorClickEvents, errorType)?.invoke()
             },
             colors = ButtonDefaults.buttonColors(
-                containerColor = WikipediaTheme.colors.backgroundColor,
-                contentColor = WikipediaTheme.colors.placeholderColor
+                containerColor = NITCWikiTheme.colors.backgroundColor,
+                contentColor = NITCWikiTheme.colors.placeholderColor
             ),
             content = {
                 Text(
@@ -147,7 +147,7 @@ fun WikiErrorView(
                     .padding(horizontal = 16.dp),
                 text = footerErrorMessage,
                 textAlign = TextAlign.Center,
-                color = WikipediaTheme.colors.placeholderColor,
+                color = NITCWikiTheme.colors.placeholderColor,
                 fontSize = 14.sp
             )
         }

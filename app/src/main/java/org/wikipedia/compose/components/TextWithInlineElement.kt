@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.Placeholder
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 
 @Composable
 fun TextWithInlineElement(
@@ -16,7 +16,7 @@ fun TextWithInlineElement(
     position: InlinePosition,
     placeholder: Placeholder,
     style: TextStyle = MaterialTheme.typography.bodyMedium.copy(
-        color = WikipediaTheme.colors.primaryColor
+        color = NITCWikiTheme.colors.primaryColor
     ),
     content: @Composable (String) -> Unit
 ) {

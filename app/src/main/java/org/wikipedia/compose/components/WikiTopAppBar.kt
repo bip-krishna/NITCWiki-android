@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -43,7 +43,7 @@ fun WikiTopAppBar(
             Text(
                 text = title,
                 style = titleStyle,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         },
         navigationIcon = {
@@ -53,14 +53,14 @@ fun WikiTopAppBar(
             }) {
                 Icon(
                     painter = painterResource(R.drawable.ic_arrow_back_black_24dp),
-                    tint = WikipediaTheme.colors.primaryColor,
+                    tint = NITCWikiTheme.colors.primaryColor,
                     contentDescription = stringResource(R.string.search_back_button_content_description)
                 )
             }
         },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = WikipediaTheme.colors.paperColor,
-            titleContentColor = WikipediaTheme.colors.primaryColor
+            containerColor = NITCWikiTheme.colors.paperColor,
+            titleContentColor = NITCWikiTheme.colors.primaryColor
         ),
         actions = actions,
         modifier = modifier.shadow(elevation = elevation)

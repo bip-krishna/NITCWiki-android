@@ -17,7 +17,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import org.wikipedia.R
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 
 enum class TopAppBarState {
     SEARCH,
@@ -85,7 +85,7 @@ fun WikiTopAppBarWithSearch(
                                         Icon(
                                             painter = painterResource(R.drawable.ic_close_black_24dp),
                                             contentDescription = stringResource(R.string.search_clear_query_content_description),
-                                            tint = WikipediaTheme.colors.placeholderColor
+                                            tint = NITCWikiTheme.colors.placeholderColor
                                         )
                                     }
                                 )
@@ -106,7 +106,7 @@ fun WikiTopAppBarWithSearch(
                                     Icon(
                                         painter = painterResource(R.drawable.outline_search_24),
                                         contentDescription = stringResource(R.string.search_icon_content_description),
-                                        tint = WikipediaTheme.colors.primaryColor
+                                        tint = NITCWikiTheme.colors.primaryColor
                                     )
                                 }
                             )

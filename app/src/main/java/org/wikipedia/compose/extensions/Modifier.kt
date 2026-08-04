@@ -41,7 +41,7 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import org.wikipedia.compose.components.WikiTopAppBar
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.compose.theme.shimmerColors
 import org.wikipedia.theme.Theme
 
@@ -102,7 +102,7 @@ fun Modifier.shimmerEffect(
     heightMultiplier: Float = 1f,
     transition: InfiniteTransition,
 ): Modifier = composed {
-    val colors = shimmerColors ?: WikipediaTheme.colors.shimmerColors()
+    val colors = shimmerColors ?: NITCWikiTheme.colors.shimmerColors()
     var size by remember { mutableStateOf(IntSize.Zero) }
 
     val startOffsetX by transition.animateFloat(
@@ -165,7 +165,7 @@ private fun PreviewPulse() {
                     onNavigationClick = { }
                 )
             },
-            containerColor = WikipediaTheme.colors.paperColor
+            containerColor = NITCWikiTheme.colors.paperColor
         ) { innerPadding ->
             Column(
                 modifier = Modifier
@@ -174,7 +174,7 @@ private fun PreviewPulse() {
             ) {
                 Text(
                     text = "Pulse",
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     modifier = Modifier.pulse(
                         repeatCount = 5,
                         easing = FastOutSlowInEasing

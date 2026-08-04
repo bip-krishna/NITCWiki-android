@@ -20,15 +20,15 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.wikipedia.compose.ComposeColors
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 
 @Composable
 fun AppButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    backgroundColor: Color = WikipediaTheme.colors.progressiveColor,
-    contentColor: Color = WikipediaTheme.colors.paperColor,
+    backgroundColor: Color = NITCWikiTheme.colors.progressiveColor,
+    contentColor: Color = NITCWikiTheme.colors.paperColor,
     content: @Composable (() -> Unit)
 ) {
     Button(
@@ -48,7 +48,7 @@ fun AppButton(
 fun AppTextButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    contentColor: Color = WikipediaTheme.colors.progressiveColor,
+    contentColor: Color = NITCWikiTheme.colors.progressiveColor,
     content: @Composable (() -> Unit)
 ) {
     Button(
@@ -70,10 +70,10 @@ fun ThemeColorCircularButton(
     onClick: () -> Unit,
     text: String = "Aa",
     size: Dp = 40.dp,
-    defaultBackgroundColor: Color = WikipediaTheme.colors.paperColor,
-    selectedBackgroundColor: Color = WikipediaTheme.colors.backgroundColor,
-    borderColor: Color = WikipediaTheme.colors.progressiveColor,
-    textColor: Color = WikipediaTheme.colors.primaryColor,
+    defaultBackgroundColor: Color = NITCWikiTheme.colors.paperColor,
+    selectedBackgroundColor: Color = NITCWikiTheme.colors.backgroundColor,
+    borderColor: Color = NITCWikiTheme.colors.progressiveColor,
+    textColor: Color = NITCWikiTheme.colors.primaryColor,
     rippleColor: Color = Color.Transparent,
     isSelected: Boolean = false
 ) {

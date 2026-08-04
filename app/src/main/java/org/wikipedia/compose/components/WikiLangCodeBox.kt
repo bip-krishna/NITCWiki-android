@@ -19,17 +19,17 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 
 @Composable
 fun WikiLangCodeBox(
     modifier: Modifier = Modifier,
     languageCode: String,
-    backgroundColor: Color = WikipediaTheme.colors.paperColor,
-    borderColor: Color = WikipediaTheme.colors.primaryColor,
+    backgroundColor: Color = NITCWikiTheme.colors.paperColor,
+    borderColor: Color = NITCWikiTheme.colors.primaryColor,
     shape: RoundedCornerShape = RoundedCornerShape(4.dp),
-    textColor: Color = WikipediaTheme.colors.primaryColor,
+    textColor: Color = NITCWikiTheme.colors.primaryColor,
     fontSize: TextUnit = 10.sp,
 ) {
     Box(
@@ -71,9 +71,9 @@ private fun WikiLangCodeBoxDarkPreview() {
                 .height(20.dp)
                 .widthIn(min = 20.dp),
             languageCode = "en",
-            backgroundColor = WikipediaTheme.colors.primaryColor,
-            borderColor = WikipediaTheme.colors.primaryColor,
-            textColor = WikipediaTheme.colors.paperColor
+            backgroundColor = NITCWikiTheme.colors.primaryColor,
+            borderColor = NITCWikiTheme.colors.primaryColor,
+            textColor = NITCWikiTheme.colors.paperColor
         )
     }
 }
