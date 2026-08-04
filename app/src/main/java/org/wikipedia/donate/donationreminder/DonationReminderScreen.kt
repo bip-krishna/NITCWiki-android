@@ -85,7 +85,7 @@ import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.extensions.noRippleClickable
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.donate.DonateUtil
 import org.wikipedia.theme.Theme
 
@@ -155,7 +155,7 @@ fun DonationReminderScreen(
                 )
             )
         },
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
     ) { paddingValues ->
         if (uiState.isLoading) {
             Box(
@@ -165,8 +165,8 @@ fun DonationReminderScreen(
             ) {
                 LinearProgressIndicator(
                     modifier = Modifier.fillMaxWidth(),
-                    color = WikipediaTheme.colors.progressiveColor,
-                    trackColor = WikipediaTheme.colors.borderColor
+                    color = NITCWikiTheme.colors.progressiveColor,
+                    trackColor = NITCWikiTheme.colors.borderColor
                 )
             }
             return@Scaffold
@@ -223,7 +223,7 @@ fun DonationReminderAppBar(
             Icon(
                 modifier = Modifier
                     .clickable(onClick = onBackButtonClick),
-                tint = WikipediaTheme.colors.primaryColor,
+                tint = NITCWikiTheme.colors.primaryColor,
                 painter = painterResource(R.drawable.ic_arrow_back_black_24dp),
                 contentDescription = null
             )
@@ -236,19 +236,19 @@ fun DonationReminderAppBar(
                     fontWeight = FontWeight.Bold,
                     lineHeight = 20.sp
                 ),
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
             if (menuItems.isNotEmpty()) {
                 Box {
                     Icon(
                         modifier = Modifier
                             .clickable(onClick = { expanded = true }),
-                        tint = WikipediaTheme.colors.primaryColor,
+                        tint = NITCWikiTheme.colors.primaryColor,
                         painter = painterResource(R.drawable.ic_more_vert_white_24dp),
                         contentDescription = null
                     )
                     DropdownMenu(
-                        containerColor = WikipediaTheme.colors.paperColor,
+                        containerColor = NITCWikiTheme.colors.paperColor,
                         expanded = expanded,
                         onDismissRequest = { expanded = false }
                     ) {
@@ -258,13 +258,13 @@ fun DonationReminderAppBar(
                                     Text(
                                         text = item.text,
                                         style = MaterialTheme.typography.bodyLarge,
-                                        color = WikipediaTheme.colors.primaryColor
+                                        color = NITCWikiTheme.colors.primaryColor
                                     )
                                 },
                                 leadingIcon = {
                                     Icon(
                                         painter = painterResource(item.icon),
-                                        tint = WikipediaTheme.colors.primaryColor,
+                                        tint = NITCWikiTheme.colors.primaryColor,
                                         contentDescription = null
                                     )
                                 },
@@ -288,7 +288,7 @@ fun DonationReminderAppBar(
             Row(
                 modifier = Modifier
                     .background(
-                        color = WikipediaTheme.colors.additionColor,
+                        color = NITCWikiTheme.colors.additionColor,
                         shape = RoundedCornerShape(size = 16.dp)
                     )
                     .padding(horizontal = 8.dp, vertical = 4.dp)
@@ -298,7 +298,7 @@ fun DonationReminderAppBar(
                     style = MaterialTheme.typography.labelSmall,
                     fontFamily = FontFamily.Monospace,
                     fontWeight = FontWeight.Normal,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             }
         }
@@ -495,7 +495,7 @@ fun DonationReminderContent(
             content = {
                 Text(
                     text = footerButtonText,
-                    color = WikipediaTheme.colors.progressiveColor
+                    color = NITCWikiTheme.colors.progressiveColor
                 )
             }
         )
@@ -529,7 +529,7 @@ fun DonationAmountView(
                 Text(
                     text = currencySymbol,
                     style = MaterialTheme.typography.bodyLarge,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             },
             onDoneClick = onDoneClick,
@@ -564,7 +564,7 @@ fun ReadFrequencyView(
                 Text(
                     text = stringResource(R.string.donation_reminders_settings_article_frequency_input_suffix_label),
                     style = MaterialTheme.typography.bodyLarge,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             },
             onDoneClick = onDoneClick,
@@ -597,7 +597,7 @@ fun DonationHeader(
                         .padding(start = 4.dp),
                     painter = painterResource(R.drawable.ic_heart_24),
                     contentDescription = null,
-                    tint = WikipediaTheme.colors.destructiveColor
+                    tint = NITCWikiTheme.colors.destructiveColor
                 )
             }
         )
@@ -605,13 +605,13 @@ fun DonationHeader(
         Text(
             text = stringResource(R.string.donation_reminders_settings_donation_info),
             style = MaterialTheme.typography.bodySmall,
-            color = WikipediaTheme.colors.placeholderColor
+            color = NITCWikiTheme.colors.placeholderColor
         )
 
         HorizontalDivider(
             modifier = Modifier
                 .padding(top = 24.dp),
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         )
     }
 }
@@ -637,7 +637,7 @@ fun <T : Number> OptionSelector(
             modifier = Modifier
                 .padding(top = 3.dp),
             painter = painterResource(headerIcon),
-            tint = WikipediaTheme.colors.primaryColor,
+            tint = NITCWikiTheme.colors.primaryColor,
             contentDescription = null
         )
         Column(
@@ -646,7 +646,7 @@ fun <T : Number> OptionSelector(
             Text(
                 text = title,
                 style = MaterialTheme.typography.bodyLarge,
-                color = WikipediaTheme.colors.primaryColor,
+                color = NITCWikiTheme.colors.primaryColor,
             )
             Spacer(modifier = Modifier.width(16.dp))
             Row(
@@ -662,13 +662,13 @@ fun <T : Number> OptionSelector(
                     onValueChange = {},
                     textStyle = MaterialTheme.typography.bodyLarge,
                     colors = TextFieldDefaults.colors(
-                        disabledContainerColor = WikipediaTheme.colors.backgroundColor,
-                        disabledTextColor = WikipediaTheme.colors.primaryColor
+                        disabledContainerColor = NITCWikiTheme.colors.backgroundColor,
+                        disabledTextColor = NITCWikiTheme.colors.primaryColor
                     ),
                     trailingIcon = {
                         Icon(
                             painter = painterResource(R.drawable.ic_arrow_drop_down_black_24dp),
-                            tint = WikipediaTheme.colors.primaryColor,
+                            tint = NITCWikiTheme.colors.primaryColor,
                             contentDescription = null
                         )
                     }
@@ -684,7 +684,7 @@ fun <T : Number> OptionSelector(
                 DropdownMenu(
                     modifier = Modifier
                         .width(210.dp),
-                    containerColor = WikipediaTheme.colors.backgroundColor,
+                    containerColor = NITCWikiTheme.colors.backgroundColor,
                     expanded = isDropdownExpanded,
                     onDismissRequest = { isDropdownExpanded = false },
                     content = {
@@ -694,7 +694,7 @@ fun <T : Number> OptionSelector(
                                     Text(
                                         text = option.displayText,
                                         style = MaterialTheme.typography.bodyLarge,
-                                        color = WikipediaTheme.colors.primaryColor
+                                        color = NITCWikiTheme.colors.primaryColor
                                     )
                                 },
                                 onClick = {
@@ -721,13 +721,13 @@ private fun DonationRemindersSwitch(
         modifier = modifier
             .clip(RoundedCornerShape(16.dp)),
         colors = ListItemDefaults.colors(
-            containerColor = WikipediaTheme.colors.backgroundColor
+            containerColor = NITCWikiTheme.colors.backgroundColor
         ),
         headlineContent = {
             Text(
                 text = stringResource(R.string.donation_reminders_settings_option_title),
                 style = MaterialTheme.typography.bodyLarge,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         },
         trailingContent = {
@@ -737,11 +737,11 @@ private fun DonationRemindersSwitch(
                     onCheckedChange(it)
                 },
                 colors = SwitchDefaults.colors(
-                    uncheckedTrackColor = WikipediaTheme.colors.paperColor,
+                    uncheckedTrackColor = NITCWikiTheme.colors.paperColor,
                     uncheckedThumbColor = MaterialTheme.colorScheme.outline,
                     uncheckedBorderColor = MaterialTheme.colorScheme.outline,
-                    checkedTrackColor = WikipediaTheme.colors.progressiveColor,
-                    checkedThumbColor = WikipediaTheme.colors.paperColor
+                    checkedTrackColor = NITCWikiTheme.colors.progressiveColor,
+                    checkedThumbColor = NITCWikiTheme.colors.paperColor
                 )
             )
         }
@@ -763,12 +763,12 @@ fun InfoTooltip(
             PlainTooltip(
                 modifier = Modifier
                     .padding(horizontal = 16.dp),
-                containerColor = WikipediaTheme.colors.primaryColor,
+                containerColor = NITCWikiTheme.colors.primaryColor,
                 content = {
                     Text(
                         text = plainTooltipText,
                         style = MaterialTheme.typography.bodyMedium,
-                        color = WikipediaTheme.colors.paperColor
+                        color = NITCWikiTheme.colors.paperColor
                     )
                 }
             )
@@ -783,7 +783,7 @@ fun InfoTooltip(
                         }
                     }),
                 painter = painterResource(R.drawable.ic_info_outline_black_24dp),
-                tint = WikipediaTheme.colors.primaryColor,
+                tint = NITCWikiTheme.colors.primaryColor,
                 contentDescription = null
             )
         }
@@ -812,7 +812,7 @@ fun CustomInputDialog(
             Column(
                 modifier = modifier
                     .clip(RoundedCornerShape(28.dp))
-                    .background(WikipediaTheme.colors.paperColor)
+                    .background(NITCWikiTheme.colors.paperColor)
                     .padding(24.dp),
             ) {
                 Text(
@@ -821,7 +821,7 @@ fun CustomInputDialog(
                     text = title,
                     textAlign = TextAlign.Center,
                     style = MaterialTheme.typography.labelLarge,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 OutlinedTextField(
@@ -857,18 +857,18 @@ fun CustomInputDialog(
                         }
                     ),
                     colors = OutlinedTextFieldDefaults.colors(
-                        focusedTextColor = WikipediaTheme.colors.primaryColor,
+                        focusedTextColor = NITCWikiTheme.colors.primaryColor,
                         focusedBorderColor = MaterialTheme.colorScheme.outline,
                         unfocusedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
                         unfocusedBorderColor = MaterialTheme.colorScheme.outline,
-                        cursorColor = WikipediaTheme.colors.primaryColor,
-                        errorTextColor = WikipediaTheme.colors.primaryColor,
+                        cursorColor = NITCWikiTheme.colors.primaryColor,
+                        errorTextColor = NITCWikiTheme.colors.primaryColor,
                     ),
                     supportingText = if (errorMessage.isNotEmpty()) {
                         {
                             Text(
                                 text = errorMessage,
-                                color = WikipediaTheme.colors.destructiveColor,
+                                color = NITCWikiTheme.colors.destructiveColor,
                             )
                         }
                     } else null,
@@ -877,7 +877,7 @@ fun CustomInputDialog(
                             Icon(
                                 painter = painterResource(R.drawable.baseline_info_24),
                                 contentDescription = null,
-                                tint = WikipediaTheme.colors.destructiveColor
+                                tint = NITCWikiTheme.colors.destructiveColor
                             )
                         }
                     } else null
@@ -899,7 +899,7 @@ fun CustomInputDialog(
                         content = {
                             Text(
                                 text = "Done",
-                                color = WikipediaTheme.colors.progressiveColor
+                                color = NITCWikiTheme.colors.progressiveColor
                             )
                         }
                     )
