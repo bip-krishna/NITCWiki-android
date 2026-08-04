@@ -73,7 +73,7 @@ import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.page.PageTitle
 import org.wikipedia.theme.Theme
@@ -200,7 +200,7 @@ fun HybridSearchResultsList(
                     HorizontalDivider(
                         modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp, top = 12.dp),
                         thickness = 1.dp,
-                        color = WikipediaTheme.colors.borderColor
+                        color = NITCWikiTheme.colors.borderColor
                     )
                 }
             }
@@ -276,7 +276,7 @@ fun HybridSearchResultsList(
                     HorizontalDivider(
                         modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp, top = 8.dp),
                         thickness = 1.dp,
-                        color = WikipediaTheme.colors.borderColor
+                        color = NITCWikiTheme.colors.borderColor
                     )
                 }
             }
@@ -321,7 +321,7 @@ fun SemanticSearchResultHeader(
                 style = MaterialTheme.typography.titleLarge.copy(
                     fontWeight = FontWeight.Bold
                 ),
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         }
         Row(
@@ -330,7 +330,7 @@ fun SemanticSearchResultHeader(
             Box(
                 modifier = Modifier
                     .background(
-                        color = WikipediaTheme.colors.progressiveColor,
+                        color = NITCWikiTheme.colors.progressiveColor,
                         shape = RoundedCornerShape(size = 16.dp)
                     )
                     .padding(horizontal = 10.dp, vertical = 1.dp)
@@ -356,12 +356,12 @@ fun SemanticSearchResultHeader(
             ) {
                 Icon(
                     painter = painterResource(R.drawable.ic_info_outline_black_24dp),
-                    tint = WikipediaTheme.colors.primaryColor,
+                    tint = NITCWikiTheme.colors.primaryColor,
                     contentDescription = stringResource(R.string.year_in_review_information_icon)
                 )
                 DropdownMenu(
                     expanded = expanded,
-                    containerColor = WikipediaTheme.colors.paperColor,
+                    containerColor = NITCWikiTheme.colors.paperColor,
                     onDismissRequest = { expanded = false }
                 ) {
                     DropdownMenuItem(
@@ -369,7 +369,7 @@ fun SemanticSearchResultHeader(
                             Text(
                                 text = stringResource(R.string.hybrid_search_onboarding_learn_more),
                                 style = MaterialTheme.typography.bodyLarge,
-                                color = WikipediaTheme.colors.primaryColor
+                                color = NITCWikiTheme.colors.primaryColor
                             ) },
                         onClick = onInfoClick
                     )
@@ -378,7 +378,7 @@ fun SemanticSearchResultHeader(
                             Text(
                                 text = stringResource(R.string.hybrid_search_turn_off_experiment_label),
                                 style = MaterialTheme.typography.bodyLarge,
-                                color = WikipediaTheme.colors.destructiveColor
+                                color = NITCWikiTheme.colors.destructiveColor
                             ) },
                         onClick = onTurnOffExperimentClick
                     )
@@ -389,7 +389,7 @@ fun SemanticSearchResultHeader(
             modifier = Modifier.offset(y = (-8).dp),
             text = stringResource(R.string.hybrid_search_results_header_description),
             style = MaterialTheme.typography.bodyMedium,
-            color = WikipediaTheme.colors.placeholderColor
+            color = NITCWikiTheme.colors.placeholderColor
         )
     }
 }
@@ -410,9 +410,9 @@ fun SemanticSearchResultPageItem(
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
         border = BorderStroke(
             width = 1.dp,
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         ),
-        colors = CardDefaults.cardColors(containerColor = WikipediaTheme.colors.backgroundColor)
+        colors = CardDefaults.cardColors(containerColor = NITCWikiTheme.colors.backgroundColor)
     ) {
         Column(
             modifier = Modifier.height(400.dp)
@@ -430,10 +430,10 @@ fun SemanticSearchResultPageItem(
                         .padding(start = 16.dp, end = 16.dp, top = 16.dp),
                     text = searchResult.snippet.orEmpty(),
                     style = MaterialTheme.typography.bodyLarge,
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     linkStyle = TextLinkStyles(
                         style = SpanStyle(
-                            color = WikipediaTheme.colors.progressiveColor,
+                            color = NITCWikiTheme.colors.progressiveColor,
                             fontSize = 16.sp
                         )
                     ),
@@ -475,7 +475,7 @@ fun SemanticSearchResultPageItem(
                     },
                     text = ratingLabel,
                     style = MaterialTheme.typography.bodySmall,
-                    color = WikipediaTheme.colors.placeholderColor,
+                    color = NITCWikiTheme.colors.placeholderColor,
                     onTextLayout = { result ->
                         if (!isTextLaidOut) {
                             val multilineNow = result.lineCount > 1
@@ -509,7 +509,7 @@ fun SemanticSearchResultPageItem(
                                 .offset(y = (-2).dp),
                             painter = painterResource(if (isRatingPositiveSelected) R.drawable.ic_thumb_up_filled else R.drawable.ic_thumb_up),
                             contentDescription = stringResource(R.string.hybrid_search_results_rate_thumb_up),
-                            tint = WikipediaTheme.colors.placeholderColor
+                            tint = NITCWikiTheme.colors.placeholderColor
                         )
                     }
                 }
@@ -537,7 +537,7 @@ fun SemanticSearchResultPageItem(
                                 .offset(y = (-2).dp),
                             painter = painterResource(if (isRatingNegativeSelected) R.drawable.ic_thumb_down_filled else R.drawable.ic_thumb_down),
                             contentDescription = stringResource(R.string.hybrid_search_results_rate_thumb_down),
-                            tint = WikipediaTheme.colors.placeholderColor
+                            tint = NITCWikiTheme.colors.placeholderColor
                         )
                     }
                 }
@@ -546,7 +546,7 @@ fun SemanticSearchResultPageItem(
             HorizontalDivider(
                 modifier = Modifier.width(80.dp).padding(horizontal = 16.dp),
                 thickness = 1.dp,
-                color = WikipediaTheme.colors.borderColor
+                color = NITCWikiTheme.colors.borderColor
             )
 
             Box(
@@ -570,14 +570,14 @@ fun SemanticSearchResultPageItem(
                         HtmlText(
                             text = searchResult.pageTitle.displayText,
                             style = MaterialTheme.typography.bodyLarge,
-                            color = WikipediaTheme.colors.primaryColor,
+                            color = NITCWikiTheme.colors.primaryColor,
                             maxLines = 2,
                             overflow = TextOverflow.Ellipsis
                         )
                         Text(
                             text = searchResult.pageTitle.description.orEmpty(),
                             style = MaterialTheme.typography.bodyMedium,
-                            color = WikipediaTheme.colors.placeholderColor,
+                            color = NITCWikiTheme.colors.placeholderColor,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
@@ -590,8 +590,8 @@ fun SemanticSearchResultPageItem(
                             )
                         AsyncImage(
                             model = request,
-                            placeholder = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
-                            error = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
+                            placeholder = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
+                            error = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
                             contentScale = ContentScale.Crop,
                             contentDescription = null,
                             modifier = Modifier

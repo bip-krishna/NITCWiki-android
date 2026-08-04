@@ -28,7 +28,7 @@ import org.wikipedia.compose.components.OnboardingItem
 import org.wikipedia.compose.components.OnboardingListItem
 import org.wikipedia.compose.components.TwoButtonBottomBar
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.extensions.instrument
 import org.wikipedia.feed.personalization.PersonalizationActivity
 import org.wikipedia.settings.Prefs
@@ -101,7 +101,7 @@ fun ExploreFeedUpdatePromptScreen(
     Scaffold(
         modifier = modifier
             .safeDrawingPadding(),
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
         bottomBar = {
             TwoButtonBottomBar(
                 modifier = Modifier.fillMaxWidth()
@@ -127,7 +127,7 @@ fun ExploreFeedUpdatePromptScreen(
                 textAlign = TextAlign.Center,
                 text = stringResource(R.string.explore_feed_new_update_prompt_title),
                 style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Medium),
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
 
             onboardingItems.forEach { onboardingItem ->

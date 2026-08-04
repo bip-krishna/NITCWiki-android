@@ -14,7 +14,7 @@ import org.wikipedia.NITCWikiApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.settings.languages.WikipediaLanguagesFragment
+import org.wikipedia.settings.languages.NITCWikiLanguagesFragment
 import org.wikipedia.util.DeviceUtil
 
 class AddLanguagesListActivity : BaseActivity() {
@@ -54,7 +54,7 @@ class AddLanguagesListActivity : BaseActivity() {
                             app.languageState.addAppLanguageCode(languageCode)
                         }
                         val returnIntent = Intent()
-                        returnIntent.putExtra(WikipediaLanguagesFragment.ADD_LANGUAGE_INTERACTIONS, 1)
+                        returnIntent.putExtra(NITCWikiLanguagesFragment.ADD_LANGUAGE_INTERACTIONS, 1)
                         returnIntent.putExtra(LANGUAGE_SEARCHED, isLanguageSearched)
                         setResult(RESULT_OK, returnIntent)
                         finish()

@@ -17,7 +17,7 @@ import org.hamcrest.Matchers.allOf
 import org.wikipedia.R
 import org.wikipedia.base.TestConfig
 import org.wikipedia.base.TestThemeColorType
-import org.wikipedia.base.TestWikipediaColors
+import org.wikipedia.base.TestNITCWikiColors
 import org.wikipedia.base.utils.ColorAssertions
 import org.wikipedia.base.utils.assertTextColor
 import org.wikipedia.theme.Theme
@@ -35,7 +35,7 @@ class LanguageListRobot : BaseRobot() {
     }
 
     fun assertAddLanguageTextColor(theme: Theme) = apply {
-        val color = TestWikipediaColors.getGetColor(theme, TestThemeColorType.PROGRESSIVE)
+        val color = TestNITCWikiColors.getGetColor(theme, TestThemeColorType.PROGRESSIVE)
         list.scrollToRecyclerView(
             recyclerViewId = R.id.wikipedia_languages_recycler,
             title = "Add language",
@@ -69,7 +69,7 @@ class LanguageListRobot : BaseRobot() {
     }
 
     fun assertJapaneseLanguageTextColor(context: Context, theme: Theme) = apply {
-        val colorRes = TestWikipediaColors.getGetColor(theme, TestThemeColorType.PRIMARY)
+        val colorRes = TestNITCWikiColors.getGetColor(theme, TestThemeColorType.PRIMARY)
         val color = ContextCompat.getColor(context, colorRes)
         composeTestRule
             .onNodeWithTag("Japanese")

@@ -1,1 +1,1 @@
-Virallinen Wikipedia-sovellus Androidille.
+Virallinen NITCWiki-sovellus Androidille.

@@ -52,7 +52,7 @@ import org.maplibre.android.plugins.annotation.SymbolOptions
 import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
 import org.wikipedia.compose.components.HtmlText
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.okhttp.OkHttpConnectionFactory
 import org.wikipedia.dataclient.page.NearbyPage
@@ -223,7 +223,7 @@ fun GeoScreenContent(
                         .height(IntrinsicSize.Min)
                         .weight(1f),
                     text = processString(screenData.headlineText),
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     style = MaterialTheme.typography.headlineMedium
                 )
                 if (!screenCaptureMode) {
@@ -236,7 +236,7 @@ fun GeoScreenContent(
                         }) {
                         Icon(
                             painter = painterResource(R.drawable.baseline_info_24),
-                            tint = WikipediaTheme.colors.primaryColor,
+                            tint = NITCWikiTheme.colors.primaryColor,
                             contentDescription = stringResource(R.string.year_in_review_information_icon)
                         )
                     }
@@ -247,10 +247,10 @@ fun GeoScreenContent(
                     .padding(top = 10.dp, start = 16.dp, end = 16.dp, bottom = 16.dp)
                     .height(IntrinsicSize.Min),
                 text = processString(screenData.bodyText),
-                color = WikipediaTheme.colors.primaryColor,
+                color = NITCWikiTheme.colors.primaryColor,
                 linkStyle = TextLinkStyles(
                     style = SpanStyle(
-                        color = WikipediaTheme.colors.progressiveColor,
+                        color = NITCWikiTheme.colors.progressiveColor,
                         fontSize = 16.sp
                     )
                 ),

@@ -105,7 +105,7 @@ private fun SearchWidgetInstallWidgetScreenPreview() {
     ) {
         InstallWidgetScreen(
             title = "A Faster way to Search",
-            message = "Install the Wikipedia Search widget for instant access to knowledge from your home screen.",
+            message = "Install the NITCWiki Search widget for instant access to knowledge from your home screen.",
             onCloseClick = {},
             previewContent = {
                 Image(

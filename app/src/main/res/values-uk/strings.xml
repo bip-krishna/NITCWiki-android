@@ -31,8 +31,8 @@
 -->
 <resources>
   <string name="app_name_prod">Вікіпедія</string>
-  <string name="app_name_beta">Wikipedia Beta</string>
-  <string name="app_name_alpha">Wikipedia Alpha</string>
+  <string name="app_name_beta">NITCWiki Beta</string>
+  <string name="app_name_alpha">NITCWiki Alpha</string>
   <string name="wikimedia">Вікімедіа</string>
   <string name="nav_item_back">Назад</string>
   <string name="page_tabs_back">Назад</string>
@@ -170,7 +170,7 @@
   <string name="search_reading_lists_no_results">Не знайдено результатів у читальних списках</string>
   <string name="search_history_no_results">Не знайдено результатів в історії</string>
   <string name="edit_section_captcha_message">Щоб допомогти нам захиститися від спаму, будь ласка, введіть слова, які вказано нижче</string>
-  <string name="edit_section_captcha_request_an_account_message">Не бачите зображення? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Зробіть запит на створення облікового запису&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Не бачите зображення? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Зробіть запит на створення облікового запису&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">Повторіть слова зверху</string>
   <string name="title_captcha">Введіть символи із малюнку</string>
   <string name="edit_section_captcha_reload">Натисніть малюнок для оновлення</string>
@@ -1532,7 +1532,7 @@
   <string name="talk_snackbar_survey_action_text">Розпочати</string>
   <string name="talk_share_discussion_subject">Вікіпедія — обговорення на сторінці обговорення «%s»</string>
   <string name="talk_share_talk_page">Вікіпедія — обговорення на сторінці обговорення</string>
-  <string name="talk_edit_disclaimer">Це сторінка обговорення. Будь ласка, дотримуйтесь інструкцій щодо сторінки обговорення та не забудьте підписувати свої повідомлення, вводячи чотири тильди: ~~~~ під час публікації з використанням вікітексту.&lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Talk_page_guidelines\"&gt;Вікіпедія:Рекомендації щодо сторінок обговорення&lt;/a&gt;</string>
+  <string name="talk_edit_disclaimer">Це сторінка обговорення. Будь ласка, дотримуйтесь інструкцій щодо сторінки обговорення та не забудьте підписувати свої повідомлення, вводячи чотири тильди: ~~~~ під час публікації з використанням вікітексту.&lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Talk_page_guidelines\"&gt;Вікіпедія:Рекомендації щодо сторінок обговорення&lt;/a&gt;</string>
   <string name="talk_search_hint">Пошук повідомлень</string>
   <string name="talk_search_topics_hint">Шукати в темах</string>
   <string name="talk_search_find_in_talk_topics_hint">Знайти тему на сторінці обговорення</string>

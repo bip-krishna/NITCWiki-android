@@ -2,7 +2,7 @@ package org.wikipedia
 
 object TestConstants {
     const val FEATURED_ARTICLE = "Featured article"
-    const val TODAY_ON_WIKIPEDIA_MAIN_PAGE = "Today on Wikipedia"
+    const val TODAY_ON_WIKIPEDIA_MAIN_PAGE = "Today on NITCWiki"
     const val TOP_READ_ARTICLES = "Top read"
     const val PICTURE_OF_DAY = "Picture of the day"
     const val BECAUSE_YOU_READ = "Because you read"

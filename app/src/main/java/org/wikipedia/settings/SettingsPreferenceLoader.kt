@@ -25,7 +25,7 @@ import org.wikipedia.readinglist.recommended.RecommendedReadingListSettingsActiv
 import org.wikipedia.readinglist.recommended.RecommendedReadingListSource
 import org.wikipedia.readinglist.sync.ReadingListSyncAdapter
 import org.wikipedia.settings.homefeed.HomeFeedSettingsActivity
-import org.wikipedia.settings.languages.WikipediaLanguagesActivity
+import org.wikipedia.settings.languages.NITCWikiLanguagesActivity
 import org.wikipedia.theme.ThemeFittingRoomActivity
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.yearinreview.YearInReviewViewModel
@@ -41,7 +41,7 @@ internal class SettingsPreferenceLoader(fragment: PreferenceFragmentCompat) : Ba
         loadPreferences(R.xml.preferences_about)
         updateLanguagePrefSummary()
         findPreference(R.string.preference_key_language).onPreferenceClickListener = Preference.OnPreferenceClickListener {
-            activity.startActivityForResult(WikipediaLanguagesActivity.newIntent(activity, Constants.InvokeSource.SETTINGS),
+            activity.startActivityForResult(NITCWikiLanguagesActivity.newIntent(activity, Constants.InvokeSource.SETTINGS),
                     Constants.ACTIVITY_REQUEST_ADD_A_LANGUAGE)
             true
         }

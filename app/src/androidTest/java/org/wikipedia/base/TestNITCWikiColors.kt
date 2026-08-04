@@ -25,7 +25,7 @@ enum class TestThemeColorType {
     OVERLAY
 }
 
-object TestWikipediaColors {
+object TestNITCWikiColors {
 
     @ColorRes
     fun getGetColor(theme: Theme, colorType: TestThemeColorType): Int {

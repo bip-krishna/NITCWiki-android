@@ -49,7 +49,7 @@ import kotlinx.coroutines.delay
 import org.wikipedia.R
 import org.wikipedia.compose.components.WikiCard
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.extensions.getString
 import org.wikipedia.feed.onthisday.OnThisDay
 import org.wikipedia.games.onthisday.OnThisDayGameProvider
@@ -67,7 +67,7 @@ fun OnThisDayGameCardPreview(
     val context = LocalContext.current
     WikiCard(
         modifier = modifier,
-        border = BorderStroke(width = 0.5.dp, color = WikipediaTheme.colors.borderColor),
+        border = BorderStroke(width = 0.5.dp, color = NITCWikiTheme.colors.borderColor),
         elevation = 2.dp
     ) {
         Column(
@@ -87,12 +87,12 @@ fun OnThisDayGameCardPreview(
                         modifier = Modifier
                             .size(24.dp),
                         painter = painterResource(R.drawable.ic_events_24dp),
-                        tint = WikipediaTheme.colors.primaryColor,
+                        tint = NITCWikiTheme.colors.primaryColor,
                         contentDescription = null
                     )
                     Text(
                         text = titleText,
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         style = MaterialTheme.typography.titleMedium.copy(
                             fontWeight = FontWeight.SemiBold,
                             letterSpacing = 0.15.sp
@@ -108,7 +108,7 @@ fun OnThisDayGameCardPreview(
                 HorizontalDivider(
                     modifier = Modifier
                         .fillMaxWidth(),
-                    color = WikipediaTheme.colors.borderColor
+                    color = NITCWikiTheme.colors.borderColor
                 )
 
                 OnThisDayGameFirstEventView(
@@ -126,8 +126,8 @@ fun OnThisDayGameCardPreview(
                     modifier = Modifier
                         .align(Alignment.CenterEnd),
                     colors = ButtonDefaults.filledTonalButtonColors(
-                        containerColor = WikipediaTheme.colors.backgroundColor,
-                        contentColor = WikipediaTheme.colors.progressiveColor
+                        containerColor = NITCWikiTheme.colors.backgroundColor,
+                        contentColor = NITCWikiTheme.colors.progressiveColor
                     ),
                     onClick = onPlayClick
                 ) {
@@ -154,7 +154,7 @@ fun OnThisDayGameCardSimple(
 ) {
     WikiCard(
         modifier = modifier,
-        border = BorderStroke(width = 0.5.dp, color = WikipediaTheme.colors.borderColor),
+        border = BorderStroke(width = 0.5.dp, color = NITCWikiTheme.colors.borderColor),
         elevation = 2.dp
     ) {
         Box(
@@ -179,7 +179,7 @@ fun OnThisDayGameCardSimple(
                     modifier = Modifier
                         .padding(top = 16.dp),
                     text = titleText,
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     style = MaterialTheme.typography.titleMedium.copy(
                         fontWeight = FontWeight.SemiBold,
                         letterSpacing = 0.15.sp
@@ -201,7 +201,7 @@ fun OnThisDayGameCardProgress(
     val context = LocalContext.current
     WikiCard(
         modifier = modifier,
-        border = BorderStroke(width = 0.5.dp, color = WikipediaTheme.colors.borderColor),
+        border = BorderStroke(width = 0.5.dp, color = NITCWikiTheme.colors.borderColor),
         elevation = 2.dp
     ) {
         Box(
@@ -216,7 +216,7 @@ fun OnThisDayGameCardProgress(
                     modifier = Modifier
                         .size(44.dp),
                     painter = painterResource(R.drawable.ic_events_24dp),
-                    tint = WikipediaTheme.colors.progressiveColor,
+                    tint = NITCWikiTheme.colors.progressiveColor,
                     contentDescription = null
                 )
 
@@ -224,7 +224,7 @@ fun OnThisDayGameCardProgress(
                     modifier = Modifier
                         .padding(top = 16.dp),
                     text = titleText,
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     style = MaterialTheme.typography.titleMedium.copy(
                         fontWeight = FontWeight.SemiBold,
                         letterSpacing = 0.15.sp
@@ -246,7 +246,7 @@ fun OnThisDayGameCardProgress(
                 Text(
                     modifier = Modifier,
                     text = descriptionText,
-                    color = WikipediaTheme.colors.secondaryColor,
+                    color = NITCWikiTheme.colors.secondaryColor,
                     style = MaterialTheme.typography.bodyMedium.copy(
                         lineHeight = 24.sp,
                         letterSpacing = 0.sp
@@ -264,8 +264,8 @@ fun OnThisDayGameCardProgress(
                             modifier = Modifier
                                 .align(Alignment.CenterEnd),
                             colors = ButtonDefaults.filledTonalButtonColors(
-                                containerColor = WikipediaTheme.colors.backgroundColor,
-                                contentColor = WikipediaTheme.colors.progressiveColor
+                                containerColor = NITCWikiTheme.colors.backgroundColor,
+                                contentColor = NITCWikiTheme.colors.progressiveColor
                             ),
                             onClick = onContinueClick
                         ) {
@@ -301,7 +301,7 @@ fun OnThisDayGameCardCompleted(
     val context = LocalContext.current
     WikiCard(
         modifier = modifier,
-        border = BorderStroke(width = 0.5.dp, color = WikipediaTheme.colors.borderColor),
+        border = BorderStroke(width = 0.5.dp, color = NITCWikiTheme.colors.borderColor),
         elevation = 2.dp
     ) {
         Box(
@@ -316,7 +316,7 @@ fun OnThisDayGameCardCompleted(
                     modifier = Modifier
                         .size(44.dp),
                     painter = painterResource(R.drawable.ic_event_available),
-                    tint = WikipediaTheme.colors.successColor,
+                    tint = NITCWikiTheme.colors.successColor,
                     contentDescription = null
                 )
 
@@ -324,7 +324,7 @@ fun OnThisDayGameCardCompleted(
                     modifier = Modifier
                         .padding(top = 16.dp),
                     text = titleText,
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     style = MaterialTheme.typography.titleMedium.copy(
                         fontWeight = FontWeight.SemiBold,
                         letterSpacing = 0.15.sp
@@ -348,8 +348,8 @@ fun OnThisDayGameCardCompleted(
                     ) {
                         FilledTonalButton(
                             colors = ButtonDefaults.filledTonalButtonColors(
-                                containerColor = WikipediaTheme.colors.backgroundColor,
-                                contentColor = WikipediaTheme.colors.progressiveColor
+                                containerColor = NITCWikiTheme.colors.backgroundColor,
+                                contentColor = NITCWikiTheme.colors.progressiveColor
                             ),
                             onClick = onReviewResult
                         ) {
@@ -375,7 +375,7 @@ fun OnThisDayGameCardCompleted(
                                 ),
                                 style = MaterialTheme.typography.bodyLarge.copy(
                                     fontWeight = FontWeight.Medium,
-                                    color = WikipediaTheme.colors.progressiveColor
+                                    color = NITCWikiTheme.colors.progressiveColor
                                 ),
                                 textAlign = TextAlign.Center
                             )
@@ -400,7 +400,7 @@ fun OnThisDayGameFirstEventView(
             modifier = Modifier
                 .weight(1f),
             text = event.text,
-            color = WikipediaTheme.colors.secondaryColor,
+            color = NITCWikiTheme.colors.secondaryColor,
             style = MaterialTheme.typography.bodyMedium.copy(
                 lineHeight = 24.sp,
                 letterSpacing = 0.sp
@@ -415,7 +415,7 @@ fun OnThisDayGameFirstEventView(
                     LocalContext.current,
                     url = thumbnailUrl
                 ),
-                error = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
+                error = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
                 contentScale = ContentScale.Crop,
                 contentDescription = null,
                 modifier = Modifier
@@ -471,7 +471,7 @@ fun OnThisDayGameCountdown(
     Text(
         modifier = Modifier,
         text = countdownText,
-        color = WikipediaTheme.colors.secondaryColor,
+        color = NITCWikiTheme.colors.secondaryColor,
         style = MaterialTheme.typography.bodyMedium.copy(
             lineHeight = 24.sp,
             letterSpacing = 0.sp
@@ -551,7 +551,7 @@ private fun OnThisDayGameCardSimplePreview() {
         OnThisDayGameCardSimple(
             titleText = "Archive",
             iconRes = R.drawable.event_repeat_24dp,
-            iconTint = WikipediaTheme.colors.primaryColor,
+            iconTint = NITCWikiTheme.colors.primaryColor,
             onPlayClick = {}
         )
     }

@@ -35,7 +35,7 @@ import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.compose.components.InstallWidgetScreen
 import org.wikipedia.compose.components.TwoButtonBottomBar
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.page.ExtendedBottomSheetDialogFragment
 import org.wikipedia.settings.Prefs
 
@@ -78,7 +78,7 @@ class ReadingChallengeInstallWidgetDialog : ExtendedBottomSheetDialogFragment(st
                                     .dropShadow(
                                         shape = RoundedCornerShape(12.dp),
                                         shadow = Shadow(
-                                            color = WikipediaTheme.colors.overlayColor,
+                                            color = NITCWikiTheme.colors.overlayColor,
                                             radius = 12.dp,
                                             offset = DpOffset(0.dp, 12.dp)
                                         )
@@ -104,14 +104,14 @@ class ReadingChallengeInstallWidgetDialog : ExtendedBottomSheetDialogFragment(st
                                 Button(
                                     modifier = Modifier.fillMaxWidth(),
                                     colors = ButtonDefaults.buttonColors(
-                                        containerColor = WikipediaTheme.colors.progressiveColor
+                                        containerColor = NITCWikiTheme.colors.progressiveColor
                                     ),
                                     onClick = onGotItClick
                                 ) {
                                     Text(
                                         text = stringResource(R.string.reading_challenge_install_prompt_got_it),
                                         style = MaterialTheme.typography.labelLarge,
-                                        color = WikipediaTheme.colors.paperColor,
+                                        color = NITCWikiTheme.colors.paperColor,
                                         textAlign = TextAlign.Center
                                     )
                                 }

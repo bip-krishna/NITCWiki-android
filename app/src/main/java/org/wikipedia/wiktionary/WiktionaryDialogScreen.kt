@@ -35,7 +35,7 @@ import androidx.compose.ui.unit.sp
 import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
 import org.wikipedia.compose.components.HtmlText
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.restbase.RbDefinition
 import org.wikipedia.util.Resource
 import org.wikipedia.util.StringUtil
@@ -84,7 +84,7 @@ fun WiktionaryDialogContent(
 
             Text(
                 text = title,
-                color = WikipediaTheme.colors.primaryColor,
+                color = NITCWikiTheme.colors.primaryColor,
                 fontSize = 20.sp,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
@@ -95,7 +95,7 @@ fun WiktionaryDialogContent(
         }
 
         HorizontalDivider(
-            color = WikipediaTheme.colors.borderColor,
+            color = NITCWikiTheme.colors.borderColor,
             thickness = 0.5.dp,
             modifier = Modifier.fillMaxWidth()
         )
@@ -109,14 +109,14 @@ fun WiktionaryDialogContent(
                     contentAlignment = Alignment.Center
                 ) {
                     CircularProgressIndicator(
-                        color = WikipediaTheme.colors.progressiveColor,
+                        color = NITCWikiTheme.colors.progressiveColor,
                     )
                 }
             }
             is Resource.Error -> {
                 Text(
                     text = stringResource(R.string.wiktionary_no_definitions_found),
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     modifier = Modifier.padding(top = 16.dp)
                 )
             }
@@ -148,7 +148,7 @@ fun DefinitionList(
         Text(
             text = StringUtil.removeStyleTags(usage.partOfSpeech),
             fontSize = 14.sp,
-            color = WikipediaTheme.colors.placeholderColor,
+            color = NITCWikiTheme.colors.placeholderColor,
             modifier = Modifier.padding(vertical = 4.dp)
         )
 
@@ -182,7 +182,7 @@ fun DefinitionWithExamples(
                 text = "$count. ${StringUtil.removeStyleTags(definition.definition)}",
                 modifier = Modifier.padding(vertical = 4.dp),
                 style = TextStyle(
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     fontSize = 14.sp,
                 ),
                 linkInteractionListener = {
@@ -199,7 +199,7 @@ fun DefinitionWithExamples(
                     text = StringUtil.removeStyleTags(example),
                     modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 4.dp),
                     style = TextStyle(
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         fontSize = 14.sp,
                         fontStyle = FontStyle.Italic
                     ),

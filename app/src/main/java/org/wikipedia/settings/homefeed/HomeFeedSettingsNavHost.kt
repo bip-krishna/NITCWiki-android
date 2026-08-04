@@ -17,7 +17,7 @@ import org.wikipedia.main.MainActivity
 import org.wikipedia.navtab.NavTab
 import org.wikipedia.places.PlacesActivity
 import org.wikipedia.settings.Prefs
-import org.wikipedia.settings.languages.WikipediaLanguagesActivity
+import org.wikipedia.settings.languages.NITCWikiLanguagesActivity
 import org.wikipedia.util.FeedbackUtil
 
 @Composable
@@ -109,7 +109,7 @@ fun HomeFeedSettingsNavHost(
                 },
                 onLanguagesClick = {
                     context.instrument?.submitInteraction("click", elementId = "languages")
-                    context.startActivity(WikipediaLanguagesActivity.newIntent(context, Constants.InvokeSource.SETTINGS))
+                    context.startActivity(NITCWikiLanguagesActivity.newIntent(context, Constants.InvokeSource.SETTINGS))
                 },
             )
         }

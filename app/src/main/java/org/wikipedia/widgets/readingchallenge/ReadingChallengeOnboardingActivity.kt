@@ -42,9 +42,9 @@ import org.wikipedia.auth.AccountUtil
 import org.wikipedia.compose.components.OnboardingItem
 import org.wikipedia.compose.components.OnboardingListItem
 import org.wikipedia.compose.components.TwoButtonBottomBar
-import org.wikipedia.compose.components.WikipediaAlertDialog
+import org.wikipedia.compose.components.NITCWikiAlertDialog
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.extensions.instrument
 import org.wikipedia.login.LoginActivity
 import org.wikipedia.settings.Prefs
@@ -98,12 +98,12 @@ class ReadingChallengeOnboardingActivity : BaseActivity() {
                 val coroutineScope = rememberCoroutineScope()
                 var showLoginDialog by remember { mutableStateOf(false) }
                 if (showLoginDialog) {
-                    WikipediaAlertDialog(
+                    NITCWikiAlertDialog(
                         title = stringResource(R.string.reading_challenge_onboarding_prompt_title),
                         message = stringResource(R.string.reading_challenge_onboarding_prompt_message),
                         confirmButtonText = stringResource(R.string.reading_challenge_onboarding_prompt_login),
                         dismissButtonText = stringResource(R.string.reading_challenge_onboarding_prompt_no_thanks),
-                        dismissButtonColor = WikipediaTheme.colors.secondaryColor,
+                        dismissButtonColor = NITCWikiTheme.colors.secondaryColor,
                         onDismissRequest = {
                             showLoginDialog = false
                         },
@@ -158,7 +158,7 @@ class ReadingChallengeOnboardingActivity : BaseActivity() {
         Scaffold(
             modifier = modifier
                 .safeDrawingPadding(),
-            containerColor = WikipediaTheme.colors.paperColor,
+            containerColor = NITCWikiTheme.colors.paperColor,
             bottomBar = {
                 TwoButtonBottomBar(
                     modifier = Modifier.fillMaxWidth()
@@ -190,7 +190,7 @@ class ReadingChallengeOnboardingActivity : BaseActivity() {
                         modifier = Modifier.size(24.dp),
                         painter = painterResource(R.drawable.ic_close_black_24dp),
                         contentDescription = stringResource(R.string.dialog_close_description),
-                        tint = WikipediaTheme.colors.primaryColor
+                        tint = NITCWikiTheme.colors.primaryColor
                     )
                 }
 
@@ -201,7 +201,7 @@ class ReadingChallengeOnboardingActivity : BaseActivity() {
                     textAlign = TextAlign.Center,
                     text = stringResource(R.string.reading_challenge_onboarding_header),
                     style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Medium),
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
 
                 onboardingItems.forEach { onboardingItem ->
@@ -219,7 +219,7 @@ class ReadingChallengeOnboardingActivity : BaseActivity() {
                     textAlign = TextAlign.Center,
                     text = stringResource(R.string.reading_challenge_onboarding_note),
                     style = MaterialTheme.typography.bodySmall,
-                    color = WikipediaTheme.colors.placeholderColor
+                    color = NITCWikiTheme.colors.placeholderColor
                 )
             }
         }

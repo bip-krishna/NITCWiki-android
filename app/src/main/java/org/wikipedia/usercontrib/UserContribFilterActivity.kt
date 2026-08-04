@@ -16,7 +16,7 @@ import org.wikipedia.activity.BaseActivity
 import org.wikipedia.databinding.ActivityUserContribWikiSelectBinding
 import org.wikipedia.page.Namespace
 import org.wikipedia.settings.Prefs
-import org.wikipedia.settings.languages.WikipediaLanguagesActivity
+import org.wikipedia.settings.languages.NITCWikiLanguagesActivity
 import org.wikipedia.staticdata.TalkAliasData
 import org.wikipedia.staticdata.UserAliasData
 import org.wikipedia.staticdata.UserTalkAliasData
@@ -70,7 +70,7 @@ class UserContribFilterActivity : BaseActivity() {
         }
 
         override fun onSelected(item: Item?) {
-            langUpdateLauncher.launch(WikipediaLanguagesActivity.newIntent(this@UserContribFilterActivity, Constants.InvokeSource.USER_CONTRIB_ACTIVITY))
+            langUpdateLauncher.launch(NITCWikiLanguagesActivity.newIntent(this@UserContribFilterActivity, Constants.InvokeSource.USER_CONTRIB_ACTIVITY))
         }
     }
 

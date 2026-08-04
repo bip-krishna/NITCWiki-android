@@ -37,7 +37,7 @@ import org.wikipedia.compose.components.WikiTopAppBarWithSearch
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UiState
@@ -70,7 +70,7 @@ fun LanguagesListScreen(
                 }
             )
         },
-        containerColor = WikipediaTheme.colors.paperColor
+        containerColor = NITCWikiTheme.colors.paperColor
     ) { paddingValues ->
         when (uiState) {
             UiState.Loading -> {
@@ -83,7 +83,7 @@ fun LanguagesListScreen(
                         modifier = Modifier
                             .align(Alignment.BottomEnd)
                             .padding(24.dp),
-                        color = WikipediaTheme.colors.progressiveColor
+                        color = NITCWikiTheme.colors.progressiveColor
                     )
                 }
             }
@@ -163,7 +163,7 @@ fun ListHeader(
     title: String,
     modifier: Modifier = Modifier,
     titleStyle: TextStyle = MaterialTheme.typography.titleSmall.copy(
-        color = WikipediaTheme.colors.primaryColor,
+        color = NITCWikiTheme.colors.primaryColor,
         fontWeight = FontWeight.Bold,
         lineHeight = 24.sp
     )
@@ -194,7 +194,7 @@ fun LanguageListItemView(
         Text(
             text = localizedLanguageName,
             style = MaterialTheme.typography.titleMedium.copy(
-                color = WikipediaTheme.colors.primaryColor,
+                color = NITCWikiTheme.colors.primaryColor,
                 fontWeight = FontWeight.Bold,
             )
         )
@@ -202,7 +202,7 @@ fun LanguageListItemView(
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    color = WikipediaTheme.colors.secondaryColor,
+                    color = NITCWikiTheme.colors.secondaryColor,
                     textAlign = TextAlign.Center,
                     lineHeight = 24.sp,
                 )

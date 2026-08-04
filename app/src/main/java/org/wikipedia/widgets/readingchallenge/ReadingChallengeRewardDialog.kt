@@ -39,7 +39,7 @@ import org.wikipedia.R
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.compose.components.AppButton
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.page.ExtendedBottomSheetDialogFragment
 import org.wikipedia.settings.Prefs
 import org.wikipedia.theme.Theme
@@ -96,7 +96,7 @@ fun RewardScreen(
                 .height(4.dp)
                 .align(Alignment.CenterHorizontally)
                 .clip(RoundedCornerShape(50))
-                .background(WikipediaTheme.colors.placeholderColor)
+                .background(NITCWikiTheme.colors.placeholderColor)
         )
         Row(
             modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
@@ -106,7 +106,7 @@ fun RewardScreen(
                 modifier = Modifier.weight(1f),
                 text = stringResource(R.string.reading_challenge_widget_collect_your_prize_button),
                 style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Medium),
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
             IconButton(
                 modifier = Modifier
@@ -119,7 +119,7 @@ fun RewardScreen(
                     modifier = Modifier.size(24.dp),
                     painter = painterResource(R.drawable.ic_close_black_24dp),
                     contentDescription = stringResource(R.string.dialog_close_description),
-                    tint = WikipediaTheme.colors.primaryColor
+                    tint = NITCWikiTheme.colors.primaryColor
                 )
             }
         }
@@ -144,7 +144,7 @@ fun RewardScreen(
             modifier = Modifier,
             text = stringResource(R.string.reading_challenge_widget_reward_title),
             style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Medium),
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         Text(
             modifier = Modifier.fillMaxWidth(),
@@ -154,7 +154,7 @@ fun RewardScreen(
             // calls, this argument can be removed, and percents don't need to be escaped.
             text = stringResource(R.string.reading_challenge_widget_reward_body, *emptyArray()),
             style = MaterialTheme.typography.bodyLarge,
-            color = WikipediaTheme.colors.secondaryColor
+            color = NITCWikiTheme.colors.secondaryColor
         )
         AppButton(
             modifier = Modifier

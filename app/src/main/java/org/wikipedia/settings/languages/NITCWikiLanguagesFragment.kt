@@ -28,7 +28,7 @@ import org.wikipedia.views.DefaultViewHolder
 import org.wikipedia.views.MultiSelectActionModeCallback
 import java.util.*
 
-class NITCWikiLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesItemView.Callback {
+class NITCWikiLanguagesFragment : Fragment(), MenuProvider, NITCWikiLanguagesItemView.Callback {
     private var _binding: FragmentWikipediaLanguagesBinding? = null
     private val binding get() = _binding!!
     private lateinit var itemTouchHelper: ItemTouchHelper
@@ -145,7 +145,7 @@ class NITCWikiLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesIt
                     FooterViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.view_wikipedia_language_footer, parent, false))
                 }
                 else -> {
-                    NITCWikiLanguageItemHolder(WikipediaLanguagesItemView(parent.context))
+                    NITCWikiLanguageItemHolder(NITCWikiLanguagesItemView(parent.context))
                 }
             }
         }
@@ -252,7 +252,7 @@ class NITCWikiLanguagesFragment : Fragment(), MenuProvider, WikipediaLanguagesIt
         }
     }
 
-    private inner class NITCWikiLanguageItemHolder(itemView: WikipediaLanguagesItemView) : DefaultViewHolder<WikipediaLanguagesItemView>(itemView) {
+    private inner class NITCWikiLanguageItemHolder(itemView: NITCWikiLanguagesItemView) : DefaultViewHolder<NITCWikiLanguagesItemView>(itemView) {
         fun bindItem(languageCode: String, position: Int) {
             view.setContents(languageCode, app.languageState.getAppLanguageLocalizedName(languageCode), position)
         }

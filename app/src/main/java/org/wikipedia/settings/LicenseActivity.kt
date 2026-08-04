@@ -18,7 +18,7 @@ import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.compose.components.WikiTopAppBar
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.util.FileUtil.readFile
 
 class LicenseActivity : BaseActivity() {
@@ -59,7 +59,7 @@ class LicenseActivity : BaseActivity() {
                     onNavigationClick = onBackButtonClick
                 )
             },
-            containerColor = WikipediaTheme.colors.paperColor
+            containerColor = NITCWikiTheme.colors.paperColor
         ) { innerPadding ->
             Column(
                 modifier = modifier
@@ -71,7 +71,7 @@ class LicenseActivity : BaseActivity() {
                     text = AnnotatedString.fromHtml(
                         htmlString = licenseText ?: ""
                     ),
-                    color = WikipediaTheme.colors.primaryColor.copy(alpha = 0.6f)
+                    color = NITCWikiTheme.colors.primaryColor.copy(alpha = 0.6f)
                 )
             }
         }

@@ -54,7 +54,7 @@ import org.wikipedia.categories.db.Category
 import org.wikipedia.compose.components.AppButton
 import org.wikipedia.compose.components.WikiTopAppBar
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.UiState
 
@@ -160,7 +160,7 @@ fun CategoryDeveloperPlayGroundScreen(
                 onNavigationClick = onBackButtonClick
             )
         },
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
     ) { paddingValues ->
 
         Column(
@@ -292,7 +292,7 @@ fun CategoryDeveloperPlayGroundScreen(
                             modifier = Modifier
                                 .align(Alignment.Center)
                                 .padding(24.dp),
-                            color = WikipediaTheme.colors.progressiveColor
+                            color = NITCWikiTheme.colors.progressiveColor
                         )
                     }
                 }
@@ -331,9 +331,9 @@ fun DeleteView(
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             label = { Text("Years before") },
             colors = OutlinedTextFieldDefaults.colors(
-                focusedTextColor = WikipediaTheme.colors.primaryColor,
-                unfocusedTextColor = WikipediaTheme.colors.primaryColor,
-                focusedBorderColor = WikipediaTheme.colors.primaryColor,
+                focusedTextColor = NITCWikiTheme.colors.primaryColor,
+                unfocusedTextColor = NITCWikiTheme.colors.primaryColor,
+                focusedBorderColor = NITCWikiTheme.colors.primaryColor,
             ),
             modifier = Modifier
                 .fillMaxWidth()
@@ -369,9 +369,9 @@ fun FilterView(
             label = { Text("Year") },
             singleLine = true,
             colors = OutlinedTextFieldDefaults.colors(
-                focusedTextColor = WikipediaTheme.colors.primaryColor,
-                unfocusedTextColor = WikipediaTheme.colors.primaryColor,
-                focusedBorderColor = WikipediaTheme.colors.primaryColor
+                focusedTextColor = NITCWikiTheme.colors.primaryColor,
+                unfocusedTextColor = NITCWikiTheme.colors.primaryColor,
+                focusedBorderColor = NITCWikiTheme.colors.primaryColor
             ),
             modifier = Modifier
                 .fillMaxWidth()
@@ -415,13 +415,13 @@ fun SingleEntryView(
             label = {
                 Text(
                     text = "Title",
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             },
             colors = OutlinedTextFieldDefaults.colors(
-                focusedTextColor = WikipediaTheme.colors.primaryColor,
-                unfocusedTextColor = WikipediaTheme.colors.primaryColor,
-                focusedBorderColor = WikipediaTheme.colors.primaryColor
+                focusedTextColor = NITCWikiTheme.colors.primaryColor,
+                unfocusedTextColor = NITCWikiTheme.colors.primaryColor,
+                focusedBorderColor = NITCWikiTheme.colors.primaryColor
             ),
             modifier = Modifier
                 .fillMaxWidth()
@@ -436,13 +436,13 @@ fun SingleEntryView(
             label = {
                 Text(
                     text = "language code",
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             },
             colors = OutlinedTextFieldDefaults.colors(
-                focusedTextColor = WikipediaTheme.colors.primaryColor,
-                unfocusedTextColor = WikipediaTheme.colors.primaryColor,
-                focusedBorderColor = WikipediaTheme.colors.primaryColor
+                focusedTextColor = NITCWikiTheme.colors.primaryColor,
+                unfocusedTextColor = NITCWikiTheme.colors.primaryColor,
+                focusedBorderColor = NITCWikiTheme.colors.primaryColor
             ),
             modifier = Modifier
                 .fillMaxWidth()
@@ -457,14 +457,14 @@ fun SingleEntryView(
             label = {
                 Text(
                     text = "Year",
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             colors = OutlinedTextFieldDefaults.colors(
-                focusedTextColor = WikipediaTheme.colors.primaryColor,
-                unfocusedTextColor = WikipediaTheme.colors.primaryColor,
-                focusedBorderColor = WikipediaTheme.colors.primaryColor
+                focusedTextColor = NITCWikiTheme.colors.primaryColor,
+                unfocusedTextColor = NITCWikiTheme.colors.primaryColor,
+                focusedBorderColor = NITCWikiTheme.colors.primaryColor
             ),
             modifier = Modifier
                 .fillMaxWidth()
@@ -507,14 +507,14 @@ fun RandomBulkEntryView(
             label = {
                 Text(
                     text = "Number of Rows",
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             colors = OutlinedTextFieldDefaults.colors(
-                focusedTextColor = WikipediaTheme.colors.primaryColor,
-                unfocusedTextColor = WikipediaTheme.colors.primaryColor,
-                focusedBorderColor = WikipediaTheme.colors.primaryColor
+                focusedTextColor = NITCWikiTheme.colors.primaryColor,
+                unfocusedTextColor = NITCWikiTheme.colors.primaryColor,
+                focusedBorderColor = NITCWikiTheme.colors.primaryColor
             ),
             modifier = Modifier
                 .fillMaxWidth()
@@ -530,13 +530,13 @@ fun RandomBulkEntryView(
             label = {
                 Text(
                     text = "Year",
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             },
             colors = OutlinedTextFieldDefaults.colors(
-                focusedTextColor = WikipediaTheme.colors.primaryColor,
-                unfocusedTextColor = WikipediaTheme.colors.primaryColor,
-                focusedBorderColor = WikipediaTheme.colors.primaryColor
+                focusedTextColor = NITCWikiTheme.colors.primaryColor,
+                unfocusedTextColor = NITCWikiTheme.colors.primaryColor,
+                focusedBorderColor = NITCWikiTheme.colors.primaryColor
             ),
             modifier = Modifier
                 .fillMaxWidth()
@@ -570,8 +570,8 @@ fun ChipButton(
         modifier = modifier.height(32.dp),
         shape = RoundedCornerShape(16.dp),
         colors = ButtonDefaults.buttonColors(
-            containerColor = if (isSelected) WikipediaTheme.colors.focusColor else
-                WikipediaTheme.colors.progressiveColor
+            containerColor = if (isSelected) NITCWikiTheme.colors.focusColor else
+                NITCWikiTheme.colors.progressiveColor
         ),
         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 0.dp)
     ) {
@@ -600,19 +600,19 @@ fun CategoryTable(
                 Text(
                     text = "Title",
                     modifier = Modifier.weight(0.4f),
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     style = MaterialTheme.typography.titleMedium
                 )
                 Text(
                     text = "Language",
                     modifier = Modifier.weight(0.3f),
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     style = MaterialTheme.typography.titleMedium
                 )
                 Text(
                     text = if (categories != null) "Count" else "Timestamp",
                     modifier = Modifier.weight(0.3f),
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     style = MaterialTheme.typography.titleMedium
                 )
             }
@@ -628,17 +628,17 @@ fun CategoryTable(
                 ) {
                     Text(
                         text = categoryCount.title,
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         modifier = Modifier.weight(0.4f)
                     )
                     Text(
                         text = categoryCount.lang,
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         modifier = Modifier.weight(0.3f)
                     )
                     Text(
                         text = categoryCount.count.toString(),
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         modifier = Modifier.weight(0.3f)
                     )
                 }
@@ -655,17 +655,17 @@ fun CategoryTable(
                 ) {
                     Text(
                         text = category.title,
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         modifier = Modifier.weight(0.4f)
                     )
                     Text(
                         text = category.lang,
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         modifier = Modifier.weight(0.3f)
                     )
                     Text(
                         text = category.year.toString(),
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         modifier = Modifier.weight(0.3f)
                     )
                 }

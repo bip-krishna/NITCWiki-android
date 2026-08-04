@@ -131,7 +131,7 @@
   <string name="search_reading_lists_no_results">Bonzaa kyebe a kannoo yoeŋ</string>
   <string name="search_history_no_results">Bonzaa kyebe a dabaŋkroŋ poɔŋ</string>
   <string name="edit_section_captcha_message">Ka foŋ na soŋ gu yi masɛgye ba boɔre naŋ maŋ e a meŋɛ, sɔroo ŋmɛ a yelbie na naŋ sãã a puliŋ eŋ</string>
-  <string name="edit_section_captcha_request_an_account_message">Fo koŋ baŋ nyɛ a enfuo? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Request an account&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Fo koŋ baŋ nyɛ a enfuo? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Request an account&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">La maaleŋ sɛge a sɛgebie a yi a sazu</string>
   <string name="title_captcha">Eŋ CAPTCHA</string>
   <string name="edit_section_captcha_reload">Tɔ CAPTCHA a la piili</string>
@@ -226,7 +226,7 @@
   <string name="about_description">A Wikipiideɛ app yɛlɛ</string>
   <string name="privacy_policy_description">Gondo yɛlwaanoo</string>
   <string name="terms_of_use_description">Sagebo yelsɛgeree</string>
-  <string name="about_wikipedia_url">https://en.wikipedia.org/wiki/Wikipedia:Yɛlɛ</string>
+  <string name="about_wikipedia_url">https://en.wikipedia.org/wiki/NITCWiki:Yɛlɛ</string>
   <string name="about_libraries_heading">Gama binziiri toŋ</string>
   <string name="about_contributors_heading">Tontomba</string>
   <string name="about_translators_heading">Leɛ leɛre ba</string>
@@ -397,9 +397,9 @@
   <string name="error_blocked_start">piili fo pagebo: %s</string>
   <string name="error_blocked_expiry">Pagebo baaroo: %s</string>
   <string name="error_blocked_id">Page ID: %s</string>
-  <string name="error_blocked_footer">Fo na baŋ boɔŋ la&lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; bee a kaŋa&lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;administrator&lt;/a&gt; a di dɛmo te kyaare a pagebo yɛlɛ.</string>
+  <string name="error_blocked_footer">Fo na baŋ boɔŋ la&lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; bee a kaŋa&lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;administrator&lt;/a&gt; a di dɛmo te kyaare a pagebo yɛlɛ.</string>
   <string name="theme_chooser_menu_item_short_tooltip">Maale a tuulbaa fo boɔbo</string>
-  <string name="error_blocked_footer_no_blocker">Fo na toɔŋ boɔŋ a&lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;administrator&lt;/a&gt; a di dɛmo te kyaare a pagebo yɛlɛ.</string>
+  <string name="error_blocked_footer_no_blocker">Fo na toɔŋ boɔŋ a&lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;administrator&lt;/a&gt; a di dɛmo te kyaare a pagebo yɛlɛ.</string>
   <string name="crash_report_activity_title">Gbɛ ŋme be la fo yɛlɛ boɔbo ŋa poɔ</string>
   <string name="crash_report_relaunch_or_quit">Fo na boɔra ka fo leɛo gaa piili bee a bare?</string>
   <string name="crash_report_relaunch">Leɛ te piili</string>
@@ -1184,7 +1184,7 @@
   <string name="talk_snackbar_survey_action_text">De piiloŋ</string>
   <string name="talk_share_discussion_subject">Wikipiideɛ - dɛmɛ diibu yelyaga peegyi yelzu eŋɛ \"%s\"</string>
   <string name="talk_share_talk_page">Wikipiideɛ - dɛmɛ diibu yelyaga peegyi eŋɛ</string>
-  <string name="talk_edit_disclaimer">ŋa e la yelyaga peegyi. Sɔroo eŋ a yelyaga peegyi guubo sobie, ane ta yinni na goligoli fo posi ka fõõ ŋmɛ a bondesɛgere: ~~~~ ka fõõ wa pooso ne wikisɛgere.&lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Talk_page_guidelines\"&gt;Wikipedia:Talk page guidelines&lt;/a&gt;</string>
+  <string name="talk_edit_disclaimer">ŋa e la yelyaga peegyi. Sɔroo eŋ a yelyaga peegyi guubo sobie, ane ta yinni na goligoli fo posi ka fõõ ŋmɛ a bondesɛgere: ~~~~ ka fõõ wa pooso ne wikisɛgere.&lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Talk_page_guidelines\"&gt;NITCWiki:Talk page guidelines&lt;/a&gt;</string>
   <string name="talk_search_hint">Wɛre masɛgyere</string>
   <string name="talk_search_topics_hint">Wɛre yelzure</string>
   <string name="talk_search_find_in_talk_topics_hint">Nyɛ o la yeli peegyi yelzu poɔ</string>

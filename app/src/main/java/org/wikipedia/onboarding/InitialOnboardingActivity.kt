@@ -22,7 +22,7 @@ import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.feed.personalization.PersonalizationActivity
 import org.wikipedia.language.AppLanguageState
 import org.wikipedia.settings.Prefs
-import org.wikipedia.settings.languages.WikipediaLanguagesActivity
+import org.wikipedia.settings.languages.NITCWikiLanguagesActivity
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.DeviceUtil
 import org.wikipedia.util.ResourceUtil
@@ -58,7 +58,7 @@ class InitialOnboardingActivity : BaseActivity() {
                     appLanguageCodes = appLanguageCodesState.value,
                     isNewUser = Prefs.isInitialOnboardingEnabled,
                     onAddLanguageClick = {
-                        languagesLauncher.launch(WikipediaLanguagesActivity.newIntent(this, Constants.InvokeSource.ONBOARDING_DIALOG))
+                        languagesLauncher.launch(NITCWikiLanguagesActivity.newIntent(this, Constants.InvokeSource.ONBOARDING_DIALOG))
                     },
                     onUpdateTheme = {
                         currentTheme = NITCWikiApp.instance.currentTheme

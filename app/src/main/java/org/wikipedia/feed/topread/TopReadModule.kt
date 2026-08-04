@@ -34,7 +34,7 @@ import coil3.compose.AsyncImage
 import org.wikipedia.R
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.extensions.getString
@@ -61,7 +61,7 @@ fun TopReadModule(
         wikiSite = wikiSite,
         titleResId = R.string.view_top_read_card_title,
         subTitleResId = R.string.view_top_read_card_description,
-        backgroundColor = WikipediaTheme.colors.backgroundColor,
+        backgroundColor = NITCWikiTheme.colors.backgroundColor,
         onHideCardClick = onHideCardClick,
         onHideModuleClick = onHideModuleClick,
         onCardInView = onCardImpression
@@ -98,14 +98,14 @@ fun TopReadModule(
             Text(
                 text = context.getString(wikiSite.languageCode, R.string.view_top_read_card_action),
                 style = MaterialTheme.typography.labelLarge,
-                color = WikipediaTheme.colors.progressiveColor,
+                color = NITCWikiTheme.colors.progressiveColor,
                 fontWeight = FontWeight.Medium
             )
             Spacer(modifier = Modifier.width(8.dp))
             Icon(
                 painter = painterResource(R.drawable.ic_arrow_forward_black_24dp),
                 contentDescription = context.getString(wikiSite.languageCode, R.string.view_top_read_card_action),
-                tint = WikipediaTheme.colors.progressiveColor
+                tint = NITCWikiTheme.colors.progressiveColor
             )
         }
     }
@@ -132,7 +132,7 @@ fun TopReadItem(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(1.dp)
-                .background(WikipediaTheme.colors.borderColor)
+                .background(NITCWikiTheme.colors.borderColor)
         )
         Spacer(modifier = Modifier.height(4.dp))
         Row(
@@ -146,7 +146,7 @@ fun TopReadItem(
                         modifier = Modifier
                             .size(24.dp)
                             .background(
-                                color = WikipediaTheme.colors.progressiveColor,
+                                color = NITCWikiTheme.colors.progressiveColor,
                                 shape = RoundedCornerShape(4.dp)
                             ),
                         contentAlignment = Alignment.Center
@@ -154,7 +154,7 @@ fun TopReadItem(
                         Text(
                             text = rank.toString(),
                             fontSize = 16.sp,
-                            color = WikipediaTheme.colors.paperColor,
+                            color = NITCWikiTheme.colors.paperColor,
                             fontFamily = FontFamily.Serif,
                             fontWeight = FontWeight.Bold
                         )
@@ -164,7 +164,7 @@ fun TopReadItem(
 
                     HtmlText(
                         text = pageSummary.displayTitle,
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         style = MaterialTheme.typography.titleMedium.copy(
                             fontWeight = FontWeight.SemiBold
                         )
@@ -175,7 +175,7 @@ fun TopReadItem(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     val trendingIcon = if (isTrendingUp) R.drawable.ic_trending_up_24dp else R.drawable.ic_trending_down_24dp
-                    val trendingIconTint = if (isTrendingUp) WikipediaTheme.colors.successColor else WikipediaTheme.colors.destructiveColor
+                    val trendingIconTint = if (isTrendingUp) NITCWikiTheme.colors.successColor else NITCWikiTheme.colors.destructiveColor
                     Icon(
                         modifier = Modifier.size(24.dp),
                         painter = painterResource(trendingIcon),
@@ -187,14 +187,14 @@ fun TopReadItem(
                         text = StringUtil.getPageViewText(context, pageSummary.views),
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
-                        color = WikipediaTheme.colors.secondaryColor
+                        color = NITCWikiTheme.colors.secondaryColor
                     )
                     Spacer(modifier = Modifier.width(4.dp))
                     Text(
                         text = context.getString(wikiSite.languageCode, R.string.view_top_read_card_pageviews_views_suffix),
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Medium,
-                        color = WikipediaTheme.colors.secondaryColor
+                        color = NITCWikiTheme.colors.secondaryColor
                     )
                 }
             }
@@ -225,7 +225,7 @@ fun TopReadItem(
                                 wikiSite.languageCode,
                                 R.string.menu_feed_overflow_label
                             ),
-                            tint = WikipediaTheme.colors.placeholderColor
+                            tint = NITCWikiTheme.colors.placeholderColor
                         )
                     }
                 )

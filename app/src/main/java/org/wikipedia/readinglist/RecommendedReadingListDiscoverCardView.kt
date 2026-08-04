@@ -34,7 +34,7 @@ import org.wikipedia.R
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.components.WikiCard
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.views.imageservice.ImageService
 
@@ -68,14 +68,14 @@ fun RecommendedReadingListDiscoverCardView(
                     Text(
                         text = title,
                         style = MaterialTheme.typography.titleMedium,
-                        color = WikipediaTheme.colors.primaryColor
+                        color = NITCWikiTheme.colors.primaryColor
                     )
                     if (isNewListGenerated) {
                         Box(
                             modifier = Modifier
                                 .size(6.dp)
                                 .clip(CircleShape)
-                                .background(WikipediaTheme.colors.destructiveColor)
+                                .background(NITCWikiTheme.colors.destructiveColor)
                         )
                     }
                 }
@@ -88,7 +88,7 @@ fun RecommendedReadingListDiscoverCardView(
                         modifier = Modifier
                             .size(20.dp),
                         painter = painterResource(subtitleIcon),
-                        tint = WikipediaTheme.colors.primaryColor,
+                        tint = NITCWikiTheme.colors.primaryColor,
                         contentDescription = null
                     )
                     HtmlText(
@@ -96,7 +96,7 @@ fun RecommendedReadingListDiscoverCardView(
                             .padding(top = 2.dp),
                         text = subtitle,
                         style = TextStyle(
-                            color = WikipediaTheme.colors.primaryColor,
+                            color = NITCWikiTheme.colors.primaryColor,
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Normal
                         )
@@ -105,7 +105,7 @@ fun RecommendedReadingListDiscoverCardView(
 
                 Text(
                     text = description,
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     style = MaterialTheme.typography.bodySmall
                 )
             }
@@ -124,7 +124,7 @@ fun RecommendedReadingListDiscoverCardView(
                             Box(
                                 modifier = Modifier
                                     .size(70.dp)
-                                    .background(WikipediaTheme.colors.borderColor)
+                                    .background(NITCWikiTheme.colors.borderColor)
                             )
                         } else {
                             AsyncImage(
@@ -136,8 +136,8 @@ fun RecommendedReadingListDiscoverCardView(
                                     .size(70.dp),
                                 contentScale = ContentScale.Crop,
                                 contentDescription = null,
-                                placeholder = ColorPainter(WikipediaTheme.colors.borderColor),
-                                error = ColorPainter(WikipediaTheme.colors.borderColor),
+                                placeholder = ColorPainter(NITCWikiTheme.colors.borderColor),
+                                error = ColorPainter(NITCWikiTheme.colors.borderColor),
                             )
                         }
                     }

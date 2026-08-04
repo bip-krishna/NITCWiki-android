@@ -130,7 +130,7 @@
   <string name="search_reading_lists_no_results">Handə sijohijonədə nətičon pəjdo nybin</string>
   <string name="search_history_no_results">Tarixədə nətičon pəjdo nybin</string>
   <string name="edit_section_captcha_message">Bo əmə dastək bej ce avtomatik spamiku noǧo doj yštəni, zəhmət nybu, žintono nišon kardə byə syxanon bynyvyštən</string>
-  <string name="edit_section_captcha_request_an_account_message">Kapcə šikili vindənijon? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Byparsən akkaunti&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Kapcə šikili vindənijon? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Byparsən akkaunti&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">Pentonədə nišon kardə byə syxanon sənibəton bykən</string>
   <string name="title_captcha">CAPTCHA bynyvyštən</string>
   <string name="edit_section_captcha_reload">Bə CAPTCHA dast byžənən əj nujə kardejro</string>
@@ -724,7 +724,7 @@
   <string name="suggested_edits_last_edited">Oxonə ovaxtəti</string>
   <string name="suggested_edits_last_edited_never">Hic vaxt</string>
   <string name="suggested_edits_task_new">Nujə</string>
-  <string name="suggested_edits_reactivation_notification_stage_one">Thanks for editing Wikipedia! Why not continue konco you left off?</string>
+  <string name="suggested_edits_reactivation_notification_stage_one">Thanks for editing NITCWiki! Why not continue konco you left off?</string>
   <string name="suggested_edits_contribution_language_label">Zyvon</string>
   <string name="suggested_edits_contribution_date_time_label">Taryx / Zəmon</string>
   <string name="suggested_edits_contribution_type_label">Tohfə tispir</string>

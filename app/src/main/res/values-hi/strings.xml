@@ -173,7 +173,7 @@
   <string name="search_reading_lists_no_results">पठन सूची में कोई परिणाम नहीं मिला</string>
   <string name="search_history_no_results">इतिहास में कोई परिणाम नहीं मिला</string>
   <string name="edit_section_captcha_message">स्वचालित स्पैम से बचने के लिए कृपया नीचे दिखाए गए शब्दों को लिखें</string>
-  <string name="edit_section_captcha_request_an_account_message">चित्र नहीं दिख रहा? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;एक खाते का अनुरोध करें&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">चित्र नहीं दिख रहा? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;एक खाते का अनुरोध करें&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">ऊपर से शब्दों को दोहराएँ</string>
   <string name="title_captcha">CAPTCHA दर्ज करें</string>
   <string name="edit_section_captcha_reload">पुनः लोड करने के लिए CAPTCHA पर टैप करें</string>
@@ -583,7 +583,7 @@
   <string name="reading_lists_default_list_delete_message">डिफ़ॉल्ट सूची ( %s ) को हटाया नहीं जा सकता</string>
   <string name="reading_lists_default_plus_one_list_delete_message">%1$s हटा दिया गया। डिफ़ॉल्ट सूची ( %2$s ) को हटाया नहीं जा सकता।</string>
   <string name="reading_lists_default_plus_many_lists_delete_message">सूचियाँ हटा दी गईं। डिफ़ॉल्ट सूची ( %s ) को हटाया नहीं जा सकता।</string>
-  <string name="single_list_json_file_name">%s (Wikipedia reading list).json</string>
+  <string name="single_list_json_file_name">%s (NITCWiki reading list).json</string>
   <string name="multiple_lists_json_file_name">विकिपीडिया पठन सूचियाँ ( %s और अधिक).json</string>
   <string name="reading_list_items_deleted">%d लेख सूची से हटाये गए</string>
   <string name="reading_lists_item_deleted">%s को सूचियों से हटाया गया</string>
@@ -1340,7 +1340,7 @@
   <string name="talk_snackbar_survey_action_text">शुरूआत करें</string>
   <string name="talk_share_discussion_subject">विकिपीडिया - वार्ता पृष्ठ विषय \"%s\" पर चर्चा</string>
   <string name="talk_share_talk_page">विकिपीडिया - वार्ता पृष्ठ पर चर्चा</string>
-  <string name="talk_edit_disclaimer">यह एक वार्ता पृष्ठ है। कृपया वार्ता पृष्ठ दिशानिर्देशों का सम्मान करें, और विकीटेक्स्ट का उपयोग करके पोस्ट करते समय चार टिल्ड टाइप करके अपनी पोस्ट पर हस्ताक्षर करना याद रखें: ~~~~।&lt;br&gt;&lt;br&gt; &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Talk_page_guidelines\"&gt;विकिपीडिया: वार्ता पृष्ठ दिशानिर्देश&lt;/a&gt;</string>
+  <string name="talk_edit_disclaimer">यह एक वार्ता पृष्ठ है। कृपया वार्ता पृष्ठ दिशानिर्देशों का सम्मान करें, और विकीटेक्स्ट का उपयोग करके पोस्ट करते समय चार टिल्ड टाइप करके अपनी पोस्ट पर हस्ताक्षर करना याद रखें: ~~~~।&lt;br&gt;&lt;br&gt; &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Talk_page_guidelines\"&gt;विकिपीडिया: वार्ता पृष्ठ दिशानिर्देश&lt;/a&gt;</string>
   <string name="talk_search_hint">संदेश खोजें</string>
   <string name="talk_search_topics_hint">विषय खोजें</string>
   <string name="talk_search_find_in_talk_topics_hint">वार्ता पृष्ठ विषय में खोजें</string>
@@ -1522,7 +1522,7 @@
   <string name="shareable_reading_lists_new_imported_snackbar">पठन सूची आयात की गई</string>
   <string name="reading_list_share_menu_label">साझा करें…</string>
   <string name="reading_list_share_menu_tooltip">यह रीडिंग लिस्ट अन्य लोगों के साथ साझा करें</string>
-  <string name="reading_list_share_message_v2">हैलो! मैं अपना Wikipedia रीडिंग लिस्ट आपके साथ साझा करना चाहता/चाहती हूं :</string>
+  <string name="reading_list_share_message_v2">हैलो! मैं अपना NITCWiki रीडिंग लिस्ट आपके साथ साझा करना चाहता/चाहती हूं :</string>
   <string name="talk_templates_new_message_subject_hint">विषय</string>
   <string name="talk_templates_new_message_compose_hint">संदेश लिखें</string>
   <string name="talk_templates_new_message_save">सहेजें</string>

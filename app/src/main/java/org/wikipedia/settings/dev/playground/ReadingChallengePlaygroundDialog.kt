@@ -47,7 +47,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.coroutines.launch
 import org.wikipedia.R
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.page.ExtendedBottomSheetDialogFragment
 import org.wikipedia.settings.Prefs
 import org.wikipedia.widgets.readingchallenge.ReadingChallengeState
@@ -80,7 +80,7 @@ class ReadingChallengePlayGroundDialog : ExtendedBottomSheetDialogFragment(start
                                     Icon(
                                         painter = painterResource(R.drawable.ic_arrow_back_black_24dp),
                                         contentDescription = stringResource(R.string.nav_item_back),
-                                        tint = WikipediaTheme.colors.primaryColor
+                                        tint = NITCWikiTheme.colors.primaryColor
                                     )
                                 }
                             )
@@ -90,7 +90,7 @@ class ReadingChallengePlayGroundDialog : ExtendedBottomSheetDialogFragment(start
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 18.sp
                                 ),
-                                color = WikipediaTheme.colors.primaryColor,
+                                color = NITCWikiTheme.colors.primaryColor,
                                 modifier = Modifier.padding(start = 8.dp)
                             )
                         }
@@ -153,11 +153,11 @@ fun ReadingChallengePlayground(
     val threeDaysAgo = LocalDate.now().minusDays(3).toString()
 
     val switchColor = SwitchDefaults.colors(
-        uncheckedTrackColor = WikipediaTheme.colors.paperColor,
+        uncheckedTrackColor = NITCWikiTheme.colors.paperColor,
         uncheckedThumbColor = MaterialTheme.colorScheme.outline,
         uncheckedBorderColor = MaterialTheme.colorScheme.outline,
-        checkedTrackColor = WikipediaTheme.colors.progressiveColor,
-        checkedThumbColor = WikipediaTheme.colors.paperColor
+        checkedTrackColor = NITCWikiTheme.colors.progressiveColor,
+        checkedThumbColor = NITCWikiTheme.colors.paperColor
     )
 
     Column(
@@ -170,21 +170,21 @@ fun ReadingChallengePlayground(
         Text(
             "Current State: ${state::class.simpleName}",
             style = MaterialTheme.typography.titleLarge,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
 
         // --- Streak ---
         Card {
             Column(
                 Modifier
-                    .background(WikipediaTheme.colors.backgroundColor)
+                    .background(NITCWikiTheme.colors.backgroundColor)
                     .padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Text(
                     text = "readingChallengeStreak",
                     style = MaterialTheme.typography.labelMedium,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
@@ -199,12 +199,12 @@ fun ReadingChallengePlayground(
                     Text(
                         text = "$streak",
                         style = MaterialTheme.typography.headlineMedium,
-                        color = WikipediaTheme.colors.primaryColor
+                        color = NITCWikiTheme.colors.primaryColor
                     )
                     IconButton(onClick = {
                         Prefs.readingChallengeStreak = ++streak
                         updateWidgetsExplicitly()
-                    }) { Text("+", color = WikipediaTheme.colors.primaryColor) }
+                    }) { Text("+", color = NITCWikiTheme.colors.primaryColor) }
                 }
             }
         }
@@ -213,7 +213,7 @@ fun ReadingChallengePlayground(
         Card {
             Row(
                 Modifier
-                    .background(WikipediaTheme.colors.backgroundColor)
+                    .background(NITCWikiTheme.colors.backgroundColor)
                     .padding(16.dp)
                     .fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -223,7 +223,7 @@ fun ReadingChallengePlayground(
                     modifier = Modifier.weight(1f),
                     text = "readingChallengeEnrolled",
                     style = MaterialTheme.typography.labelMedium,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
                 Switch(
                     checked = enrolled,
@@ -243,7 +243,7 @@ fun ReadingChallengePlayground(
             Card {
                 Row(
                     Modifier
-                        .background(WikipediaTheme.colors.backgroundColor)
+                        .background(NITCWikiTheme.colors.backgroundColor)
                         .padding(16.dp)
                         .fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -253,12 +253,12 @@ fun ReadingChallengePlayground(
                         Text(
                             text = "readingChallengeWidgetFastCycle",
                             style = MaterialTheme.typography.labelMedium,
-                            color = WikipediaTheme.colors.primaryColor
+                            color = NITCWikiTheme.colors.primaryColor
                         )
                         Text(
                             text = "Updates every 1 min instead of midnight",
                             style = MaterialTheme.typography.bodySmall,
-                            color = WikipediaTheme.colors.secondaryColor
+                            color = NITCWikiTheme.colors.secondaryColor
                         )
                     }
                     Switch(
@@ -278,7 +278,7 @@ fun ReadingChallengePlayground(
         Card {
             Row(
                 Modifier
-                    .background(WikipediaTheme.colors.backgroundColor)
+                    .background(NITCWikiTheme.colors.backgroundColor)
                     .padding(16.dp)
                     .fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -288,7 +288,7 @@ fun ReadingChallengePlayground(
                     modifier = Modifier.weight(1f),
                     text = "readingChallengeOnboardingShown",
                     style = MaterialTheme.typography.labelMedium,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
                 Switch(
                     checked = onboardingShown,
@@ -306,7 +306,7 @@ fun ReadingChallengePlayground(
         Card {
             Row(
                 Modifier
-                    .background(WikipediaTheme.colors.backgroundColor)
+                    .background(NITCWikiTheme.colors.backgroundColor)
                     .padding(16.dp)
                     .fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -316,7 +316,7 @@ fun ReadingChallengePlayground(
                     modifier = Modifier.weight(1f),
                     text = "readingChallengeInstallPromptShown",
                     style = MaterialTheme.typography.labelMedium,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
                 Switch(
                     checked = widgetPromptShown,
@@ -334,14 +334,14 @@ fun ReadingChallengePlayground(
         Card {
             Column(
                 Modifier
-                    .background(WikipediaTheme.colors.backgroundColor)
+                    .background(NITCWikiTheme.colors.backgroundColor)
                     .padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Text(
                     text = "readingChallengeLastReadDate",
                     style = MaterialTheme.typography.labelMedium,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -352,15 +352,15 @@ fun ReadingChallengePlayground(
                         onValueChange = {
                             lastReadDate = it
                         },
-                        placeholder = { Text("YYYY-MM-DD", color = WikipediaTheme.colors.primaryColor) },
+                        placeholder = { Text("YYYY-MM-DD", color = NITCWikiTheme.colors.primaryColor) },
                         singleLine = true,
                         colors = OutlinedTextFieldDefaults.colors(
-                            focusedTextColor = WikipediaTheme.colors.primaryColor,
+                            focusedTextColor = NITCWikiTheme.colors.primaryColor,
                             focusedBorderColor = MaterialTheme.colorScheme.outline,
-                            unfocusedTextColor = WikipediaTheme.colors.primaryColor,
+                            unfocusedTextColor = NITCWikiTheme.colors.primaryColor,
                             unfocusedBorderColor = MaterialTheme.colorScheme.outline,
-                            cursorColor = WikipediaTheme.colors.primaryColor,
-                            errorTextColor = WikipediaTheme.colors.primaryColor,
+                            cursorColor = NITCWikiTheme.colors.primaryColor,
+                            errorTextColor = NITCWikiTheme.colors.primaryColor,
                         ),
                         modifier = Modifier.weight(1f)
                     )
@@ -371,8 +371,8 @@ fun ReadingChallengePlayground(
                         },
                         enabled = lastReadDate.isEmpty() || runCatching { LocalDate.parse(lastReadDate) }.isSuccess,
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = WikipediaTheme.colors.progressiveColor,
-                            contentColor = WikipediaTheme.colors.paperColor
+                            containerColor = NITCWikiTheme.colors.progressiveColor,
+                            contentColor = NITCWikiTheme.colors.paperColor
                         )
                     ) {
                         Text("Save")
@@ -384,22 +384,22 @@ fun ReadingChallengePlayground(
                         Prefs.readingChallengeLastReadDate = today
                         lastReadDate = today
                         updateWidgetsExplicitly()
-                    }, label = { Text("Today", color = WikipediaTheme.colors.primaryColor) })
+                    }, label = { Text("Today", color = NITCWikiTheme.colors.primaryColor) })
                     AssistChip(onClick = {
                         Prefs.readingChallengeLastReadDate = yesterday
                         lastReadDate = yesterday
                         updateWidgetsExplicitly()
-                    }, label = { Text("Yesterday", color = WikipediaTheme.colors.primaryColor) })
+                    }, label = { Text("Yesterday", color = NITCWikiTheme.colors.primaryColor) })
                     AssistChip(onClick = {
                         Prefs.readingChallengeLastReadDate = threeDaysAgo
                         lastReadDate = threeDaysAgo
                         updateWidgetsExplicitly()
-                    }, label = { Text("3 Days Ago", color = WikipediaTheme.colors.primaryColor) })
+                    }, label = { Text("3 Days Ago", color = NITCWikiTheme.colors.primaryColor) })
                     AssistChip(onClick = {
                         Prefs.readingChallengeLastReadDate = ""
                         lastReadDate = ""
                         updateWidgetsExplicitly()
-                    }, label = { Text("Clear", color = WikipediaTheme.colors.primaryColor) })
+                    }, label = { Text("Clear", color = NITCWikiTheme.colors.primaryColor) })
                 }
             }
         }
@@ -408,14 +408,14 @@ fun ReadingChallengePlayground(
         Card {
             Column(
                 Modifier
-                    .background(WikipediaTheme.colors.backgroundColor)
+                    .background(NITCWikiTheme.colors.backgroundColor)
                     .padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Text(
                     text = "readingChallengeStartDate",
                     style = MaterialTheme.typography.labelMedium,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -429,17 +429,17 @@ fun ReadingChallengePlayground(
                         placeholder = {
                             Text(
                                 "YYYY-MM-DD",
-                                color = WikipediaTheme.colors.primaryColor
+                                color = NITCWikiTheme.colors.primaryColor
                             )
                         },
                         singleLine = true,
                         colors = OutlinedTextFieldDefaults.colors(
-                            focusedTextColor = WikipediaTheme.colors.primaryColor,
+                            focusedTextColor = NITCWikiTheme.colors.primaryColor,
                             focusedBorderColor = MaterialTheme.colorScheme.outline,
-                            unfocusedTextColor = WikipediaTheme.colors.primaryColor,
+                            unfocusedTextColor = NITCWikiTheme.colors.primaryColor,
                             unfocusedBorderColor = MaterialTheme.colorScheme.outline,
-                            cursorColor = WikipediaTheme.colors.primaryColor,
-                            errorTextColor = WikipediaTheme.colors.primaryColor,
+                            cursorColor = NITCWikiTheme.colors.primaryColor,
+                            errorTextColor = NITCWikiTheme.colors.primaryColor,
                         ),
                         modifier = Modifier.weight(1f)
                     )
@@ -450,8 +450,8 @@ fun ReadingChallengePlayground(
                         },
                         enabled = startDate.isEmpty() || runCatching { LocalDate.parse(startDate) }.isSuccess,
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = WikipediaTheme.colors.progressiveColor,
-                            contentColor = WikipediaTheme.colors.paperColor
+                            containerColor = NITCWikiTheme.colors.progressiveColor,
+                            contentColor = NITCWikiTheme.colors.paperColor
                         )
                     ) {
                         Text("Save")
@@ -464,14 +464,14 @@ fun ReadingChallengePlayground(
         Card {
             Column(
                 Modifier
-                    .background(WikipediaTheme.colors.backgroundColor)
+                    .background(NITCWikiTheme.colors.backgroundColor)
                     .padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Text(
                     text = "readingChallengeEndDate",
                     style = MaterialTheme.typography.labelMedium,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -485,17 +485,17 @@ fun ReadingChallengePlayground(
                         placeholder = {
                             Text(
                                 "YYYY-MM-DD",
-                                color = WikipediaTheme.colors.primaryColor
+                                color = NITCWikiTheme.colors.primaryColor
                             )
                         },
                         singleLine = true,
                         colors = OutlinedTextFieldDefaults.colors(
-                            focusedTextColor = WikipediaTheme.colors.primaryColor,
+                            focusedTextColor = NITCWikiTheme.colors.primaryColor,
                             focusedBorderColor = MaterialTheme.colorScheme.outline,
-                            unfocusedTextColor = WikipediaTheme.colors.primaryColor,
+                            unfocusedTextColor = NITCWikiTheme.colors.primaryColor,
                             unfocusedBorderColor = MaterialTheme.colorScheme.outline,
-                            cursorColor = WikipediaTheme.colors.primaryColor,
-                            errorTextColor = WikipediaTheme.colors.primaryColor,
+                            cursorColor = NITCWikiTheme.colors.primaryColor,
+                            errorTextColor = NITCWikiTheme.colors.primaryColor,
                         ),
                         modifier = Modifier.weight(1f)
                     )
@@ -506,8 +506,8 @@ fun ReadingChallengePlayground(
                         },
                         enabled = endDate.isEmpty() || runCatching { LocalDate.parse(endDate) }.isSuccess,
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = WikipediaTheme.colors.progressiveColor,
-                            contentColor = WikipediaTheme.colors.paperColor
+                            containerColor = NITCWikiTheme.colors.progressiveColor,
+                            contentColor = NITCWikiTheme.colors.paperColor
                         )
                     ) {
                         Text("Save")
@@ -532,7 +532,7 @@ fun ReadingChallengePlayground(
             modifier = Modifier.fillMaxWidth(),
             colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.error)
         ) {
-            Text("Reset All", color = WikipediaTheme.colors.primaryColor)
+            Text("Reset All", color = NITCWikiTheme.colors.primaryColor)
         }
     }
 }

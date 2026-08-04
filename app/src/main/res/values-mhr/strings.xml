@@ -129,7 +129,7 @@
   <string name="search_reading_lists_no_results">Лудашлан спискылаште лектышым мумо огыл</string>
   <string name="search_history_no_results">Историйыште лектышым мумо огыл</string>
   <string name="edit_section_captcha_message">Автоматизированный спам деч аралалташлан, поро лийза, ӱлнӧ ончыктымо мут-влакым пуртыза</string>
-  <string name="edit_section_captcha_request_an_account_message">Капчан сӱретшым  ода уж? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Аккаунтым йодса&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Капчан сӱретшым  ода уж? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Аккаунтым йодса&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">Кӱшнӧ ончыктымо мут-влакым уэштаре</string>
   <string name="title_captcha">CAPTCHA-м пурто</string>
   <string name="edit_section_captcha_reload">CAPTCHA-м уэмдаш манын, тудым логал</string>
@@ -197,7 +197,7 @@
   <string name="create_account_ip_block_details">Кумданрак</string>
   <string name="preferences_general_heading">Чумыр</string>
   <string name="preferences_account_heading">Аккаунт</string>
-  <string name="wikipedia_app_faq">Wikipedia App ЧПЙ</string>
+  <string name="wikipedia_app_faq">NITCWiki App ЧПЙ</string>
   <string name="send_feedback">Приложений нерген шоныммутым колташ</string>
   <string name="create_account_account_created_toast">Аккаунт ышталтын!</string>
   <string name="preferences_heading_syncing">Синхронизаций</string>

@@ -138,7 +138,7 @@
   <string name="search_reading_lists_no_results">Nénten wenten asil katemu ring lis wacaan</string>
   <string name="search_history_no_results">Nenten wénten asil katemu ring lelintihan</string>
   <string name="edit_section_captcha_message">Antuk ngewantuk ngalindungin majeng spam otomatis, ketik kruna-kruna sané kacingak ring metén puniki</string>
-  <string name="edit_section_captcha_request_an_account_message">Nentén prasida nyingakin gambar?&lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Mapinunas_satunggal_akun\"&gt;&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Nentén prasida nyingakin gambar?&lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Mapinunas_satunggal_akun\"&gt;&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">Ulangin kruna-kruna saking duur</string>
   <string name="title_captcha">Masukang CAPTCHA</string>
   <string name="edit_section_captcha_reload">Teken CAPTCHA antuk ngamuat malih</string>
@@ -239,10 +239,10 @@
   <string name="about_description">Indik aplikasi Wikipédia</string>
   <string name="privacy_policy_description">Awig-awig indik data praragan</string>
   <string name="terms_of_use_description">Katentuan pawigunaan</string>
-  <string name="about_wikipedia_url">https://ban.wikipedia.org/wiki/Wikipedia:Indik</string>
+  <string name="about_wikipedia_url">https://ban.wikipedia.org/wiki/NITCWiki:Indik</string>
   <string name="privacy_policy_url" fuzzy="true">https://foundation.wikimedia.org/wiki/Privacy_policy</string>
   <string name="terms_of_use_url" fuzzy="true">https://foundation.wikimedia.org/wiki/Terms_of_Use</string>
-  <string name="android_app_request_an_account_url">https://ban.wikipedia.org/wiki/Wikipedia:Pinunas_satunggal_akun</string>
+  <string name="android_app_request_an_account_url">https://ban.wikipedia.org/wiki/NITCWiki:Pinunas_satunggal_akun</string>
   <string name="about_libraries_heading">Kapustakaan kaanggén</string>
   <string name="about_contributors_heading">Papituut</string>
   <string name="about_contributors">&lt;a href=\"https://www.mediawiki.org/wiki/Special\n:MyLanguage/Wikimedia_Apps/Team/Android\"&gt;Kaca seka&lt;/a&gt;</string>
@@ -384,7 +384,7 @@
   <string name="link_preview_dialog_share_button">Sobyahang</string>
   <string name="error_page_does_not_exist">Kaca puniki nénten wénten.</string>
   <string name="view_wiki_error_message_offline">Nénten prasida kahubung nuju Internét</string>
-  <string name="view_wiki_error_message_timeout">Ten prasida ngubungin Wikipedia. Turéksa sambungan jaringan Ragané, utawi indayang malih jebos</string>
+  <string name="view_wiki_error_message_timeout">Ten prasida ngubungin NITCWiki. Turéksa sambungan jaringan Ragané, utawi indayang malih jebos</string>
   <string name="reference_title">Pustaka %s</string>
   <string name="reference_list_title">Pustaka</string>
   <string name="theme_chooser_dialog_image_dimming_switch_label">Paredupan gambar (ting téma Gelap)</string>

@@ -48,12 +48,12 @@ import androidx.compose.ui.window.Dialog
 import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.RecommendedReadingListEvent
 import org.wikipedia.compose.components.WikiTopAppBar
-import org.wikipedia.compose.components.WikipediaAlertDialog
+import org.wikipedia.compose.components.NITCWikiAlertDialog
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.extensions.noRippleClickable
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.Resource
 
@@ -83,7 +83,7 @@ fun RecommendedReadingListSettingsScreen(
                 onNavigationClick = onBackButtonClick
             )
         },
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
     ) { paddingValues ->
 
         when (resetUiState) {
@@ -95,8 +95,8 @@ fun RecommendedReadingListSettingsScreen(
                 ) {
                     LinearProgressIndicator(
                         modifier = Modifier.fillMaxWidth(),
-                        color = WikipediaTheme.colors.progressiveColor,
-                        trackColor = WikipediaTheme.colors.borderColor
+                        color = NITCWikiTheme.colors.progressiveColor,
+                        trackColor = NITCWikiTheme.colors.borderColor
                     )
                 }
                 return@Scaffold
@@ -168,7 +168,7 @@ fun RecommendedReadingListSettingsScreen(
         }
 
         if (showAlertDialog) {
-            WikipediaAlertDialog(
+            NITCWikiAlertDialog(
                 title = stringResource(R.string.recommended_reading_list_settings_turn_off_dialog_title),
                 message = stringResource(R.string.recommended_reading_list_settings_turn_off_dialog_message, uiState.updateFrequency.name.lowercase()),
                 confirmButtonText = stringResource(R.string.recommended_reading_list_settings_turn_off_dialog_negative_button),
@@ -202,7 +202,7 @@ private fun DisabledState(
         Text(
             text = stringResource(R.string.recommended_reading_list_settings_toggle_disable_message),
             style = MaterialTheme.typography.bodySmall,
-            color = WikipediaTheme.colors.secondaryColor
+            color = NITCWikiTheme.colors.secondaryColor
         )
     }
 }
@@ -289,13 +289,13 @@ private fun ArticlesNumberView(
     ListItem(
         modifier = modifier,
         colors = ListItemDefaults.colors(
-            containerColor = WikipediaTheme.colors.paperColor
+            containerColor = NITCWikiTheme.colors.paperColor
         ),
         leadingContent = {
             Icon(
                 modifier = Modifier,
                 painter = painterResource(R.drawable.newsstand_24dp),
-                tint = WikipediaTheme.colors.primaryColor,
+                tint = NITCWikiTheme.colors.primaryColor,
                 contentDescription = stringResource(R.string.recommended_reading_list_settings_articles)
             )
         },
@@ -332,7 +332,7 @@ private fun ArticlesNumberView(
                         }
                     },
                     colors = OutlinedTextFieldDefaults.colors(
-                        focusedTextColor = WikipediaTheme.colors.primaryColor,
+                        focusedTextColor = NITCWikiTheme.colors.primaryColor,
                         focusedBorderColor = MaterialTheme.colorScheme.outline,
                         unfocusedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
                         unfocusedBorderColor = MaterialTheme.colorScheme.outline
@@ -340,14 +340,14 @@ private fun ArticlesNumberView(
                     placeholder = {
                         Text(
                             text = articlesNumber.toString(),
-                            color = WikipediaTheme.colors.primaryColor
+                            color = NITCWikiTheme.colors.primaryColor
                         )
                     }
                 )
                 Text(
                     text = stringResource(R.string.recommended_reading_list_settings_articles),
                     style = MaterialTheme.typography.bodyLarge,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             }
         }
@@ -381,13 +381,13 @@ private fun UpdatesFrequencyView(
             )
             .padding(bottom = 16.dp),
         colors = ListItemDefaults.colors(
-            containerColor = WikipediaTheme.colors.paperColor
+            containerColor = NITCWikiTheme.colors.paperColor
         ),
         leadingContent = {
             Icon(
                 modifier = Modifier,
                 painter = painterResource(R.drawable.refresh_24dp),
-                tint = WikipediaTheme.colors.primaryColor,
+                tint = NITCWikiTheme.colors.primaryColor,
                 contentDescription = stringResource(R.string.recommended_reading_list_settings_articles)
             )
         },
@@ -395,7 +395,7 @@ private fun UpdatesFrequencyView(
             Text(
                 text = updateFrequencyString,
                 style = MaterialTheme.typography.bodyLarge,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         }
     )
@@ -423,13 +423,13 @@ private fun RecommendedReadingListSwitch(
         modifier = modifier
             .clip(RoundedCornerShape(16.dp)),
         colors = ListItemDefaults.colors(
-            containerColor = WikipediaTheme.colors.backgroundColor
+            containerColor = NITCWikiTheme.colors.backgroundColor
         ),
         headlineContent = {
             Text(
                 text = stringResource(R.string.recommended_reading_list_settings_toggle),
                 style = MaterialTheme.typography.bodyLarge,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         },
         trailingContent = {
@@ -439,11 +439,11 @@ private fun RecommendedReadingListSwitch(
                     onCheckedChange(it)
                 },
                 colors = SwitchDefaults.colors(
-                    uncheckedTrackColor = WikipediaTheme.colors.paperColor,
+                    uncheckedTrackColor = NITCWikiTheme.colors.paperColor,
                     uncheckedThumbColor = MaterialTheme.colorScheme.outline,
                     uncheckedBorderColor = MaterialTheme.colorScheme.outline,
-                    checkedTrackColor = WikipediaTheme.colors.progressiveColor,
-                    checkedThumbColor = WikipediaTheme.colors.paperColor
+                    checkedTrackColor = NITCWikiTheme.colors.progressiveColor,
+                    checkedThumbColor = NITCWikiTheme.colors.paperColor
                 )
             )
         }
@@ -463,13 +463,13 @@ private fun SourceView(
     ListItem(
         modifier = modifier,
         colors = ListItemDefaults.colors(
-            containerColor = WikipediaTheme.colors.paperColor
+            containerColor = NITCWikiTheme.colors.paperColor
         ),
         leadingContent = {
             Icon(
                 modifier = Modifier,
                 painter = painterResource(R.drawable.build_24dp),
-                tint = WikipediaTheme.colors.primaryColor,
+                tint = NITCWikiTheme.colors.primaryColor,
                 contentDescription = stringResource(R.string.recommended_reading_list_settings_updates_base_title)
             )
         },
@@ -477,7 +477,7 @@ private fun SourceView(
             Text(
                 text = stringResource(R.string.recommended_reading_list_settings_updates_base_title),
                 style = MaterialTheme.typography.bodyLarge,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         },
         supportingContent = {
@@ -486,7 +486,7 @@ private fun SourceView(
                     .padding(top = 4.dp),
                 text = stringResource(subtitle),
                 style = MaterialTheme.typography.bodySmall,
-                color = WikipediaTheme.colors.secondaryColor
+                color = NITCWikiTheme.colors.secondaryColor
             )
         }
     )
@@ -499,14 +499,14 @@ private fun InterestsView(
     ListItem(
         modifier = modifier,
         colors = ListItemDefaults.colors(
-            containerColor = WikipediaTheme.colors.paperColor
+            containerColor = NITCWikiTheme.colors.paperColor
         ),
         leadingContent = {
             Icon(
                 modifier = Modifier
                     .size(24.dp),
                 painter = painterResource(R.drawable.interests_24dp),
-                tint = WikipediaTheme.colors.primaryColor,
+                tint = NITCWikiTheme.colors.primaryColor,
                 contentDescription = stringResource(R.string.recommended_reading_list_settings_updates_base_title)
             )
         },
@@ -514,7 +514,7 @@ private fun InterestsView(
             Text(
                 text = stringResource(R.string.recommended_reading_list_settings_interests),
                 style = MaterialTheme.typography.bodyLarge,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         }
     )
@@ -538,14 +538,14 @@ private fun NotificationView(
                     onNotificationStateChanged(true)
             },
         colors = ListItemDefaults.colors(
-            containerColor = WikipediaTheme.colors.paperColor
+            containerColor = NITCWikiTheme.colors.paperColor
         ),
         leadingContent = {
             Icon(
                 modifier = Modifier
                     .size(24.dp),
                 painter = painterResource(R.drawable.notifications_24dp),
-                tint = WikipediaTheme.colors.primaryColor,
+                tint = NITCWikiTheme.colors.primaryColor,
                 contentDescription = stringResource(R.string.recommended_reading_list_settings_updates_base_title)
             )
         },
@@ -553,7 +553,7 @@ private fun NotificationView(
             Text(
                 text = stringResource(R.string.recommended_reading_list_settings_notifications_title),
                 style = MaterialTheme.typography.bodyLarge,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         },
         supportingContent = {
@@ -562,7 +562,7 @@ private fun NotificationView(
                     .padding(top = 4.dp),
                 text = subtitle,
                 style = MaterialTheme.typography.bodySmall,
-                color = WikipediaTheme.colors.secondaryColor
+                color = NITCWikiTheme.colors.secondaryColor
             )
         },
         trailingContent = {
@@ -575,18 +575,18 @@ private fun NotificationView(
                         onNotificationStateChanged(it)
                 },
                 colors = SwitchDefaults.colors(
-                    uncheckedTrackColor = WikipediaTheme.colors.paperColor,
+                    uncheckedTrackColor = NITCWikiTheme.colors.paperColor,
                     uncheckedThumbColor = MaterialTheme.colorScheme.outline,
                     uncheckedBorderColor = MaterialTheme.colorScheme.outline,
-                    checkedTrackColor = WikipediaTheme.colors.progressiveColor,
-                    checkedThumbColor = WikipediaTheme.colors.paperColor
+                    checkedTrackColor = NITCWikiTheme.colors.progressiveColor,
+                    checkedThumbColor = NITCWikiTheme.colors.paperColor
                 )
             )
         }
     )
 
     if (showAlertDialog) {
-        WikipediaAlertDialog(
+        NITCWikiAlertDialog(
             title = stringResource(R.string.recommended_reading_list_settings_notifications_dialog_title),
             message = stringResource(R.string.recommended_reading_list_settings_notifications_dialog_message),
             confirmButtonText = stringResource(R.string.recommended_reading_list_settings_notifications_dialog_negative_button),
@@ -622,7 +622,7 @@ fun RadioListDialog(
             LazyColumn(
                 modifier = modifier
                     .clip(RoundedCornerShape(28.dp))
-                    .background(WikipediaTheme.colors.paperColor)
+                    .background(NITCWikiTheme.colors.paperColor)
                     .padding(vertical = 8.dp, horizontal = 16.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
@@ -643,13 +643,13 @@ fun RadioListDialog(
                                 onDismissRequest()
                             },
                             colors = RadioButtonDefaults.colors(
-                                selectedColor = WikipediaTheme.colors.progressiveColor
+                                selectedColor = NITCWikiTheme.colors.progressiveColor
                             )
                         )
                         Text(
                             text = option,
                             style = MaterialTheme.typography.bodyLarge,
-                            color = WikipediaTheme.colors.primaryColor
+                            color = NITCWikiTheme.colors.primaryColor
                         )
                     }
                 }
@@ -670,7 +670,7 @@ fun SettingsSection(
             content()
             if (canShowDivider) {
                 HorizontalDivider(
-                    color = WikipediaTheme.colors.borderColor
+                    color = NITCWikiTheme.colors.borderColor
                 )
             }
         }

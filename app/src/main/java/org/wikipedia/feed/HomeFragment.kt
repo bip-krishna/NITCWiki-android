@@ -23,7 +23,7 @@ import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
-import org.wikipedia.compose.components.WikipediaAlertDialog
+import org.wikipedia.compose.components.NITCWikiAlertDialog
 import org.wikipedia.compose.components.menu.PageOverflowMenuViewModel
 import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.feed.didyouknow.DidYouKnowActivity
@@ -306,7 +306,7 @@ class HomeFragment : Fragment() {
                             swipeToExplorePromptShown = true
                             Prefs.isHomeSwipeToExplorePromptShown = true
                         }
-                        WikipediaAlertDialog(
+                        NITCWikiAlertDialog(
                             title = stringResource(R.string.explore_feed_swipe_to_explore_prompt_title),
                             titleModifier = Modifier.fillMaxWidth(),
                             message = stringResource(R.string.explore_feed_swipe_to_explore_prompt_message),

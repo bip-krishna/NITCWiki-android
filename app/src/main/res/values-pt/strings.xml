@@ -167,7 +167,7 @@
   <string name="search_reading_lists_no_results">Não foram encontrados resultados nas listas de leitura</string>
   <string name="search_history_no_results">Não foram encontrados resultados no histórico</string>
   <string name="edit_section_captcha_message">Para ajudar a proteger contra sistemas automatizados de inserção de \'\'spam\'\', introduza as palavras que aparecem abaixo, por favor</string>
-  <string name="edit_section_captcha_request_an_account_message">Não consegue ver a imagem? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Peça uma conta&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Não consegue ver a imagem? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Peça uma conta&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">Repita as palavras acima</string>
   <string name="title_captcha">Introduza o CAPTCHA</string>
   <string name="edit_section_captcha_reload">Toque no CAPTCHA para recarregar</string>
@@ -346,7 +346,7 @@
   <string name="widget_name_featured_page">Página em destaque na Wikipédia</string>
   <string name="widget_title_featured_page">Página em destaque de hoje:</string>
   <string name="widget_name_search">Pesquisa na Wikipédia</string>
-  <string name="widget_description_search">A maneira mais rápida de pesquisar na Wikipedia</string>
+  <string name="widget_description_search">A maneira mais rápida de pesquisar na NITCWiki</string>
   <string name="widget_description_featured_page">Os melhores artigos que a Wikipédia tem a oferecer</string>
   <string name="wiktionary_no_definitions_found">Não foram encontradas definições.</string>
   <string name="alpha_update_notification_title">Nova atualização alfa disponível</string>
@@ -456,9 +456,9 @@
   <string name="error_blocked_start">Início do bloqueio: %s</string>
   <string name="error_blocked_expiry">Expiração do bloqueio: %s</string>
   <string name="error_blocked_id">Identificador do bloqueio: %s</string>
-  <string name="error_blocked_footer">Pode entrar em contacto com &lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; ou outro &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;administrador&lt;/a&gt; para discutir o bloqueio.</string>
+  <string name="error_blocked_footer">Pode entrar em contacto com &lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; ou outro &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;administrador&lt;/a&gt; para discutir o bloqueio.</string>
   <string name="theme_chooser_menu_item_short_tooltip">Personalizar a sua barra de ferramentas</string>
-  <string name="error_blocked_footer_no_blocker">Pode entrar em contacto com um &lt;a href=\"https://pt.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;administrador&lt;/a&gt; para discutir o bloqueio.</string>
+  <string name="error_blocked_footer_no_blocker">Pode entrar em contacto com um &lt;a href=\"https://pt.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;administrador&lt;/a&gt; para discutir o bloqueio.</string>
   <string name="temp_account_not_logged_in">Não tem sessão iniciada</string>
   <string name="temp_account_anon_ip_dialog_body">Assim que realize uma edição, o seu endereço de IP será associado às suas edições.&lt;br&gt; &lt;/br&gt; &lt;/a href=\"https://#login\"&gt;Inicie a sessão/&lt;a&gt; ou &lt;a href=\"https://#createaccount\"crie uma conta&lt;/a&gt; para obter crédito nas futuras edições e aceder a outras funcionalidades.</string>
   <string name="temp_account_anon_dialog_body">Assim que realize uma edição, será criada uma &lt;b&gt;conta temporária&lt;/b&gt; para proteger a sua privacidade. &lt;/a href=\"%1$s\"&gt;Saiba mais&lt;/a&gt;. &lt;br /&gt;&lt;br /&gt;&lt;a href=\"https://#login\"&gt;Inicie a sessão/&lt;a&gt; ou &lt;a href=\"https://#createaccount\"crie uma conta&lt;/a&gt; para obter crédito nas futuras edições e aceder a outras funcionalidades.</string>

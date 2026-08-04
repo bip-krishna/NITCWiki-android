@@ -151,7 +151,7 @@
   <string name="search_reading_lists_no_results">ਰੀਡਿੰਗ ਸੂਚੀਆਂ ਵਿੱਚ ਕੋਈ ਨਤੀਜੇ ਨਹੀਂ ਮਿਲੇ</string>
   <string name="search_history_no_results">ਅਤੀਤ ਵਿੱਚ ਕੋਈ ਨਤੀਜੇ ਨਹੀਂ ਮਿਲੇ</string>
   <string name="edit_section_captcha_message">ਆਪੇ ਚੱਲਦੇ ਊਲ-ਜਲੂਲ ਤੋਂ ਬਚਣ ਵਿੱਚ ਮਦਦ ਕਰਨ ਵਾਸਤੇ ਹੇਠਾਂ ਵਿਖ ਰਹੇ ਸ਼ਬਦ ਭਰੋ ਜੀ।</string>
-  <string name="edit_section_captcha_request_an_account_message">ਕੀ ਤੁਸੀਂ ਚਿੱਤਰ ਨਹੀਂ ਵੇਖ ਸਕਦੇ? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;ਖਾਤੇ ਲਈ ਬੇਨਤੀ ਕਰੋ&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">ਕੀ ਤੁਸੀਂ ਚਿੱਤਰ ਨਹੀਂ ਵੇਖ ਸਕਦੇ? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;ਖਾਤੇ ਲਈ ਬੇਨਤੀ ਕਰੋ&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">ਉੱਤੇ ਦਿੱਤੇ ਸ਼ਬਦਾਂ ਨੂੰ ਦੁਹਰਾਉ</string>
   <string name="title_captcha">ਕੈਪਚਾ ਭਰੋ</string>
   <string name="edit_section_captcha_reload">ਮੁੜ ਲਿਆਉਣ ਵਾਸਤੇ ਕੈਪਚਾ ਟਕੋਰੋ</string>
@@ -430,8 +430,8 @@
   <string name="error_blocked_start">ਪਾਬੰਦੀ ਦੀ ਸ਼ੁਰੂਆਤ: %s</string>
   <string name="error_blocked_expiry">ਪਾਬੰਦੀ ਦੀ ਮਿਆਦ ਪੁੱਗਣੀ: %s</string>
   <string name="error_blocked_id">ਪਾਬੰਦੀ ਦੀ ਸ਼ਿਨਾਖਤ (ID): %s</string>
-  <string name="error_blocked_footer">ਤੁਸੀਂ ਪਾਬੰਦੀਆਂ ਬਾਰੇ ਚਰਚਾ ਕਰਨ ਲਈ&lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; ਜਾਂ ਕਿਸੇ ਹੋਰ &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;ਪ੍ਰਬੰਧਕ&lt;/a&gt; ਨਾਲ ਸੰਪਰਕ ਕਰ ਸਕਦੇ ਹੋ।</string>
-  <string name="error_blocked_footer_no_blocker">ਤੁਸੀਂ ਪਾਬੰਦੀਆਂ ਬਾਰੇ ਚਰਚਾ ਕਰਨ ਲਈ &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;ਪ੍ਰਬੰਧਕ&lt;/a&gt; ਨਾਲ ਸੰਪਰਕ ਕਰ ਸਕਦੇ ਹੋ।</string>
+  <string name="error_blocked_footer">ਤੁਸੀਂ ਪਾਬੰਦੀਆਂ ਬਾਰੇ ਚਰਚਾ ਕਰਨ ਲਈ&lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; ਜਾਂ ਕਿਸੇ ਹੋਰ &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;ਪ੍ਰਬੰਧਕ&lt;/a&gt; ਨਾਲ ਸੰਪਰਕ ਕਰ ਸਕਦੇ ਹੋ।</string>
+  <string name="error_blocked_footer_no_blocker">ਤੁਸੀਂ ਪਾਬੰਦੀਆਂ ਬਾਰੇ ਚਰਚਾ ਕਰਨ ਲਈ &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;ਪ੍ਰਬੰਧਕ&lt;/a&gt; ਨਾਲ ਸੰਪਰਕ ਕਰ ਸਕਦੇ ਹੋ।</string>
   <string name="temp_account_not_logged_in">ਤੁਸੀਂ ਦਾਖ਼ਲ ਨਹੀਂ ਹੋ</string>
   <string name="temp_account_anon_ip_dialog_body">ਇੱਕ ਵਾਰ ਜਦੋਂ ਤੁਸੀਂ ਕੋਈ ਸੋਧ ਕਰਦੇ ਹੋ, ਤਾਂ ਤੁਹਾਡਾ IP ਪਤਾ ਤੁਹਾਡੇ ਸੋਧਾਂ ਨਾਲ ਜੁੜ ਜਾਵੇਗਾ। ਭਵਿੱਖ ਦਿਆਂ ਸੋਧਾਂ ਦਾ ਸਿਹਰਾ ਪ੍ਰਾਪਤ ਕਰਨ ਅਤੇ ਹੋਰ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ &lt;br /&gt;&lt;br /&gt;&lt;a href=\"https://#login\"&gt;ਦਾਖ਼ਲ ਹੋਵੋ&lt;/a&gt; ਜਾਂ &lt;a href=\"https://#createaccount\"&gt;ਖਾਤਾ ਬਣਾਓ&lt;/a&gt;।</string>
   <string name="temp_account_anon_dialog_body">ਇੱਕ ਵਾਰ ਜਦੋਂ ਤੁਸੀਂ ਸੋਧ ਕਰਦੇ ਹੋ, ਤਾਂ ਤੁਹਾਡੀ ਨਿੱਜਤਾ ਦੀ ਰੱਖਿਆ ਲਈ ਤੁਹਾਡੇ ਲਈ ਇੱਕ &lt;b&gt;ਅਸਥਾਈ ਖਾਤਾ&lt;/b&gt; ਬਣਾਇਆ ਜਾਵੇਗਾ। &lt;a href=\"%1$s\"&gt; ਹੋਰ ਜਾਣੋ &lt;/a&gt;। ਭਵਿੱਖ ਦਿਆਂ ਸੋਧਾਂ ਦਾ ਸਿਹਰਾ ਪ੍ਰਾਪਤ ਕਰਨ ਅਤੇ ਹੋਰ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ &lt;br /&gt;&lt;br /&gt;&lt;a href=\"https://#login\"&gt;ਦਾਖ਼ਲ ਹੋਵੋ&lt;/a&gt; ਜਾਂ &lt;a href=\"https://#createaccount\"&gt;ਖਾਤਾ ਬਣਾਓ&lt;/a&gt;।</string>

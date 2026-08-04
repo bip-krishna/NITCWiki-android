@@ -128,7 +128,7 @@
   <string name="search_reading_lists_no_results">Nisu pronađeni rezultati na listama za čitanje</string>
   <string name="search_history_no_results">Nisu pronađeni rezultati u istoriji</string>
   <string name="edit_section_captcha_message">Da biste pomogli u zaštiti protiv automatizovanog nepoželjnog sadržaja, unesite reči koje su prikazane ispod</string>
-  <string name="edit_section_captcha_request_an_account_message">Ne vidite sliku? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Zatražite nalog&lt;/a&gt;.</string>
+  <string name="edit_section_captcha_request_an_account_message">Ne vidite sliku? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Zatražite nalog&lt;/a&gt;.</string>
   <string name="edit_section_captcha_hint">Ponovite reči iznad</string>
   <string name="title_captcha">Unesite CAPTCHA tekst</string>
   <string name="edit_section_captcha_reload">Dodirnite CAPTCHA sliku da biste je ponovo učitali</string>
@@ -1201,7 +1201,7 @@
   <string name="talk_snackbar_survey_action_text">Započnite</string>
   <string name="talk_share_discussion_subject">Vikipedija - diskusija na temi stranice za razgovor \"%s\"</string>
   <string name="talk_share_talk_page">Vikipedija - diskusije na stranici za razgovor</string>
-  <string name="talk_edit_disclaimer">Ovo je stranica za razgovor. Poštujte pravila stranice za razgovor, i ne zaboravite da potpišete svoje objave kucajući četiri tilde: ~~~~ kada objavljujete koristeći vikitekst.&lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Talk_page_guidelines\"&gt;Wikipedia:Talk page guidelines&lt;/a&gt;</string>
+  <string name="talk_edit_disclaimer">Ovo je stranica za razgovor. Poštujte pravila stranice za razgovor, i ne zaboravite da potpišete svoje objave kucajući četiri tilde: ~~~~ kada objavljujete koristeći vikitekst.&lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Talk_page_guidelines\"&gt;NITCWiki:Talk page guidelines&lt;/a&gt;</string>
   <string name="talk_search_hint">Pretraga poruka</string>
   <string name="talk_search_topics_hint">Pretraži teme</string>
   <string name="talk_search_find_in_talk_topics_hint">Pronađi u temi na stranici za razgovor</string>

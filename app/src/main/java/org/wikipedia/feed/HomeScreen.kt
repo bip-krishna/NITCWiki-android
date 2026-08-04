@@ -53,7 +53,7 @@ import org.wikipedia.compose.components.WikiLangCodeBox
 import org.wikipedia.compose.components.menu.PageOverflowMenuViewModel
 import org.wikipedia.compose.extensions.pulse
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.extensions.getString
@@ -125,8 +125,8 @@ fun HomeScreen(
             Indicator(
                 modifier = Modifier.align(Alignment.TopCenter),
                 isRefreshing = isRefreshing,
-                containerColor = WikipediaTheme.colors.paperColor,
-                color = WikipediaTheme.colors.progressiveColor,
+                containerColor = NITCWikiTheme.colors.paperColor,
+                color = NITCWikiTheme.colors.progressiveColor,
                 state = pullToRefreshState
             )
         }
@@ -140,7 +140,7 @@ fun HomeScreen(
                         modifier = Modifier
                             .align(Alignment.TopCenter)
                             .fillMaxSize()
-                            .background(WikipediaTheme.colors.paperColor)
+                            .background(NITCWikiTheme.colors.paperColor)
                     ) {
                         HomeToolbar(
                             topInset = topInset,
@@ -281,7 +281,7 @@ fun HomeToolbar(
         Image(
             painter = painterResource(R.drawable.feed_header_wordmark),
             contentDescription = null,
-            colorFilter = ColorFilter.tint(WikipediaTheme.colors.primaryColor),
+            colorFilter = ColorFilter.tint(NITCWikiTheme.colors.primaryColor),
             contentScale = ContentScale.FillWidth,
             modifier = Modifier
                 .statusBarsPadding()
@@ -369,7 +369,7 @@ fun HomeTabBar(
                 ) {
                     Text(
                         text = label,
-                        color = if (selectedTab == HomeTab.FOR_YOU) WikipediaTheme.colors.primaryColor else if (isSelected) WikipediaTheme.colors.progressiveColor else WikipediaTheme.colors.primaryColor,
+                        color = if (selectedTab == HomeTab.FOR_YOU) NITCWikiTheme.colors.primaryColor else if (isSelected) NITCWikiTheme.colors.progressiveColor else NITCWikiTheme.colors.primaryColor,
                         style = MaterialTheme.typography.titleSmall
                     )
                     Spacer(modifier = Modifier.height(4.dp))
@@ -380,8 +380,8 @@ fun HomeTabBar(
                             .clip(RoundedCornerShape(1.5.dp))
                             .background(
                                 if (isSelected) {
-                                    if (selectedTab == HomeTab.FOR_YOU) WikipediaTheme.colors.primaryColor
-                                    else WikipediaTheme.colors.progressiveColor
+                                    if (selectedTab == HomeTab.FOR_YOU) NITCWikiTheme.colors.primaryColor
+                                    else NITCWikiTheme.colors.progressiveColor
                                 } else Color.Transparent
                             )
                     )
@@ -418,7 +418,7 @@ fun LanguageDropDownMenu(
             modifier = Modifier
                 .border(
                     width = 1.dp,
-                    color = WikipediaTheme.colors.primaryColor.copy(alpha = 0.8f),
+                    color = NITCWikiTheme.colors.primaryColor.copy(alpha = 0.8f),
                     shape = RoundedCornerShape(8.dp)
                 )
                 .padding(4.dp),
@@ -430,20 +430,20 @@ fun LanguageDropDownMenu(
                     .height(20.dp)
                     .widthIn(min = 20.dp),
                 languageCode = selectedLanguageCode,
-                backgroundColor = WikipediaTheme.colors.primaryColor.copy(alpha = 0.8f),
+                backgroundColor = NITCWikiTheme.colors.primaryColor.copy(alpha = 0.8f),
                 borderColor = Color.Transparent,
-                textColor = WikipediaTheme.colors.paperColor,
+                textColor = NITCWikiTheme.colors.paperColor,
             )
             Icon(
                 modifier = Modifier.size(16.dp),
                 painter = painterResource(R.drawable.ic_arrow_down_24),
                 contentDescription = null,
-                tint = WikipediaTheme.colors.primaryColor
+                tint = NITCWikiTheme.colors.primaryColor
             )
         }
         DropdownMenu(
             expanded = expanded,
-            containerColor = WikipediaTheme.colors.paperColor,
+            containerColor = NITCWikiTheme.colors.paperColor,
             onDismissRequest = { expanded = false }
         ) {
             val languageCodes = languageState?.appLanguageCodes.orEmpty()
@@ -456,8 +456,8 @@ fun LanguageDropDownMenu(
                                 .height(20.dp)
                                 .widthIn(min = 20.dp),
                             languageCode = langCode,
-                            borderColor = WikipediaTheme.colors.secondaryColor,
-                            textColor = WikipediaTheme.colors.secondaryColor,
+                            borderColor = NITCWikiTheme.colors.secondaryColor,
+                            textColor = NITCWikiTheme.colors.secondaryColor,
                         )
                     },
                     trailingIcon = {
@@ -465,7 +465,7 @@ fun LanguageDropDownMenu(
                             Icon(
                                 painter = painterResource(R.drawable.ic_check_black_24dp),
                                 contentDescription = null,
-                                tint = WikipediaTheme.colors.secondaryColor
+                                tint = NITCWikiTheme.colors.secondaryColor
                             )
                         }
                     },
@@ -473,7 +473,7 @@ fun LanguageDropDownMenu(
                         Text(
                             text = languageState?.getAppLanguageLocalizedName(langCode) ?: langCode,
                             style = MaterialTheme.typography.bodyLarge,
-                            color = WikipediaTheme.colors.primaryColor
+                            color = NITCWikiTheme.colors.primaryColor
                         )
                     },
                     onClick = {
@@ -485,7 +485,7 @@ fun LanguageDropDownMenu(
 
             HorizontalDivider(
                 modifier = Modifier.padding(vertical = 8.dp),
-                color = WikipediaTheme.colors.borderColor
+                color = NITCWikiTheme.colors.borderColor
             )
 
             Column(
@@ -501,7 +501,7 @@ fun LanguageDropDownMenu(
                     modifier = Modifier.padding(horizontal = 16.dp),
                     text = LocalContext.current.getString(selectedLanguageCode, R.string.explore_feed_manage_languages_label),
                     style = MaterialTheme.typography.bodyLarge,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             }
         }

@@ -141,7 +141,7 @@
   <string name="search_reading_lists_no_results">अध्ययन सूचीहरूमा कुनै पनि परिणाम फेला परेन</string>
   <string name="search_history_no_results">इतिहासमा कुनै पनि परिणाम फेला परेन</string>
   <string name="edit_section_captcha_message">स्वचालित स्प्यामविरूद्ध सुरक्षा गर्ने कार्यमा मद्दत गर्न, कृपया तल देखिएका शब्दहरू प्रविष्ट गर्नुहोस्</string>
-  <string name="edit_section_captcha_request_an_account_message">यस तस्विर देख्नु भएको छैन? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;खाता अनुरोध गर्नुहोस्&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">यस तस्विर देख्नु भएको छैन? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;खाता अनुरोध गर्नुहोस्&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">माथिका शब्दहरू दोहोर्‍याएर प्रविष्ट गर्नुहोस्</string>
   <string name="title_captcha">क्याप्चा प्रविष्ट गर्नुहोस्</string>
   <string name="edit_section_captcha_reload">पुनः लोड गर्न क्याप्चामा ट्याप गर्नुहोस्</string>

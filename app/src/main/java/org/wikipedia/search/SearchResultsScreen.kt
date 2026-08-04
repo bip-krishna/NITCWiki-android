@@ -51,7 +51,7 @@ import org.wikipedia.R
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.extensions.toAnnotatedStringWithBoldQuery
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.util.DeviceUtil
 import org.wikipedia.util.L10nUtil
 import org.wikipedia.views.imageservice.ImageService
@@ -115,7 +115,7 @@ fun SearchResultsScreen(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .align(Alignment.BottomStart)
-                                .background(WikipediaTheme.colors.paperColor)
+                                .background(NITCWikiTheme.colors.paperColor)
                                 .clickable(
                                     onClick = {
                                         searchTerm.value?.let {
@@ -249,7 +249,7 @@ fun SearchResultPageItem(
                 // Title with bold style
                 Text(
                     text = boldenTitle,
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     style = MaterialTheme.typography.bodyLarge
                 )
 
@@ -261,12 +261,12 @@ fun SearchResultPageItem(
                             modifier = Modifier
                                 .size(16.dp),
                             painter = painterResource(R.drawable.ic_subdirectory_arrow_right_black_24dp),
-                            colorFilter = ColorFilter.tint(color = WikipediaTheme.colors.placeholderColor),
+                            colorFilter = ColorFilter.tint(color = NITCWikiTheme.colors.placeholderColor),
                             contentDescription = null
                         )
                         Text(
                             text = stringResource(R.string.search_redirect_from, redirectFrom),
-                            color = WikipediaTheme.colors.secondaryColor,
+                            color = NITCWikiTheme.colors.secondaryColor,
                             style = MaterialTheme.typography.bodyLarge.copy(
                                 fontSize = 14.sp
                             ),
@@ -281,7 +281,7 @@ fun SearchResultPageItem(
                             modifier = Modifier
                                 .padding(top = 2.dp),
                             text = description,
-                            color = WikipediaTheme.colors.secondaryColor,
+                            color = NITCWikiTheme.colors.secondaryColor,
                             style = MaterialTheme.typography.bodyLarge.copy(
                                 fontSize = 14.sp
                             ),
@@ -301,7 +301,7 @@ fun SearchResultPageItem(
                         modifier = Modifier
                             .size(20.dp),
                         painter = painterResource(iconResId),
-                        colorFilter = ColorFilter.tint(color = WikipediaTheme.colors.placeholderColor),
+                        colorFilter = ColorFilter.tint(color = NITCWikiTheme.colors.placeholderColor),
                         contentDescription = null
                     )
                 }
@@ -314,8 +314,8 @@ fun SearchResultPageItem(
                         )
                     AsyncImage(
                         model = request,
-                        placeholder = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
-                        error = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
+                        placeholder = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
+                        error = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
                         contentScale = ContentScale.Crop,
                         contentDescription = null,
                         modifier = Modifier

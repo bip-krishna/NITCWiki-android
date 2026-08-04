@@ -13,7 +13,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import org.wikipedia.R
 import org.wikipedia.compose.components.ToggleListScreen
 import org.wikipedia.compose.components.ToggleSettingItem
-import org.wikipedia.compose.components.WikipediaAlertDialog
+import org.wikipedia.compose.components.NITCWikiAlertDialog
 import org.wikipedia.extensions.instrument
 
 enum class ForYouModuleType(
@@ -90,7 +90,7 @@ fun ForYouModulesScreen(
     }
 
     if (showAllOffDialog) {
-        WikipediaAlertDialog(
+        NITCWikiAlertDialog(
             title = stringResource(R.string.home_feed_settings_for_you_empty_dialog_title),
             message = stringResource(R.string.home_feed_settings_empty_dialog_text),
             confirmButtonText = stringResource(R.string.home_feed_settings_empty_dialog_positive),

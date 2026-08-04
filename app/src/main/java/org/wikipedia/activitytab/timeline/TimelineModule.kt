@@ -36,7 +36,7 @@ import coil3.compose.AsyncImage
 import org.wikipedia.R
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.extensions.isToday
 import org.wikipedia.extensions.isYesterday
@@ -89,7 +89,7 @@ fun TimelineContent(
         if (icon != null) {
             Icon(
                 painter = painterResource(icon),
-                tint = WikipediaTheme.colors.primaryColor,
+                tint = NITCWikiTheme.colors.primaryColor,
                 contentDescription = null
             )
         }
@@ -102,7 +102,7 @@ fun TimelineContent(
                 text = timelineItem.displayTitle,
                 style = MaterialTheme.typography.titleMedium.copy(
                     fontFamily = FontFamily.Serif,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 ),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
@@ -113,7 +113,7 @@ fun TimelineContent(
                 Text(
                     text = timelineItem.description,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = WikipediaTheme.colors.secondaryColor,
+                    color = NITCWikiTheme.colors.secondaryColor,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -125,8 +125,8 @@ fun TimelineContent(
                 ImageService.getRequest(LocalContext.current, url = timelineItem.thumbnailUrl)
             AsyncImage(
                 model = request,
-                placeholder = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
-                error = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
+                placeholder = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
+                error = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
                 contentScale = ContentScale.Crop,
                 contentDescription = null,
                 modifier = Modifier
@@ -155,15 +155,15 @@ fun TimelineButtonView(
             modifier = Modifier.padding(top = 8.dp),
             contentPadding = PaddingValues(horizontal = 18.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = WikipediaTheme.colors.additionColor,
-                contentColor = WikipediaTheme.colors.secondaryColor,
+                containerColor = NITCWikiTheme.colors.additionColor,
+                contentColor = NITCWikiTheme.colors.secondaryColor,
             ),
             onClick = onViewChangesBtnClick
         ) {
             Icon(
                 modifier = Modifier.size(20.dp),
                 painter = painterResource(R.drawable.filled_difference_24),
-                tint = WikipediaTheme.colors.secondaryColor,
+                tint = NITCWikiTheme.colors.secondaryColor,
                 contentDescription = null
             )
             Text(
@@ -187,7 +187,7 @@ fun TimelineModuleEmptyView(modifier: Modifier = Modifier) {
             text = stringResource(R.string.activity_tab_timeline_today),
             fontWeight = FontWeight.Bold,
             style = MaterialTheme.typography.titleLarge,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         Image(
             modifier = Modifier
@@ -200,14 +200,14 @@ fun TimelineModuleEmptyView(modifier: Modifier = Modifier) {
             text = stringResource(R.string.activity_tab_timeline_empty_state_title),
             style = MaterialTheme.typography.titleSmall,
             textAlign = TextAlign.Center,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         Text(
             modifier = Modifier.padding(top = 4.dp),
             text = stringResource(R.string.activity_tab_timeline_empty_state_message),
             style = MaterialTheme.typography.bodyMedium,
             textAlign = TextAlign.Center,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
     }
 }
@@ -232,13 +232,13 @@ fun TimelineDateSeparator(
             text = dateHeaderText,
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Medium,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         if (showSecondaryDate) {
             Text(
                 text = DateUtil.getMMMMdYYYY(date, false),
                 style = MaterialTheme.typography.bodySmall,
-                color = WikipediaTheme.colors.secondaryColor
+                color = NITCWikiTheme.colors.secondaryColor
             )
         }
     }

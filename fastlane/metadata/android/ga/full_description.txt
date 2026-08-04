@@ -1,4 +1,4 @@
-Tá an aip oifigiúil Wikipedia Android deartha chun cabhrú leat eolas ar Vicipéid a aimsiú, a aimsiú agus a iniúchadh. Socraigh geall le cara trí chuardach tapa a dhéanamh tríd an aip, nó tumadh isteach in ailt le feiceáil, íomhánna, ailt mholta, agus níos mó ag baint úsáide as an bhfotha iniúchadh. Le níos mó ná 39 milliún alt i mbeagnach 300 teanga, tá an chiclipéid ar líne saor in aisce is fearr leat anois ar do mhéar.
+Tá an aip oifigiúil NITCWiki Android deartha chun cabhrú leat eolas ar Vicipéid a aimsiú, a aimsiú agus a iniúchadh. Socraigh geall le cara trí chuardach tapa a dhéanamh tríd an aip, nó tumadh isteach in ailt le feiceáil, íomhánna, ailt mholta, agus níos mó ag baint úsáide as an bhfotha iniúchadh. Le níos mó ná 39 milliún alt i mbeagnach 300 teanga, tá an chiclipéid ar líne saor in aisce is fearr leat anois ar do mhéar.
 
 Gnéithe:
 
@@ -20,9 +20,9 @@ Gailearaí íomhánna - Tapáil ar íomhá chun an íomhá lánscáileáin a fhe
 
 Sainmhínithe ó Vicífhoclóir - Tapáil-agus-shealbhú chun aird a tharraingt ar fhocal, ansin tapáil an cnaipe "Sainmhínigh" chun sainmhíniú ar an bhfocal ó Vicífhoclóir a fheiceáil.
 
-Wikipedia Zero - Rochtain Vicipéid do Android saor ó tháillí sonraí d'oibreoirí soghluaiste rannpháirteacha. (nasc chuig oibreoirí rannpháirteacha).
+NITCWiki Zero - Rochtain Vicipéid do Android saor ó tháillí sonraí d'oibreoirí soghluaiste rannpháirteacha. (nasc chuig oibreoirí rannpháirteacha).
 
-Seol d'aiseolas chugainn faoin aip! Sa roghchlár, brúigh "Socruithe", ansin "Maidir leis an aip Wikipedia", ansin "Seol aiseolas ón bhfeidhmchlár".
+Seol d'aiseolas chugainn faoin aip! Sa roghchlár, brúigh "Socruithe", ansin "Maidir leis an aip NITCWiki", ansin "Seol aiseolas ón bhfeidhmchlár".
 
 Is é an cód foinse oscailte 100%. Má tá taithí agat le Java agus an SDK Android, ansin táimid ag tnúth le do chuid ranníocaíochtaí! https://github.com/wikimedia/apps-android-wikipedia
 

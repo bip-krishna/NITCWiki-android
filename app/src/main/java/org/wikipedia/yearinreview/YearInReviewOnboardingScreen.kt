@@ -42,7 +42,7 @@ import coil3.request.allowHardware
 import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.YearInReviewEvent
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.UriUtil
 
@@ -55,16 +55,16 @@ fun YearInReviewOnboardingScreen(
 ) {
     Scaffold(
         modifier = modifier,
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
         topBar = {
             TopAppBar(
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = WikipediaTheme.colors.paperColor),
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = NITCWikiTheme.colors.paperColor),
                 title = {},
                 navigationIcon = {
                     IconButton(onClick = { onBackButtonClick() }) {
                         Icon(
                             painter = painterResource(R.drawable.ic_close_black_24dp),
-                            tint = WikipediaTheme.colors.primaryColor,
+                            tint = NITCWikiTheme.colors.primaryColor,
                             contentDescription = stringResource(R.string.year_in_review_close)
                         )
                     }
@@ -119,7 +119,7 @@ fun YearInReviewOnboardingContent(
                 modifier = Modifier
                     .padding(top = 16.dp, start = 16.dp, end = 8.dp),
                 text = stringResource(R.string.year_in_review_get_started_headline),
-                color = WikipediaTheme.colors.primaryColor,
+                color = NITCWikiTheme.colors.primaryColor,
                 style = MaterialTheme.typography.headlineMedium,
                 textAlign = TextAlign.Center
             )
@@ -127,7 +127,7 @@ fun YearInReviewOnboardingContent(
                 modifier = Modifier
                     .padding(top = 10.dp, start = 16.dp, end = 16.dp, bottom = 16.dp),
                 text = stringResource(R.string.year_in_review_get_started_bodytext),
-                color = WikipediaTheme.colors.primaryColor,
+                color = NITCWikiTheme.colors.primaryColor,
                 style = MaterialTheme.typography.bodyLarge,
                 textAlign = TextAlign.Center
             )
@@ -136,7 +136,7 @@ fun YearInReviewOnboardingContent(
             modifier = Modifier
                 .padding(top = 10.dp, start = 16.dp, end = 16.dp),
             text = stringResource(R.string.year_in_review_get_started_info),
-            color = WikipediaTheme.colors.secondaryColor,
+            color = NITCWikiTheme.colors.secondaryColor,
             style = MaterialTheme.typography.bodySmall,
             textAlign = TextAlign.Center
         )
@@ -150,7 +150,7 @@ fun YearInReviewOnboardingBottomBar(
     val context = LocalContext.current
     val mediaWikiUrl = stringResource(R.string.year_in_review_media_wiki_url)
     BottomAppBar(
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
         content = {
             Row(
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -160,8 +160,8 @@ fun YearInReviewOnboardingBottomBar(
             ) {
                 OutlinedButton(
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = WikipediaTheme.colors.paperColor,
-                        contentColor = WikipediaTheme.colors.progressiveColor),
+                        containerColor = NITCWikiTheme.colors.paperColor,
+                        contentColor = NITCWikiTheme.colors.progressiveColor),
                     modifier = Modifier
                         .weight(1f)
                         .padding(end = 12.dp),
@@ -180,8 +180,8 @@ fun YearInReviewOnboardingBottomBar(
                 }
                 Button(
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = WikipediaTheme.colors.progressiveColor,
-                        contentColor = WikipediaTheme.colors.paperColor
+                        containerColor = NITCWikiTheme.colors.progressiveColor,
+                        contentColor = NITCWikiTheme.colors.paperColor
                     ),
                     modifier = Modifier
                         .weight(1f)

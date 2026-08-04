@@ -17,7 +17,7 @@ This repository already has several pieces that are helpful for F-Droid packagin
 
 - A dedicated F-Droid build flavor exists in [app/build.gradle](app/build.gradle).
 - The F-Droid flavor removes Google Pay and Firebase push integration in [app/src/fdroid/AndroidManifest.xml](app/src/fdroid/AndroidManifest.xml).
-- A stub Firebase messaging service exists for the F-Droid build in [app/src/fdroid/java/org/wikipedia/push/WikipediaFirebaseMessagingService.kt](app/src/fdroid/java/org/wikipedia/push/WikipediaFirebaseMessagingService.kt).
+- A stub Firebase messaging service exists for the F-Droid build in [app/src/fdroid/java/org/wikipedia/push/NITCWikiFirebaseMessagingService.kt](app/src/fdroid/java/org/wikipedia/push/NITCWikiFirebaseMessagingService.kt).
 - Basic Fastlane metadata already exists under [fastlane/metadata/android/en-US](fastlane/metadata/android/en-US).
 - A separate custom flavor for the college wiki fork exists in [app/build.gradle](app/build.gradle), with the package name set to `org.nitcwiki`.
 

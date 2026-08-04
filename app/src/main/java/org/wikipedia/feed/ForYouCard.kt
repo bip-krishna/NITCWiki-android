@@ -48,7 +48,7 @@ import org.wikipedia.R
 import org.wikipedia.compose.components.FadeInAsyncImage
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.extensions.getString
 import org.wikipedia.feed.model.ForYouCard
@@ -362,14 +362,14 @@ fun ForYouCardDropdownMenu(
         offset = DpOffset(x = (-16).dp, y = 0.dp),
         expanded = expanded,
         onDismissRequest = onDismiss,
-        containerColor = WikipediaTheme.colors.paperColor
+        containerColor = NITCWikiTheme.colors.paperColor
     ) {
         DropdownMenuItem(
             leadingIcon = {
                 Icon(
                     painter = painterResource(R.drawable.ic_share),
                     contentDescription = null,
-                    tint = WikipediaTheme.colors.secondaryColor,
+                    tint = NITCWikiTheme.colors.secondaryColor,
                     modifier = Modifier.size(24.dp)
                 )
             },
@@ -377,7 +377,7 @@ fun ForYouCardDropdownMenu(
                 Text(
                     text = context.getString(wikiSite.languageCode, R.string.menu_page_article_share),
                     style = MaterialTheme.typography.bodyLarge,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             },
             onClick = {
@@ -390,7 +390,7 @@ fun ForYouCardDropdownMenu(
                 Icon(
                     painter = painterResource(R.drawable.ic_bookmark_border_white_24dp),
                     contentDescription = null,
-                    tint = WikipediaTheme.colors.secondaryColor,
+                    tint = NITCWikiTheme.colors.secondaryColor,
                     modifier = Modifier.size(24.dp)
                 )
             },
@@ -398,7 +398,7 @@ fun ForYouCardDropdownMenu(
                 Text(
                     text = context.getString(wikiSite.languageCode, R.string.menu_page_add_to_default_list),
                     style = MaterialTheme.typography.bodyLarge,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             },
             onClick = {
@@ -411,7 +411,7 @@ fun ForYouCardDropdownMenu(
                 Icon(
                     painter = painterResource(R.drawable.ic_no_sim_24dp),
                     contentDescription = null,
-                    tint = WikipediaTheme.colors.secondaryColor,
+                    tint = NITCWikiTheme.colors.secondaryColor,
                     modifier = Modifier.size(24.dp)
                 )
             },
@@ -419,7 +419,7 @@ fun ForYouCardDropdownMenu(
                 Text(
                     text = context.getString(wikiSite.languageCode, R.string.menu_feed_card_dismiss),
                     style = MaterialTheme.typography.bodyLarge,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             },
             onClick = {
@@ -432,7 +432,7 @@ fun ForYouCardDropdownMenu(
                 Icon(
                     painter = painterResource(R.drawable.ic_visibility_off_24dp),
                     contentDescription = null,
-                    tint = WikipediaTheme.colors.secondaryColor,
+                    tint = NITCWikiTheme.colors.secondaryColor,
                     modifier = Modifier.size(24.dp)
                 )
             },
@@ -440,7 +440,7 @@ fun ForYouCardDropdownMenu(
                 Text(
                     text = context.getString(wikiSite.languageCode, R.string.explore_feed_header_overflow_hide_module_label),
                     style = MaterialTheme.typography.bodyLarge,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             },
             onClick = {
@@ -453,7 +453,7 @@ fun ForYouCardDropdownMenu(
                 Icon(
                     painter = painterResource(R.drawable.ic_baseline_tune_24),
                     contentDescription = null,
-                    tint = WikipediaTheme.colors.secondaryColor,
+                    tint = NITCWikiTheme.colors.secondaryColor,
                     modifier = Modifier.size(24.dp)
                 )
             },
@@ -461,7 +461,7 @@ fun ForYouCardDropdownMenu(
                 Text(
                     text = context.getString(wikiSite.languageCode, customizeMenuText),
                     style = MaterialTheme.typography.bodyLarge,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             },
             onClick = {

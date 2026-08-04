@@ -8,7 +8,7 @@
       "platforms": [
         "iOSApp"
       ],
-      "text": "Answer three questions and help us improve Wikipedia.",
+      "text": "Answer three questions and help us improve NITCWiki.",
       "action": {
         "title": "Take the survey",
         "url": "https://survey.url?survey_id=12345&source=iOS"
@@ -30,7 +30,7 @@
       "platforms": [
         "AndroidAppV2"
       ],
-      "text": "Answer three questions and help us improve Wikipedia.",
+      "text": "Answer three questions and help us improve NITCWiki.",
       "action": {
         "title": "Take the survey",
         "url": "https://survey.url?survey_id=12345&source=android"
@@ -50,7 +50,7 @@
       "platforms": [
         "AndroidAppV2"
       ],
-      "text": "Help Wikipedia by making a donation.",
+      "text": "Help NITCWiki by making a donation.",
       "image_url" : "https://image.url",
       "action": {
         "title": "Donate",
@@ -71,7 +71,7 @@
       "platforms": [
         "AndroidAppV2"
       ],
-      "text": "Help Wikipedia by making a donation.",
+      "text": "Help NITCWiki by making a donation.",
       "action": {
         "title": "Donate",
         "url": "https://donate.url?campaign_id=12345&source=android"
@@ -88,7 +88,7 @@
       "platforms": [
         "AndroidAppV2"
       ],
-      "text": "Help Wikipedia by making a donation.",
+      "text": "Help NITCWiki by making a donation.",
       "action": {
         "title": "Donate",
         "url": "https://donate.url?campaign_id=12345&source=android"
@@ -107,7 +107,7 @@
       "platforms": [
         "AndroidAppV2"
       ],
-      "text": "Help Wikipedia by making a donation.",
+      "text": "Help NITCWiki by making a donation.",
       "action": {
         "title": "Donate",
         "url": "https://donate.url?campaign_id=12345&source=android"
@@ -121,7 +121,7 @@
       "platforms": [
         "AndroidAppV2"
       ],
-      "text": "Help Wikipedia by making a donation.",
+      "text": "Help NITCWiki by making a donation.",
       "image_url" : "https://image.url",
       "action": {
         "title": "Donate",
@@ -145,7 +145,7 @@
       "platforms": [
         "AndroidAppV2"
       ],
-      "text": "Help Wikipedia by making a donation.",
+      "text": "Help NITCWiki by making a donation.",
       "image_url" : "https://image.url",
       "action": {
         "title": "Donate",

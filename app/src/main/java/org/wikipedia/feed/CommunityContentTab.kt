@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import org.wikipedia.R
 import org.wikipedia.compose.components.menu.PageOverflowMenu
 import org.wikipedia.compose.components.menu.PageOverflowMenuViewModel
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.extensions.getString
@@ -79,7 +79,7 @@ fun CommunityContentTab(
             FeedEmptyStateView(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(WikipediaTheme.colors.paperColor)
+                    .background(NITCWikiTheme.colors.paperColor)
                     .padding(16.dp)
                     .verticalScroll(rememberScrollState()),
                 title = context.getString(wikiSite.languageCode, R.string.home_feed_screen_empty_state_label),

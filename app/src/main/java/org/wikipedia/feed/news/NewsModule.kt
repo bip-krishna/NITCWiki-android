@@ -28,7 +28,7 @@ import org.wikipedia.R
 import org.wikipedia.compose.components.FadeInAsyncImage
 import org.wikipedia.compose.components.PageIndicator
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.feed.CommunityModuleContainer
@@ -96,8 +96,8 @@ fun NewsItemContent(
         } else {
             FadeInAsyncImage(
                 model = newsItem.thumbUrl()?.let { ImageService.getRequest(LocalContext.current, url = it) },
-                placeholder = ColorPainter(WikipediaTheme.colors.backgroundColor),
-                error = ColorPainter(WikipediaTheme.colors.backgroundColor),
+                placeholder = ColorPainter(NITCWikiTheme.colors.backgroundColor),
+                error = ColorPainter(NITCWikiTheme.colors.backgroundColor),
                 contentDescription = newsItem.story,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxWidth().height(415.dp)
@@ -128,12 +128,12 @@ fun NewsItemContent(
                         .fillMaxWidth()
                         .padding(16.dp)
                         .clip(RoundedCornerShape(8.dp))
-                        .background(WikipediaTheme.colors.paperColor.copy(alpha = 0.92f))
+                        .background(NITCWikiTheme.colors.paperColor.copy(alpha = 0.92f))
                         .padding(16.dp)
                 ) {
                     Text(
                         text = StringUtil.fromHtml(removeItalicParenthetical(newsItem.story)).toString(),
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         style = MaterialTheme.typography.bodyMedium,
                         maxLines = 4,
                         overflow = TextOverflow.Ellipsis

@@ -35,7 +35,7 @@ import coil3.compose.AsyncImage
 import org.wikipedia.R
 import org.wikipedia.compose.ComposeColors
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 
 private const val SHORT_TILE_WEIGHT = 100f
@@ -143,8 +143,8 @@ private fun PlaceholderTile(
         AsyncImage(
             model = imageUrl,
             contentDescription = null,
-            placeholder = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
-            error = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
+            placeholder = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
+            error = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
         )

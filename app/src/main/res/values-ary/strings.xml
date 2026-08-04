@@ -113,7 +113,7 @@
   <string name="search_reading_lists_no_results">تا نتائج ما تلقاو ف ليستات لقراية</string>
   <string name="search_history_no_results">تا نتائج ما تلقاو فليسطوريك</string>
   <string name="edit_section_captcha_message">باش نحميوك من السپام، دخل لكلمات لي كايبانو ليك لتحت</string>
-  <string name="edit_section_captcha_request_an_account_message">ماكاتبانش ليك التصويرة؟ &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;طلب كونط&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">ماكاتبانش ليك التصويرة؟ &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;طلب كونط&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">عاود لكلمات من لفوڭ</string>
   <string name="title_captcha">دخل لكاپتشا</string>
   <string name="edit_section_captcha_reload">برك على لكاپتشا باش تعاود تشارجا</string>

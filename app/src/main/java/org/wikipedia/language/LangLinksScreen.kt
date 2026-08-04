@@ -31,7 +31,7 @@ import org.wikipedia.compose.components.SearchEmptyView
 import org.wikipedia.compose.components.WikiTopAppBarWithSearch
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.util.UiState
 
 @Composable
@@ -63,7 +63,7 @@ fun ComposeLangLinksScreen(
                 onBackButtonClick = onBackButtonClick
             )
         },
-        containerColor = WikipediaTheme.colors.paperColor
+        containerColor = NITCWikiTheme.colors.paperColor
     ) { paddingValues ->
         when (uiState) {
             is UiState.Loading -> {
@@ -74,7 +74,7 @@ fun ComposeLangLinksScreen(
                     contentAlignment = Alignment.Center
                 ) {
                     CircularProgressIndicator(
-                        color = WikipediaTheme.colors.progressiveColor
+                        color = NITCWikiTheme.colors.progressiveColor
                     )
                 }
             }
@@ -155,7 +155,7 @@ fun ListHeader(
     title: String,
     modifier: Modifier = Modifier,
     titleStyle: TextStyle = MaterialTheme.typography.titleSmall.copy(
-        color = WikipediaTheme.colors.primaryColor,
+        color = NITCWikiTheme.colors.primaryColor,
         fontWeight = FontWeight.Bold,
         lineHeight = 24.sp
     )
@@ -180,7 +180,7 @@ fun LangLinksItemView(
     articleName: String
 ) {
     val listItemTextStyle = MaterialTheme.typography.bodyMedium.copy(
-        color = WikipediaTheme.colors.secondaryColor,
+        color = NITCWikiTheme.colors.secondaryColor,
         lineHeight = 24.sp,
     )
 
@@ -193,7 +193,7 @@ fun LangLinksItemView(
                 .fillMaxWidth(),
             text = localizedLanguageName,
             style = MaterialTheme.typography.titleMedium.copy(
-                color = WikipediaTheme.colors.primaryColor,
+                color = NITCWikiTheme.colors.primaryColor,
                 fontWeight = FontWeight.Bold,
             )
         )

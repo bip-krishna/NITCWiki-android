@@ -20,15 +20,15 @@
     "read": "20211007230440",
     "targetpages": [],
     "*": {
-      "header": "‪Cooltey‬，歡迎來到Wikipedia！很高興在這裡見到您。",
-      "compactHeader": "‪Cooltey‬，歡迎來到Wikipedia！很高興在這裡見到您。",
+      "header": "‪Cooltey‬，歡迎來到NITCWiki！很高興在這裡見到您。",
+      "compactHeader": "‪Cooltey‬，歡迎來到NITCWiki！很高興在這裡見到您。",
       "body": "",
       "icon": "site",
       "links": {
         "primary": [],
         "secondary": []
       },
-      "iconUrl": "/static/images/project-logos/notifications/120px-Notification-icon-Wikipedia-logo.svg.png"
+      "iconUrl": "/static/images/project-logos/notifications/120px-Notification-icon-NITCWiki-logo.svg.png"
     }
   },
   {

@@ -33,7 +33,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import org.wikipedia.R
 import org.wikipedia.compose.components.WikiTopAppBar
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 
 enum class FeedConfigurationType { INTERESTS, LOCATION, READING_HISTORY, LANGUAGES }
@@ -88,7 +88,7 @@ fun FeedConfigurationContent(
                 onNavigationClick = onBack,
             )
         },
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
     ) { paddingValues ->
         when (state) {
             FeedConfigurationState.Loading -> {
@@ -99,7 +99,7 @@ fun FeedConfigurationContent(
                     contentAlignment = Alignment.Center
                 ) {
                     CircularProgressIndicator(
-                        color = WikipediaTheme.colors.progressiveColor
+                        color = NITCWikiTheme.colors.progressiveColor
                     )
                 }
             }
@@ -116,7 +116,7 @@ fun FeedConfigurationContent(
                             .padding(vertical = 8.dp),
                         text = stringResource(R.string.home_feed_settings_feed_configuration_description),
                         style = MaterialTheme.typography.bodyMedium,
-                        color = WikipediaTheme.colors.primaryColor
+                        color = NITCWikiTheme.colors.primaryColor
                     )
                     Spacer(modifier = Modifier.height(16.dp))
                     state.items.forEach { item ->
@@ -152,7 +152,7 @@ fun FeedConfigurationItemView(
                 modifier = Modifier
                     .size(22.dp),
                 painter = painterResource(item.icon),
-                tint = WikipediaTheme.colors.primaryColor,
+                tint = NITCWikiTheme.colors.primaryColor,
                 contentDescription = null
             )
             Column(
@@ -161,12 +161,12 @@ fun FeedConfigurationItemView(
                 Text(
                     text = stringResource(item.title),
                     style = MaterialTheme.typography.bodyLarge,
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
                 Text(
                     text = stringResource(item.description),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = WikipediaTheme.colors.secondaryColor
+                    color = NITCWikiTheme.colors.secondaryColor
                 )
             }
         }

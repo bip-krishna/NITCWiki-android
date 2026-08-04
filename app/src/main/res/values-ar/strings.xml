@@ -206,7 +206,7 @@
   <string name="search_reading_lists_no_results">لا نتائج في قوائم القراءة</string>
   <string name="search_history_no_results">لا نتائج في التاريخ</string>
   <string name="edit_section_captcha_message">للمساعدة في الحماية من السبام الآلي، يُرجى إدخال الكلمات التي تظهر أدناه</string>
-  <string name="edit_section_captcha_request_an_account_message">ألا ترى الصورة؟ &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;اطلب حسابًا&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">ألا ترى الصورة؟ &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;اطلب حسابًا&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">كرّر الكلمات من فوق</string>
   <string name="title_captcha">أدخِل رمز التحقُّق (CAPTCHA)</string>
   <string name="edit_section_captcha_reload">انقر على رمز التحقُّق لإعادة التحميل</string>
@@ -510,9 +510,9 @@
   <string name="error_blocked_start">بداية المنع: %s</string>
   <string name="error_blocked_expiry">انتهاء صلاحية المنع: %s</string>
   <string name="error_blocked_id">معرف المنع: %s</string>
-  <string name="error_blocked_footer">يمكنك الاتصال بـ&lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; أو أي &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;إداري&lt;/a&gt; آخر لمناقشة المنع.</string>
+  <string name="error_blocked_footer">يمكنك الاتصال بـ&lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; أو أي &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;إداري&lt;/a&gt; آخر لمناقشة المنع.</string>
   <string name="theme_chooser_menu_item_short_tooltip">تخصيص شريط الأدوات الخاص بك</string>
-  <string name="error_blocked_footer_no_blocker">يمكنك التواصل مع أحد &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;الإداريين&lt;/a&gt; لمناقشة المنع.</string>
+  <string name="error_blocked_footer_no_blocker">يمكنك التواصل مع أحد &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;الإداريين&lt;/a&gt; لمناقشة المنع.</string>
   <string name="temp_account_not_logged_in">أنت غير مسجل الدخول</string>
   <string name="temp_account_anon_ip_dialog_body">بمجرد إجراء تعديل، سيتم ربط عنوان IP الخاص بك بتعديلاتك.&lt;br /&gt;&lt;br /&gt; &lt;a href=\"https://#login\"&gt;قم بتسجيل الدخول&lt;/a&gt; أو &lt;a href=\"https://#createaccount\"&gt;إنشاء حساب&lt;/a&gt; للحصول على رصيد للتعديلات المستقبلية وللوصول إلى ميزات أخرى.</string>
   <string name="temp_account_anon_dialog_body">بمجرد إجراء تعديل، سيتم إنشاء &lt;b&gt;حساب مؤقت&lt;/b&gt; لك لحماية خصوصيتك. &lt;&lt;a href=\"%1$s\"&gt;Learn more&lt;/a&gt; .&lt;br /&gt;&lt;br /&gt; &lt;a href=\"https://#login\"&gt;. قم بتسجيل الدخول&lt;/a&gt; أو &lt;a href=\"https://#createaccount\"&gt;إنشاء حساب&lt;/a&gt; للحصول على رصيد للتعديلات المستقبلية وللوصول إلى ميزات أخرى.</string>
@@ -1636,7 +1636,7 @@
   <string name="talk_warn_saved_messages">رسائل محفوظة</string>
   <string name="talk_page_empty">صفحة النقاش هذه فارغة.</string>
   <string name="talk_page_empty_title">تبدأ المحادثة هنا</string>
-  <string name="talk_page_empty_content">صفحات النقاش هي حيث يناقش الناس كيفية جعل المحتوى على ويكيبيديا أفضل ما يمكن أن يكون. ابدأ بإضافة موضوع مناقشة جديد للتواصل والتعاون مع مجتمع Wikipedians.</string>
+  <string name="talk_page_empty_content">صفحات النقاش هي حيث يناقش الناس كيفية جعل المحتوى على ويكيبيديا أفضل ما يمكن أن يكون. ابدأ بإضافة موضوع مناقشة جديد للتواصل والتعاون مع مجتمع NITCWikins.</string>
   <string name="talk_add_reply">رد</string>
   <string name="talk_no_subject">(بدون موضوع)</string>
   <string name="talk_reply_subject">الموضوع</string>
@@ -1982,10 +1982,10 @@
   <string name="patroller_saved_message_title_do_not_censor">لا تقم بالرقابة</string>
   <string name="patroller_saved_message_title_art_imp">اقتراح تحسين المقال</string>
   <string name="patroller_saved_message_body_vandalism">مرحبًا {{{username}}}، أود أن أعلمك أنني تراجعت عن واحدة أو أكثر من [{{{diffLink}}}|مساهماتك الأخيرة] لأنها لا تبدو بناءة. إذا كنت تعتقد أنني ارتكبت خطأ أو لديك أسئلة، يمكنك ترك رسالة على [[User talk:{{{senderUserName}}}|صفحة نقاشي]]. يرجى ملاحظة أن التخريب المستمر قد يؤدي إلى فرض قيود.</string>
-  <string name="patroller_saved_message_body_editing_tests">مرحبًا {{{username}}}، يسعدني أن ويكيبيديا لفتت انتباهك وأنك مهتم بتعلم كيفية التحرير فيها. لقد نجح اختبار التحرير الذي أجريته؛ ومع ذلك، يجب أن تضع في اعتبارك أن هدف هذا المشروع هو تطوير موسوعة موثوقة وكاملة يمكن للجميع الرجوع إليها. لقد أثر تعديلك على المحتوى، لذا فقد تمت إزالته.\nإذا كنت تريد معرفة كيفية تحرير ويكيبيديا، فإن [[Wikipedia:Sandbox|sandbox]] تحت تصرفك. إذا كانت تعليقاتك خاصة بمقالة ما، فإن المكان الصحيح هو صفحة نقاش تلك المقالة.</string>
-  <string name="patroller_saved_message_body_npov">مرحبًا {{{username}}}، بعض المساهمات التي قدمتها لا تفي بالحياد المطلوب للامتثال لسياسة [[Wikipedia:NPOV|وجهة نظر محايدة]] الخاصة بويكيبيديا. ولهذا السبب، تم تعديل بعض المحتوى أو إزالته. يُرجى تعديل الفقرات أو الأقسام التي تعرض وجهة نظر جزئية، واستبدالها بنص أكثر حيادية وموضوعية بما يتماشى مع ما هو متوقع في الموسوعة.</string>
+  <string name="patroller_saved_message_body_editing_tests">مرحبًا {{{username}}}، يسعدني أن ويكيبيديا لفتت انتباهك وأنك مهتم بتعلم كيفية التحرير فيها. لقد نجح اختبار التحرير الذي أجريته؛ ومع ذلك، يجب أن تضع في اعتبارك أن هدف هذا المشروع هو تطوير موسوعة موثوقة وكاملة يمكن للجميع الرجوع إليها. لقد أثر تعديلك على المحتوى، لذا فقد تمت إزالته.\nإذا كنت تريد معرفة كيفية تحرير ويكيبيديا، فإن [[NITCWiki:Sandbox|sandbox]] تحت تصرفك. إذا كانت تعليقاتك خاصة بمقالة ما، فإن المكان الصحيح هو صفحة نقاش تلك المقالة.</string>
+  <string name="patroller_saved_message_body_npov">مرحبًا {{{username}}}، بعض المساهمات التي قدمتها لا تفي بالحياد المطلوب للامتثال لسياسة [[NITCWiki:NPOV|وجهة نظر محايدة]] الخاصة بويكيبيديا. ولهذا السبب، تم تعديل بعض المحتوى أو إزالته. يُرجى تعديل الفقرات أو الأقسام التي تعرض وجهة نظر جزئية، واستبدالها بنص أكثر حيادية وموضوعية بما يتماشى مع ما هو متوقع في الموسوعة.</string>
   <string name="patroller_saved_message_body_auto_trans">مرحبًا {{{username}}}، ربما تكون بعض المساهمات التي قدمتها عبارة عن ترجمات آلية، ولهذا السبب تم تعديلها أو تمييزها باستخدام القالب. إذا لم يتم إجراء أي تحسينات على المقالة، فقد يتم حذفها.\n\nإذا كان لديك أي أسئلة على الرغم من كل هذه المعلومات، فلا تتردد في ترك رسالة على [[User talk:{{{senderUserName}}}|my talk page]]. لا تيأس من هذه الحادثة الصغيرة. مساهماتك مهمة جدًا لويكيبيديا.</string>
-  <string name="patroller_saved_message_body_coi_rem">مرحبًا {{{username}}}، أقدر تعاونك على ويكيبيديا؛ ومع ذلك، لاحظت أنك في [[Wikipedia:Conflict_of_interest|تضارب المصالح]]. تضارب المصالح هو عدم التوافق بين أهداف ويكيبيديا المتمثلة في الحياد والموثوقية والأهداف الخاصة لبعض المحررين أو الأفراد أو الكيانات أو الشركات من أي نوع.\n\nتخضع جميع المساهمات في المساحة الرئيسية لسياسات معايير المحتوى الخاصة بهذه ويكيبيديا ([[Wikipedia:What_Wikipedia_is_not|ما لا تمثله ويكيبيديا]])، والجودة الموسوعية ([[Wikipedia:Verifiability|قابلية التحقق]] و[[Wikipedia:No_original_research|عدم وجود بحث أصلي]])، وطريقة التحرير ([[Wikipedia:Neutral_point_of_view|وجهة نظر محايدة]])، وشرعية المحتوى ([[Wikipedia:Copyrights|حقوق الطبع والنشر]]). من المتوقع أن يلتزم جميع الناشرين بهذه السياسات عند إنشاء المحتوى وتقييمه واحترام تصرفات الناشرين الآخرين وتحمل حسن النية لضمان اتباع هذه السياسات.\n\nإذا قمت بالتحرير بموجب تضارب المصالح، فيجب عليك تطبيق السياسة المقابلة بعناية خاصة؛ وإلا، فقد يتم اعتبار حساب المستخدم الخاص بك لأغراض خاصة ويتم حظره. لا تتردد في التواصل معي على صفحة نقاشي إذا كان لديك أي أسئلة.</string>
+  <string name="patroller_saved_message_body_coi_rem">مرحبًا {{{username}}}، أقدر تعاونك على ويكيبيديا؛ ومع ذلك، لاحظت أنك في [[NITCWiki:Conflict_of_interest|تضارب المصالح]]. تضارب المصالح هو عدم التوافق بين أهداف ويكيبيديا المتمثلة في الحياد والموثوقية والأهداف الخاصة لبعض المحررين أو الأفراد أو الكيانات أو الشركات من أي نوع.\n\nتخضع جميع المساهمات في المساحة الرئيسية لسياسات معايير المحتوى الخاصة بهذه ويكيبيديا ([[NITCWiki:What_NITCWiki_is_not|ما لا تمثله ويكيبيديا]])، والجودة الموسوعية ([[NITCWiki:Verifiability|قابلية التحقق]] و[[NITCWiki:No_original_research|عدم وجود بحث أصلي]])، وطريقة التحرير ([[NITCWiki:Neutral_point_of_view|وجهة نظر محايدة]])، وشرعية المحتوى ([[NITCWiki:Copyrights|حقوق الطبع والنشر]]). من المتوقع أن يلتزم جميع الناشرين بهذه السياسات عند إنشاء المحتوى وتقييمه واحترام تصرفات الناشرين الآخرين وتحمل حسن النية لضمان اتباع هذه السياسات.\n\nإذا قمت بالتحرير بموجب تضارب المصالح، فيجب عليك تطبيق السياسة المقابلة بعناية خاصة؛ وإلا، فقد يتم اعتبار حساب المستخدم الخاص بك لأغراض خاصة ويتم حظره. لا تتردد في التواصل معي على صفحة نقاشي إذا كان لديك أي أسئلة.</string>
   <string name="patroller_saved_message_body_final_warning">نظرًا لأنك قمت بإجراء تعديلات مدمرة متعددة، فإن هذا سيكون بمثابة تحذيرك الأخير. إذا قمت بتخريب ويكيبيديا مرة أخرى، فسيتم منعك من التحرير.</string>
   <string name="patroller_saved_message_body_copy_vio">يبدو أن تعديلك الأخير يتضمن مواد محمية بحقوق الطبع والنشر دون إذن. يرجى التأكد من أن كل المحتوى يتوافق مع سياسات حقوق الطبع والنشر الخاصة بويكيبيديا لتجنب الإزالة.</string>
   <string name="patroller_saved_message_body_edit_summary">مرحبًا {{{username}}}، يبدو أنك قمت بإزالة محتوى من ويكيبيديا دون ترك ملخص التحرير. يُرجى ترك ملخص التحرير كلما قمت بإضافة أو إزالة محتوى إلى ويكيبيديا.</string>
@@ -1993,7 +1993,7 @@
   <string name="talk_warn_learn_more_label">تعرف على عناصر نائبة الرسائل</string>
   <string name="talk_warn_learn_more_url">https://www.mediawiki.org/wiki/Special:MyLanguage/Wikimedia_Apps/Android_Suggested_edits#Message_placeholders</string>
   <string name="talk_warn_saved_messages_usage_instruction">استخدم رسالة المثال أدناه لتخصيصها وإرسالها وحفظها في رسائلك.</string>
-  <string name="patroller_saved_message_body_art_imp">مرحبًا {{{username}}}. مقالتك بداية رائعة! ولجعلها أفضل، فكر في إضافة المزيد من المراجع إلى مصادر موثوقة. يساعد هذا في التحقق من المعلومات وتحسين جودة المقالة. راجع إرشادات ويكيبيديا هذه حول [[Wikipedia:Reliable_sources|مصادر موثوقة]] لمزيد من التفاصيل.</string>
+  <string name="patroller_saved_message_body_art_imp">مرحبًا {{{username}}}. مقالتك بداية رائعة! ولجعلها أفضل، فكر في إضافة المزيد من المراجع إلى مصادر موثوقة. يساعد هذا في التحقق من المعلومات وتحسين جودة المقالة. راجع إرشادات ويكيبيديا هذه حول [[NITCWiki:Reliable_sources|مصادر موثوقة]] لمزيد من التفاصيل.</string>
   <string name="talk_templates_menu_edit_title">عدل</string>
   <string name="data_opt_in_accept">قبول</string>
   <string name="data_opt_in_reject">رفض</string>
@@ -2113,7 +2113,7 @@
   <string name="on_this_day_game_report_email_subject">تقرير المشكلة - ألعاب ويكيبيديا</string>
   <string name="on_this_day_game_report_email_body">لقد واجهت مشكلة مع ميزة ألعاب ويكيبيديا:\n- [وصف المشكلة المحددة]\n\nالسلوك الذي أرغب في رؤيته هو:\n- [وصف الحل المقترح]</string>
   <string name="on_this_day_game_notification_undo">رجوع</string>
-  <string name="on_this_day_game_share_link_message">ألعب لعبة \"أيهما جاء أولاً؟\" وهي لعبة تفاهات يومية على تطبيق Wikipedia Android %s</string>
+  <string name="on_this_day_game_share_link_message">ألعب لعبة \"أيهما جاء أولاً؟\" وهي لعبة تفاهات يومية على تطبيق NITCWiki Android %s</string>
   <string name="on_this_day_game_share_screen_title">لقد حصلت على %1$d/%2$d في \n\"أيهما جاء أولاً؟\" \nاليوم.</string>
   <string name="on_this_day_game_share_screen_subtitle">المواضيع المتضمنة:</string>
   <string name="on_this_day_game_archive_calendar_title">اختر لعبة حسب التاريخ للعب.</string>
@@ -2385,7 +2385,7 @@
   <string name="recommended_reading_list_settings_toggle">اكتشف قائمة القراءة</string>
   <string name="recommended_reading_list_settings_toggle_disable_message">خاصية \"اكتشف\" مُعطّلة. لن تُوصي ويكيبيديا بقراءة مقالاتك.</string>
   <string name="recommended_reading_list_settings_turn_off_dialog_title">إيقاف تشغيل Discover؟</string>
-  <string name="recommended_reading_list_settings_turn_off_dialog_message">إذا قمت بإيقاف تشغيل Discover، فسوف تتوقف عن تلقي %s من توصيات القراءة من Wikipedia.</string>
+  <string name="recommended_reading_list_settings_turn_off_dialog_message">إذا قمت بإيقاف تشغيل Discover، فسوف تتوقف عن تلقي %s من توصيات القراءة من NITCWiki.</string>
   <string name="recommended_reading_list_settings_turn_off_dialog_positive_button">أطفئه</string>
   <string name="recommended_reading_list_settings_turn_off_dialog_negative_button">لا، استمر في ذلك</string>
   <string name="recommended_reading_list_settings_turn_off_snackbar">تم إيقاف ميزة \"اكتشف\". يمكنك إعادة تفعيلها في أي وقت من الإعدادات.</string>
@@ -2419,7 +2419,7 @@
   <string name="recommended_reading_list_settings_notifications_dialog_negative_button">لا، ابقهم على حالهم</string>
   <string name="recommended_reading_list_notification_title">قائمة القراءة %s Discover الخاصة بك جاهزة.</string>
   <string name="recommended_reading_list_notification_subtitle">انقر هنا لرؤية أحدث توصياتك.</string>
-  <string name="recommended_reading_list_settings_notification_subtitle_enable">عندما يتم تحديث Discover الخاص بك، سوف ترسل لك Wikipedia إشعارًا.</string>
+  <string name="recommended_reading_list_settings_notification_subtitle_enable">عندما يتم تحديث Discover الخاص بك، سوف ترسل لك NITCWiki إشعارًا.</string>
   <string name="recommended_reading_list_settings_toggle_enable_message">اكتشف الآن. ستقترح عليك ويكيبيديا مقالات للقراءة.</string>
   <string name="donation_reminders_prompt_dismiss_snackbar">يمكن تعديل تذكيرات التبرع في أي وقت من خلال الإعدادات.</string>
   <string name="donation_settings_section_header">التبرعات</string>

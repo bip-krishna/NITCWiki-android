@@ -27,14 +27,14 @@ import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
 import org.wikipedia.base.TestConfig
 import org.wikipedia.base.TestThemeColorType
-import org.wikipedia.base.TestWikipediaColors
+import org.wikipedia.base.TestNITCWikiColors
 import org.wikipedia.base.utils.assertTextColor
 import org.wikipedia.theme.Theme
 
 class SearchRobot : BaseRobot() {
     fun tapSearchView() = apply {
         // Click the Search box
-        click.onViewWithText("Search Wikipedia")
+        click.onViewWithText("Search NITCWiki")
         delay(TestConfig.DELAY_SHORT)
     }
 
@@ -188,14 +188,14 @@ class SearchRobot : BaseRobot() {
     }
 
     fun assertColorOfTitleInTheSearchList(context: Context, position: Int, theme: Theme) = apply {
-        val colorRes = TestWikipediaColors.getGetColor(theme, TestThemeColorType.PRIMARY)
+        val colorRes = TestNITCWikiColors.getGetColor(theme, TestThemeColorType.PRIMARY)
         val color = Color(ContextCompat.getColor(context, colorRes))
         composeTestRule.onNodeWithTag("search_list$position")
             .assertTextColor(color)
     }
 
     fun assertColorOfTitleInTheHistoryList(position: Int, theme: Theme) = apply {
-        val color = TestWikipediaColors.getGetColor(theme, TestThemeColorType.PRIMARY)
+        val color = TestNITCWikiColors.getGetColor(theme, TestThemeColorType.PRIMARY)
         verify.assertColorForChildItemInAList(
             listId = R.id.history_list,
             childItemId = R.id.page_list_item_title,

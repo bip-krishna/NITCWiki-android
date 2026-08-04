@@ -229,7 +229,7 @@ class PageActivity : BaseActivity(), PageFragment.Callback, LinkPreviewDialog.Lo
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         binding.pageToolbarButtonSearch.setOnClickListener {
-            pageFragment.articleInteractionEvent?.logSearchWikipediaClick()
+            pageFragment.articleInteractionEvent?.logSearchNITCWikiClick()
             val articleTitle = if (pageFragment.title?.namespace() == Namespace.MAIN) pageFragment.title?.displayText else null
             startActivity(SearchActivity.newIntent(
                 context = this@PageActivity,

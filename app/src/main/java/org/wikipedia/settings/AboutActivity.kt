@@ -46,7 +46,7 @@ import org.wikipedia.compose.components.LinkTextData
 import org.wikipedia.compose.components.Snackbar
 import org.wikipedia.compose.components.WikiTopAppBar
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.DeviceUtil
 
@@ -98,7 +98,7 @@ class AboutActivity : BaseActivity() {
         DeviceUtil.setEdgeToEdge(this)
         setContent {
             BaseTheme {
-                AboutWikipediaScreen(
+                AboutNITCWikiScreen(
                     modifier = Modifier
                         .fillMaxSize()
                         .safeDrawingPadding(),
@@ -118,7 +118,7 @@ class AboutActivity : BaseActivity() {
 }
 
 @Composable
-fun AboutWikipediaScreen(
+fun AboutNITCWikiScreen(
     modifier: Modifier = Modifier,
     versionName: String,
     credits: List<LinkTextData>,
@@ -144,7 +144,7 @@ fun AboutWikipediaScreen(
                 onNavigationClick = onBackButtonClick
             )
         },
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
         content = { paddingValues ->
            AboutScreenContent(
                modifier = Modifier
@@ -169,7 +169,7 @@ fun AboutScreenContent(
             .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        AboutWikipediaHeader(
+        AboutNITCWikiHeader(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 30.dp, bottom = 16.dp),
@@ -193,7 +193,7 @@ fun AboutScreenContent(
 }
 
 @Composable
-fun AboutWikipediaHeader(
+fun AboutNITCWikiHeader(
     modifier: Modifier = Modifier,
     versionName: String,
     snackbarHostState: SnackbarHostState
@@ -206,7 +206,7 @@ fun AboutWikipediaHeader(
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        AboutWikipediaImage(
+        AboutNITCWikiImage(
             onSecretCountClick = { isEnabled ->
                 scope.launch {
                     when (isEnabled) {
@@ -232,14 +232,14 @@ fun AboutWikipediaHeader(
                 modifier = Modifier
                     .padding(vertical = 16.dp),
                 text = versionName,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         }
     }
 }
 
 @Composable
-fun AboutWikipediaImage(
+fun AboutNITCWikiImage(
     modifier: Modifier = Modifier,
     onSecretCountClick: (isEnabled: Boolean) -> Unit,
 ) {
@@ -278,7 +278,7 @@ fun AboutWikipediaImage(
                     width = 114.dp
                 ),
             painter = painterResource(R.drawable.wp_wordmark),
-            colorFilter = ColorFilter.tint(color = WikipediaTheme.colors.primaryColor),
+            colorFilter = ColorFilter.tint(color = NITCWikiTheme.colors.primaryColor),
             contentDescription = null,
         )
     }
@@ -329,14 +329,14 @@ fun AboutScreenFooter(
                 .size(24.dp),
             painter = painterResource(R.drawable.ic_wmf_logo),
             contentDescription = null,
-            colorFilter = ColorFilter.tint(color = WikipediaTheme.colors.placeholderColor)
+            colorFilter = ColorFilter.tint(color = NITCWikiTheme.colors.placeholderColor)
         )
         HtmlText(
             text = stringResource(R.string.about_wmf),
             style = MaterialTheme.typography.bodySmall,
-            color = WikipediaTheme.colors.secondaryColor,
+            color = NITCWikiTheme.colors.secondaryColor,
             linkStyle = TextLinkStyles(
-                style = SpanStyle(color = WikipediaTheme.colors.progressiveColor)
+                style = SpanStyle(color = NITCWikiTheme.colors.progressiveColor)
             )
         )
     }
@@ -349,7 +349,7 @@ fun LinkTextWithHeader(
     html: String,
     linkStyles: TextLinkStyles = TextLinkStyles(
         style = SpanStyle(
-            color = WikipediaTheme.colors.progressiveColor
+            color = NITCWikiTheme.colors.progressiveColor
         )
     )
 ) {
@@ -360,7 +360,7 @@ fun LinkTextWithHeader(
         Text(
             text = header,
             style = MaterialTheme.typography.bodyLarge,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         HtmlText(
             text = html,
@@ -382,7 +382,7 @@ fun LicenseTextWithHeader(
         Text(
             text = header,
             style = MaterialTheme.typography.bodyLarge,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         LicenseLinkText(
             links = credits
@@ -394,7 +394,7 @@ fun LicenseTextWithHeader(
 @Composable
 private fun AboutScreenPreview() {
     BaseTheme(currentTheme = Theme.LIGHT) {
-        AboutWikipediaScreen(
+        AboutNITCWikiScreen(
             modifier = Modifier
                 .fillMaxSize(),
             versionName = "version name",

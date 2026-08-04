@@ -14,7 +14,7 @@ import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.YearInReviewEvent
 import org.wikipedia.auth.AccountUtil
-import org.wikipedia.compose.components.WikipediaAlertDialog
+import org.wikipedia.compose.components.NITCWikiAlertDialog
 import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.login.LoginActivity
 import org.wikipedia.settings.Prefs
@@ -36,7 +36,7 @@ class YearInReviewOnboardingActivity : BaseActivity() {
             BaseTheme {
                 var showLoginDialog by remember { mutableStateOf(false) }
                 if (showLoginDialog) {
-                    WikipediaAlertDialog(
+                    NITCWikiAlertDialog(
                         title = stringResource(R.string.year_in_review_login_dialog_title),
                         message = stringResource(R.string.year_in_review_login_dialog_body),
                         confirmButtonText = stringResource(R.string.year_in_review_login_dialog_positive),

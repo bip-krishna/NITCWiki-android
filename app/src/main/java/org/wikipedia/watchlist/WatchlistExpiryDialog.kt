@@ -42,7 +42,7 @@ import org.wikipedia.R
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.compose.ComposeColors
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.page.ExtendedBottomSheetDialogFragment
 import org.wikipedia.page.PageTitle
 import org.wikipedia.theme.Theme
@@ -66,7 +66,7 @@ class WatchlistExpiryDialog : ExtendedBottomSheetDialogFragment() {
                 BaseTheme {
                     WatchlistExpiryDialogView(
                         modifier = Modifier
-                            .background(WikipediaTheme.colors.paperColor),
+                            .background(NITCWikiTheme.colors.paperColor),
                         expiryList = expiryList,
                         selectedWatchListTime = WatchlistExpiry.NEVER,
                         onExpiryItemSelected = {
@@ -136,7 +136,7 @@ fun WatchlistExpiryDialogView(
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(WikipediaTheme.colors.borderColor)
+                .background(NITCWikiTheme.colors.borderColor)
                 .height(48.dp)
                 .padding(horizontal = 16.dp)
         ) {
@@ -145,7 +145,7 @@ fun WatchlistExpiryDialogView(
                     .align(Alignment.CenterStart),
                 text = stringResource(R.string.watchlist_expiry_dialog_title),
                 style = MaterialTheme.typography.labelLarge,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         }
 
@@ -184,7 +184,7 @@ fun WatchlistExpiryDialogView(
                             .padding(horizontal = 24.dp),
                         text = expiryTitle,
                         style = MaterialTheme.typography.bodyLarge,
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         fontWeight = if (expiryItem.expiry == selectedWatchListTime.expiry) FontWeight.Bold else null
                     )
 
@@ -193,7 +193,7 @@ fun WatchlistExpiryDialogView(
                             modifier = Modifier
                                 .size(24.dp),
                             painter = painterResource(R.drawable.ic_check_black_24dp),
-                            tint = WikipediaTheme.colors.primaryColor,
+                            tint = NITCWikiTheme.colors.primaryColor,
                             contentDescription = null
                         )
                     }
@@ -211,7 +211,7 @@ private fun WatchlistExpiryDialogViewPreview() {
     ) {
         WatchlistExpiryDialogView(
             modifier = Modifier
-                .background(WikipediaTheme.colors.paperColor),
+                .background(NITCWikiTheme.colors.paperColor),
             expiryList = listOf(WatchlistExpiry.NEVER, WatchlistExpiry.ONE_WEEK, WatchlistExpiry.ONE_MONTH,
                 WatchlistExpiry.THREE_MONTH, WatchlistExpiry.SIX_MONTH),
             selectedWatchListTime = WatchlistExpiry.NEVER,

@@ -52,7 +52,7 @@ import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.compose.components.OnboardingItem
 import org.wikipedia.compose.components.OnboardingListItem
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.extensions.getString
 import org.wikipedia.extensions.instrument
 import org.wikipedia.settings.Prefs
@@ -183,7 +183,7 @@ fun HybridSearchOnboardingScreen(
     Scaffold(
         modifier = modifier
             .safeDrawingPadding(),
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
         topBar = {
             TopAppBar(
                 title = {
@@ -195,7 +195,7 @@ fun HybridSearchOnboardingScreen(
                         Box(
                             modifier = Modifier
                                 .background(
-                                    color = WikipediaTheme.colors.progressiveColor,
+                                    color = NITCWikiTheme.colors.progressiveColor,
                                     shape = RoundedCornerShape(size = 16.dp)
                                 )
                                 .padding(horizontal = 10.dp, vertical = 1.dp)
@@ -211,19 +211,19 @@ fun HybridSearchOnboardingScreen(
                         Text(
                             text = stringResource(R.string.hybrid_search_onboarding_screen_title),
                             style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Medium),
-                            color = WikipediaTheme.colors.primaryColor
+                            color = NITCWikiTheme.colors.primaryColor
                         )
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = WikipediaTheme.colors.paperColor
+                    containerColor = NITCWikiTheme.colors.paperColor
                 )
             )
         },
         bottomBar = {
             HorizontalDivider(
                 thickness = 0.5.dp,
-                color = WikipediaTheme.colors.borderColor
+                color = NITCWikiTheme.colors.borderColor
             )
             MainBottomBar(
                 onNextButtonClick = {
@@ -250,7 +250,7 @@ fun HybridSearchOnboardingScreen(
             }
             SearchExamplesView(
                 modifier = Modifier
-                    .background(WikipediaTheme.colors.paperColor),
+                    .background(NITCWikiTheme.colors.paperColor),
                 langCode = langCode,
                 searchExamples = searchExamples,
                 onClick = { exampleQuery ->
@@ -293,7 +293,7 @@ fun SearchExamplesView(
                 val exampleQueryString = context.getString(langCode, exampleQuery)
                 Box(
                     modifier = Modifier
-                        .border(width = 1.dp, color = WikipediaTheme.colors.borderColor, shape = RoundedCornerShape(8.dp))
+                        .border(width = 1.dp, color = NITCWikiTheme.colors.borderColor, shape = RoundedCornerShape(8.dp))
                         .clip(shape = RoundedCornerShape(8.dp))
                         .clickable(onClick = { onClick(exampleQueryString) })
                 ) {
@@ -301,7 +301,7 @@ fun SearchExamplesView(
                         modifier = Modifier.padding(horizontal = 16.dp, vertical = 6.dp),
                         text = exampleQueryString,
                         style = MaterialTheme.typography.bodyMedium,
-                        color = WikipediaTheme.colors.secondaryColor
+                        color = NITCWikiTheme.colors.secondaryColor
                     )
                 }
             }
@@ -327,14 +327,14 @@ fun MainBottomBar(
             modifier = Modifier
                 .weight(1f),
             colors = ButtonDefaults.buttonColors(
-                containerColor = WikipediaTheme.colors.backgroundColor
+                containerColor = NITCWikiTheme.colors.backgroundColor
             ),
             onClick = onLearnMoreClick
         ) {
             Text(
                 text = stringResource(R.string.hybrid_search_onboarding_learn_more),
                 style = MaterialTheme.typography.labelLarge,
-                color = WikipediaTheme.colors.progressiveColor,
+                color = NITCWikiTheme.colors.progressiveColor,
                 textAlign = TextAlign.Center
             )
         }
@@ -343,14 +343,14 @@ fun MainBottomBar(
             modifier = Modifier
                 .weight(1f),
             colors = ButtonDefaults.buttonColors(
-                containerColor = WikipediaTheme.colors.progressiveColor
+                containerColor = NITCWikiTheme.colors.progressiveColor
             ),
             onClick = onNextButtonClick
         ) {
             Text(
                 text = stringResource(R.string.onboarding_get_started),
                 style = MaterialTheme.typography.labelLarge,
-                color = WikipediaTheme.colors.paperColor,
+                color = NITCWikiTheme.colors.paperColor,
                 textAlign = TextAlign.Center
             )
         }
@@ -383,7 +383,7 @@ private fun SearchExamplesPreview() {
             langCode = "en",
             searchExamples = defaultSuggestedQueries,
             modifier = Modifier
-                .background(WikipediaTheme.colors.paperColor),
+                .background(NITCWikiTheme.colors.paperColor),
             onClick = {}
         )
     }

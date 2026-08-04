@@ -42,7 +42,7 @@ import org.wikipedia.compose.components.WikiCard
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.Resource
 
@@ -65,14 +65,14 @@ fun SourceSelectionScreen(
         modifier = Modifier
             .fillMaxSize()
             .nestedScroll(scrollBehavior.nestedScrollConnection)
-            .background(WikipediaTheme.colors.paperColor),
+            .background(NITCWikiTheme.colors.paperColor),
         topBar = {
             TopAppBar(
                 title = {
                     if (fromSettings) {
                         Text(
                             text = stringResource(id = R.string.recommended_reading_list_settings_updates_base_title),
-                            color = WikipediaTheme.colors.primaryColor,
+                            color = NITCWikiTheme.colors.primaryColor,
                             style = MaterialTheme.typography.headlineSmall.copy(
                                 fontWeight = FontWeight.Bold,
                                 lineHeight = 24.sp
@@ -90,17 +90,17 @@ fun SourceSelectionScreen(
                                 onCloseClick()
                             })
                             .padding(12.dp),
-                        tint = WikipediaTheme.colors.primaryColor
+                        tint = NITCWikiTheme.colors.primaryColor
                     )
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = WikipediaTheme.colors.paperColor,
-                    scrolledContainerColor = WikipediaTheme.colors.paperColor
+                    containerColor = NITCWikiTheme.colors.paperColor,
+                    scrolledContainerColor = NITCWikiTheme.colors.paperColor
                 ),
                 scrollBehavior = scrollBehavior
             )
         },
-        containerColor = WikipediaTheme.colors.paperColor
+        containerColor = NITCWikiTheme.colors.paperColor
     ) { paddingValues ->
         when (uiState) {
             is Resource.Loading -> {
@@ -111,8 +111,8 @@ fun SourceSelectionScreen(
                 ) {
                     LinearProgressIndicator(
                         modifier = Modifier.fillMaxWidth(),
-                        color = WikipediaTheme.colors.progressiveColor,
-                        trackColor = WikipediaTheme.colors.borderColor
+                        color = NITCWikiTheme.colors.progressiveColor,
+                        trackColor = NITCWikiTheme.colors.borderColor
                     )
                 }
             }
@@ -188,7 +188,7 @@ fun SourceSelectionContent(
                 Text(
                     modifier = Modifier.padding(horizontal = 16.dp),
                     text = stringResource(id = R.string.recommended_reading_list_interest_source_message),
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     fontSize = 22.sp,
                     textAlign = TextAlign.Center
                 )
@@ -240,12 +240,12 @@ fun SourceSelectionContent(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(1.dp)
-                        .background(WikipediaTheme.colors.borderColor)
+                        .background(NITCWikiTheme.colors.borderColor)
                 )
                 Icon(
                     painter = painterResource(R.drawable.ic_arrow_forward_black_24dp),
                     contentDescription = stringResource(R.string.nav_item_forward),
-                    tint = WikipediaTheme.colors.primaryColor,
+                    tint = NITCWikiTheme.colors.primaryColor,
                     modifier = Modifier
                         .size(48.dp)
                         .align(Alignment.CenterEnd)
@@ -272,11 +272,11 @@ fun SourceOptionCard(
             .padding(horizontal = 16.dp),
         elevation = 0.dp,
         colors = CardDefaults.cardColors(
-            containerColor = if (isSelected) WikipediaTheme.colors.additionColor else WikipediaTheme.colors.paperColor
+            containerColor = if (isSelected) NITCWikiTheme.colors.additionColor else NITCWikiTheme.colors.paperColor
         ),
         border = BorderStroke(
             width = 1.dp,
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         )
     ) {
         Row(
@@ -288,7 +288,7 @@ fun SourceOptionCard(
                 modifier = Modifier
                     .size(24.dp),
                 painter = painterResource(iconRes),
-                tint = WikipediaTheme.colors.primaryColor,
+                tint = NITCWikiTheme.colors.primaryColor,
                 contentDescription = stringResource(textRes)
             )
             Text(
@@ -296,7 +296,7 @@ fun SourceOptionCard(
                 text = stringResource(textRes),
                 style = MaterialTheme.typography.bodyLarge,
                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         }
     }

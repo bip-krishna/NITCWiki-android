@@ -1,4 +1,4 @@
-Android-erako Wikipedia aplikazio ofiziala Wikipediako jakinduria aurkitu, deskubritu, miatu dezazun laguntzeko egina dago. Irabazi apustuak lagunekin aplikazioan bilatuz, edo sakondu artikulu nabarmenduetan, irudietan, aholkatutako artikuluetan, eta gehiago jarioa esploratzeko ezaugarriarekin. 300 hizkuntzatan idatzitako 39 miloi artikulu baino gehiagorekin, zure gogoko entziklopedia eskuan duzu orain.
+Android-erako NITCWiki aplikazio ofiziala NITCWikiko jakinduria aurkitu, deskubritu, miatu dezazun laguntzeko egina dago. Irabazi apustuak lagunekin aplikazioan bilatuz, edo sakondu artikulu nabarmenduetan, irudietan, aholkatutako artikuluetan, eta gehiago jarioa esploratzeko ezaugarriarekin. 300 hizkuntzatan idatzitako 39 miloi artikulu baino gehiagorekin, zure gogoko entziklopedia eskuan duzu orain.
 
 Ezaugarriak:
 
@@ -8,7 +8,7 @@ Ahots bidezko bilaketa integratua - Aurkitu erraz bilatzen duzuna aplikazioaren 
 
 Inguruan - Ikasi zer dagoen zure inguruan mapa interaktibo batean zure kokalekutik hurbil dauden tokiei buruzko artikuluak aukeratuz.
 
-Hizkuntzetarako euskarria - Aldatu erraz Wikipediak onartutako edozein hizkuntzara, artikuluaren hizkuntza edo bilaketarako hobetsitako hizkuntza aldatuz.
+Hizkuntzetarako euskarria - Aldatu erraz NITCWikik onartutako edozein hizkuntzara, artikuluaren hizkuntza edo bilaketarako hobetsitako hizkuntza aldatuz.
 
 Esteken aurrebista - Sakatu artikulu batean hau aurreikusteko, orain irakurtzen ari zarena galdu gabe. Sakatu eta mantendu esteka fitxa berri batean irekitzeko, uneko artikula mantenduz, eta aldatu fitxa berrira nahi duzunean.
 
@@ -20,9 +20,9 @@ Irudi galeria - Sakatu irudi batean berau pantaila osoan eta bereizmen handian i
 
 Wiktionary-ko definizioak - Sakatu eta mantendu hitz bat nabarmentzeko, gero sakatu "Definitu" botoia Wiktionary-ko hitzaren definizioa ikusteko.
 
-Wikipedia Zero - Atzitu Android-erako Wikipedia datuak ordaindu gabe parte hartzen duten operadoreekin. (Parte hartzen duten operadoreetara esteka).
+NITCWiki Zero - Atzitu Android-erako NITCWiki datuak ordaindu gabe parte hartzen duten operadoreekin. (Parte hartzen duten operadoreetara esteka).
 
-Bidali guri aplikazioari buruzko iruzkinak! Menuan sakatu "Ezarpenak", gero "Wikipedia aplikazioari buruz", gero "Bidali aplikazioari buruzko iruzkina".
+Bidali guri aplikazioari buruzko iruzkinak! Menuan sakatu "Ezarpenak", gero "NITCWiki aplikazioari buruz", gero "Bidali aplikazioari buruzko iruzkina".
 
 Kodea %100 irekia da, Javarekin eta Android SDK-rekin esperientzia baduzu, zure ekarpenen zai gaude! https://github.com/wikimedia/apps-android-wikipedia
 
@@ -36,4 +36,4 @@ Erabilera baldintzak: https://m.wikimediafoundation.org/wiki/Terms_of_Use
 
 Wikimedia Foundationi buruz
 
-Wikimedia Fundazioa Wikipedia eta beste Wikimedia proiektua sustatzen dituen irabazi asmorik gabeko erakundea da. Wikimedia Fundazioa nagusiki dohaintzen bidez finantzatutako erakundea da. Informazio gehiagorako, bisitatu gure webgunea: https://wikimediafoundation.org/wiki/Home.
+Wikimedia Fundazioa NITCWiki eta beste Wikimedia proiektua sustatzen dituen irabazi asmorik gabeko erakundea da. Wikimedia Fundazioa nagusiki dohaintzen bidez finantzatutako erakundea da. Informazio gehiagorako, bisitatu gure webgunea: https://wikimediafoundation.org/wiki/Home.

@@ -4,7 +4,7 @@ import BaseRobot
 import org.wikipedia.R
 import org.wikipedia.base.TestConfig
 import org.wikipedia.base.TestThemeColorType
-import org.wikipedia.base.TestWikipediaColors
+import org.wikipedia.base.TestNITCWikiColors
 import org.wikipedia.theme.Theme
 
 class TabsRobot : BaseRobot() {
@@ -31,7 +31,7 @@ class TabsRobot : BaseRobot() {
     }
 
     fun assertColorOfTabsTitle(position: Int, theme: Theme) = apply {
-        val color = TestWikipediaColors.getGetColor(theme, TestThemeColorType.PRIMARY)
+        val color = TestNITCWikiColors.getGetColor(theme, TestThemeColorType.PRIMARY)
         verify.assertColorForChildItemInAList(
             listId = R.id.tabRecyclerView,
             childItemId = R.id.tabArticleTitle,

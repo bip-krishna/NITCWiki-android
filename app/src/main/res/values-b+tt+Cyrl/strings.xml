@@ -146,7 +146,7 @@
   <string name="search_reading_lists_no_results">Уку исемлекләрендә берни дә табылмаган</string>
   <string name="search_history_no_results">Тарихта берни дә табылмаган</string>
   <string name="edit_section_captcha_message">Автомат спамнан саклану өчен, түбәндәге сүзләрне кертегез.</string>
-  <string name="edit_section_captcha_request_an_account_message">Сурәт күренмиме? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Хисап язмасын соратырга&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Сурәт күренмиме? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Хисап язмасын соратырга&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">Өстә күрсәтелгән сүзләрне кабатлагыз</string>
   <string name="title_captcha">CAPTCHAны кертегез</string>
   <string name="edit_section_captcha_reload">Яңадан йөкләү өчен CAPTCHAга басыгыз.</string>
@@ -1365,7 +1365,7 @@
   <string name="talk_snackbar_survey_action_text">Башларга</string>
   <string name="talk_share_discussion_subject">Википедия — «%s» темасы буенча фикер алышу</string>
   <string name="talk_share_talk_page">Википедия — фикер алышу бите</string>
-  <string name="talk_edit_disclaimer">Бу фикер алышу бите. Зинһар өчен, фикер алышу битендә кагыйдәләрне үтәгез һәм дүрт тильда җыеп үз постларыгызга язма өстәргә оынтмагыз: ~~~~ бастырып чыгарганда вики-текст кулланып. &lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Talk_page_guidelines\"&gt;Википедия: фикер алышу бите буенча тәкъдимнәр&lt;/a&gt;</string>
+  <string name="talk_edit_disclaimer">Бу фикер алышу бите. Зинһар өчен, фикер алышу битендә кагыйдәләрне үтәгез һәм дүрт тильда җыеп үз постларыгызга язма өстәргә оынтмагыз: ~~~~ бастырып чыгарганда вики-текст кулланып. &lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Talk_page_guidelines\"&gt;Википедия: фикер алышу бите буенча тәкъдимнәр&lt;/a&gt;</string>
   <string name="talk_search_hint">Хәбәрләрне эзләү</string>
   <string name="talk_search_topics_hint">Эзләү темалары</string>
   <string name="talk_search_find_in_talk_topics_hint">Фикер алышу битендә теманы табыгыз</string>

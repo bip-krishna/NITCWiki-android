@@ -137,7 +137,7 @@
   <string name="search_reading_lists_no_results">Neniuj rezultoj trovitaj en legolistoj</string>
   <string name="search_history_no_results">Neniuj rezultoj trovitaj en historio</string>
   <string name="edit_section_captcha_message">Por helpi al la projekto kontraŭ spamado, bv. entajpi la vortojn kiuj aperas sube</string>
-  <string name="edit_section_captcha_request_an_account_message">Ĉu vi ne povas vidi la bildon? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Petu konton&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Ĉu vi ne povas vidi la bildon? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Petu konton&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">Ripetu la suprajn vortojn</string>
   <string name="title_captcha">Enigu CAPTCHA</string>
   <string name="edit_section_captcha_reload">Tuŝetu la CAPTCHA-n por reprovi</string>
@@ -229,7 +229,7 @@
   <string name="about_description">Pri la Vikipedia aplikaĵo</string>
   <string name="privacy_policy_description">Politiko pri privateco</string>
   <string name="terms_of_use_description">Uzkondiĉoj</string>
-  <string name="about_wikipedia_url">https://en.wikipedia.org/wiki/Wikipedia:About</string>
+  <string name="about_wikipedia_url">https://en.wikipedia.org/wiki/NITCWiki:About</string>
   <string name="cc_by_sa_4_url">https://creativecommons.org/licenses/by-sa/4.0/deed.eo</string>
   <string name="cc_0_url">https://creativecommons.org/publicdomain/zero/1.0/deed.eo</string>
   <string name="about_libraries_heading">Bibliotekoj uzataj</string>
@@ -237,7 +237,7 @@
   <string name="about_translators_heading">Tradukantoj</string>
   <string name="about_translators_translatewiki">Ĉi tiu aplikaĵo estis tradukita de volontulaj tradukantoj ĉe &lt;a href=\"https://translatewiki.net\"&gt;translatewiki.net&lt;/a&gt;.</string>
   <string name="about_app_license_heading">Permesilo</string>
-  <string name="about_app_license" fuzzy="true">Fontkodo havebla je &lt;a href=\"https://gerrit.wikimedia.org/r/#/admin/projects/apps/android/wikipedia\"&gt;Gerrit&lt;/a&gt; kaj &lt;a href=\"https://github.com/wikimedia/apps-android-wikipedia\"&gt;GitHub&lt;/a&gt; laŭ la &lt;a href=\"https://phabricator.wikimedia.org/diffusion/APAW/browse/master/COPYING?view=raw\"&gt;permesilo Apache 2.0&lt;/a&gt;. Krom se alie specifita, enhavo estas havebla laŭ &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License\"&gt;la permesilo Creative Commons Atribuite-Samkondiĉe&lt;/a&gt;.</string>
+  <string name="about_app_license" fuzzy="true">Fontkodo havebla je &lt;a href=\"https://gerrit.wikimedia.org/r/#/admin/projects/apps/android/wikipedia\"&gt;Gerrit&lt;/a&gt; kaj &lt;a href=\"https://github.com/wikimedia/apps-android-wikipedia\"&gt;GitHub&lt;/a&gt; laŭ la &lt;a href=\"https://phabricator.wikimedia.org/diffusion/APAW/browse/master/COPYING?view=raw\"&gt;permesilo Apache 2.0&lt;/a&gt;. Krom se alie specifita, enhavo estas havebla laŭ &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License\"&gt;la permesilo Creative Commons Atribuite-Samkondiĉe&lt;/a&gt;.</string>
   <string name="about_wmf">Produkto de la &lt;a href=\"https://wikimediafoundation.org/\"&gt;Fondaĵo Vikimedio&lt;/a&gt;</string>
   <string name="about_activity_title">Pri</string>
   <string name="edit_abandon_confirm">Ĉi tiu paĝo estis modifita. Ĉu vi certas ke vi volas eliri sen konservi viajn modifojn?</string>

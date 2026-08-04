@@ -117,7 +117,7 @@
   <string name="search_reading_lists_no_results">រកមិនឃើញលទ្ធផលក្នុងបញ្ជីអំណាន</string>
   <string name="search_history_no_results">រកមិនឃើញលទ្ធផលក្នុងប្រវត្តិ</string>
   <string name="edit_section_captcha_message">ដើម្បីការពារពីស្ប៉ាមស្វ័យប្រវត្តិ សូមវាយបញ្ចូលពាក្យដែលបង្ហាញខាងក្រោម</string>
-  <string name="edit_section_captcha_request_an_account_message">មិនឃើញរូបភាពឬ? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;ស្នើសុំគណនីមួយ&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">មិនឃើញរូបភាពឬ? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;ស្នើសុំគណនីមួយ&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">សរសេរតាមពាក្យខាងលើ</string>
   <string name="title_captcha">វាយបញ្ចូល CAPTCHA</string>
   <string name="edit_section_captcha_reload">ចុច CAPTCHA ដើម្បីផ្ទុកឡើងវិញ</string>

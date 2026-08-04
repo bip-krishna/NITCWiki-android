@@ -101,7 +101,7 @@
   <string name="search_reading_lists_no_results">ოკითხირე ერკებულშ შედეგეფქ ვეგორინჷ</string>
   <string name="search_history_no_results">ისტორიას შედეგეფქ ვეგორინჷ</string>
   <string name="edit_section_captcha_message">ავტომატურ სპამშე ოთხილარო, ქორთხინთ გემშიონით გიმე მოჩამილი ზიტყვეფი</string>
-  <string name="edit_section_captcha_request_an_account_message">სურათის ვარწყეთო? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;ქჷმითხით ანგარიში&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">სურათის ვარწყეთო? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;ქჷმითხით ანგარიში&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">გამაჟირით ჟილე მოჩამილი ზიტყვეფი</string>
   <string name="title_captcha">გემშიონით CAPTCHA</string>
   <string name="edit_section_captcha_reload">ქეგუნჭირით CAPTCHA-შ გჷნახარგალო</string>

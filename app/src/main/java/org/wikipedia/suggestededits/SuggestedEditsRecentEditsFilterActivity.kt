@@ -18,7 +18,7 @@ import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.PatrollerExperienceEvent
 import org.wikipedia.databinding.ActivitySuggestedEditsRecentEditsFiltersBinding
 import org.wikipedia.settings.Prefs
-import org.wikipedia.settings.languages.WikipediaLanguagesActivity
+import org.wikipedia.settings.languages.NITCWikiLanguagesActivity
 import org.wikipedia.views.DefaultViewHolder
 
 class SuggestedEditsRecentEditsFilterActivity : BaseActivity() {
@@ -149,7 +149,7 @@ class SuggestedEditsRecentEditsFilterActivity : BaseActivity() {
 
         override fun onCheckedChanged(filter: Filter?) {
             appLanguagesPreFilterList.addAll(appLanguagesList)
-            languageChooserLauncher.launch(WikipediaLanguagesActivity.newIntent(this@SuggestedEditsRecentEditsFilterActivity, Constants.InvokeSource.SUGGESTED_EDITS_RECENT_EDITS))
+            languageChooserLauncher.launch(NITCWikiLanguagesActivity.newIntent(this@SuggestedEditsRecentEditsFilterActivity, Constants.InvokeSource.SUGGESTED_EDITS_RECENT_EDITS))
         }
     }
 

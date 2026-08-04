@@ -33,7 +33,7 @@ import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
 import org.wikipedia.R
 import org.wikipedia.compose.components.PageIndicator
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.extensions.instrument
 import org.wikipedia.feed.personalization.homepreference.HomePreferenceScreen
 import org.wikipedia.feed.personalization.homepreference.HomePreferenceType
@@ -93,7 +93,7 @@ fun PersonalizationScreen(
                     }
                 )
         },
-        containerColor = WikipediaTheme.colors.paperColor
+        containerColor = NITCWikiTheme.colors.paperColor
     ) { paddingValues ->
         Column(
             modifier = modifier
@@ -110,7 +110,7 @@ fun PersonalizationScreen(
                         InterestOnboardingScreen(
                             modifier = Modifier
                                 .fillMaxSize()
-                                .background(WikipediaTheme.colors.paperColor)
+                                .background(NITCWikiTheme.colors.paperColor)
                                 .padding(top = 40.dp),
                             topicsList = interestUiState.value.topicsList,
                             articlesState = interestUiState.value.articlesState,
@@ -140,7 +140,7 @@ fun PersonalizationScreen(
                         HomePreferenceScreen(
                             modifier = Modifier
                                 .fillMaxSize()
-                                .background(WikipediaTheme.colors.paperColor)
+                                .background(NITCWikiTheme.colors.paperColor)
                                 .padding(top = 40.dp),
                             selectedType = feedPreferenceUiState.value.selectedType,
                             communityContentState = feedPreferenceUiState.value.communityState,
@@ -175,7 +175,7 @@ fun OnboardingBottomBar(
             modifier = Modifier
                 .height(1.dp)
                 .fillMaxWidth(),
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         )
 
         Row(
@@ -192,7 +192,7 @@ fun OnboardingBottomBar(
                 ) {
                     Text(
                         text = stringResource(id = R.string.onboarding_skip),
-                        color = WikipediaTheme.colors.placeholderColor
+                        color = NITCWikiTheme.colors.placeholderColor
                     )
                 }
 
@@ -215,7 +215,7 @@ fun OnboardingBottomBar(
                 Icon(
                     painter = painterResource(id = R.drawable.ic_arrow_forward_black_24dp),
                     contentDescription = stringResource(id = R.string.onboarding_next),
-                    tint = WikipediaTheme.colors.progressiveColor
+                    tint = NITCWikiTheme.colors.progressiveColor
                 )
             }
         }

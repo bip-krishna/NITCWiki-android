@@ -37,7 +37,7 @@ import org.wikipedia.R
 import org.wikipedia.compose.components.FadeInAsyncImage
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.extensions.getString
@@ -83,8 +83,8 @@ fun FeaturedArticleModule(
             } else {
                 FadeInAsyncImage(
                     model = article.thumbnailUrl?.let { ImageService.getRequest(context, url = it) },
-                    placeholder = ColorPainter(WikipediaTheme.colors.backgroundColor),
-                    error = ColorPainter(WikipediaTheme.colors.backgroundColor),
+                    placeholder = ColorPainter(NITCWikiTheme.colors.backgroundColor),
+                    error = ColorPainter(NITCWikiTheme.colors.backgroundColor),
                     contentDescription = article.displayTitle,
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
@@ -109,7 +109,7 @@ fun FeaturedArticleModule(
                     Box(
                         modifier = Modifier
                             .background(
-                                color = WikipediaTheme.colors.backgroundColor,
+                                color = NITCWikiTheme.colors.backgroundColor,
                                 shape = CircleShape
                             )
                             .size(40.dp),
@@ -118,7 +118,7 @@ fun FeaturedArticleModule(
                         Icon(
                             painter = painterResource(R.drawable.ic_bookmark_border_white_24dp),
                             contentDescription = context.getString(wikiSite.languageCode, R.string.feed_card_add_to_default_list),
-                            tint = WikipediaTheme.colors.primaryColor,
+                            tint = NITCWikiTheme.colors.primaryColor,
                             modifier = Modifier.size(24.dp)
                         )
                     }
@@ -130,7 +130,7 @@ fun FeaturedArticleModule(
                     Box(
                         modifier = Modifier
                             .background(
-                                color = WikipediaTheme.colors.backgroundColor,
+                                color = NITCWikiTheme.colors.backgroundColor,
                                 shape = CircleShape
                             )
                             .size(40.dp),
@@ -139,7 +139,7 @@ fun FeaturedArticleModule(
                         Icon(
                             painter = painterResource(R.drawable.ic_share),
                             contentDescription = context.getString(wikiSite.languageCode, R.string.view_featured_image_card_share),
-                            tint = WikipediaTheme.colors.primaryColor,
+                            tint = NITCWikiTheme.colors.primaryColor,
                             modifier = Modifier.size(24.dp)
                         )
                     }
@@ -152,12 +152,12 @@ fun FeaturedArticleModule(
                     .fillMaxWidth()
                     .padding(16.dp)
                     .clip(RoundedCornerShape(8.dp))
-                    .background(if (article.thumbnailUrl.isNullOrEmpty()) Color.Transparent else WikipediaTheme.colors.paperColor.copy(alpha = 0.92f))
+                    .background(if (article.thumbnailUrl.isNullOrEmpty()) Color.Transparent else NITCWikiTheme.colors.paperColor.copy(alpha = 0.92f))
                     .padding(16.dp)
             ) {
                 HtmlText(
                     text = article.displayTitle,
-                    color = if (article.thumbnailUrl.isNullOrEmpty()) Color.White else WikipediaTheme.colors.primaryColor,
+                    color = if (article.thumbnailUrl.isNullOrEmpty()) Color.White else NITCWikiTheme.colors.primaryColor,
                     style = MaterialTheme.typography.titleLarge.copy(
                         fontFamily = FontFamily.Serif
                     ),
@@ -167,7 +167,7 @@ fun FeaturedArticleModule(
                     Spacer(modifier = Modifier.height(2.dp))
                     Text(
                         text = description,
-                        color = if (article.thumbnailUrl.isNullOrEmpty()) Color.White.copy(alpha = 0.8f) else WikipediaTheme.colors.secondaryColor,
+                        color = if (article.thumbnailUrl.isNullOrEmpty()) Color.White.copy(alpha = 0.8f) else NITCWikiTheme.colors.secondaryColor,
                         style = MaterialTheme.typography.bodyMedium,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
@@ -177,11 +177,11 @@ fun FeaturedArticleModule(
                     HorizontalDivider(
                         modifier = Modifier.padding(vertical = 12.dp).width(48.dp),
                         thickness = 1.dp,
-                        color = if (article.thumbnailUrl.isNullOrEmpty()) Color.White.copy(alpha = 0.8f) else WikipediaTheme.colors.secondaryColor.copy(alpha = 0.2f)
+                        color = if (article.thumbnailUrl.isNullOrEmpty()) Color.White.copy(alpha = 0.8f) else NITCWikiTheme.colors.secondaryColor.copy(alpha = 0.2f)
                     )
                     Text(
                         text = extract,
-                        color = if (article.thumbnailUrl.isNullOrEmpty()) Color.White else WikipediaTheme.colors.primaryColor,
+                        color = if (article.thumbnailUrl.isNullOrEmpty()) Color.White else NITCWikiTheme.colors.primaryColor,
                         style = MaterialTheme.typography.bodyMedium,
                         maxLines = if (article.thumbnailUrl.isNullOrEmpty()) 6 else 4,
                         overflow = TextOverflow.Ellipsis

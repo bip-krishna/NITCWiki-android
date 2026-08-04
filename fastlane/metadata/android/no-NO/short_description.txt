@@ -1,1 +1,1 @@
-Offisiell Wikipedia-app for Android.
+Offisiell NITCWiki-app for Android.

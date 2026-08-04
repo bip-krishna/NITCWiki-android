@@ -136,7 +136,7 @@
   <string name="search_reading_lists_no_results">O‘qish ro‘yxatida natija topilmadi</string>
   <string name="search_history_no_results">Tarixda hech qanday natija topilmadi</string>
   <string name="edit_section_captcha_message">Avtomatlashtirilgan spamdan himoyalanish uchun quyida keltirilgan so‘zlarni kiriting</string>
-  <string name="edit_section_captcha_request_an_account_message">Rasmni ko‘rmayapsizmi? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Akkauntni so‘ramoq&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Rasmni ko‘rmayapsizmi? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Akkauntni so‘ramoq&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">Tepadagi so‘zlarni takrorlang</string>
   <string name="title_captcha">CAPTCHAni kiriting</string>
   <string name="edit_section_captcha_reload">CAPTCHAni qayta yuklash uchun bosing</string>
@@ -413,9 +413,9 @@
   <string name="error_blocked_start">Bloklashni boshlash: %s</string>
   <string name="error_blocked_expiry">Bloklash muddati: %s</string>
   <string name="error_blocked_id">Bloklashning ID kodi: %s</string>
-  <string name="error_blocked_footer">Siz &lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; bilan yoki &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;administrator&lt;/a&gt; bilan bloklash masalasida murojaat qilishingiz mumkin.</string>
+  <string name="error_blocked_footer">Siz &lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; bilan yoki &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;administrator&lt;/a&gt; bilan bloklash masalasida murojaat qilishingiz mumkin.</string>
   <string name="theme_chooser_menu_item_short_tooltip">Panelni moslang</string>
-  <string name="error_blocked_footer_no_blocker">Siz &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;administrator&lt;/a&gt; bilan bloklash boʻyicha bogʻlanishingiz mumkin.</string>
+  <string name="error_blocked_footer_no_blocker">Siz &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;administrator&lt;/a&gt; bilan bloklash boʻyicha bogʻlanishingiz mumkin.</string>
   <string name="crash_report_activity_title">Ilova xatoligi</string>
   <string name="crash_report_relaunch_or_quit">Kechirasiz, Vikipediya ilovasida xatolik yuz berdi va u bekor qilindi.\n\nBoshlashni xohlaysizmi yoki ishdan chiqishni xohlaysizmi?</string>
   <string name="crash_report_relaunch">Boshlandi</string>
@@ -1241,7 +1241,7 @@
   <string name="talk_snackbar_survey_action_text">Boshladik</string>
   <string name="talk_share_discussion_subject">Vikipediya - munozara sahifasidagi \"%s\" mavzusidagi muhokama</string>
   <string name="talk_share_talk_page">Vikipediya - munozaralar sahifasi</string>
-  <string name="talk_edit_disclaimer">Bu munozara sahifasi. Iltimos, munozara sahifasi yoʻriqnomalarini hurmat qiling va toʻrtta tilda belgisini terish orqali postlaringizga imzo qoʻyishni unutmang: vikimatn yordamida joylashda ~~~~.&lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Talk_page_guidelines\"&gt;Wikipedia:Talk page guidelines&lt;/a&gt;</string>
+  <string name="talk_edit_disclaimer">Bu munozara sahifasi. Iltimos, munozara sahifasi yoʻriqnomalarini hurmat qiling va toʻrtta tilda belgisini terish orqali postlaringizga imzo qoʻyishni unutmang: vikimatn yordamida joylashda ~~~~.&lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Talk_page_guidelines\"&gt;NITCWiki:Talk page guidelines&lt;/a&gt;</string>
   <string name="talk_search_hint">Xabarni izlash</string>
   <string name="talk_search_topics_hint">Mavzularni qidirmoq</string>
   <string name="talk_search_find_in_talk_topics_hint">Muhokama sahifasida mavzuni izlamoq</string>

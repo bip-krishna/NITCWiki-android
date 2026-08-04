@@ -37,7 +37,7 @@ import coil3.compose.AsyncImage
 import org.wikipedia.R
 import org.wikipedia.compose.ComposeColors
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.extensions.getString
 import org.wikipedia.feed.FeedFeatureTeaserModule
@@ -158,7 +158,7 @@ fun SeeAllRecommendationsSlide(
             modifier = Modifier.fillMaxWidth(),
             text = context.getString(wikiSite.languageCode, R.string.home_feed_discover_see_all_title),
             style = MaterialTheme.typography.headlineMedium.copy(fontFamily = FontFamily.Serif),
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
 
         Spacer(modifier = Modifier.height(12.dp))
@@ -167,7 +167,7 @@ fun SeeAllRecommendationsSlide(
             modifier = Modifier.fillMaxWidth(),
             text = context.getString(wikiSite.languageCode, R.string.home_feed_discover_see_all_description),
             style = MaterialTheme.typography.bodyMedium.copy(letterSpacing = 0.25.sp),
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
 
         Spacer(modifier = Modifier.height(24.dp))
@@ -180,13 +180,13 @@ fun SeeAllRecommendationsSlide(
             Icon(
                 painter = painterResource(R.drawable.ic_lightbulb_24dp),
                 contentDescription = null,
-                tint = WikipediaTheme.colors.primaryColor
+                tint = NITCWikiTheme.colors.primaryColor
             )
             Spacer(modifier = Modifier.size(8.dp))
             Text(
                 text = context.getString(wikiSite.languageCode, R.string.home_feed_discover_see_all_button),
                 style = MaterialTheme.typography.labelLarge,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         }
 

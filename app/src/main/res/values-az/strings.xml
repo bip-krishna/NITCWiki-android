@@ -150,7 +150,7 @@
   <string name="search_reading_lists_no_results">Oxuma siyahısında heç bir nəticə tapılmadı</string>
   <string name="search_history_no_results">Tarixçədə heç bir nəticə tapılmadı</string>
   <string name="edit_section_captcha_message">Avtomatik spamdan qorumağa kömək etmək üçün, aşağıda göstərilən sözləri daxil edin</string>
-  <string name="edit_section_captcha_request_an_account_message">Şəkili görə bilmirsiniz? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Hesab üçün müraciət edin&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Şəkili görə bilmirsiniz? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Hesab üçün müraciət edin&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">Yuxarıdakı sözləri təkrarlayın</string>
   <string name="title_captcha">CAPTCHA daxil edin</string>
   <string name="edit_section_captcha_reload">Yenidən yükləmək üçün CAPTCHA-ya dokunun</string>
@@ -1140,9 +1140,9 @@
   <string name="edit_summary_added_caption">Başlıq əlavə edildi</string>
   <string name="edit_summary_added_image_and_caption">Şəkil və başlıq əlavə edildi</string>
   <string name="edit_published_view">Bax</string>
-  <string name="activity_tab_logged_out_title">Wikipedia tətbiqində fəaliyyətinizə baxmaq üçün daxil olun və ya hesab yaradın</string>
+  <string name="activity_tab_logged_out_title">NITCWiki tətbiqində fəaliyyətinizə baxmaq üçün daxil olun və ya hesab yaradın</string>
   <string name="activity_tab_user_reading">%s istifadəçisinin oxuduqları</string>
-  <string name="activity_tab_on_wikipedia_android">Wikipedia Android-də</string>
+  <string name="activity_tab_on_wikipedia_android">NITCWiki Android-də</string>
   <string name="activity_tab_weekly_time_spent_hm">%1$ds %2$dd</string>
   <string name="activity_tab_weekly_time_spent">Bu həftə oxumağa sərf olunan vaxt</string>
   <string name="activity_tab_monthly_articles_read">Bu ay oxunan məqalələr</string>
@@ -2329,7 +2329,7 @@
   <string name="reading_challenge_widget_concluded_incomplete">Yarış başa çatdı</string>
   <string name="reading_challenge_widget_concluded_complete">Sən bunu bacardın!</string>
   <string name="reading_challenge_widget_reward_title">Maraqlanmaq sənə yaraşır! 🛍️</string>
-  <string name="reading_challenge_widget_reward_body">Wikipedia Mağazasında 15%% endirimlə yarışmanı tamamladığınızı qeyd edin.</string>
+  <string name="reading_challenge_widget_reward_body">NITCWiki Mağazasında 15%% endirimlə yarışmanı tamamladığınızı qeyd edin.</string>
   <string name="reading_challenge_widget_reward_button_label">Mağazada 15%% endirim əldə edin</string>
   <string name="explore_feed_new_update_prompt_title">\"Kəşf et\" artıq yeni görünüşdə \"Ana səhifə\"dir</string>
   <string name="explore_feed_new_update_prompt_new_name_title">Yeni bir ad</string>

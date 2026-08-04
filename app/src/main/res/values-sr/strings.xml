@@ -158,7 +158,7 @@
   <string name="search_reading_lists_no_results">Нису пронађени резултати на листама за читање</string>
   <string name="search_history_no_results">Нису пронађени резултати у историји</string>
   <string name="edit_section_captcha_message">Да бисте помогли у заштити против аутоматизованог нежељеног садржаја, унесите речи које су приказане испод</string>
-  <string name="edit_section_captcha_request_an_account_message">Не видите слику? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Затражите налог&lt;/a&gt;.</string>
+  <string name="edit_section_captcha_request_an_account_message">Не видите слику? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Затражите налог&lt;/a&gt;.</string>
   <string name="edit_section_captcha_hint">Поновите речи изнад</string>
   <string name="title_captcha">Унесите CAPTCHA текст</string>
   <string name="edit_section_captcha_reload">Додирните CAPTCHA слику да бисте је поново учитали</string>
@@ -562,7 +562,7 @@
   <string name="reading_lists_default_list_delete_message">Подразумеван списак (%s) не може бити обрисан</string>
   <string name="reading_lists_default_plus_one_list_delete_message">%1$s обрисан. Подразумеван списак (%2$s) не може бити обрисан.</string>
   <string name="reading_lists_default_plus_many_lists_delete_message">Спискови обрисани. Подразумеван списак (%s) не може бити обрисан.</string>
-  <string name="single_list_json_file_name">%s (Wikipedia reading list).json</string>
+  <string name="single_list_json_file_name">%s (NITCWiki reading list).json</string>
   <string name="reading_list_items_deleted">Чланака уклоњено са листе: %d</string>
   <string name="reading_lists_item_deleted">%s уклоњено са спискова</string>
   <string name="reading_list_item_delete_undo">Опозови</string>
@@ -1308,7 +1308,7 @@
   <string name="talk_snackbar_survey_action_text">Започните</string>
   <string name="talk_share_discussion_subject">Википедија - дискусија на теми странице за разговор \"%s\"</string>
   <string name="talk_share_talk_page">Википедија — дискусије на страници за разговор</string>
-  <string name="talk_edit_disclaimer">Ово је страница за разговор. Поштујте правила странице за разговор, и не заборавите да потпишете своје објаве куцајући четири тилде: ~~~~ када објављујете користећи викитекст.&lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Talk_page_guidelines\"&gt;Wikipedia:Talk page guidelines&lt;/a&gt;</string>
+  <string name="talk_edit_disclaimer">Ово је страница за разговор. Поштујте правила странице за разговор, и не заборавите да потпишете своје објаве куцајући четири тилде: ~~~~ када објављујете користећи викитекст.&lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Talk_page_guidelines\"&gt;NITCWiki:Talk page guidelines&lt;/a&gt;</string>
   <string name="talk_search_hint">Претрага порука</string>
   <string name="talk_search_topics_hint">Претражи теме</string>
   <string name="talk_search_find_in_talk_topics_hint">Пронађи у теми на страници за разговор</string>

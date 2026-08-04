@@ -182,7 +182,7 @@
   <string name="search_reading_lists_no_results">V seznamech k přečtení nebyly nalezeny žádné výsledky</string>
   <string name="search_history_no_results">Nebyly nalezeny žádné výsledky v historii</string>
   <string name="edit_section_captcha_message">V zájmu ochrany před automatickým spamováním vás prosíme o opsání slov, která vidíte níže</string>
-  <string name="edit_section_captcha_request_an_account_message">Nevidíte obrázek? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Požádejte o účet&lt;/a&gt; (anglicky)</string>
+  <string name="edit_section_captcha_request_an_account_message">Nevidíte obrázek? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Požádejte o účet&lt;/a&gt; (anglicky)</string>
   <string name="edit_section_captcha_hint">Zopakujte výše uvedená slova</string>
   <string name="title_captcha">Zadejte CAPTCHA</string>
   <string name="edit_section_captcha_reload">Klepnutím načtete CAPTCHA znovu</string>
@@ -1272,7 +1272,7 @@
   <string name="activity_tab_onboarding_engage_message">Prozkoumejte statistiky her, uložených článků a dalších aktivit, které vás více spojují s Wikipedií.</string>
   <string name="activity_tab_onboarding_stay_in_control_title">Mějte vše pod kontrolou</string>
   <string name="activity_tab_onboarding_stay_in_control_message">Vyberte, které moduly chcete zobrazit. Veškerá osobní data zůstanou soukromá na vašem zařízení a historii prohlížení lze kdykoli vymazat.</string>
-  <string name="edits_screen_what_is_title">Editace v aplikaci Wikipedia</string>
+  <string name="edits_screen_what_is_title">Editace v aplikaci NITCWiki</string>
   <string name="file_page_activity_title">Stránka souboru</string>
   <string name="file_page_add_image_caption_button">Přidat titulek obrázku</string>
   <string name="file_page_add_image_tags_button">Přidejte značky obrázků</string>
@@ -1713,7 +1713,7 @@
   <string name="year_in_review_get_started">Začít</string>
   <string name="year_in_review_donate">Přispět</string>
   <string name="year_in_review_get_started_headline">Prozkoumejte svůj Rok na Wikipedii</string>
-  <string name="year_in_review_get_started_bodytext">Zobrazte přehled článků, které jste četli v aplikaci Wikipedia, a editací, které jste provedli.</string>
+  <string name="year_in_review_get_started_bodytext">Zobrazte přehled článků, které jste četli v aplikaci NITCWiki, a editací, které jste provedli.</string>
   <string name="year_in_review_get_started_info">Vaše historie čtení je chráněna. Statistiky čtení se vypočítávají na základě dat uložených lokálně ve vašem zařízení.</string>
   <string name="year_in_review_share_subject">Můj rok na Wikipedii</string>
   <string name="year_in_review_share_body">Tady je Můj rok na Wikipedii. Vytvořeno pomocí aplikace Wikipedie pro Android %1$s %2$s</string>

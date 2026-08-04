@@ -56,7 +56,7 @@ import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.extensions.shimmerEffect
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.extensions.getString
 import org.wikipedia.page.PageTitle
@@ -92,7 +92,7 @@ fun InterestOnboardingScreen(
                             .clickable(onClick = onBackButtonClick),
                         painter = painterResource(id = R.drawable.ic_arrow_back_black_24dp),
                         contentDescription = null,
-                        tint = WikipediaTheme.colors.primaryColor
+                        tint = NITCWikiTheme.colors.primaryColor
                     )
                     Spacer(modifier = Modifier.width(12.dp))
                 }
@@ -101,7 +101,7 @@ fun InterestOnboardingScreen(
                     style = MaterialTheme.typography.titleLarge.copy(
                         fontWeight = FontWeight.Medium
                     ),
-                    color = WikipediaTheme.colors.primaryColor
+                    color = NITCWikiTheme.colors.primaryColor
                 )
             }
 
@@ -202,7 +202,7 @@ fun InterestOnboardingScreen(
         SelectionBottomBar(
             modifier = Modifier
                 .align(Alignment.BottomStart)
-                .background(WikipediaTheme.colors.paperColor)
+                .background(NITCWikiTheme.colors.paperColor)
                 .clickable(enabled = false, onClick = {}),
             selectedItemsCount = totalSelectedCount,
             onDeselectAllClick = onDeselectAllClick
@@ -248,17 +248,17 @@ fun TopicFilterChipRow(
                     }
                 },
                 colors = FilterChipDefaults.filterChipColors(
-                    containerColor = WikipediaTheme.colors.backgroundColor,
-                    labelColor = WikipediaTheme.colors.primaryColor,
-                    iconColor = WikipediaTheme.colors.primaryColor,
-                    selectedLeadingIconColor = WikipediaTheme.colors.progressiveColor,
-                    selectedContainerColor = WikipediaTheme.colors.additionColor,
-                    selectedLabelColor = WikipediaTheme.colors.progressiveColor
+                    containerColor = NITCWikiTheme.colors.backgroundColor,
+                    labelColor = NITCWikiTheme.colors.primaryColor,
+                    iconColor = NITCWikiTheme.colors.primaryColor,
+                    selectedLeadingIconColor = NITCWikiTheme.colors.progressiveColor,
+                    selectedContainerColor = NITCWikiTheme.colors.additionColor,
+                    selectedLabelColor = NITCWikiTheme.colors.progressiveColor
                 ),
                 border = FilterChipDefaults.filterChipBorder(
                     enabled = true,
                     selected = item.isSelected,
-                    borderColor = WikipediaTheme.colors.borderColor,
+                    borderColor = NITCWikiTheme.colors.borderColor,
                     selectedBorderColor = Color.Transparent
                 )
             )
@@ -277,7 +277,7 @@ fun SelectionBottomBar(
     ) {
         HorizontalDivider(
             thickness = 0.5.dp,
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         )
         AnimatedContent(
             targetState = selectedItemsCount > 0
@@ -297,15 +297,15 @@ fun SelectionBottomBar(
                         ),
                         style = MaterialTheme.typography.labelLarge.copy(
                             fontWeight = FontWeight.Bold,
-                            color = WikipediaTheme.colors.primaryColor
+                            color = NITCWikiTheme.colors.primaryColor
                         )
                     )
 
                     Button(
                         onClick = onDeselectAllClick,
                         colors = ButtonDefaults.filledTonalButtonColors(
-                            containerColor = WikipediaTheme.colors.backgroundColor,
-                            contentColor = WikipediaTheme.colors.secondaryColor
+                            containerColor = NITCWikiTheme.colors.backgroundColor,
+                            contentColor = NITCWikiTheme.colors.secondaryColor
                         )
                     ) {
                         Text(
@@ -327,7 +327,7 @@ fun SelectionBottomBar(
                     Text(
                         text = stringResource(R.string.recommended_reading_list_interest_select_minimum),
                         style = MaterialTheme.typography.labelLarge,
-                        color = WikipediaTheme.colors.primaryColor
+                        color = NITCWikiTheme.colors.primaryColor
                     )
                 }
             }
@@ -354,7 +354,7 @@ private fun InterestOnboardingScreenPreview() {
         InterestOnboardingScreen(
             modifier = Modifier
                 .fillMaxSize()
-                .background(WikipediaTheme.colors.paperColor)
+                .background(NITCWikiTheme.colors.paperColor)
                 .padding(top = 40.dp),
             totalSelectedCount = 0,
             topicsList = ArticleTopics.all.map { OnboardingTopic(it) }.map {

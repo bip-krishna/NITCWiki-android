@@ -1,8 +1,8 @@
-Wikipedia ametlik Androidi rakendus on loodud teadmiste Wikipedia otsimiseks, avastamiseks ja uurimiseks. Otsi kiirelt rakendusest või sukeldu esiletoodud ja soovitatud artiklitesse-piltidesse, või veelgi enamasse kasutades uurimisvoogu, et lahendada kihlvedu sõbraga. Sisaldades üle 39 miljoni artikli peaaegu 300 keeles on su tasuta lemmikentsüklopeedia sõrmede all.
+NITCWiki ametlik Androidi rakendus on loodud teadmiste NITCWiki otsimiseks, avastamiseks ja uurimiseks. Otsi kiirelt rakendusest või sukeldu esiletoodud ja soovitatud artiklitesse-piltidesse, või veelgi enamasse kasutades uurimisvoogu, et lahendada kihlvedu sõbraga. Sisaldades üle 39 miljoni artikli peaaegu 300 keeles on su tasuta lemmikentsüklopeedia sõrmede all.
 
 Omadused:
 
-Voo uurimine - uus 'voo uurimine' pakub soovitatud ja pidevalt uuenevat Wikipedia sisu avaekraanil: seal on hetkel olulised artilklid, praegused sündmused, soovitatud lugemine ja palju muud.
+Voo uurimine - uus 'voo uurimine' pakub soovitatud ja pidevalt uuenevat NITCWiki sisu avaekraanil: seal on hetkel olulised artilklid, praegused sündmused, soovitatud lugemine ja palju muud.
 
 Hääljuhitud otsing - leia otsitu lihtsalt kasutades rakenduse ülaservas olevat prominentset otsinguriba, kaasates oma seadme hääljuhitud otsingu.
 
@@ -20,9 +20,9 @@ Pildigalerii - koputa pildil, et näha kõrglahutusega pilti täisekraanil; pilt
 
 Wiktionary mõisted - koputa ja hoia, et valida sõna, mille määratlust sa soovid Wiktionaryst näha koputades nupul "Määratle".
 
-Wikipedia Zero - Kasuta Wikipedia for Android rakendust selles osalevate mobiilside operaatorite võrkudes andmedastustasuta. (Viit osalevatele operaatoritele).
+NITCWiki Zero - Kasuta NITCWiki for Android rakendust selles osalevate mobiilside operaatorite võrkudes andmedastustasuta. (Viit osalevatele operaatoritele).
 
-Saada meile oma arvamus rakendusest! Vajuta menüüs olles "Seaded" -> "Wikipedia rakendusest" -> "Saada tagasisidet".
+Saada meile oma arvamus rakendusest! Vajuta menüüs olles "Seaded" -> "NITCWiki rakendusest" -> "Saada tagasisidet".
 
 Kood on 100% avatud lähtekoodiga. Kui sul on kogemusi Java ja Androidi SDK-ga, siis ootame sinu panust! https://github.com/wikimedia/apps-android-wikipedia
 

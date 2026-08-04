@@ -41,7 +41,7 @@
             style="@style/App.Button.Tertiary"
             android:layout_marginTop="16dp"
             android:text="@string/add_wikipedia_languages_text"
-            tools:text="Add Wikipedia languages" />
+            tools:text="Add NITCWiki languages" />
     </LinearLayout>
 
     <LinearLayout

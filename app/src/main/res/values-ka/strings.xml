@@ -20,7 +20,7 @@
   <string name="nav_item_back">უკან</string>
   <string name="page_tabs_back">უკან</string>
   <string name="nav_item_forward">წინ</string>
-  <string name="search_hint">Wikipedia-ით ძებნა</string>
+  <string name="search_hint">NITCWiki-ით ძებნა</string>
   <string name="search_hint_voice_search">ხმოვანი ძიება</string>
   <string name="search_hint_search_languages">ენის მოძებნა</string>
   <string name="search_back_button_content_description">უკან გადასვლა</string>
@@ -127,7 +127,7 @@
   <string name="search_reading_lists_no_results">საკითხავ სიაში შედეგები ვერ მოიძებნა</string>
   <string name="search_history_no_results">ისტორიაში შედეგები ვერ მოიძებნა</string>
   <string name="edit_section_captcha_message">ავტომატური სპამისგან დასაცავად, გთხოვთ შეიყვანეთ ქვემოთ მოცემული სიტყვები</string>
-  <string name="edit_section_captcha_request_an_account_message">სურათს ვერ ხედავთ? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;მოითხოვეთ ანგარიში&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">სურათს ვერ ხედავთ? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;მოითხოვეთ ანგარიში&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">გაიმეორეთ ზემოთ მოცემული სიტყვები</string>
   <string name="title_captcha">შეიყვანეთ CAPTCHA</string>
   <string name="edit_section_captcha_reload">დააჭირეთ CAPTCHA-ის გადასატვირთად</string>
@@ -342,7 +342,7 @@
   <string name="temp_account_dialog_ok">გავიგე</string>
   <string name="temp_account_end_session">სესიის დასრულება</string>
   <string name="crash_report_activity_title">აპლიკაციის შეცდომა</string>
-  <string name="crash_report_relaunch_or_quit">უკაცრავად, მაგრამ Wikipedia-ის აპში შეცდომაა და მისი შესრულება შეწყდა.\n\nგნებავთ თავიდან გაშვება, თუ გახვალთ?</string>
+  <string name="crash_report_relaunch_or_quit">უკაცრავად, მაგრამ NITCWiki-ის აპში შეცდომაა და მისი შესრულება შეწყდა.\n\nგნებავთ თავიდან გაშვება, თუ გახვალთ?</string>
   <string name="crash_report_relaunch">თავიდან დაწყება</string>
   <string name="crash_report_quit">გასვლა</string>
   <string name="article_menu_bar_save_button">შენახვა</string>

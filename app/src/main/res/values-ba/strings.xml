@@ -147,7 +147,7 @@
   <string name="search_reading_lists_no_results">Уҡыу исемлектәрендә һөҙөмтәләр табылманы</string>
   <string name="search_history_no_results">Тарихта һөҙөмтәләр табылманы</string>
   <string name="edit_section_captcha_message">Автоматлаштырылған спамдан һаҡланыу өсөн түбәндәге һүҙҙе яҙығыҙ.</string>
-  <string name="edit_section_captcha_request_an_account_message">Һүрәтте күрмәйһегеҙме? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Иҫәп яҙмаһын һорарға&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Һүрәтте күрмәйһегеҙме? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Иҫәп яҙмаһын һорарға&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">Өҫтәге һүҙҙе ҡабатлағыҙ</string>
   <string name="title_captcha">CAPTCHA индерегеҙ</string>
   <string name="edit_section_captcha_reload">Яңыртыу өсөн CAPTCHA-ға ҡағылығыҙ</string>
@@ -550,7 +550,7 @@
   <string name="reading_lists_default_list_delete_message">Программа көйләгән исемлек (%s) юйыла алмай</string>
   <string name="reading_lists_default_plus_one_list_delete_message">%1$s исемлеге юйылған. Программа көйләгән исемлек (%2$s) юйыла алмай.</string>
   <string name="reading_lists_default_plus_many_lists_delete_message">Исемлектәр юйылған. Программа көйләгән исемлек (%s) юйыла алмай.</string>
-  <string name="single_list_json_file_name">%s (Wikipedia reading list).json</string>
+  <string name="single_list_json_file_name">%s (NITCWiki reading list).json</string>
   <string name="multiple_lists_json_file_name">Википедия уҡыу исемлеге (%s һәм күберәк).json</string>
   <string name="reading_list_items_deleted">%d мәҡәлә исемлектән юйылған</string>
   <string name="reading_lists_item_deleted">%s исемлектәрҙән юйылған</string>

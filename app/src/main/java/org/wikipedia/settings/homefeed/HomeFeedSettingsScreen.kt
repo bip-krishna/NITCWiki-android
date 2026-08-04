@@ -16,7 +16,7 @@ import org.wikipedia.compose.components.SettingsRow
 import org.wikipedia.compose.components.SettingsSection
 import org.wikipedia.compose.components.WikiTopAppBar
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 
 @Composable
@@ -38,7 +38,7 @@ fun HomeFeedSettingsScreen(
                 }
             )
         },
-        containerColor = WikipediaTheme.colors.paperColor
+        containerColor = NITCWikiTheme.colors.paperColor
     ) { paddingValues ->
         Column(
             modifier = Modifier

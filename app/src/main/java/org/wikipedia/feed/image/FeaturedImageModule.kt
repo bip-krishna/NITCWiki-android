@@ -32,7 +32,7 @@ import org.wikipedia.R
 import org.wikipedia.compose.components.FadeInAsyncImage
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.extensions.getString
 import org.wikipedia.feed.CommunityModuleContainer
@@ -71,8 +71,8 @@ fun FeaturedImageModule(
         ) {
             FadeInAsyncImage(
                 model = ImageService.getRequest(context, url = featuredImage.thumbnailUrl),
-                placeholder = ColorPainter(WikipediaTheme.colors.backgroundColor),
-                error = ColorPainter(WikipediaTheme.colors.backgroundColor),
+                placeholder = ColorPainter(NITCWikiTheme.colors.backgroundColor),
+                error = ColorPainter(NITCWikiTheme.colors.backgroundColor),
                 contentDescription = featuredImage.title,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
@@ -93,7 +93,7 @@ fun FeaturedImageModule(
                         modifier = Modifier
                             .size(40.dp)
                             .background(
-                                color = WikipediaTheme.colors.backgroundColor,
+                                color = NITCWikiTheme.colors.backgroundColor,
                                 shape = CircleShape
                             ),
                         contentAlignment = Alignment.Center
@@ -101,7 +101,7 @@ fun FeaturedImageModule(
                         Icon(
                             painter = painterResource(R.drawable.ic_download_24px),
                             contentDescription = context.getString(wikiSite.languageCode, R.string.view_featured_image_card_download),
-                            tint = WikipediaTheme.colors.primaryColor,
+                            tint = NITCWikiTheme.colors.primaryColor,
                             modifier = Modifier.size(24.dp)
                         )
                     }
@@ -114,7 +114,7 @@ fun FeaturedImageModule(
                         modifier = Modifier
                             .size(40.dp)
                             .background(
-                                color = WikipediaTheme.colors.backgroundColor,
+                                color = NITCWikiTheme.colors.backgroundColor,
                                 shape = CircleShape
                             ),
                         contentAlignment = Alignment.Center
@@ -122,7 +122,7 @@ fun FeaturedImageModule(
                         Icon(
                             painter = painterResource(R.drawable.ic_share),
                             contentDescription = context.getString(wikiSite.languageCode, R.string.view_featured_image_card_share),
-                            tint = WikipediaTheme.colors.primaryColor,
+                            tint = NITCWikiTheme.colors.primaryColor,
                             modifier = Modifier.size(24.dp)
                         )
                     }

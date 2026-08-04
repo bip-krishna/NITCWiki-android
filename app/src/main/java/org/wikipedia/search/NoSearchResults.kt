@@ -31,7 +31,7 @@ import org.wikipedia.Constants
 import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.PlacesEvent
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.language.LanguageUtil
 import org.wikipedia.theme.Theme
 
@@ -55,7 +55,7 @@ fun NoSearchResults(
             items(countsPerLanguageCode.size) { index ->
                 val (langCode, count) = countsPerLanguageCode[index]
                 val color =
-                    if (count == 0) WikipediaTheme.colors.secondaryColor else WikipediaTheme.colors.progressiveColor
+                    if (count == 0) NITCWikiTheme.colors.secondaryColor else NITCWikiTheme.colors.progressiveColor
 
                 Row(
                     modifier = Modifier
@@ -77,7 +77,7 @@ fun NoSearchResults(
                         style = MaterialTheme.typography.bodyLarge.copy(
                             fontWeight = FontWeight.Medium
                         ),
-                        color = WikipediaTheme.colors.secondaryColor,
+                        color = NITCWikiTheme.colors.secondaryColor,
                         modifier = Modifier
                             .weight(1f)
                     )
@@ -86,7 +86,7 @@ fun NoSearchResults(
                         Column(
                             modifier = Modifier
                                 .align(Alignment.CenterVertically)
-                                .background(color = WikipediaTheme.colors.paperColor).border(
+                                .background(color = NITCWikiTheme.colors.paperColor).border(
                                     1.5.dp,
                                     color,
                                     RoundedCornerShape(4.dp)

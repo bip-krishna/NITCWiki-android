@@ -14,7 +14,7 @@ import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.StringUtil
 
-class WikipediaLanguagesItemView : LinearLayout {
+class NITCWikiLanguagesItemView : LinearLayout {
     interface Callback {
         fun onCheckedChanged(position: Int)
         fun onLongPress(position: Int)

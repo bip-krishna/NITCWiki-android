@@ -54,7 +54,7 @@ import org.wikipedia.R
 import org.wikipedia.compose.ComposeColors
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.extensions.getString
 import org.wikipedia.feed.becauseyouread.BecauseYouReadModule
@@ -99,7 +99,7 @@ fun ForYouContentTab(
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(color = WikipediaTheme.colors.backgroundColor),
+                    .background(color = NITCWikiTheme.colors.backgroundColor),
                 contentAlignment = Alignment.Center
             ) {
                 LoadingIndicator(modifier = Modifier.fillMaxHeight())
@@ -111,7 +111,7 @@ fun ForYouContentTab(
             ForYouFeedMessageView(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(WikipediaTheme.colors.paperColor)
+                    .background(NITCWikiTheme.colors.paperColor)
                     .padding(horizontal = 16.dp)
                     .padding(top = (topInset * 2 + 64).dp)
                     .verticalScroll(rememberScrollState()),
@@ -131,7 +131,7 @@ fun ForYouContentTab(
             FeedEmptyStateView(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(WikipediaTheme.colors.paperColor)
+                    .background(NITCWikiTheme.colors.paperColor)
                     .padding(horizontal = 16.dp)
                     .padding(top = (topInset * 2 + 64).dp)
                     .verticalScroll(rememberScrollState()),
@@ -145,7 +145,7 @@ fun ForYouContentTab(
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(color = WikipediaTheme.colors.backgroundColor),
+                    .background(color = NITCWikiTheme.colors.backgroundColor),
                 contentAlignment = Alignment.Center
             ) {
                 ErrorState(state.error, onRetry = onLoadMore)
@@ -176,7 +176,7 @@ fun ForYouContentTab(
                         flingBehavior = rememberSnapFlingBehavior(lazyListState = listState),
                         modifier = Modifier
                             .fillMaxSize()
-                            .background(WikipediaTheme.colors.backgroundColor)
+                            .background(NITCWikiTheme.colors.backgroundColor)
                     ) {
                         modules.forEachIndexed { index, module ->
                             forYouModuleItem(
@@ -471,7 +471,7 @@ fun EmptyStateActionRow(
     ) {
         Icon(
             painter = painterResource(iconRes),
-            tint = WikipediaTheme.colors.primaryColor,
+            tint = NITCWikiTheme.colors.primaryColor,
             contentDescription = null
         )
         HtmlText(
@@ -479,11 +479,11 @@ fun EmptyStateActionRow(
             linkStyle = TextLinkStyles(
                 style = SpanStyle(
                     fontSize = 14.sp,
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     textDecoration = TextDecoration.Underline
                 )
             ),
-            color = WikipediaTheme.colors.primaryColor,
+            color = NITCWikiTheme.colors.primaryColor,
             style = MaterialTheme.typography.bodyMedium,
             linkInteractionListener = LinkInteractionListener { onLinkClick() }
         )
@@ -526,19 +526,19 @@ fun ForYouFeedMessageView(
             style = MaterialTheme.typography.headlineSmall.copy(
                 fontFamily = FontFamily.Serif
             ),
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         Text(
             modifier = Modifier.fillMaxWidth(),
             text = context.getString(wikiSite.languageCode, descriptionResId),
             style = MaterialTheme.typography.bodyMedium,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         Text(
             modifier = Modifier.fillMaxWidth(),
             text = context.getString(wikiSite.languageCode, headerResId),
             style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Medium),
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         if (showCustomizeInterests) {
             EmptyStateActionRow(
@@ -584,7 +584,7 @@ fun ForYouFeedEmptyViewPreview() {
         ForYouFeedMessageView(
             modifier = Modifier
                 .fillMaxSize()
-                .background(WikipediaTheme.colors.paperColor)
+                .background(NITCWikiTheme.colors.paperColor)
                 .padding(16.dp)
                 .verticalScroll(rememberScrollState()),
             wikiSite = WikiSite.preview(),

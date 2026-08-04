@@ -65,7 +65,7 @@ class ArticleInteractionEvent(private val wikiDb: String, private val pageId: In
         submitEvent("tabs")
     }
 
-    fun logSearchWikipediaClick() {
+    fun logSearchNITCWikiClick() {
         submitEvent("search_wikipedia")
     }
 

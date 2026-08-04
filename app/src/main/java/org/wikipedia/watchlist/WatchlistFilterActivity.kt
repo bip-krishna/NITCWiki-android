@@ -18,7 +18,7 @@ import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.WatchlistAnalyticsHelper
 import org.wikipedia.databinding.ActivityWatchlistFiltersBinding
 import org.wikipedia.settings.Prefs
-import org.wikipedia.settings.languages.WikipediaLanguagesActivity
+import org.wikipedia.settings.languages.NITCWikiLanguagesActivity
 import org.wikipedia.views.DefaultViewHolder
 
 class WatchlistFilterActivity : BaseActivity() {
@@ -132,7 +132,7 @@ class WatchlistFilterActivity : BaseActivity() {
         }
 
         override fun onCheckedChanged(filter: Filter?) {
-            languageChooserLauncher.launch(WikipediaLanguagesActivity.newIntent(this@WatchlistFilterActivity, Constants.InvokeSource.WATCHLIST_FILTER_ACTIVITY))
+            languageChooserLauncher.launch(NITCWikiLanguagesActivity.newIntent(this@WatchlistFilterActivity, Constants.InvokeSource.WATCHLIST_FILTER_ACTIVITY))
         }
     }
 

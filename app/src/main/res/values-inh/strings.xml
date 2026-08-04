@@ -134,7 +134,7 @@
   <string name="search_reading_lists_no_results">Цхьаккха корадинзар дешарá долча листамашка</string>
   <string name="search_history_no_results">Цхьаккха а хӀама корадинзар тархьара чу</string>
   <string name="edit_section_captcha_message">Ши-шегӀа хулача спамах тхо лоралургдолаш лохе гойташ дола дешаш Ӏочуязде</string>
-  <string name="edit_section_captcha_request_an_account_message">Гаций хьона CAPTCHA сурташ? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;ДӀаéха аккаунт&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Гаций хьона CAPTCHA сурташ? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;ДӀаéха аккаунт&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">Ӏоязде лакхе гойташ дола дешаш</string>
   <string name="title_captcha">Ӏочузъе CAPTCHA</string>
   <string name="edit_section_captcha_reload">ӀотӀатоӀабе CAPTCHA йолча из кердайоаккхаргйолаш</string>
@@ -238,7 +238,7 @@
   <string name="about_contributors_heading">Автораш</string>
   <string name="about_contributors">&lt;a href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Wikimedia_Apps/Team/Android\"&gt;Тоабан оагӀув&lt;/a&gt;</string>
   <string name="about_translators_heading">Таржамхой</string>
-  <string name="about_translators_translatewiki">Укх приложенена &lt;a href=\"https://translatewiki.net\"&gt;translatewiki.net&lt;/a&gt; чу таржам даьр ГӀалгӀай Википеден админ ва (&lt;a href=\"https://instagram.com/ingush_wikipedia\"&gt;@Ingush_Wikipedia&lt;/a&gt;).</string>
+  <string name="about_translators_translatewiki">Укх приложенена &lt;a href=\"https://translatewiki.net\"&gt;translatewiki.net&lt;/a&gt; чу таржам даьр ГӀалгӀай Википеден админ ва (&lt;a href=\"https://instagram.com/ingush_wikipedia\"&gt;@Ingush_NITCWiki&lt;/a&gt;).</string>
   <string name="about_app_license_heading">Лицензи</string>
   <string name="about_app_license" fuzzy="true">Юххьера код тӀакхоачача да &lt;a href=\"https://gerrit.wikimedia.org/r/#/admin/projects/apps/android/wikipedia\"&gt;Gerrit&lt;/a&gt; и &lt;a href=\"https://github.com/wikimedia/apps-android-wikipedia\"&gt;Github&lt;/a&gt; яхача моттиге &lt;a href=\"https://phabricator.wikimedia.org/diffusion/APAW/browse/master/COPYING?view=raw\"&gt;Apache 2.0&lt;/a&gt; лицензеца. Нагахьа санна кхыдар белгалдаьдеце, чурадолчунна тӀакхачар &lt;a href=\"https://creativecommons.org/licenses/by-sa/4.0\"&gt;Creative Commons Attribution-ShareAlike&lt;/a&gt; яхача лицензеца да.</string>
   <string name="about_wmf">&lt;a href=\"https://wikimediafoundation.org/\"&gt;Фонд Викимедиан продукт&lt;/a&gt;</string>
@@ -409,9 +409,9 @@
   <string name="error_blocked_start">Блок тохар доладеннад: %s</string>
   <string name="error_blocked_expiry">Блок тохар чакхдоал: %s</string>
   <string name="error_blocked_id">Блок тохара идентификаци: %s</string>
-  <string name="error_blocked_footer">Хьа аьттув ба &lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; яхачунца е кхыча &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;администратораца&lt;/a&gt; бувзаме а ваьнна хьона теха йолча блоках лаьца дувца.</string>
+  <string name="error_blocked_footer">Хьа аьттув ба &lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; яхачунца е кхыча &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;администратораца&lt;/a&gt; бувзаме а ваьнна хьона теха йолча блоках лаьца дувца.</string>
   <string name="theme_chooser_menu_item_short_tooltip">Хьай кечалий панель нийсъе</string>
-  <string name="error_blocked_footer_no_blocker">Хьа аьттув ба &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;администратораца&lt;/a&gt; бувзаме а ваьнна хьона теха йолча блоках лаьца дувца.</string>
+  <string name="error_blocked_footer_no_blocker">Хьа аьттув ба &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;администратораца&lt;/a&gt; бувзаме а ваьнна хьона теха йолча блоках лаьца дувца.</string>
   <string name="crash_report_activity_title">Приложенен гӀалат</string>
   <string name="crash_report_relaunch_or_quit">Бехк ма баккхалахь, Википеден приложене чу гӀалат нийсделар, из бахьан долаш дӀакъовлаялар из.\n\nЮха хьаелла безам ба хьа из е аравала?</string>
   <string name="crash_report_relaunch">Юха хеца</string>
@@ -1198,7 +1198,7 @@
   <string name="talk_snackbar_survey_action_text">ДӀадоладе</string>
   <string name="talk_share_discussion_subject">Википеди — къамаьл да укх тема чу: «%s»</string>
   <string name="talk_share_talk_page">Википеди — къамаьла оагӀув</string>
-  <string name="talk_edit_disclaimer">Ер къамаьла оагӀув я. Дехар да, къамаьла оагӀон бокъонаш лелае, иштта, нагахьа санна викитекстаца Ӏайха цхьа хӀама яздаьдале, йистеваьлча(-яьлча), хьай текста кӀалха кулга язде йиъ тильдаца: ~~~~ .&lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Talk_page_guidelines\"&gt;Википеди:Къамаьла оагӀон бокъонаш&lt;/a&gt;</string>
+  <string name="talk_edit_disclaimer">Ер къамаьла оагӀув я. Дехар да, къамаьла оагӀон бокъонаш лелае, иштта, нагахьа санна викитекстаца Ӏайха цхьа хӀама яздаьдале, йистеваьлча(-яьлча), хьай текста кӀалха кулга язде йиъ тильдаца: ~~~~ .&lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Talk_page_guidelines\"&gt;Википеди:Къамаьла оагӀон бокъонаш&lt;/a&gt;</string>
   <string name="talk_search_hint">Хоамаш лахар</string>
   <string name="talk_search_topics_hint">Лахара темаш</string>
   <string name="talk_search_find_in_talk_topics_hint">Къамаьла оагӀона тӀа тема лаха</string>

@@ -35,7 +35,7 @@ import kotlinx.coroutines.delay
 import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 
 class ExploreFeedBuildingActivity : BaseActivity() {
@@ -75,7 +75,7 @@ fun ExploreFeedBuildingScreen(
     Scaffold(
         modifier = modifier
             .safeDrawingPadding(),
-        containerColor = WikipediaTheme.colors.paperColor
+        containerColor = NITCWikiTheme.colors.paperColor
     ) { paddingValues ->
         Column(
             modifier = Modifier
@@ -91,7 +91,7 @@ fun ExploreFeedBuildingScreen(
                     .fillMaxWidth(),
                 text = stringResource(R.string.explore_feed_building_text),
                 style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Medium),
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
 
             Spacer(modifier = Modifier.height(16.dp))

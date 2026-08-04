@@ -134,7 +134,7 @@
   <string name="search_reading_lists_no_results">Вуламалли списокра нимӗн те тупӑнмарӗ</string>
   <string name="search_history_no_results">Историре нимӗн те тупӑнмарӗ</string>
   <string name="edit_section_captcha_message">Пире спамран хӳтӗленме пулӑшмашкӑн аяларах кӑтартнӑ сӑмахсене ҫырса кӗртӗр.</string>
-  <string name="edit_section_captcha_request_an_account_message">Капча ӳкерчӗкне курмастӑр-и? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Аккаунт хатӗрлесе пама ыйтӑр&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Капча ӳкерчӗкне курмастӑр-и? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Аккаунт хатӗрлесе пама ыйтӑр&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">Ҫӳлерех кӑтартнӑ сӑмахсене ҫырӑр</string>
   <string name="title_captcha">CAPTCHA кӗртӗр</string>
   <string name="edit_section_captcha_reload">CAPTCHA ҫӗнетме ӑна тӗкӗнӗр</string>

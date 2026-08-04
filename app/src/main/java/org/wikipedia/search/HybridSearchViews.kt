@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.sp
 import androidx.paging.compose.LazyPagingItems
 import org.wikipedia.R
 import org.wikipedia.compose.extensions.toAnnotatedStringWithBoldQuery
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 
 @Composable
 fun HybridSearchSuggestionListView(
@@ -79,7 +79,7 @@ fun HybridSearchSuggestionListView(
                 modifier = Modifier
                     .fillMaxWidth()
                     .align(Alignment.BottomStart)
-                    .background(WikipediaTheme.colors.paperColor)
+                    .background(NITCWikiTheme.colors.paperColor)
                     .clickable(
                         onClick = { onSuggestionTitleClick(searchTerm) }
                     ),
@@ -104,7 +104,7 @@ fun SearchResultTitleOnly(
     ) {
         Text(
             text = boldenTitle,
-            color = WikipediaTheme.colors.primaryColor,
+            color = NITCWikiTheme.colors.primaryColor,
             style = MaterialTheme.typography.bodyLarge
         )
     }
@@ -122,7 +122,7 @@ fun SearchResultTitleOnlyBottomContent(
         HorizontalDivider(
             modifier = Modifier
                 .fillMaxWidth(),
-            color = WikipediaTheme.colors.borderColor,
+            color = NITCWikiTheme.colors.borderColor,
         )
         Text(
             modifier = Modifier
@@ -132,7 +132,7 @@ fun SearchResultTitleOnlyBottomContent(
                 append(suggestionTitle)
                 withStyle(
                     style = SpanStyle(
-                        color = WikipediaTheme.colors.progressiveColor
+                        color = NITCWikiTheme.colors.progressiveColor
                     )
                 ) {
                     append(" ")
@@ -143,7 +143,7 @@ fun SearchResultTitleOnlyBottomContent(
                 fontWeight = FontWeight.Medium,
                 lineHeight = 18.sp
             ),
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
     }
 }

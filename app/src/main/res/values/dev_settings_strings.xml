@@ -3,8 +3,8 @@
     <!-- TODO: add some spacing to this file so we can see headings vs other stuff at a glance. -->
     <string name="developer_settings_activity_title">Developer settings</string>
     <string name="preference_summary_no_value">Unset</string>
-    <string name="show_developer_settings_enabled">You are now a Wikipedia developer!</string>
-    <string name="show_developer_settings_already_enabled">You are already a Wikipedia developer!</string>
+    <string name="show_developer_settings_enabled">You are now a NITCWiki developer!</string>
+    <string name="show_developer_settings_already_enabled">You are already a NITCWiki developer!</string>
     <string name="menu_developer_settings">@string/developer_settings_activity_title</string>
     <string name="preferences_developer_misc_heading">Miscellaneous</string>
     <string name="preferences_developer_onboarding_heading">Onboarding</string>

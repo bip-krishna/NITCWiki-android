@@ -24,7 +24,7 @@ import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import org.wikipedia.R
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.yearinreview.LoadingIndicator
 
@@ -35,7 +35,7 @@ fun OnboardingCuriosityScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(WikipediaTheme.colors.paperColor),
+            .background(NITCWikiTheme.colors.paperColor),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
@@ -64,7 +64,7 @@ fun OnboardingCuriosityScreen(
             text = stringResource(R.string.explore_feed_onboarding_curiosity_title),
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Medium,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         Text(
             modifier = Modifier
@@ -72,7 +72,7 @@ fun OnboardingCuriosityScreen(
                 .padding(horizontal = 24.dp),
             text = stringResource(R.string.explore_feed_onboarding_curiosity_description),
             style = MaterialTheme.typography.bodyLarge,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
 
         Spacer(modifier = Modifier.weight(1f))

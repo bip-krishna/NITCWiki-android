@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import org.wikipedia.R
 import org.wikipedia.compose.components.WikiTopAppBar
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.feed.personalization.homepreference.HomePreferenceType
 import org.wikipedia.theme.Theme
 
@@ -48,7 +48,7 @@ fun HomeFeedDefaultViewScreen(
                 }
             )
         },
-        containerColor = WikipediaTheme.colors.paperColor
+        containerColor = NITCWikiTheme.colors.paperColor
     ) { paddingValues ->
         Column(
             modifier = Modifier
@@ -69,21 +69,21 @@ fun HomeFeedDefaultViewScreen(
                     selected = currentSelection == HomePreferenceType.COMMUNITY,
                     onClick = null,
                     colors = RadioButtonDefaults.colors(
-                        selectedColor = WikipediaTheme.colors.primaryColor,
-                        unselectedColor = WikipediaTheme.colors.primaryColor,
+                        selectedColor = NITCWikiTheme.colors.primaryColor,
+                        unselectedColor = NITCWikiTheme.colors.primaryColor,
                     )
                 )
                 Column(modifier = Modifier.padding(top = 8.dp, bottom = 8.dp, end = 24.dp).weight(1f)) {
                     Text(
                         text = stringResource(R.string.explore_feed_community_tab_label),
                         style = MaterialTheme.typography.bodyLarge,
-                        color = WikipediaTheme.colors.primaryColor
+                        color = NITCWikiTheme.colors.primaryColor
                     )
                     Text(
                         modifier = Modifier.padding(top = 4.dp),
                         text = stringResource(R.string.explore_feed_preference_community_content_title),
                         style = MaterialTheme.typography.bodyMedium,
-                        color = WikipediaTheme.colors.secondaryColor
+                        color = NITCWikiTheme.colors.secondaryColor
                     )
                 }
             }
@@ -101,21 +101,21 @@ fun HomeFeedDefaultViewScreen(
                     selected = currentSelection == HomePreferenceType.PERSONALIZED,
                     onClick = null,
                     colors = RadioButtonDefaults.colors(
-                        selectedColor = WikipediaTheme.colors.primaryColor,
-                        unselectedColor = WikipediaTheme.colors.primaryColor,
+                        selectedColor = NITCWikiTheme.colors.primaryColor,
+                        unselectedColor = NITCWikiTheme.colors.primaryColor,
                     )
                 )
                 Column(modifier = Modifier.padding(top = 8.dp, bottom = 8.dp, end = 24.dp).weight(1f)) {
                     Text(
                         text = stringResource(R.string.explore_feed_for_you_tab_label),
                         style = MaterialTheme.typography.bodyLarge,
-                        color = WikipediaTheme.colors.primaryColor
+                        color = NITCWikiTheme.colors.primaryColor
                     )
                     Text(
                         modifier = Modifier.padding(top = 4.dp),
                         text = stringResource(R.string.explore_feed_preference_personalized_content_title),
                         style = MaterialTheme.typography.bodyMedium,
-                        color = WikipediaTheme.colors.secondaryColor
+                        color = NITCWikiTheme.colors.secondaryColor
                     )
                 }
             }

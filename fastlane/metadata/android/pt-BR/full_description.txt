@@ -1,4 +1,4 @@
-O aplicativo oficial da Wikipedia para Android foi desenvolvido para ajudar você a encontrar, descobrir e explorar o conhecimento na Wikipédia. Faça uma aposta com um amigo fazendo uma pesquisa rápida no aplicativo ou mergulhe em artigos em destaque, imagens, artigos recomendados e muito mais usando o feed de exploração. Com mais de 39 milhões de artigos em quase 300 idiomas, sua enciclopédia online livre favorita está agora ao seu alcance.
+O aplicativo oficial da NITCWiki para Android foi desenvolvido para ajudar você a encontrar, descobrir e explorar o conhecimento na Wikipédia. Faça uma aposta com um amigo fazendo uma pesquisa rápida no aplicativo ou mergulhe em artigos em destaque, imagens, artigos recomendados e muito mais usando o feed de exploração. Com mais de 39 milhões de artigos em quase 300 idiomas, sua enciclopédia online livre favorita está agora ao seu alcance.
 
 Caraterísticas:
 

@@ -36,7 +36,7 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import org.wikipedia.R
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.extensions.getString
 import org.wikipedia.theme.Theme
@@ -49,7 +49,7 @@ fun CommunityModuleContainer(
     @StringRes titleResId: Int,
     @StringRes subTitleResId: Int,
     @DrawableRes contextIconResId: Int? = null,
-    backgroundColor: Color = WikipediaTheme.colors.paperColor,
+    backgroundColor: Color = NITCWikiTheme.colors.paperColor,
     onHideCardClick: () -> Unit = {},
     onHideModuleClick: () -> Unit = {},
     onCardInView: () -> Unit = {},
@@ -81,7 +81,7 @@ fun CommunityModuleContainer(
                 Text(
                     modifier = Modifier.weight(1f).padding(horizontal = 16.dp),
                     text = context.getString(wikiSite.languageCode, titleResId),
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     style = MaterialTheme.typography.headlineSmall,
                     fontWeight = FontWeight.W500
                 )
@@ -89,7 +89,7 @@ fun CommunityModuleContainer(
                     Icon(
                         painter = painterResource(it),
                         contentDescription = null,
-                        tint = WikipediaTheme.colors.primaryColor,
+                        tint = NITCWikiTheme.colors.primaryColor,
                         modifier = Modifier.size(24.dp)
                     )
                 }
@@ -103,7 +103,7 @@ fun CommunityModuleContainer(
                         Icon(
                             painter = painterResource(R.drawable.ic_more_vert_white_24dp),
                             contentDescription = context.getString(wikiSite.languageCode, R.string.menu_feed_overflow_label),
-                            tint = WikipediaTheme.colors.primaryColor,
+                            tint = NITCWikiTheme.colors.primaryColor,
                             modifier = Modifier.size(24.dp)
                         )
                     }
@@ -111,14 +111,14 @@ fun CommunityModuleContainer(
                         offset = DpOffset(x = (-16).dp, y = 0.dp),
                         expanded = expanded,
                         onDismissRequest = { expanded = false },
-                        containerColor = WikipediaTheme.colors.paperColor
+                        containerColor = NITCWikiTheme.colors.paperColor
                     ) {
                         DropdownMenuItem(
                             leadingIcon = {
                                 Icon(
                                     painter = painterResource(R.drawable.ic_no_sim_24dp),
                                     contentDescription = null,
-                                    tint = WikipediaTheme.colors.secondaryColor,
+                                    tint = NITCWikiTheme.colors.secondaryColor,
                                     modifier = Modifier.size(24.dp)
                                 )
                             },
@@ -126,7 +126,7 @@ fun CommunityModuleContainer(
                                 Text(
                                     text = stringResource(R.string.menu_feed_card_dismiss),
                                     style = MaterialTheme.typography.bodyLarge,
-                                    color = WikipediaTheme.colors.primaryColor
+                                    color = NITCWikiTheme.colors.primaryColor
                                 )
                             },
                             onClick = {
@@ -139,7 +139,7 @@ fun CommunityModuleContainer(
                                 Icon(
                                     painter = painterResource(R.drawable.ic_visibility_off_24dp),
                                     contentDescription = null,
-                                    tint = WikipediaTheme.colors.secondaryColor,
+                                    tint = NITCWikiTheme.colors.secondaryColor,
                                     modifier = Modifier.size(24.dp)
                                 )
                             },
@@ -147,7 +147,7 @@ fun CommunityModuleContainer(
                                 Text(
                                     text = stringResource(R.string.explore_feed_header_overflow_hide_module_label),
                                     style = MaterialTheme.typography.bodyLarge,
-                                    color = WikipediaTheme.colors.primaryColor
+                                    color = NITCWikiTheme.colors.primaryColor
                                 )
                             },
                             onClick = {
@@ -161,7 +161,7 @@ fun CommunityModuleContainer(
             Text(
                 modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 16.dp),
                 text = context.getString(wikiSite.languageCode, subTitleResId),
-                color = WikipediaTheme.colors.secondaryColor,
+                color = NITCWikiTheme.colors.secondaryColor,
                 style = MaterialTheme.typography.bodyMedium
             )
         }

@@ -2,7 +2,7 @@
 
 An Android app for browsing and editing the [NITC Wiki](https://wiki.fosscell.org).
 
-Forked from the [official Wikipedia Android app](https://github.com/wikimedia/apps-android-wikipedia) by the Wikimedia Foundation.
+Forked from the [official NITCWiki Android app](https://github.com/wikimedia/apps-android-wikipedia) by the Wikimedia Foundation.
 
 ## Features
 

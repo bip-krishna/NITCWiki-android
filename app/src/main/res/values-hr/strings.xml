@@ -154,7 +154,7 @@
   <string name="search_reading_lists_no_results">Nisu pronađeni rezultati na popisima za čitanje</string>
   <string name="search_history_no_results">Nisu pronađeni rezultati u povijesti</string>
   <string name="edit_section_captcha_message">Da biste se zaštitili od neželjenih poruka, molimo unesite riječi koje se pokazuju ispod</string>
-  <string name="edit_section_captcha_request_an_account_message">Ne vidite sliku? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Zatražite račun&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Ne vidite sliku? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Zatražite račun&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">Ponovite riječi iznad</string>
   <string name="title_captcha">Unesite CAPTCHA</string>
   <string name="edit_section_captcha_reload">Za ponovno učitavanje dodirnite CAPTCHA</string>
@@ -250,10 +250,10 @@
   <string name="page_watchlist_overflow_menu_onboarding_tooltip_title">Dodaj na popis praćenja</string>
   <string name="settings_item_preferences">Postavke</string>
   <string name="settings_activity_title">Postavke</string>
-  <string name="about_description">O aplikaciji \"Wikipedia\"</string>
+  <string name="about_description">O aplikaciji \"NITCWiki\"</string>
   <string name="privacy_policy_description">Politika privatnosti</string>
   <string name="terms_of_use_description">Uvjeti uporabe</string>
-  <string name="about_wikipedia_url">https://en.wikipedia.org/wiki/Wikipedia:About</string>
+  <string name="about_wikipedia_url">https://en.wikipedia.org/wiki/NITCWiki:About</string>
   <string name="cc_by_sa_4_url">https://creativecommons.org/licenses/by-sa/4.0/deed.hr</string>
   <string name="cc_0_url">https://creativecommons.org/publicdomain/zero/1.0/deed.hr</string>
   <string name="about_libraries_heading">Korištene biblioteke</string>
@@ -303,7 +303,7 @@
   <string name="abusefilter_title_warn">Ovo uređivanje možda je nekonstruktivno. Želite li ga objaviti?</string>
   <string name="abusefilter_title_disallow">Ne možete objaviti ovo uređivanje. Vratite se natrag i promijenite ga.</string>
   <string name="abusefilter_text_warn">Automatizirani filter je ovo uređivanje označio kao moguće nekonstruktivno. Moguće je da sadrži nešto od sljedećeg:&lt;br /&gt;&lt;br /&gt;· pisanje tiskanim slovima&lt;br /&gt;· brisanje članaka ili spamiranje&lt;br /&gt;· nevažne vanjske poveznice ili slike&lt;br /&gt;· ponavljanje znakova</string>
-  <string name="abusefilter_text_disallow">An automated filter has identified this edit as potentially unconstructive, or potential vandalism.&lt;br /&gt;&lt;br /&gt;Wikipedia is an encyclopedia and only neutral, notable content belongs here.\n\nAutomatizirani filter je ovo uređivanje označio kao moguće nekonstruktivno ili vandalizam.&lt;br /&gt;&lt;br /&gt;Wikipedija je enciklopedija i dodajite samo neutralan i provjerljiv sadržaj.</string>
+  <string name="abusefilter_text_disallow">An automated filter has identified this edit as potentially unconstructive, or potential vandalism.&lt;br /&gt;&lt;br /&gt;NITCWiki is an encyclopedia and only neutral, notable content belongs here.\n\nAutomatizirani filter je ovo uređivanje označio kao moguće nekonstruktivno ili vandalizam.&lt;br /&gt;&lt;br /&gt;Wikipedija je enciklopedija i dodajite samo neutralan i provjerljiv sadržaj.</string>
   <string name="page_similar_titles">Slične stranice</string>
   <string name="search_did_you_mean">Jeste li mislili \"%s\"?</string>
   <string name="search_recent_header">Nedavna pretraživanja:</string>
@@ -325,7 +325,7 @@
   <string name="widget_title_featured_page">Današnja izabrana stranica:</string>
   <string name="widget_name_search">Pretraživanje Wikipedije</string>
   <string name="widget_description_search">Najbrži način pretraživanja Wikipedije</string>
-  <string name="widget_description_featured_page">Najbolji članci koje Wikipedia nudi</string>
+  <string name="widget_description_featured_page">Najbolji članci koje NITCWiki nudi</string>
   <string name="wiktionary_no_definitions_found">Nema pronađenih definicija.</string>
   <string name="alpha_update_notification_title">Dostupno je novo alfa ažuriranje</string>
   <string name="alpha_update_notification_text">Dodirnite za preuzimanje</string>

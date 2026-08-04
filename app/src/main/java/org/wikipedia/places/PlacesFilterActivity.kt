@@ -18,7 +18,7 @@ import org.wikipedia.analytics.eventplatform.PlacesEvent
 import org.wikipedia.databinding.ActivityPlacesFiltersBinding
 import org.wikipedia.databinding.ViewPlacesFilterItemBinding
 import org.wikipedia.settings.Prefs
-import org.wikipedia.settings.languages.WikipediaLanguagesActivity
+import org.wikipedia.settings.languages.NITCWikiLanguagesActivity
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.views.DefaultViewHolder
 
@@ -115,7 +115,7 @@ class PlacesFilterActivity : BaseActivity() {
     inner class PlacesFilterFooterViewHolder(itemView: View) : DefaultViewHolder<View>(itemView) {
         fun bindItem() {
             itemView.setOnClickListener {
-                addLanguageLauncher.launch(WikipediaLanguagesActivity.newIntent(itemView.context,
+                addLanguageLauncher.launch(NITCWikiLanguagesActivity.newIntent(itemView.context,
                     Constants.InvokeSource.PLACES))
             }
         }

@@ -1,6 +1,6 @@
-# Migration Roadmap: Wikipedia App → NITC Wiki App
+# Migration Roadmap: NITCWiki App → NITC Wiki App
 
-This document outlines the plan to migrate the official Wikipedia Android app to target
+This document outlines the plan to migrate the official NITCWiki Android app to target
 **wiki.fosscell.org** (the NIT Calicut Wiki, "WIKI FOSSCELL NITC"). The goal is to
 preserve upstream compatibility so that Wikimedia engineering fixes flow in with minimal
 conflict while we maintain a fork that addresses NITC-specific needs.
@@ -10,10 +10,10 @@ conflict while we maintain a fork that addresses NITC-specific needs.
 ## 1. Current State Assessment
 
 ### Source repo
-- **Repo**: `apps-android-wikipedia` (official Wikipedia Android app)
+- **Repo**: `apps-android-wikipedia` (official NITCWiki Android app)
 - **Package**: `org.wikipedia`
-- **App name**: Wikipedia
-- **Target**: Wikipedia sites (`*.wikipedia.org`) plus Wikimedia infrastructure
+- **App name**: NITCWiki
+- **Target**: NITCWiki sites (`*.wikipedia.org`) plus Wikimedia infrastructure
   (Commons, Wikidata, Meta-Wiki, LiftWing, EventGate, RESTBase)
 
 ### Target wiki (wiki.fosscell.org)
@@ -128,8 +128,8 @@ conflict while we maintain a fork that addresses NITC-specific needs.
 | `strings.xml` | `app_name_prod` → "NITC Wiki"; update search hint, login strings, about text |
 | `strings_no_translate.xml` | `account_name` → "NITC Wiki"; `account_type` → `org.nitcwiki` |
 | App icon (`mipmap/`) | Replace with NITC/FOSSCell branding |
-| `WikipediaApp.kt` | Class rename → `NITCWikiApp` (or keep via `@Suppress`) |
-| `WikipediaFileProvider.kt` | Rename → `NITCWikiFileProvider` |
+| `NITCWikiApp.kt` | Class rename → `NITCWikiApp` (or keep via `@Suppress`) |
+| `NITCWikiFileProvider.kt` | Rename → `NITCWikiFileProvider` |
 | `strings.xml` line 194 | `wp_stylized` → remove or adapt the "WIKIPEDIA" wordmark |
 
 ### Phase 2: Feature compatibility (Weeks 3–4)
@@ -195,7 +195,7 @@ conflict while we maintain a fork that addresses NITC-specific needs.
 - [ ] Watch list works
 - [ ] Deep links open the correct pages
 - [ ] Offline reading (saved pages) works
-- [ ] All Wikipedia references in UI are replaced
+- [ ] All NITCWiki references in UI are replaced
 - [ ] Version bumps and release process documented
 
 ### Phase 4: Upstream sync strategy (Ongoing)
@@ -222,7 +222,7 @@ conflict while we maintain a fork that addresses NITC-specific needs.
 4. **What NOT to change (leave as-is to reduce conflicts):**
    - Package name `org.wikipedia` in source files (use build config for app ID)
    - Class names in shared code (only rename truly conflicting files like
-     `WikipediaApp.kt`)
+     `NITCWikiApp.kt`)
    - Core Retrofit service interfaces unless absolutely necessary
    - Compose component library (it's generic)
 
@@ -260,8 +260,8 @@ conflict while we maintain a fork that addresses NITC-specific needs.
 
 | # | File | Change type | Notes |
 |---|---|---|---|
-| 12 | `WikipediaApp.kt` | Modify | User-agent string, class rename (optional) |
-| 13 | `WikipediaFileProvider.kt` | Modify | Class rename |
+| 12 | `NITCWikiApp.kt` | Modify | User-agent string, class rename (optional) |
+| 13 | `NITCWikiFileProvider.kt` | Modify | Class rename |
 | 14 | `Constants.kt` | Modify | Commons/Wikidata constants |
 | 15 | `settings/Prefs.kt` | Review | Preference keys if needed |
 
@@ -274,11 +274,11 @@ conflict while we maintain a fork that addresses NITC-specific needs.
 | 18 | `res/mipmap-*/` | Replace | App icon |
 | 19 | `res/xml/network_security_config.xml` | Review | May need updates |
 
-### Code (Wikipedia references)
+### Code (NITCWiki references)
 
 | # | Pattern | Approx count | Action |
 |---|---|---|---|
-| 20 | `import org.wikipedia.WikipediaApp` (in ~400 files) | 400+ | Keep `org.wikipedia` package; rename only if essential |
+| 20 | `import org.wikipedia.NITCWikiApp` (in ~400 files) | 400+ | Keep `org.wikipedia` package; rename only if essential |
 | 21 | `"en.wikipedia.org"` hardcoded URLs | ~10 files | Replace with configurable or `wiki.fosscell.org` |
 | 22 | `wikipedia://` deep link scheme | 4 files | Replace with custom scheme |
 | 23 | `.wikipedia.org` string refs | ~15 files | Replace with `.fosscell.org` |

@@ -46,7 +46,7 @@ import coil3.compose.AsyncImage
 import org.wikipedia.R
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.extensions.getString
@@ -72,7 +72,7 @@ fun OnThisDayModule(
         wikiSite = wikiSite,
         titleResId = R.string.on_this_day_card_title,
         subTitleResId = R.string.explore_feed_on_this_day_subtitle,
-        backgroundColor = WikipediaTheme.colors.backgroundColor,
+        backgroundColor = NITCWikiTheme.colors.backgroundColor,
         onHideCardClick = onHideCardClick,
         onHideModuleClick = onHideModuleClick,
         onCardInView = onCardImpression
@@ -100,14 +100,14 @@ fun OnThisDayModule(
             Text(
                 text = context.getString(wikiSite.languageCode, R.string.more_events_text),
                 style = MaterialTheme.typography.labelLarge,
-                color = WikipediaTheme.colors.progressiveColor,
+                color = NITCWikiTheme.colors.progressiveColor,
                 fontWeight = FontWeight.Medium
             )
             Spacer(modifier = Modifier.width(8.dp))
             Icon(
                 painter = painterResource(R.drawable.ic_arrow_forward_black_24dp),
                 contentDescription = context.getString(wikiSite.languageCode, R.string.more_events_text),
-                tint = WikipediaTheme.colors.progressiveColor
+                tint = NITCWikiTheme.colors.progressiveColor
             )
         }
     }
@@ -140,7 +140,7 @@ private fun EventRow(
                     .padding(start = 21.dp)
                     .width(1.dp)
                     .weight(1f)
-                    .background(WikipediaTheme.colors.borderColor)
+                    .background(NITCWikiTheme.colors.borderColor)
             )
         }
 
@@ -150,7 +150,7 @@ private fun EventRow(
                     .padding(start = 16.dp, top = 8.dp)
                     .size(12.dp)
                     .clip(CircleShape)
-                    .background(WikipediaTheme.colors.progressiveColor)
+                    .background(NITCWikiTheme.colors.progressiveColor)
             )
         } else {
             Box(
@@ -158,14 +158,14 @@ private fun EventRow(
                     .padding(start = 16.dp, top = 24.dp)
                     .size(11.dp)
                     .clip(CircleShape)
-                    .border(1.dp, WikipediaTheme.colors.progressiveColor, CircleShape)
+                    .border(1.dp, NITCWikiTheme.colors.progressiveColor, CircleShape)
                     .padding(3.dp)
             ) {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
                         .clip(CircleShape)
-                        .background(WikipediaTheme.colors.progressiveColor)
+                        .background(NITCWikiTheme.colors.progressiveColor)
                 )
             }
         }
@@ -181,7 +181,7 @@ private fun EventRow(
                 style = MaterialTheme.typography.titleLarge.copy(
                     fontWeight = FontWeight.W500
                 ),
-                color = WikipediaTheme.colors.progressiveColor
+                color = NITCWikiTheme.colors.progressiveColor
             )
             Text(
                 modifier = Modifier.padding(start = 36.dp, top = 8.dp),
@@ -189,13 +189,13 @@ private fun EventRow(
                 style = MaterialTheme.typography.titleMedium.copy(
                     fontWeight = FontWeight.W600
                 ),
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
             Text(
                 modifier = Modifier.padding(start = 36.dp, end = 16.dp, top = 8.dp),
                 text = event.text,
                 style = MaterialTheme.typography.bodyMedium,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
 
             Spacer(modifier = Modifier.height(12.dp))
@@ -236,8 +236,8 @@ private fun OnThisDayPageItem(
 ) {
     Surface(
         shape = RoundedCornerShape(16.dp),
-        border = BorderStroke(1.dp, WikipediaTheme.colors.borderColor),
-        color = WikipediaTheme.colors.paperColor,
+        border = BorderStroke(1.dp, NITCWikiTheme.colors.borderColor),
+        color = NITCWikiTheme.colors.paperColor,
         modifier = Modifier.width(min(viewPortSize.width - 100.dp, 480.dp)),
         onClick = { onPageClick(pageSummary) }
     ) {
@@ -248,7 +248,7 @@ private fun OnThisDayPageItem(
             Column(modifier = Modifier.weight(1f)) {
                 HtmlText(
                     text = pageSummary.displayTitle,
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     maxLines = 1,
                     style = MaterialTheme.typography.titleSmall.copy(
                         fontWeight = FontWeight.W600
@@ -258,7 +258,7 @@ private fun OnThisDayPageItem(
                     Text(
                         text = pageSummary.description.orEmpty(),
                         style = MaterialTheme.typography.bodySmall,
-                        color = WikipediaTheme.colors.secondaryColor,
+                        color = NITCWikiTheme.colors.secondaryColor,
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -291,7 +291,7 @@ private fun OnThisDayPageItem(
                                 wikiSite.languageCode,
                                 R.string.menu_feed_overflow_label
                             ),
-                            tint = WikipediaTheme.colors.secondaryColor
+                            tint = NITCWikiTheme.colors.secondaryColor
                         )
                     }
                 )

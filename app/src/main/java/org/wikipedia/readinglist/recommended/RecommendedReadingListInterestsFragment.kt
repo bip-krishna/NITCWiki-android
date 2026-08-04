@@ -69,11 +69,11 @@ import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.RecommendedReadingListEvent
 import org.wikipedia.compose.components.ArticleCard
 import org.wikipedia.compose.components.SearchBarCard
-import org.wikipedia.compose.components.WikipediaAlertDialog
+import org.wikipedia.compose.components.NITCWikiAlertDialog
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.extensions.parcelableExtra
 import org.wikipedia.page.PageTitle
@@ -197,7 +197,7 @@ fun RecommendedReadingListInterestsScreen(
 
     var showRandomizeDialog by remember { mutableStateOf(false) }
     if (showRandomizeDialog) {
-        WikipediaAlertDialog(
+        NITCWikiAlertDialog(
             title = stringResource(R.string.recommended_reading_list_interest_pick_random_dialog_title),
             message = stringResource(R.string.recommended_reading_list_interest_pick_random_dialog_message),
             confirmButtonText = stringResource(R.string.recommended_reading_list_interest_pick_random_dialog_positive_button),
@@ -219,7 +219,7 @@ fun RecommendedReadingListInterestsScreen(
 
     Scaffold(
         modifier = Modifier
-            .background(WikipediaTheme.colors.paperColor),
+            .background(NITCWikiTheme.colors.paperColor),
         topBar = {
             TopAppBar(
                 title = {
@@ -230,7 +230,7 @@ fun RecommendedReadingListInterestsScreen(
                     ) {
                         Text(
                             text = stringResource(R.string.recommended_reading_list_interest_pick_title),
-                            color = WikipediaTheme.colors.primaryColor,
+                            color = NITCWikiTheme.colors.primaryColor,
                             style = MaterialTheme.typography.titleLarge.copy(
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold
@@ -248,16 +248,16 @@ fun RecommendedReadingListInterestsScreen(
                             .clickable(onClick = onCloseClick, enabled = enabled)
                             .alpha(if (enabled) 1f else 0.5f)
                             .padding(12.dp),
-                        tint = WikipediaTheme.colors.primaryColor
+                        tint = NITCWikiTheme.colors.primaryColor
                     )
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = WikipediaTheme.colors.paperColor,
-                    scrolledContainerColor = WikipediaTheme.colors.paperColor
+                    containerColor = NITCWikiTheme.colors.paperColor,
+                    scrolledContainerColor = NITCWikiTheme.colors.paperColor
                 )
             )
         },
-        containerColor = WikipediaTheme.colors.paperColor
+        containerColor = NITCWikiTheme.colors.paperColor
     ) { paddingValues ->
         when (uiState) {
             is Resource.Loading -> {
@@ -268,8 +268,8 @@ fun RecommendedReadingListInterestsScreen(
                 ) {
                     LinearProgressIndicator(
                         modifier = Modifier.fillMaxWidth(),
-                        color = WikipediaTheme.colors.progressiveColor,
-                        trackColor = WikipediaTheme.colors.borderColor
+                        color = NITCWikiTheme.colors.progressiveColor,
+                        trackColor = NITCWikiTheme.colors.borderColor
                     )
                 }
             }
@@ -327,7 +327,7 @@ fun RecommendedReadingListInterestsContent(
     onSearchClick: () -> Unit
 ) {
     Box {
-        val borderColor = WikipediaTheme.colors.borderColor
+        val borderColor = NITCWikiTheme.colors.borderColor
 
         LazyVerticalStaggeredGrid(
             columns = StaggeredGridCells.Adaptive(140.dp),
@@ -344,7 +344,7 @@ fun RecommendedReadingListInterestsContent(
                             .fillMaxWidth()
                             .padding(top = 48.dp, bottom = 4.dp, start = 16.dp, end = 16.dp),
                         style = MaterialTheme.typography.titleLarge,
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         textAlign = TextAlign.Center,
                         text = stringResource(R.string.recommended_reading_list_interest_pick_title)
                     )
@@ -374,7 +374,7 @@ fun RecommendedReadingListInterestsContent(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(56.dp)
-                .background(color = WikipediaTheme.colors.paperColor)
+                .background(color = NITCWikiTheme.colors.paperColor)
                 .align(Alignment.BottomCenter)
                 .drawBehind {
                     drawLine(
@@ -393,7 +393,7 @@ fun RecommendedReadingListInterestsContent(
                         .clickable(onClick = onRandomizeClick)
                         .padding(12.dp),
                     painter = painterResource(R.drawable.ic_dice_24),
-                    tint = WikipediaTheme.colors.primaryColor,
+                    tint = NITCWikiTheme.colors.primaryColor,
                     contentDescription = stringResource(R.string.recommended_reading_list_interest_pick_random_button_content_description)
                 )
             } else {
@@ -412,7 +412,7 @@ fun RecommendedReadingListInterestsContent(
                 textAlign = TextAlign.Center,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Medium,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
             if (!fromSettings) {
                 Icon(
@@ -422,7 +422,7 @@ fun RecommendedReadingListInterestsContent(
                         .padding(12.dp)
                         .alpha(if (selectedItems.isNotEmpty()) 1f else 0.5f),
                     painter = painterResource(R.drawable.ic_arrow_forward_black_24dp),
-                    tint = WikipediaTheme.colors.primaryColor,
+                    tint = NITCWikiTheme.colors.primaryColor,
                     contentDescription = stringResource(R.string.nav_item_forward)
                 )
             } else {

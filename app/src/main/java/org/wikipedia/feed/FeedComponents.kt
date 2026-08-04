@@ -38,7 +38,7 @@ import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.extensions.getString
 import org.wikipedia.theme.Theme
@@ -57,7 +57,7 @@ fun CommunityDisclaimer(
             modifier = Modifier
                 .fillMaxSize()
                 .background(
-                    color = WikipediaTheme.colors.borderColor,
+                    color = NITCWikiTheme.colors.borderColor,
                     shape = RoundedCornerShape(24.dp)
                 )
                 .padding(16.dp),
@@ -68,7 +68,7 @@ fun CommunityDisclaimer(
                 modifier = Modifier.weight(1f),
                 text = LocalContext.current.getString(wikiSite.languageCode, R.string.explore_feed_community_disclaimer),
                 style = MaterialTheme.typography.bodyMedium,
-                color = WikipediaTheme.colors.secondaryColor
+                color = NITCWikiTheme.colors.secondaryColor
             )
             Image(
                 modifier = Modifier.size(45.dp),
@@ -83,7 +83,7 @@ fun DayHeader(date: LocalDate, isFirst: Boolean = true) {
     val dateFormatter = DateTimeFormatter.ofPattern(DateFormat.getBestDateTimePattern(LocalLocale.current.platformLocale, "MMM dd, yyyy"))
     Text(
         text = if (LocalDate.now().dayOfYear == date.dayOfYear) stringResource(R.string.explore_feed_date_today, date.format(dateFormatter)) else date.format(dateFormatter),
-        color = WikipediaTheme.colors.secondaryColor,
+        color = NITCWikiTheme.colors.secondaryColor,
         fontWeight = FontWeight.Bold,
         fontSize = 14.sp,
         modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = if (isFirst) 16.dp else 24.dp)
@@ -110,7 +110,7 @@ fun LoadMoreButton(
                 ) {
                     Icon(
                         painter = painterResource(R.drawable.ic_dynamic_feed_24dp),
-                        tint = WikipediaTheme.colors.paperColor,
+                        tint = NITCWikiTheme.colors.paperColor,
                         contentDescription = null
                     )
 
@@ -120,7 +120,7 @@ fun LoadMoreButton(
                         text = LocalContext.current.getString(wikiSite.languageCode, R.string.explore_feed_community_load_more_label),
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Medium,
-                        color = WikipediaTheme.colors.paperColor
+                        color = NITCWikiTheme.colors.paperColor
                     )
                 }
             }
@@ -133,7 +133,7 @@ fun LoadMoreButton(
                 TextButton(onClick = onClick) {
                     Text(
                         text = "Load more recommendations",
-                        color = WikipediaTheme.colors.progressiveColor,
+                        color = NITCWikiTheme.colors.progressiveColor,
                         fontWeight = FontWeight.Medium
                     )
                 }
@@ -153,7 +153,7 @@ fun LoadingIndicator(
         contentAlignment = Alignment.Center
     ) {
         CircularProgressIndicator(
-            color = WikipediaTheme.colors.progressiveColor
+            color = NITCWikiTheme.colors.progressiveColor
         )
     }
 }
@@ -204,7 +204,7 @@ fun FeedEmptyStateView(
                 fontWeight = FontWeight.SemiBold,
                 letterSpacing = 0.15.sp
             ),
-            color = WikipediaTheme.colors.secondaryColor
+            color = NITCWikiTheme.colors.secondaryColor
         )
         HtmlText(
             text = description,
@@ -212,7 +212,7 @@ fun FeedEmptyStateView(
                 letterSpacing = 0.25.sp
             ),
             textAlign = TextAlign.Center,
-            color = WikipediaTheme.colors.secondaryColor
+            color = NITCWikiTheme.colors.secondaryColor
         )
         AppButton(
             onClick = onCallToActionClick

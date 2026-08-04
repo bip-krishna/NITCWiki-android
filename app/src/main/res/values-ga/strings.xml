@@ -253,7 +253,7 @@
   <string name="privacy_policy_description">Polasaí príobháideachais</string>
   <string name="terms_of_use_description">Coinníollacha úsáide</string>
   <string name="legal_safety_contacts_description">Teagmhálaithe dlí agus sábháilteachta</string>
-  <string name="about_wikipedia_url">https://en.wikipedia.org/wiki/Wikipedia:About</string>
+  <string name="about_wikipedia_url">https://en.wikipedia.org/wiki/NITCWiki:About</string>
   <string name="privacy_policy_url">https://foundation.wikimedia.org/wiki/Special:MyLanguage/Privacy_policy</string>
   <string name="offline_reading_and_data_url">https://www.mediawiki.org/wiki/Special:MyLanguage/Wikimedia_Apps/Android_FAQ#Offline_reading_and_data</string>
   <string name="android_app_faq_url">https://www.mediawiki.org/wiki/Special:MyLanguage/Wikimedia_Apps/Android_FAQ</string>
@@ -455,9 +455,9 @@
   <string name="error_blocked_start">Tús an bhloic: %s</string>
   <string name="error_blocked_expiry">Dáta éaga an bhloic: %s</string>
   <string name="error_blocked_id">ID an bhloic: %s</string>
-  <string name="error_blocked_footer">Is féidir leat teagmháil a dhéanamh le &lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; nó le &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;riarthóir&lt;/a&gt; eile chun an bac a phlé.</string>
+  <string name="error_blocked_footer">Is féidir leat teagmháil a dhéanamh le &lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; nó le &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;riarthóir&lt;/a&gt; eile chun an bac a phlé.</string>
   <string name="theme_chooser_menu_item_short_tooltip">Saincheap do bharra uirlisí</string>
-  <string name="error_blocked_footer_no_blocker">Is féidir leat teagmháil a dhéanamh &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;le riarthóir&lt;/a&gt; chun an blocáil a phlé.</string>
+  <string name="error_blocked_footer_no_blocker">Is féidir leat teagmháil a dhéanamh &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;le riarthóir&lt;/a&gt; chun an blocáil a phlé.</string>
   <string name="temp_account_not_logged_in">Níl tú logáilte isteach</string>
   <string name="temp_account_anon_ip_dialog_body">Nuair a dhéanfaidh tú eagarthóireacht, beidh do sheoladh IP ceangailte le d’eagarthóireacht.&lt;br /&gt;&lt;br /&gt;&lt;a href=\"https://#login\"&gt;Logáil isteach&lt;/a&gt; nó &lt;a href=\"https://#createaccount\"&gt;cruthaigh cuntas&lt;/a&gt; chun creidiúint a fháil as eagarthóireachtaí amach anseo agus chun rochtain a fháil ar ghnéithe eile.</string>
   <string name="temp_account_anon_dialog_body">Nuair a dhéanfaidh tú eagarthóireacht, cruthófar &lt;b&gt;cuntas sealadach&lt;/b&gt; duit chun do phríobháideacht a chosaint. &lt;a href=\"%1$s\"&gt;Foghlaim tuilleadh&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;a href=\"https://#login\"&gt;Logáil isteach&lt;/a&gt; nó &lt;a href=\"https://#createaccount\"&gt;cruthaigh cuntas&lt;/a&gt; chun creidiúint a fháil as eagarthóireachtaí amach anseo agus chun rochtain a fháil ar ghnéithe eile.</string>
@@ -1562,7 +1562,7 @@
   <string name="talk_snackbar_survey_action_text">Tosaigh</string>
   <string name="talk_share_discussion_subject">Vicipéid - plé ar an topaic leathanach plé \"%s\"</string>
   <string name="talk_share_talk_page">Vicipéid - plé ar an leathanach plé</string>
-  <string name="talk_edit_disclaimer">Is leathanach plé é seo. Tabhair aird ar threoirlínte an leathanaigh phlé, agus cuimhnigh do phoist a shíniú trí cheithre thildé a chlóscríobh: ~~~~ agus tú ag postáil ag baint úsáide as vicíthéacs.&lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Talk_page_guidelines\"&gt;Vicipéid:Treoirlínte an leathanaigh phlé&lt;/a&gt;</string>
+  <string name="talk_edit_disclaimer">Is leathanach plé é seo. Tabhair aird ar threoirlínte an leathanaigh phlé, agus cuimhnigh do phoist a shíniú trí cheithre thildé a chlóscríobh: ~~~~ agus tú ag postáil ag baint úsáide as vicíthéacs.&lt;br&gt;&lt;br&gt;&lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Talk_page_guidelines\"&gt;Vicipéid:Treoirlínte an leathanaigh phlé&lt;/a&gt;</string>
   <string name="talk_search_hint">Cuardaigh teachtaireachtaí</string>
   <string name="talk_search_topics_hint">Cuardaigh topaicí</string>
   <string name="talk_search_find_in_talk_topics_hint">Aimsigh sa topaic ar an leathanach plé</string>
@@ -2328,7 +2328,7 @@
   </plurals>
   <string name="year_in_review_slide_viewed_articles_times_body">Do dhaoine ar fud an domhain, is í Vicipéid an chéad stad agus ceist á freagairt acu, eolas á chuardach acu don scoil nó don obair, nó fíric nua á foghlaim acu.</string>
   <string name="year_in_review_reading_list_dialog_title">Cruthaigh do liosta léitheoireachta %d Athbhreithniú ar an mBliain?</string>
-  <string name="year_in_review_reading_list_dialog_message">Cruthóidh Wikipedia Year in Review liosta léitheoireachta de na hailt ar chaith tú an t-am is mó leo i %1$d. &lt;a href=\"%2$s\"&gt;Foghlaim tuilleadh&lt;/a&gt;</string>
+  <string name="year_in_review_reading_list_dialog_message">Cruthóidh NITCWiki Year in Review liosta léitheoireachta de na hailt ar chaith tú an t-am is mó leo i %1$d. &lt;a href=\"%2$s\"&gt;Foghlaim tuilleadh&lt;/a&gt;</string>
   <string name="year_in_review_reading_list_dialog_positive_button_label">Cruthaigh</string>
   <string name="year_in_review_reading_list_dialog_negative_button_label">Ní raibh maith agat</string>
   <string name="year_in_review_reading_list_title">Athbhreithniú na Bliana %d</string>

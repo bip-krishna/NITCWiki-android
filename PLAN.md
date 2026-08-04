@@ -2,7 +2,7 @@
 
 > **Reference**: `ROADMAP.md` (Section 1c, Section 6, Section 4 file inventory #1–3)
 > **Deliverable**: A working `nitcwiki` product flavor that builds cleanly, is isolated
-> from Wikipedia/Wikimedia infrastructure, and coexists with upstream flavors.
+> from NITCWiki/Wikimedia infrastructure, and coexists with upstream flavors.
 > **Build target to verify**: `./gradlew assembleNitcwikiDebug`
 
 ---
@@ -19,7 +19,7 @@
 | 6 | `app/src/nitcwiki/AndroidManifest.xml` | Create — set channel, strip Google Pay/Firebase entries |
 | 7 | `app/src/nitcwiki/res/values/strings.xml` | Create — stub file (content filled by P3) |
 | 8 | `app/src/nitcwiki/java/…/donate/GooglePayComponent.kt` | Copy stub from `fdroid/` |
-| 9 | `app/src/nitcwiki/java/…/push/WikipediaFirebaseMessagingService.kt` | Copy stub from `fdroid/` |
+| 9 | `app/src/nitcwiki/java/…/push/NITCWikiFirebaseMessagingService.kt` | Copy stub from `fdroid/` |
 | 10 | `app/src/nitcwiki/java/…/mlkit/MlKitLanguageDetector.kt` | Copy stub from `fdroid/` |
 | 11 | `app/src/nitcwiki/java/…/installreferrer/InstallReferrerListener.kt` | Copy stub from `fdroid/` |
 
@@ -117,7 +117,7 @@ Firebase. The `fdroid` flavor has the same problem and deals with it by keeping
 **Resolution**: `google-services.json` already exists in the repo, so the plugin will
 not crash the `nitcwiki` build even though Firebase is stubbed out in the flavor.
 **No change needed here.** The plugin runs but Firebase is never initialised at runtime
-because the stub `WikipediaFirebaseMessagingService` is what gets compiled in.
+because the stub `NITCWikiFirebaseMessagingService` is what gets compiled in.
 
 ---
 
@@ -175,7 +175,7 @@ Create the file with this content:
 
         <!-- Remove Firebase messaging service — stubbed out -->
         <service
-            android:name=".push.WikipediaFirebaseMessagingService"
+            android:name=".push.NITCWikiFirebaseMessagingService"
             tools:node="remove" />
 
         <!-- Remove Google Pay donate activity — not applicable -->
@@ -223,8 +223,8 @@ mkdir -p app/src/nitcwiki/java/org/wikipedia/installreferrer
 cp app/src/fdroid/java/org/wikipedia/donate/GooglePayComponent.kt \
    app/src/nitcwiki/java/org/wikipedia/donate/GooglePayComponent.kt
 
-cp app/src/fdroid/java/org/wikipedia/push/WikipediaFirebaseMessagingService.kt \
-   app/src/nitcwiki/java/org/wikipedia/push/WikipediaFirebaseMessagingService.kt
+cp app/src/fdroid/java/org/wikipedia/push/NITCWikiFirebaseMessagingService.kt \
+   app/src/nitcwiki/java/org/wikipedia/push/NITCWikiFirebaseMessagingService.kt
 
 cp app/src/fdroid/java/org/wikipedia/mlkit/MlKitLanguageDetector.kt \
    app/src/nitcwiki/java/org/wikipedia/mlkit/MlKitLanguageDetector.kt
@@ -272,7 +272,7 @@ These are in scope for other team members. Do not touch:
 | `app/src/main/AndroidManifest.xml` | P4 | Deep link hosts and URI scheme |
 | `res/values/strings.xml` content | P3 | Actual branding text |
 | App icons (`mipmap/`) | P3 | Icon assets |
-| `WikipediaApp.kt` | P3 | Class rename |
+| `NITCWikiApp.kt` | P3 | Class rename |
 
 ---
 

@@ -1,370 +1,370 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Branding overrides for the nitcwiki flavor. Replace Wikipedia → WikiNITC. -->
+    <!-- Branding overrides for the nitcwiki flavor. -->
 
     <string name="account_type">org.nitcwiki.account</string>
 
-    <string name="about_description">About the WikiNITC app</string>
+    <string name="about_description">About the NITCWiki app</string>
 
-    <string name="about_logo_content_description">WikiNITC puzzle globe logo</string>
+    <string name="about_logo_content_description">NITCWiki puzzle globe logo</string>
 
-    <string name="abusefilter_text_disallow"><![CDATA[An automated filter has identified this edit as potentially unconstructive, or potential vandalism.<br /><br />WikiNITC is an encyclopedia and only neutral, notable content belongs here.]]></string>
+    <string name="abusefilter_text_disallow"><![CDATA[An automated filter has identified this edit as potentially unconstructive, or potential vandalism.<br /><br />NITCWiki is an encyclopedia and only neutral, notable content belongs here.]]></string>
 
-    <string name="account_vanish_request_confirm"><![CDATA[Vanishing is a <b>last resort</b> and should <b>only be used when you wish to stop editing forever</b> and also to hide as many of your past associations as possible.<br/><br/>Account deletion on WikiNITC is done by changing your account name to make it so others cannot recognize your contributions in a process called account vanishing. <b>Vanishing does not guarantee complete anonymity or remove contributions to the projects</b>.]]></string>
+    <string name="account_vanish_request_confirm"><![CDATA[Vanishing is a <b>last resort</b> and should <b>only be used when you wish to stop editing forever</b> and also to hide as many of your past associations as possible.<br/><br/>Account deletion on NITCWiki is done by changing your account name to make it so others cannot recognize your contributions in a process called account vanishing. <b>Vanishing does not guarantee complete anonymity or remove contributions to the projects</b>.]]></string>
 
-    <string name="activity_tab_explore_wikipedia">Discover through WikiNITC</string>
+    <string name="activity_tab_explore_wikipedia">Discover through NITCWiki</string>
 
-    <string name="activity_tab_logged_out_title">Log in or create an account to view your activity on the WikiNITC app</string>
+    <string name="activity_tab_logged_out_title">Log in or create an account to view your activity on the NITCWiki app</string>
 
-    <string name="activity_tab_on_wikipedia_android">On WikiNITC Android</string>
+    <string name="activity_tab_on_wikipedia_android">On NITCWiki Android</string>
 
-    <string name="activity_tab_onboarding_engage_message">Explore stats for games, saved articles, and other activities that connect you more deeply with WikiNITC.</string>
+    <string name="activity_tab_onboarding_engage_message">Explore stats for games, saved articles, and other activities that connect you more deeply with NITCWiki.</string>
 
-    <string name="add_wikipedia_languages_text">Add WikiNITC languages</string>
+    <string name="add_wikipedia_languages_text">Add NITCWiki languages</string>
 
-    <string name="app_name_alpha">WikiNITC Alpha</string>
+    <string name="app_name_alpha">NITCWiki Alpha</string>
 
-    <string name="app_name_beta">WikiNITC Beta</string>
+    <string name="app_name_beta">NITCWiki Beta</string>
 
-    <string name="app_name_prod">WikiNITC</string>
+    <string name="app_name_prod">NITCWiki</string>
 
-    <string name="crash_report_relaunch_or_quit"><![CDATA[We\'re sorry, the WikiNITC app has experienced an error and was terminated.\n\nWould you like to start over or quit?]]></string>
+    <string name="crash_report_relaunch_or_quit"><![CDATA[We\'re sorry, the NITCWiki app has experienced an error and was terminated.\n\nWould you like to start over or quit?]]></string>
 
-    <string name="description_edit_anon_limit">Thanks for your continued interest in editing article descriptions! To make additional edits, please log in to your WikiNITC account.</string>
+    <string name="description_edit_anon_limit">Thanks for your continued interest in editing article descriptions! To make additional edits, please log in to your NITCWiki account.</string>
 
-    <string name="description_edit_revert_subtitle">Thanks for editing WikiNITC!</string>
+    <string name="description_edit_revert_subtitle">Thanks for editing NITCWiki!</string>
 
-    <string name="description_edit_success_encouragement">You just made WikiNITC better for everyone</string>
+    <string name="description_edit_success_encouragement">You just made NITCWiki better for everyone</string>
 
-    <string name="donate_gpay_success_message"><![CDATA[<b>Thank you!</b> Your generosity to WikiNITC means so much to us.]]></string>
+    <string name="donate_gpay_success_message"><![CDATA[<b>Thank you!</b> Your generosity to NITCWiki means so much to us.]]></string>
 
-    <string name="donation_campaign_donated_snackbar">Thank you, dear donor! Your generosity helps keep WikiNITC and other free knowledge projects thriving.</string>
+    <string name="donation_campaign_donated_snackbar">Thank you, dear donor! Your generosity helps keep NITCWiki and other free knowledge projects thriving.</string>
 
-    <string name="donation_reminders_prompt_message">You set up a donation reminder on %1$s to give %3$s every %2$s you read. Ready to follow through on your pledge to support WikiNITC?</string>
+    <string name="donation_reminders_prompt_message">You set up a donation reminder on %1$s to give %3$s every %2$s you read. Ready to follow through on your pledge to support NITCWiki?</string>
 
-    <string name="donation_reminders_settings_description_on">Donation reminders are on. WikiNITC will remind you to donate %1$s every %2$s you read while this experiment runs.</string>
+    <string name="donation_reminders_settings_description_on">Donation reminders are on. NITCWiki will remind you to donate %1$s every %2$s you read while this experiment runs.</string>
 
-    <string name="donation_reminders_settings_donation_info">Donations go to the Wikimedia Foundation and affiliates, proud hosts of WikiNITC and other free knowledge projects.</string>
+    <string name="donation_reminders_settings_donation_info">Donations go to the Wikimedia Foundation and affiliates, proud hosts of NITCWiki and other free knowledge projects.</string>
 
-    <string name="donation_reminders_settings_thank_you_message">Your generosity helps keep WikiNITC thriving. Set up a donation reminder based on the number of articles you read.</string>
+    <string name="donation_reminders_settings_thank_you_message">Your generosity helps keep NITCWiki thriving. Set up a donation reminder based on the number of articles you read.</string>
 
-    <string name="edits_screen_what_is_body">Unsure where to get started with editing? Try Suggested Edits, a feature that creates opportunities to make small but vital contributions to WikiNITC. Alternatively, go directly to an article of interest and make a change using wikitext.</string>
+    <string name="edits_screen_what_is_body">Unsure where to get started with editing? Try Suggested Edits, a feature that creates opportunities to make small but vital contributions to NITCWiki. Alternatively, go directly to an article of interest and make a change using wikitext.</string>
 
-    <string name="edits_screen_what_is_title">Editing in the WikiNITC app</string>
+    <string name="edits_screen_what_is_title">Editing in the NITCWiki app</string>
 
-    <string name="error_user_page_does_not_exist"><![CDATA[WikiNITC does not have a <a href="%1$s">user page</a> with this exact name. In general, this page should be created and edited by <b>%2$s</b>. If in doubt, please verify that \"%3$s\" exists.]]></string>
+    <string name="error_user_page_does_not_exist"><![CDATA[NITCWiki does not have a <a href="%1$s">user page</a> with this exact name. In general, this page should be created and edited by <b>%2$s</b>. If in doubt, please verify that \"%3$s\" exists.]]></string>
 
-    <string name="explore_feed_featured_article_subtitle">Featured articles are some of the highest-quality articles on WikiNITC, selected daily by editors</string>
+    <string name="explore_feed_featured_article_subtitle">Featured articles are some of the highest-quality articles on NITCWiki, selected daily by editors</string>
 
-    <string name="explore_feed_new_update_prompt_two_ways_description"><![CDATA[Discover articles personalized to your interests in For You, or browse WikiNITC\'s best editorial content in Community.]]></string>
+    <string name="explore_feed_new_update_prompt_two_ways_description"><![CDATA[Discover articles personalized to your interests in For You, or browse NITCWiki\'s best editorial content in Community.]]></string>
 
-    <string name="feed_configure_language_warning">Note that not all card types are available in all WikiNITC languages. Edit your selected languages in Settings.</string>
+    <string name="feed_configure_language_warning">Note that not all card types are available in all NITCWiki languages. Edit your selected languages in Settings.</string>
 
-    <string name="feed_item_type_featured_article">Daily featured article on WikiNITC</string>
+    <string name="feed_item_type_featured_article">Daily featured article on NITCWiki</string>
 
-    <string name="feed_item_type_main_page">Main page of WikiNITC with daily featured content</string>
+    <string name="feed_item_type_main_page">Main page of NITCWiki with daily featured content</string>
 
-    <string name="feed_item_type_suggested_edits">Suggestions to add content to WikiNITC</string>
+    <string name="feed_item_type_suggested_edits">Suggestions to add content to NITCWiki</string>
 
-    <string name="feed_language_variants_removal_dialog_message">You are currently using an unsupported generic Chinese language variant as your primary WikiNITC language</string>
+    <string name="feed_language_variants_removal_dialog_message">You are currently using an unsupported generic Chinese language variant as your primary NITCWiki language</string>
 
-    <string name="games_hub_activity_games_unavailable_message"><![CDATA[No games available in this language yet! Games leverage content created by volunteer editors for each language\'s WikiNITC.]]></string>
+    <string name="games_hub_activity_games_unavailable_message"><![CDATA[No games available in this language yet! Games leverage content created by volunteer editors for each language\'s NITCWiki.]]></string>
 
-    <string name="hybrid_search_results_header_description">Sourced from human written WikiNITC articles</string>
+    <string name="hybrid_search_results_header_description">Sourced from human written NITCWiki articles</string>
 
-    <string name="image_recommendation_onboarding_2">You will decide if a suggested image should be placed in a WikiNITC article.</string>
+    <string name="image_recommendation_onboarding_2">You will decide if a suggested image should be placed in a NITCWiki article.</string>
 
-    <string name="image_recommendation_onboarding_4">Images are from Wikimedia Commons, a collection of freely licensed images used by WikiNITC.</string>
+    <string name="image_recommendation_onboarding_4">Images are from Wikimedia Commons, a collection of freely licensed images used by NITCWiki.</string>
 
-    <string name="langlinks_your_wikipedia_languages">Your WikiNITC languages</string>
+    <string name="langlinks_your_wikipedia_languages">Your NITCWiki languages</string>
 
-    <string name="logged_out_in_background_dialog">You have been logged out of WikiNITC. Would you like to log in again?</string>
+    <string name="logged_out_in_background_dialog">You have been logged out of NITCWiki. Would you like to log in again?</string>
 
-    <string name="login_join_wikipedia">Join WikiNITC</string>
+    <string name="login_join_wikipedia">Join NITCWiki</string>
 
-    <string name="main_drawer_login">Log in / join WikiNITC</string>
+    <string name="main_drawer_login">Log in / join NITCWiki</string>
 
-    <string name="multiple_lists_json_file_name">WikiNITC reading lists (%s and more).json</string>
+    <string name="multiple_lists_json_file_name">NITCWiki reading lists (%s and more).json</string>
 
-    <string name="nav_item_login">Log in to WikiNITC</string>
+    <string name="nav_item_login">Log in to NITCWiki</string>
 
-    <string name="notification_echo_channel_description">WikiNITC notifications</string>
+    <string name="notification_echo_channel_description">NITCWiki notifications</string>
 
-    <string name="notifications_channel_group_wikipedia_notifications_description">Notifications from WikiNITC</string>
+    <string name="notifications_channel_group_wikipedia_notifications_description">Notifications from NITCWiki</string>
 
-    <string name="notifications_channel_group_wikipedia_notifications_title">WikiNITC</string>
+    <string name="notifications_channel_group_wikipedia_notifications_title">NITCWiki</string>
 
-    <string name="on_this_day_game_entry_dialog_snackbar_message">WikiNITC games are available in the Games Hub, found in the MORE menu.</string>
+    <string name="on_this_day_game_entry_dialog_snackbar_message">NITCWiki games are available in the Games Hub, found in the MORE menu.</string>
 
-    <string name="on_this_day_game_entry_dialog_subtitle">WikiNITC games</string>
+    <string name="on_this_day_game_entry_dialog_subtitle">NITCWiki games</string>
 
-    <string name="on_this_day_game_feed_entry_card_heading">WikiNITC games</string>
+    <string name="on_this_day_game_feed_entry_card_heading">NITCWiki games</string>
 
-    <string name="on_this_day_game_report_email_body">I have encountered a problem with the WikiNITC games feature:\n- [Describe specific problem]\n\nThe behavior I would like to see is:\n- [Describe proposed solution]</string>
+    <string name="on_this_day_game_report_email_body">I have encountered a problem with the NITCWiki games feature:\n- [Describe specific problem]\n\nThe behavior I would like to see is:\n- [Describe proposed solution]</string>
 
-    <string name="on_this_day_game_report_email_subject">Issue Report - WikiNITC games</string>
+    <string name="on_this_day_game_report_email_subject">Issue Report - NITCWiki games</string>
 
-    <string name="on_this_day_game_share_link_message"><![CDATA[I\'m playing \"Which came first?\" a daily trivia game on the WikiNITC Android app %s]]></string>
+    <string name="on_this_day_game_share_link_message"><![CDATA[I\'m playing \"Which came first?\" a daily trivia game on the NITCWiki Android app %s]]></string>
 
-    <string name="onboarding_explore_text"><![CDATA[Dive down the WikiNITC rabbit hole with a constantly updating Home feed. <br/> <b>Customize</b> the feed to your interests – whether it\'s learning about historical events <b>On this day</b>, or rolling the dice with <b>Random</b>.]]></string>
+    <string name="onboarding_explore_text"><![CDATA[Dive down the NITCWiki rabbit hole with a constantly updating Home feed. <br/> <b>Customize</b> the feed to your interests – whether it\'s learning about historical events <b>On this day</b>, or rolling the dice with <b>Random</b>.]]></string>
 
-    <string name="onboarding_fresh_install_knowledge_learn_more">Learn more about WikiNITC</string>
+    <string name="onboarding_fresh_install_knowledge_learn_more">Learn more about NITCWiki</string>
 
-    <string name="onboarding_fresh_install_knowledge_text">WikiNITC is a free online encyclopedia with 65 million articles collaboratively written and maintained in more than 300 languages by a community of volunteers.</string>
+    <string name="onboarding_fresh_install_knowledge_text">NITCWiki is a free online encyclopedia with 65 million articles collaboratively written and maintained in more than 300 languages by a community of volunteers.</string>
 
-    <string name="onboarding_reading_list_sync_text_v2"><![CDATA[You can make reading lists from articles you want to read later, even when you\'re offline. <br/>Login to your WikiNITC account to sync your reading lists. <a href="#login">Join WikiNITC</a>]]></string>
+    <string name="onboarding_reading_list_sync_text_v2"><![CDATA[You can make reading lists from articles you want to read later, even when you\'re offline. <br/>Login to your NITCWiki account to sync your reading lists. <a href="#login">Join NITCWiki</a>]]></string>
 
-    <string name="patroller_onboarding_one_content">Enhance the quality of WikiNITC content by actively reviewing a feed of recent edits and providing guidance, quality control, and encouragement to other editors.</string>
+    <string name="patroller_onboarding_one_content">Enhance the quality of NITCWiki content by actively reviewing a feed of recent edits and providing guidance, quality control, and encouragement to other editors.</string>
 
-    <string name="patroller_onboarding_one_title">Contribute to the oversight and approval of WikiNITC edits.</string>
+    <string name="patroller_onboarding_one_title">Contribute to the oversight and approval of NITCWiki edits.</string>
 
-    <string name="patroller_saved_message_body_art_imp"><![CDATA[Hello {{{username}}}. Your article is a great start! To make it even better, consider adding more references to reliable sources. This helps verify the information and improves the article\'s quality. Check out this WikiNITC\'s guidelines on [[WikiNITC:Reliable_sources|reliable sources]] for more details.]]></string>
+    <string name="patroller_saved_message_body_art_imp"><![CDATA[Hello {{{username}}}. Your article is a great start! To make it even better, consider adding more references to reliable sources. This helps verify the information and improves the article\'s quality. Check out this NITCWiki\'s guidelines on [[NITCWiki:Reliable_sources|reliable sources]] for more details.]]></string>
 
-    <string name="patroller_saved_message_body_auto_trans"><![CDATA[Hello {{{username}}}, some contributions you have made are possibly machine translations, which is why they have been modified or marked with the template. If no improvements are made to the article, it may be deleted.\n\nIf, despite all this information, you still have any questions, feel free to leave a message on [[User talk:{{{senderUserName}}}|my talk page]]. Don\'t be discouraged by this little incident. Your contributions are very important to WikiNITC.]]></string>
+    <string name="patroller_saved_message_body_auto_trans"><![CDATA[Hello {{{username}}}, some contributions you have made are possibly machine translations, which is why they have been modified or marked with the template. If no improvements are made to the article, it may be deleted.\n\nIf, despite all this information, you still have any questions, feel free to leave a message on [[User talk:{{{senderUserName}}}|my talk page]]. Don\'t be discouraged by this little incident. Your contributions are very important to NITCWiki.]]></string>
 
-    <string name="patroller_saved_message_body_coi_rem"><![CDATA[Hello {{{username}}}, I appreciate your collaboration on WikiNITC; However, I noticed you are in a [[WikiNITC:Conflict_of_interest|conflict of interest]]. A conflict of interest is the incompatibility between WikiNITC\'s objectives of neutrality and reliability and the particular objectives of certain editors, individuals, entities, or companies of any type.\n\nAll contributions in the main space are subject to the policies of content criteria of this WikiNITC ([[WikiNITC:What_WikiNITC_is_not|what WikiNITC is not]]), encyclopedic quality ([[WikiNITC:Verifiability|verifiability]] and [[WikiNITC:No_original_research|no original research]]), editorial method ([[WikiNITC:Neutral_point_of_view|neutral point of view]]), and legitimacy of content ([[WikiNITC:Copyrights|copyrights]]). All publishers are expected to abide by these policies when creating and evaluating content and to respect and assume good faith in the actions of other publishers to ensure that these policies are followed.\n\nIf you edit under a conflict of interest, you must apply the corresponding policy with special care; Otherwise, your user account could be considered private purpose and blocked. Feel free to reach out on my talk page if you have any questions.]]></string>
+    <string name="patroller_saved_message_body_coi_rem"><![CDATA[Hello {{{username}}}, I appreciate your collaboration on NITCWiki; However, I noticed you are in a [[NITCWiki:Conflict_of_interest|conflict of interest]]. A conflict of interest is the incompatibility between NITCWiki\'s objectives of neutrality and reliability and the particular objectives of certain editors, individuals, entities, or companies of any type.\n\nAll contributions in the main space are subject to the policies of content criteria of this NITCWiki ([[NITCWiki:What_NITCWiki_is_not|what NITCWiki is not]]), encyclopedic quality ([[NITCWiki:Verifiability|verifiability]] and [[NITCWiki:No_original_research|no original research]]), editorial method ([[NITCWiki:Neutral_point_of_view|neutral point of view]]), and legitimacy of content ([[NITCWiki:Copyrights|copyrights]]). All publishers are expected to abide by these policies when creating and evaluating content and to respect and assume good faith in the actions of other publishers to ensure that these policies are followed.\n\nIf you edit under a conflict of interest, you must apply the corresponding policy with special care; Otherwise, your user account could be considered private purpose and blocked. Feel free to reach out on my talk page if you have any questions.]]></string>
 
-    <string name="patroller_saved_message_body_copy_vio"><![CDATA[Your recent edit appears to include copyrighted material without permission. Please ensure all content complies with this WikiNITC\'s [[WikiNITC:Copyrights|copyright]] policies to avoid removal.]]></string>
+    <string name="patroller_saved_message_body_copy_vio"><![CDATA[Your recent edit appears to include copyrighted material without permission. Please ensure all content complies with this NITCWiki\'s [[NITCWiki:Copyrights|copyright]] policies to avoid removal.]]></string>
 
-    <string name="patroller_saved_message_body_do_not_censor">Hi {{{username}}}, it appears you removed content without discussing it on the article talk page. Please note that WikiNITC is not censored, and content should not be removed because it is controversial. If you believe the information is inaccurate, please reach a consensus on the article talk page.</string>
+    <string name="patroller_saved_message_body_do_not_censor">Hi {{{username}}}, it appears you removed content without discussing it on the article talk page. Please note that NITCWiki is not censored, and content should not be removed because it is controversial. If you believe the information is inaccurate, please reach a consensus on the article talk page.</string>
 
-    <string name="patroller_saved_message_body_edit_summary">Hi {{{username}}}, it appears you removed content from WikiNITC without leaving an edit summary. Please leave an edit summary whenever you add or remove content to WikiNITC.</string>
+    <string name="patroller_saved_message_body_edit_summary">Hi {{{username}}}, it appears you removed content from NITCWiki without leaving an edit summary. Please leave an edit summary whenever you add or remove content to NITCWiki.</string>
 
-    <string name="patroller_saved_message_body_editing_tests"><![CDATA[Hi {{{username}}}, I am delighted that WikiNITC has caught your attention and that you have been interested in learning how to edit on it. The editing test you did worked; However, you should keep in mind that the goal of this project is to develop a reliable and complete encyclopedia that everyone can consult. Your edit affected the content, so it has been removed.\nIf you want to learn how to edit WikiNITC, the [[WikiNITC:Sandbox|sandbox]] is at your disposal. If your comments were specific to an article, the correct place is that article\'s talk page.]]></string>
+    <string name="patroller_saved_message_body_editing_tests"><![CDATA[Hi {{{username}}}, I am delighted that NITCWiki has caught your attention and that you have been interested in learning how to edit on it. The editing test you did worked; However, you should keep in mind that the goal of this project is to develop a reliable and complete encyclopedia that everyone can consult. Your edit affected the content, so it has been removed.\nIf you want to learn how to edit NITCWiki, the [[NITCWiki:Sandbox|sandbox]] is at your disposal. If your comments were specific to an article, the correct place is that article\'s talk page.]]></string>
 
-    <string name="patroller_saved_message_body_final_warning">Because you made multiple destructive edits, this will serve as your final warning. Should you vandalize WikiNITC again, you will be banned from editing.</string>
+    <string name="patroller_saved_message_body_final_warning">Because you made multiple destructive edits, this will serve as your final warning. Should you vandalize NITCWiki again, you will be banned from editing.</string>
 
-    <string name="patroller_saved_message_body_npov"><![CDATA[Hello {{{username}}}, some contributions you have made do not meet the neutrality required to comply with this WikiNITC\'s [[WikiNITC:NPOV|neutral point of view]] policy. For this reason, some content has been modified or removed. Please modify the paragraphs or sections that show a partial point of view, replacing them with a more neutral and objective text in line with what is expected in an encyclopedia.]]></string>
+    <string name="patroller_saved_message_body_npov"><![CDATA[Hello {{{username}}}, some contributions you have made do not meet the neutrality required to comply with this NITCWiki\'s [[NITCWiki:NPOV|neutral point of view]] policy. For this reason, some content has been modified or removed. Please modify the paragraphs or sections that show a partial point of view, replacing them with a more neutral and objective text in line with what is expected in an encyclopedia.]]></string>
 
-    <string name="places_card_enable_location_card_message">Places is a map-based way to explore WikiNITC</string>
+    <string name="places_card_enable_location_card_message">Places is a map-based way to explore NITCWiki</string>
 
-    <string name="preference_summary_sync_reading_lists">Sync reading lists across different devices by saving them to your WikiNITC account</string>
+    <string name="preference_summary_sync_reading_lists">Sync reading lists across different devices by saving them to your NITCWiki account</string>
 
-    <string name="preference_summary_sync_reading_lists_from_account"><![CDATA[Sync reading lists across different devices by saving them to your WikiNITC account \"%s\"]]></string>
+    <string name="preference_summary_sync_reading_lists_from_account"><![CDATA[Sync reading lists across different devices by saving them to your NITCWiki account \"%s\"]]></string>
 
-    <string name="preference_title_language">WikiNITC languages</string>
+    <string name="preference_title_language">NITCWiki languages</string>
 
-    <string name="reading_challenge_onboarding_header"><![CDATA[Celebrate WikiNITC\'s 25th birthday by joining the 25-day reading challenge!]]></string>
+    <string name="reading_challenge_onboarding_header"><![CDATA[Celebrate NITCWiki\'s 25th birthday by joining the 25-day reading challenge!]]></string>
 
-    <string name="reading_challenge_onboarding_prompt_login">Log in / Join WikiNITC</string>
+    <string name="reading_challenge_onboarding_prompt_login">Log in / Join NITCWiki</string>
 
-    <string name="reading_challenge_widget_explore_wikipedia_button">Explore WikiNITC</string>
+    <string name="reading_challenge_widget_explore_wikipedia_button">Explore NITCWiki</string>
 
-    <string name="reading_challenge_widget_reward_body">Celebrate completing the challenge with 15%% off at the WikiNITC Store.</string>
+    <string name="reading_challenge_widget_reward_body">Celebrate completing the challenge with 15%% off at the NITCWiki Store.</string>
 
-    <string name="reading_list_prompt_turned_sync_on_dialog_text"><![CDATA[Articles saved to reading lists can now be synced to your WikiNITC account. <a href="#faq">Learn more</a>]]></string>
+    <string name="reading_list_prompt_turned_sync_on_dialog_text"><![CDATA[Articles saved to reading lists can now be synced to your NITCWiki account. <a href="#faq">Learn more</a>]]></string>
 
-    <string name="reading_list_share_message_v2"><![CDATA[Hi! I\'d like to share my WikiNITC reading list with you:]]></string>
+    <string name="reading_list_share_message_v2"><![CDATA[Hi! I\'d like to share my NITCWiki reading list with you:]]></string>
 
-    <string name="reading_lists_login_button">Log in / join WikiNITC</string>
+    <string name="reading_lists_login_button">Log in / join NITCWiki</string>
 
-    <string name="reading_lists_login_reminder_text">Reading lists can now be synced across devices. Log in to your WikiNITC account and allow your lists to be saved.</string>
+    <string name="reading_lists_login_reminder_text">Reading lists can now be synced across devices. Log in to your NITCWiki account and allow your lists to be saved.</string>
 
-    <string name="reading_lists_login_reminder_text_with_link"><![CDATA[Reading lists can now be synced across devices. Log in to your WikiNITC account and allow your lists to be saved. <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Wikimedia_Apps/Android_FAQ#Synced_reading_lists">Learn more</a>]]></string>
+    <string name="reading_lists_login_reminder_text_with_link"><![CDATA[Reading lists can now be synced across devices. Log in to your NITCWiki account and allow your lists to be saved. <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Wikimedia_Apps/Android_FAQ#Synced_reading_lists">Learn more</a>]]></string>
 
-    <string name="reading_lists_sync_reminder_text"><![CDATA[Articles saved to reading lists can now be synced to your WikiNITC account. <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Wikimedia_Apps/Android_FAQ#Synced_reading_lists">Learn more</a>]]></string>
+    <string name="reading_lists_sync_reminder_text"><![CDATA[Articles saved to reading lists can now be synced to your NITCWiki account. <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Wikimedia_Apps/Android_FAQ#Synced_reading_lists">Learn more</a>]]></string>
 
-    <string name="recommended_reading_list_onboarding_card_message">Your weekly reading list of WikiNITC articles, curated just for you.</string>
+    <string name="recommended_reading_list_onboarding_card_message">Your weekly reading list of NITCWiki articles, curated just for you.</string>
 
-    <string name="recommended_reading_list_settings_notification_subtitle_enable">When your Discover is updated, WikiNITC will send you a notification.</string>
+    <string name="recommended_reading_list_settings_notification_subtitle_enable">When your Discover is updated, NITCWiki will send you a notification.</string>
 
-    <string name="recommended_reading_list_settings_notifications_subtitle">WikiNITC will not send you a notification when Discover is updated.</string>
+    <string name="recommended_reading_list_settings_notifications_subtitle">NITCWiki will not send you a notification when Discover is updated.</string>
 
-    <string name="recommended_reading_list_settings_toggle_disable_message"><![CDATA[Discover is off. WikiNITC won\'t recommend you articles to read.]]></string>
+    <string name="recommended_reading_list_settings_toggle_disable_message"><![CDATA[Discover is off. NITCWiki won\'t recommend you articles to read.]]></string>
 
-    <string name="recommended_reading_list_settings_toggle_enable_message">Discover is on. WikiNITC will recommend you articles to read.</string>
+    <string name="recommended_reading_list_settings_toggle_enable_message">Discover is on. NITCWiki will recommend you articles to read.</string>
 
-    <string name="recommended_reading_list_settings_turn_off_dialog_message"><![CDATA[If you turn off Discover, you\'ll stop receiving %s reading recommendations from WikiNITC.]]></string>
+    <string name="recommended_reading_list_settings_turn_off_dialog_message"><![CDATA[If you turn off Discover, you\'ll stop receiving %s reading recommendations from NITCWiki.]]></string>
 
-    <string name="search_empty_message_multilingual_upgrade">Search WikiNITC in more languages</string>
+    <string name="search_empty_message_multilingual_upgrade">Search NITCWiki in more languages</string>
 
-    <string name="search_hint">Search WikiNITC</string>
+    <string name="search_hint">Search NITCWiki</string>
 
-    <string name="search_widget_install_prompt_message">Install the WikiNITC Search widget for instant access to knowledge from your home screen.</string>
+    <string name="search_widget_install_prompt_message">Install the NITCWiki Search widget for instant access to knowledge from your home screen.</string>
 
-    <string name="settings_app_icon_preference_subtitle">You have access to a custom icon that celebrates your %d in-app contributions to WikiNITC. It will remain until the next Year in Review.</string>
+    <string name="settings_app_icon_preference_subtitle">You have access to a custom icon that celebrates your %d in-app contributions to NITCWiki. It will remain until the next Year in Review.</string>
 
-    <string name="single_list_json_file_name">%s (WikiNITC reading list).json</string>
+    <string name="single_list_json_file_name">%s (NITCWiki reading list).json</string>
 
-    <string name="suggested_edits_contribution_current_revision_text">Your edit is currently live on WikiNITC</string>
+    <string name="suggested_edits_contribution_current_revision_text">Your edit is currently live on NITCWiki</string>
 
-    <string name="suggested_edits_encourage_account_creation_login_button">Log in / join WikiNITC</string>
+    <string name="suggested_edits_encourage_account_creation_login_button">Log in / join NITCWiki</string>
 
-    <string name="suggested_edits_encourage_account_creation_message">Suggested edits is a new way to edit WikiNITC on Android. It helps you make small but vital contributions to WikiNITC.\nOur goal is to make editing easier and more accessible for everyone! Log in or join WikiNITC to get started.</string>
+    <string name="suggested_edits_encourage_account_creation_message">Suggested edits is a new way to edit NITCWiki on Android. It helps you make small but vital contributions to NITCWiki.\nOur goal is to make editing easier and more accessible for everyone! Log in or join NITCWiki to get started.</string>
 
-    <string name="suggested_edits_encourage_account_creation_title">Did you know that everyone can edit WikiNITC?</string>
+    <string name="suggested_edits_encourage_account_creation_title">Did you know that everyone can edit NITCWiki?</string>
 
-    <string name="suggested_edits_encouragement_message">%s\, thanks for your edits. Below you can find more ways to contribute to WikiNITC.</string>
+    <string name="suggested_edits_encouragement_message">%s\, thanks for your edits. Below you can find more ways to contribute to NITCWiki.</string>
 
-    <string name="suggested_edits_image_preview_dialog_file_page_wikipedia_link_text">File page on WikiNITC</string>
+    <string name="suggested_edits_image_preview_dialog_file_page_wikipedia_link_text">File page on NITCWiki</string>
 
-    <string name="suggested_edits_image_recommendations_task_detail">Add suggested images to WikiNITC articles to enhance understanding.</string>
+    <string name="suggested_edits_image_recommendations_task_detail">Add suggested images to NITCWiki articles to enhance understanding.</string>
 
-    <string name="suggested_edits_image_tags_onboarding_text">By adding image tags, you will help make images easier to search for on Commons, the free license image repository that WikiNITC uses for images in its articles.</string>
+    <string name="suggested_edits_image_tags_onboarding_text">By adding image tags, you will help make images easier to search for on Commons, the free license image repository that NITCWiki uses for images in its articles.</string>
 
-    <string name="suggested_edits_ip_blocked_message">It looks like your IP address (or range of IP addresses) is currently blocked from editing WikiNITC.</string>
+    <string name="suggested_edits_ip_blocked_message">It looks like your IP address (or range of IP addresses) is currently blocked from editing NITCWiki.</string>
 
-    <string name="suggested_edits_onboarding_message"><![CDATA[<b>Hi %s\</b>, below you can find some quick and easy ways to help improve WikiNITC. You\'ll see the difference you\'re making as soon as you get started. Happy editing!]]></string>
+    <string name="suggested_edits_onboarding_message"><![CDATA[<b>Hi %s\</b>, below you can find some quick and easy ways to help improve NITCWiki. You\'ll see the difference you\'re making as soon as you get started. Happy editing!]]></string>
 
-    <string name="suggested_edits_reactivation_notification_stage_one">Thanks for editing WikiNITC! Why not continue where you left off?</string>
+    <string name="suggested_edits_reactivation_notification_stage_one">Thanks for editing NITCWiki! Why not continue where you left off?</string>
 
-    <string name="suggested_edits_reactivation_notification_stage_two">Have a minute to continue improving WikiNITC? Check out these editing suggestions.</string>
+    <string name="suggested_edits_reactivation_notification_stage_two">Have a minute to continue improving NITCWiki? Check out these editing suggestions.</string>
 
-    <string name="suggested_edits_task_multilingual_description">Translation tasks are available if you read and write in more than one WikiNITC language.</string>
+    <string name="suggested_edits_task_multilingual_description">Translation tasks are available if you read and write in more than one NITCWiki language.</string>
 
-    <string name="suggested_edits_what_is_text">Suggested edits presents opportunities for small but vital contributions to WikiNITC.</string>
+    <string name="suggested_edits_what_is_text">Suggested edits presents opportunities for small but vital contributions to NITCWiki.</string>
 
-    <string name="talk_edit_disclaimer"><![CDATA[This is a talk page. Please respect the talk page guidelines, and remember to sign your posts by typing four tildes: ~~~~ when posting using wikitext.<br\><br\><a href="https://en.wikipedia.org/wiki/Wikipedia:Talk_page_guidelines">WikiNITC:Talk page guidelines</a>]]></string>
+    <string name="talk_edit_disclaimer"><![CDATA[This is a talk page. Please respect the talk page guidelines, and remember to sign your posts by typing four tildes: ~~~~ when posting using wikitext.<br\><br\><a href="https://en.wikipedia.org/wiki/Wikipedia:Talk_page_guidelines">NITCWiki:Talk page guidelines</a>]]></string>
 
-    <string name="talk_login_to_subscribe_dialog_content">Topic subscriptions will allow you to receive notifications about new comments in this topic. Please create an account or log into your WikiNITC account to subscribe to a topic.</string>
+    <string name="talk_login_to_subscribe_dialog_content">Topic subscriptions will allow you to receive notifications about new comments in this topic. Please create an account or log into your NITCWiki account to subscribe to a topic.</string>
 
-    <string name="talk_page_empty_content">Talk pages are where people discuss how to make WikiNITC content the best it can be. Start by adding a new discussion topic to connect and collaborate with a community of WikiNITCns.</string>
+    <string name="talk_page_empty_content">Talk pages are where people discuss how to make NITCWiki content the best it can be. Start by adding a new discussion topic to connect and collaborate with a community of NITCWikins.</string>
 
-    <string name="talk_share_discussion_subject"><![CDATA[WikiNITC - discussion on talk page topic \"%s\"]]></string>
+    <string name="talk_share_discussion_subject"><![CDATA[NITCWiki - discussion on talk page topic \"%s\"]]></string>
 
-    <string name="talk_share_talk_page">WikiNITC - discussions on talk page</string>
+    <string name="talk_share_talk_page">NITCWiki - discussions on talk page</string>
 
-    <string name="thank_dialog_text"><![CDATA[\'Thanks\' are an easy way to show appreciation for an editor\'s work on WikiNITC. \'Thanks\' cannot be undone and are publicly viewable]]></string>
+    <string name="thank_dialog_text"><![CDATA[\'Thanks\' are an easy way to show appreciation for an editor\'s work on NITCWiki. \'Thanks\' cannot be undone and are publicly viewable]]></string>
 
-    <string name="view_main_page_card_title">Today on WikiNITC</string>
+    <string name="view_main_page_card_title">Today on NITCWiki</string>
 
-    <string name="view_top_read_card_description">What is trending today on WikiNITC</string>
+    <string name="view_top_read_card_description">What is trending today on NITCWiki</string>
 
-    <string name="view_wiki_error_message_timeout">Cannot connect to WikiNITC. Check your network connection, or try again later</string>
+    <string name="view_wiki_error_message_timeout">Cannot connect to NITCWiki. Check your network connection, or try again later</string>
 
-    <string name="widget_description_featured_page">The best articles WikiNITC has to offer</string>
+    <string name="widget_description_featured_page">The best articles NITCWiki has to offer</string>
 
-    <string name="widget_description_search">The fastest way to search WikiNITC</string>
+    <string name="widget_description_search">The fastest way to search NITCWiki</string>
 
-    <string name="widget_name_featured_page">WikiNITC featured page</string>
+    <string name="widget_name_featured_page">NITCWiki featured page</string>
 
-    <string name="widget_name_search">WikiNITC search</string>
+    <string name="widget_name_search">NITCWiki search</string>
 
-    <string name="wikipedia_app_faq">WikiNITC App FAQ</string>
+    <string name="wikipedia_app_faq">NITCWiki App FAQ</string>
 
-    <string name="wikipedia_games_subtitle">Daily trivia games based WikiNITC content.</string>
+    <string name="wikipedia_games_subtitle">Daily trivia games based NITCWiki content.</string>
 
-    <string name="wikipedia_games_title">WikiNITC games</string>
+    <string name="wikipedia_games_title">NITCWiki games</string>
 
-    <string name="wikipedia_languages_remove_dialog_content">You will only see content on the Home feed and quick search filters for remaining WikiNITC languages.</string>
+    <string name="wikipedia_languages_remove_dialog_content">You will only see content on the Home feed and quick search filters for remaining NITCWiki languages.</string>
 
-    <string name="wikipedia_languages_remove_warning_dialog_content">Keep at least one WikiNITC language from which to search and read content.</string>
+    <string name="wikipedia_languages_remove_warning_dialog_content">Keep at least one NITCWiki language from which to search and read content.</string>
 
-    <string name="wikipedia_languages_title">WikiNITC languages</string>
+    <string name="wikipedia_languages_title">NITCWiki languages</string>
 
-    <string name="year_in_review_get_started_bodytext">See insights about which articles you read on the WikiNITC app and the edits you made.</string>
+    <string name="year_in_review_get_started_bodytext">See insights about which articles you read on the NITCWiki app and the edits you made.</string>
 
-    <string name="year_in_review_get_started_headline">Explore your WikiNITC Year in Review</string>
+    <string name="year_in_review_get_started_headline">Explore your NITCWiki Year in Review</string>
 
-    <string name="year_in_review_highlights_logged_out_non_en_wikipedia_edited_title">How often WikiNITC was edited</string>
+    <string name="year_in_review_highlights_logged_out_non_en_wikipedia_edited_title">How often NITCWiki was edited</string>
 
-    <string name="year_in_review_highlights_logo_description">WikiNITC logo</string>
+    <string name="year_in_review_highlights_logo_description">NITCWiki logo</string>
 
-    <string name="year_in_review_highlights_thank_you_message">Thank you for spending your year with WikiNITC.</string>
+    <string name="year_in_review_highlights_thank_you_message">Thank you for spending your year with NITCWiki.</string>
 
-    <string name="year_in_review_login_dialog_positive">Log in / Join WikiNITC</string>
+    <string name="year_in_review_login_dialog_positive">Log in / Join NITCWiki</string>
 
-    <string name="year_in_review_reading_list_dialog_message"><![CDATA[WikiNITC Year in Review will create a reading list of the articles you spent the most time with in %1$d. <a href="%2$s">Learn more</a>]]></string>
+    <string name="year_in_review_reading_list_dialog_message"><![CDATA[NITCWiki Year in Review will create a reading list of the articles you spent the most time with in %1$d. <a href="%2$s">Learn more</a>]]></string>
 
-    <string name="year_in_review_share_body"><![CDATA[Here\'s my WikiNITC Year in Review. Created with the WikiNITC Android app %1$s %2$s]]></string>
+    <string name="year_in_review_share_body"><![CDATA[Here\'s my NITCWiki Year in Review. Created with the NITCWiki Android app %1$s %2$s]]></string>
 
-    <string name="year_in_review_share_subject">My WikiNITC Year in Review</string>
+    <string name="year_in_review_share_subject">My NITCWiki Year in Review</string>
 
-    <string name="year_in_review_slide_app_edited_times_body">The heart and soul of WikiNITC is our global community of volunteer contributors, donors, and billions of readers like yourself – all united to share unlimited access to reliable information.</string>
+    <string name="year_in_review_slide_app_edited_times_body">The heart and soul of NITCWiki is our global community of volunteer contributors, donors, and billions of readers like yourself – all united to share unlimited access to reliable information.</string>
 
-    <string name="year_in_review_slide_app_icon_body_unlock"><![CDATA[We\'re glad WikiNITC was part of your %1$d! Unlock a special reward in your %2$d Year in Review by becoming a contributor—whether by <a href="%3$s">editing WikiNITC</a> or by donating from the app to the <a href="%4$s">Wikimedia Foundation</a>, the nonprofit behind it. If WikiNITC is useful to you, please consider donating to help sustain its future and keep it free, ad-free, trustworthy, and accessible to all. If you donated elsewhere, your support is deeply appreciated.]]></string>
+    <string name="year_in_review_slide_app_icon_body_unlock"><![CDATA[We\'re glad NITCWiki was part of your %1$d! Unlock a special reward in your %2$d Year in Review by becoming a contributor—whether by <a href="%3$s">editing NITCWiki</a> or by donating from the app to the <a href="%4$s">Wikimedia Foundation</a>, the nonprofit behind it. If NITCWiki is useful to you, please consider donating to help sustain its future and keep it free, ad-free, trustworthy, and accessible to all. If you donated elsewhere, your support is deeply appreciated.]]></string>
 
-    <string name="year_in_review_slide_app_icon_body_unlocked">Activate your new app icon in Settings under App icon. Thank you for investing in the future of free knowledge. Your contributions as %1$s in %2$d are helping pave the way to a world of free information, and as a result you have unlocked a custom contributor icon for WikiNITC on your home screen.</string>
+    <string name="year_in_review_slide_app_icon_body_unlocked">Activate your new app icon in Settings under App icon. Thank you for investing in the future of free knowledge. Your contributions as %1$s in %2$d are helping pave the way to a world of free information, and as a result you have unlocked a custom contributor icon for NITCWiki on your home screen.</string>
 
-    <string name="year_in_review_slide_most_read_english_articles_headline"><![CDATA[English WikiNITC\'s most read articles]]></string>
+    <string name="year_in_review_slide_most_read_english_articles_headline"><![CDATA[English NITCWiki\'s most read articles]]></string>
 
-    <string name="year_in_review_slide_viewed_articles_times_body">For people around the world, WikiNITC is the first stop when answering a question, looking up information for school or work, or learning a new fact.</string>
+    <string name="year_in_review_slide_viewed_articles_times_body">For people around the world, NITCWiki is the first stop when answering a question, looking up information for school or work, or learning a new fact.</string>
 
-    <string name="year_in_review_topbar_w_icon">WikiNITC W Icon</string>
+    <string name="year_in_review_topbar_w_icon">NITCWiki W Icon</string>
 
     <plurals name="year_in_review_slide_most_read_english_articles_body">
-        <item quantity="one"><![CDATA[When people want to learn about our world, they turn to WikiNITC. The top %1$d visited article on English WikiNITC was: %2$s <br />Read more in our <a href=\"%3$s\">dedicated blog post</a>.]]></item>
-        <item quantity="other"><![CDATA[When people want to learn about our world, they turn to WikiNITC. The top %1$d visited articles on English WikiNITC were: %2$s <br />Read more in our <a href=\"%3$s\">dedicated blog post</a>.]]></item>
+        <item quantity="one"><![CDATA[When people want to learn about our world, they turn to NITCWiki. The top %1$d visited article on English NITCWiki was: %2$s <br />Read more in our <a href=\"%3$s\">dedicated blog post</a>.]]></item>
+        <item quantity="other"><![CDATA[When people want to learn about our world, they turn to NITCWiki. The top %1$d visited articles on English NITCWiki were: %2$s <br />Read more in our <a href=\"%3$s\">dedicated blog post</a>.]]></item>
     </plurals>
 
     <plurals name="year_in_review_slide_edits_viewed_times_body">
-        <item quantity="one"><![CDATA[Readers around the world appreciate your contributions. In the last 2 months, articles you\'ve edited have received %,d total view. Thanks to editors like you, WikiNITC is a steadily improving, fact-based, and reliable knowledge resource for the world.]]></item>
-        <item quantity="other"><![CDATA[Readers around the world appreciate your contributions. In the last 2 months, articles you\'ve edited have received %,d total views. Thanks to editors like you, WikiNITC is a steadily improving, fact-based, and reliable knowledge resource for the world.]]></item>
+        <item quantity="one"><![CDATA[Readers around the world appreciate your contributions. In the last 2 months, articles you\'ve edited have received %,d total view. Thanks to editors like you, NITCWiki is a steadily improving, fact-based, and reliable knowledge resource for the world.]]></item>
+        <item quantity="other"><![CDATA[Readers around the world appreciate your contributions. In the last 2 months, articles you\'ve edited have received %,d total views. Thanks to editors like you, NITCWiki is a steadily improving, fact-based, and reliable knowledge resource for the world.]]></item>
     </plurals>
 
     <plurals name="year_in_review_slide_edited_per_minute_headline">
-        <item quantity="one">WikiNITC was edited %,d time per minute</item>
-        <item quantity="other">WikiNITC was edited %,d times per minute</item>
+        <item quantity="one">NITCWiki was edited %,d time per minute</item>
+        <item quantity="other">NITCWiki was edited %,d times per minute</item>
     </plurals>
 
     <plurals name="year_in_review_slide_bytes_added_body">
-        <item quantity="one"><![CDATA[In %1$d, volunteers added %2$,d byte to English WikiNITC. The sum of all their work together leads to a steadily improving, fact-based, and reliable knowledge resource that they give to the world. All of us have knowledge to share, <a href="%3$s">learn how to participate</a>.]]></item>
-        <item quantity="other"><![CDATA[In %1$d, volunteers added %2$,d bytes to English WikiNITC. The sum of all their work together leads to a steadily improving, fact-based, and reliable knowledge resource that they give to the world. All of us have knowledge to share, <a href="%3$s">learn how to participate</a>.]]></item>
+        <item quantity="one"><![CDATA[In %1$d, volunteers added %2$,d byte to English NITCWiki. The sum of all their work together leads to a steadily improving, fact-based, and reliable knowledge resource that they give to the world. All of us have knowledge to share, <a href="%3$s">learn how to participate</a>.]]></item>
+        <item quantity="other"><![CDATA[In %1$d, volunteers added %2$,d bytes to English NITCWiki. The sum of all their work together leads to a steadily improving, fact-based, and reliable knowledge resource that they give to the world. All of us have knowledge to share, <a href="%3$s">learn how to participate</a>.]]></item>
     </plurals>
 
     <plurals name="year_in_review_slide_edited_times_body">
-        <item quantity="one">Thank you for being one of the volunteer editors making a difference on Wikimedia projects around the world. Volunteers like you made %,d change across over 300 different language editions of WikiNITC.</item>
-        <item quantity="other">Thank you for being one of the volunteer editors making a difference on Wikimedia projects around the world. Volunteers like you made %,d changes across over 300 different language editions of WikiNITC.</item>
+        <item quantity="one">Thank you for being one of the volunteer editors making a difference on Wikimedia projects around the world. Volunteers like you made %,d change across over 300 different language editions of NITCWiki.</item>
+        <item quantity="other">Thank you for being one of the volunteer editors making a difference on Wikimedia projects around the world. Volunteers like you made %,d changes across over 300 different language editions of NITCWiki.</item>
     </plurals>
 
     <plurals name="year_in_review_slide_app_edited_times_headline">
-        <item quantity="one">Editors on the official WikiNITC apps made %,d edit</item>
-        <item quantity="other">Editors on the official WikiNITC apps made %,d edits</item>
+        <item quantity="one">Editors on the official NITCWiki apps made %,d edit</item>
+        <item quantity="other">Editors on the official NITCWiki apps made %,d edits</item>
     </plurals>
 
     <plurals name="year_in_review_slide_english_edited_times_body_first">
-        <item quantity="one">Volunteers made %,d change across over 300 different language editions of WikiNITC.</item>
-        <item quantity="other">Volunteers made %,d changes across over 300 different language editions of WikiNITC.</item>
+        <item quantity="one">Volunteers made %,d change across over 300 different language editions of NITCWiki.</item>
+        <item quantity="other">Volunteers made %,d changes across over 300 different language editions of NITCWiki.</item>
     </plurals>
 
     <plurals name="year_in_review_slide_english_edited_times_body_second">
-        <item quantity="one">%,d change was made on English WikiNITC. Every hour of every day, volunteers are working to improve WikiNITC.</item>
-        <item quantity="other">%,d changes were made on English WikiNITC. Every hour of every day, volunteers are working to improve WikiNITC.</item>
+        <item quantity="one">%,d change was made on English NITCWiki. Every hour of every day, volunteers are working to improve NITCWiki.</item>
+        <item quantity="other">%,d changes were made on English NITCWiki. Every hour of every day, volunteers are working to improve NITCWiki.</item>
     </plurals>
 
     <plurals name="year_in_review_slide_saved_articles_body">
-        <item quantity="one"><![CDATA[These articles included <b>%1$s</b>, <b>%2$s</b>, and <b>%3$s</b>. Each saved article reflects your interests and helps build a personalized knowledge base on WikiNITC.<br /><br />Active app users had %4$,d saved article this year.]]></item>
-        <item quantity="other"><![CDATA[These articles included <b>%1$s</b>, <b>%2$s</b>, and <b>%3$s</b>. Each saved article reflects your interests and helps build a personalized knowledge base on WikiNITC.<br /><br />Active app users had %4$,d saved articles this year.]]></item>
+        <item quantity="one"><![CDATA[These articles included <b>%1$s</b>, <b>%2$s</b>, and <b>%3$s</b>. Each saved article reflects your interests and helps build a personalized knowledge base on NITCWiki.<br /><br />Active app users had %4$,d saved article this year.]]></item>
+        <item quantity="other"><![CDATA[These articles included <b>%1$s</b>, <b>%2$s</b>, and <b>%3$s</b>. Each saved article reflects your interests and helps build a personalized knowledge base on NITCWiki.<br /><br />Active app users had %4$,d saved articles this year.]]></item>
     </plurals>
 
     <plurals name="year_in_review_slide_english_reading_hours_body_second">
-        <item quantity="one"><![CDATA[—around %1$,d year!—reading English WikiNITC in %2$d. WikiNITC is there when you want to learn about our changing world, win a bet among friends, or answer a curious child\'s question.]]></item>
-        <item quantity="other"><![CDATA[—around %1$,d years!—reading English WikiNITC in %2$d. WikiNITC is there when you want to learn about our changing world, win a bet among friends, or answer a curious child\'s question.]]></item>
+        <item quantity="one"><![CDATA[—around %1$,d year!—reading English NITCWiki in %2$d. NITCWiki is there when you want to learn about our changing world, win a bet among friends, or answer a curious child\'s question.]]></item>
+        <item quantity="other"><![CDATA[—around %1$,d years!—reading English NITCWiki in %2$d. NITCWiki is there when you want to learn about our changing world, win a bet among friends, or answer a curious child\'s question.]]></item>
     </plurals>
 
     <plurals name="year_in_review_slide_available_languages_headline">
-        <item quantity="one">WikiNITC was available in more than %,d language</item>
-        <item quantity="other">WikiNITC was available in more than %,d languages</item>
+        <item quantity="one">NITCWiki was available in more than %,d language</item>
+        <item quantity="other">NITCWiki was available in more than %,d languages</item>
     </plurals>
 
     <plurals name="year_in_review_slide_available_languages_body_first">
-        <item quantity="one">WikiNITC had %,d article</item>
-        <item quantity="other">WikiNITC had %,d articles</item>
+        <item quantity="one">NITCWiki had %,d article</item>
+        <item quantity="other">NITCWiki had %,d articles</item>
     </plurals>
 
     <plurals name="year_in_review_slide_spent_minutes_reading_body_top">
-        <item quantity="one">We estimate that puts you in the top %1$s%% of WikiNITC readers globally. The average person reads %2$,d article a year.</item>
-        <item quantity="other">We estimate that puts you in the top %1$s%% of WikiNITC readers globally. The average person reads %2$,d articles a year.</item>
+        <item quantity="one">We estimate that puts you in the top %1$s%% of NITCWiki readers globally. The average person reads %2$,d article a year.</item>
+        <item quantity="other">We estimate that puts you in the top %1$s%% of NITCWiki readers globally. The average person reads %2$,d articles a year.</item>
     </plurals>
 
     <plurals name="year_in_review_slide_spent_minutes_reading_body_global_first">
-        <item quantity="one">WikiNITC had %,d article</item>
-        <item quantity="other">WikiNITC had %,d articles</item>
+        <item quantity="one">NITCWiki had %,d article</item>
+        <item quantity="other">NITCWiki had %,d articles</item>
     </plurals>
 
     <plurals name="year_in_review_slide_spent_minutes_reading_body_english_second">
-        <item quantity="one">—around %1$,d year!—reading English WikiNITC in %2$d.</item>
-        <item quantity="other">—around %1$,d years!—reading English WikiNITC in %2$d.</item>
+        <item quantity="one">—around %1$,d year!—reading English NITCWiki in %2$d.</item>
+        <item quantity="other">—around %1$,d years!—reading English NITCWiki in %2$d.</item>
     </plurals>
 
     <plurals name="year_in_review_slide_viewed_articles_times_headline">
-        <item quantity="one">App users viewed WikiNITC articles %,d time</item>
-        <item quantity="other">App users viewed WikiNITC articles %,d times</item>
+        <item quantity="one">App users viewed NITCWiki articles %,d time</item>
+        <item quantity="other">App users viewed NITCWiki articles %,d times</item>
     </plurals>
 
     <plurals name="year_in_review_highlights_logged_out_en_most_read_title">
-        <item quantity="one">Most read article on English WikiNITC</item>
-        <item quantity="other">Most read articles on English WikiNITC</item>
+        <item quantity="one">Most read article on English NITCWiki</item>
+        <item quantity="other">Most read articles on English NITCWiki</item>
     </plurals>
 
 </resources>

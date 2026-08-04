@@ -35,7 +35,7 @@ import coil3.request.allowHardware
 import org.wikipedia.R
 import org.wikipedia.compose.ComposeColors
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.history.db.HistoryEntryWithImage
 import org.wikipedia.theme.Theme
 import org.wikipedia.yearinreview.YearInReviewScreenData.CustomIconScreen
@@ -145,7 +145,7 @@ sealed class YearInReviewScreenData(
                     .fillMaxWidth()
                     .padding(start = 8.dp, end = 8.dp, top = 8.dp).fillMaxWidth(),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = WikipediaTheme.colors.progressiveColor
+                    containerColor = NITCWikiTheme.colors.progressiveColor
                 ),
                 onClick = { onButtonClick(this) }
             ) {
@@ -209,7 +209,7 @@ sealed class YearInReviewScreenData(
                     modifier = Modifier.padding(start = 8.dp, end = 8.dp, top = 8.dp).fillMaxWidth(),
                     contentPadding = PaddingValues(horizontal = 18.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = WikipediaTheme.colors.progressiveColor
+                        containerColor = NITCWikiTheme.colors.progressiveColor
                     ),
                     onClick = { onButtonClick(this) },
                 ) {

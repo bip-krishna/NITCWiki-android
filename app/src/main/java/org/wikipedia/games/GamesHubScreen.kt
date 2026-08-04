@@ -44,7 +44,7 @@ import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.extensions.shimmerEffect
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.extensions.getString
 import org.wikipedia.feed.wikigames.OnThisDayCardGameState
 import org.wikipedia.feed.wikigames.OnThisDayGameAction
@@ -76,8 +76,8 @@ fun GamesHubScreen(
     Scaffold(
         modifier = Modifier
             .fillMaxSize()
-            .background(WikipediaTheme.colors.paperColor),
-        containerColor = WikipediaTheme.colors.paperColor
+            .background(NITCWikiTheme.colors.paperColor),
+        containerColor = NITCWikiTheme.colors.paperColor
     ) { paddingValues ->
 
         PullToRefreshBox(
@@ -93,8 +93,8 @@ fun GamesHubScreen(
                     state = state,
                     isRefreshing = isRefreshing,
                     modifier = Modifier.align(Alignment.TopCenter),
-                    containerColor = WikipediaTheme.colors.paperColor,
-                    color = WikipediaTheme.colors.progressiveColor
+                    containerColor = NITCWikiTheme.colors.paperColor,
+                    color = NITCWikiTheme.colors.progressiveColor
                 )
             }
         ) {
@@ -241,7 +241,7 @@ fun GamesHubLanguageChip(
 ) {
     val langText = NITCWikiApp.instance.languageState.getAppLanguageLocalizedName(langCode) ?: langCode
     val isEnabled = WikiGames.WHICH_CAME_FIRST.isLangSupported(langCode) // TODO: Add check for other games when they are added
-    val textColor = if (isEnabled) WikipediaTheme.colors.primaryColor else WikipediaTheme.colors.inactiveColor
+    val textColor = if (isEnabled) NITCWikiTheme.colors.primaryColor else NITCWikiTheme.colors.inactiveColor
     val snackbarMessage = stringResource(R.string.games_hub_activity_games_unavailable_message)
     FilterChip(
         selected = isSelected,
@@ -253,11 +253,11 @@ fun GamesHubLanguageChip(
             onSelected()
         },
         colors = FilterChipDefaults.filterChipColors().copy(
-            selectedContainerColor = WikipediaTheme.colors.additionColor
+            selectedContainerColor = NITCWikiTheme.colors.additionColor
         ),
         border = BorderStroke(
             width = 1.dp,
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         ),
         label = {
             Text(
@@ -272,7 +272,7 @@ fun GamesHubLanguageChip(
             if (isSelected) {
                 Icon(
                     painter = painterResource(R.drawable.ic_check_black_24dp),
-                    tint = WikipediaTheme.colors.primaryColor,
+                    tint = NITCWikiTheme.colors.primaryColor,
                     contentDescription = null
                 )
             }
@@ -293,7 +293,7 @@ fun OnThisDayGameCards(
             text = LocalContext.current.getString(selectedLanguage, WikiGames.entries[position].titleRes),
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.Medium,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
 
         // Load fix cards: Today, last 3 days and archive
@@ -333,7 +333,7 @@ fun OnThisDayGameCards(
                                 .height(350.dp)
                                 .padding(vertical = 8.dp),
                             iconRes = R.drawable.event_repeat_24dp,
-                            iconTint = WikipediaTheme.colors.primaryColor,
+                            iconTint = NITCWikiTheme.colors.primaryColor,
                             titleText = stringResource(R.string.on_this_day_game_card_archive_label),
                             onPlayClick = {
                                 WikiGamesEvent.submit(action = "archive_click", activeInterface = "games_hub", cardType = "archive", langCode = selectedLanguage, position = cardIndex + 1)
@@ -380,7 +380,7 @@ fun OnThisDayGameCardContent(
                     OnThisDayGameCardSimple(
                         modifier = modifier,
                         iconRes = R.drawable.ic_events_24dp,
-                        iconTint = WikipediaTheme.colors.progressiveColor,
+                        iconTint = NITCWikiTheme.colors.progressiveColor,
                         titleText = dateTitle,
                         onPlayClick = {
                             WikiGamesEvent.submit(action = "play_click", activeInterface = "games_hub", cardType = "archive", langCode = selectedLanguage, position = cardPositionForEvent)

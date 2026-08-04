@@ -34,7 +34,7 @@ import org.wikipedia.compose.components.WikiCard
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.games.onthisday.OnThisDayGameViewModel
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.UiState
@@ -98,13 +98,13 @@ fun WikiGamesStatsCard(
     WikiCard(
         modifier = modifier,
         colors = CardDefaults.cardColors(
-            containerColor = WikipediaTheme.colors.paperColor,
-            contentColor = WikipediaTheme.colors.paperColor
+            containerColor = NITCWikiTheme.colors.paperColor,
+            contentColor = NITCWikiTheme.colors.paperColor
         ),
         elevation = 0.dp,
         border = BorderStroke(
             width = 1.dp,
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         ),
         onClick = onStatsCardClick
     ) {
@@ -124,13 +124,13 @@ fun WikiGamesStatsCard(
                         style = MaterialTheme.typography.labelMedium.copy(
                             fontWeight = FontWeight.SemiBold
                         ),
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                         lineHeight = MaterialTheme.typography.labelMedium.lineHeight
                     )
                     Icon(
                         modifier = Modifier.size(24.dp),
                         painter = painterResource(R.drawable.ic_chevron_forward_white_24dp),
-                        tint = WikipediaTheme.colors.secondaryColor,
+                        tint = NITCWikiTheme.colors.secondaryColor,
                         contentDescription = null
                     )
                 }
@@ -177,7 +177,7 @@ fun WikiGamesStatsCard(
                     modifier = Modifier.padding(top = 16.dp).align(Alignment.CenterHorizontally),
                     contentPadding = PaddingValues(horizontal = 18.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = WikipediaTheme.colors.progressiveColor,
+                        containerColor = NITCWikiTheme.colors.progressiveColor,
                         contentColor = Color.White,
                     ),
                     onClick = { onPlayGameCardClick?.invoke() },
@@ -206,7 +206,7 @@ fun WikiGamesStatView(
         Icon(
             modifier = Modifier.size(28.dp),
             painter = painterResource(iconResource),
-            tint = WikipediaTheme.colors.progressiveColor,
+            tint = NITCWikiTheme.colors.progressiveColor,
             contentDescription = null
         )
         Column(
@@ -217,12 +217,12 @@ fun WikiGamesStatView(
                 style = MaterialTheme.typography.labelLarge.copy(
                     fontWeight = FontWeight.SemiBold
                 ),
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
             Text(
                 text = statLabel.lowercase(),
                 style = MaterialTheme.typography.bodySmall,
-                color = WikipediaTheme.colors.primaryColor
+                color = NITCWikiTheme.colors.primaryColor
             )
         }
     }
@@ -236,13 +236,13 @@ fun OnThisDayGameLoginPromptCard(
     WikiCard(
         modifier = modifier,
         colors = CardDefaults.cardColors(
-            containerColor = WikipediaTheme.colors.paperColor,
-            contentColor = WikipediaTheme.colors.paperColor
+            containerColor = NITCWikiTheme.colors.paperColor,
+            contentColor = NITCWikiTheme.colors.paperColor
         ),
         elevation = 0.dp,
         border = BorderStroke(
             width = 1.dp,
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         )
     ) {
         Column(
@@ -253,7 +253,7 @@ fun OnThisDayGameLoginPromptCard(
         ) {
             Text(
                 text = stringResource(R.string.on_this_day_game_stats_log_in_prompt_card_title),
-                color = WikipediaTheme.colors.primaryColor,
+                color = NITCWikiTheme.colors.primaryColor,
                 style = MaterialTheme.typography.titleSmall.copy(
                     fontWeight = FontWeight.SemiBold
                 )
@@ -263,7 +263,7 @@ fun OnThisDayGameLoginPromptCard(
                 modifier = Modifier
                     .padding(top = 8.dp),
                 text = stringResource(R.string.on_this_day_game_stats_log_in_prompt_card_description),
-                color = WikipediaTheme.colors.primaryColor,
+                color = NITCWikiTheme.colors.primaryColor,
                 style = MaterialTheme.typography.bodyMedium
             )
 
@@ -271,7 +271,7 @@ fun OnThisDayGameLoginPromptCard(
                 modifier = Modifier
                     .padding(top = 16.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = WikipediaTheme.colors.progressiveColor,
+                    containerColor = NITCWikiTheme.colors.progressiveColor,
                     contentColor = Color.White,
                 ),
                 elevation = ButtonDefaults.elevatedButtonElevation(

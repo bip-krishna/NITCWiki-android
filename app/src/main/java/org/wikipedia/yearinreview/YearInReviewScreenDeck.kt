@@ -65,7 +65,7 @@ import org.wikipedia.compose.components.PageIndicator
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.UiState
 import org.wikipedia.util.UriUtil
@@ -108,11 +108,11 @@ fun YearInReviewScreenDeck(
             Scaffold(
                 modifier = modifier
                     .safeDrawingPadding(),
-                containerColor = WikipediaTheme.colors.paperColor,
+                containerColor = NITCWikiTheme.colors.paperColor,
                 topBar = {
                     TopAppBar(
                         colors = TopAppBarDefaults.topAppBarColors(
-                            containerColor = WikipediaTheme.colors.paperColor
+                            containerColor = NITCWikiTheme.colors.paperColor
                         ),
                         title = { },
                         navigationIcon = {
@@ -122,7 +122,7 @@ fun YearInReviewScreenDeck(
                             }) {
                                 Icon(
                                     painter = painterResource(R.drawable.ic_close_black_24dp),
-                                    tint = WikipediaTheme.colors.primaryColor,
+                                    tint = NITCWikiTheme.colors.primaryColor,
                                     contentDescription = stringResource(R.string.year_in_review_close)
                                 )
                             }
@@ -144,14 +144,14 @@ fun YearInReviewScreenDeck(
                                     ) {
                                         Icon(
                                             painter = painterResource(R.drawable.ic_heart_24),
-                                            tint = WikipediaTheme.colors.destructiveColor,
+                                            tint = NITCWikiTheme.colors.destructiveColor,
                                             contentDescription = stringResource(R.string.year_in_review_heart_icon),
                                         )
 
                                         Text(
                                             text = stringResource(R.string.year_in_review_donate),
                                             style = MaterialTheme.typography.labelLarge,
-                                            color = WikipediaTheme.colors.destructiveColor
+                                            color = NITCWikiTheme.colors.destructiveColor
                                         )
                                     }
                                 }
@@ -219,7 +219,7 @@ fun YearInReviewScreenDeck(
         }
 
         is UiState.Error -> {
-            Box(modifier = Modifier.fillMaxSize()) {
+            Box(Modifier.fillMaxSize()) {
                 WikiErrorView(
                     modifier = modifier.align(Alignment.Center),
                     caught = state.error,
@@ -253,7 +253,7 @@ fun MainBottomBar(
             modifier = Modifier
                 .height(1.dp)
                 .fillMaxWidth(),
-            color = WikipediaTheme.colors.borderColor
+            color = NITCWikiTheme.colors.borderColor
         )
         Box {
             pages[pagerState.currentPage].BottomButton(context, onBottomButtonClick)
@@ -270,7 +270,7 @@ fun MainBottomBar(
                 ) {
                     Icon(
                         painter = painterResource(R.drawable.ic_share),
-                        tint = WikipediaTheme.colors.primaryColor,
+                        tint = NITCWikiTheme.colors.primaryColor,
                         contentDescription = stringResource(R.string.year_in_review_share_icon)
                     )
                 }
@@ -292,7 +292,7 @@ fun MainBottomBar(
             ) {
                 Icon(
                     painter = painterResource(R.drawable.ic_arrow_forward_black_24dp),
-                    tint = WikipediaTheme.colors.primaryColor,
+                    tint = NITCWikiTheme.colors.primaryColor,
                     contentDescription = stringResource(R.string.year_in_review_navigate_right)
                 )
             }
@@ -311,8 +311,8 @@ fun CreateScreenShotBitmap(
 
     if (isImageLoaded) {
         LaunchedEffect(Unit) {
-            val bitmap = graphicsLayer.toImageBitmap()
-            onBitmapReady(bitmap.asAndroidBitmap())
+            val graphicsLayerBitmap = graphicsLayer.toImageBitmap()
+            onBitmapReady(graphicsLayerBitmap.asAndroidBitmap())
         }
     }
 
@@ -325,7 +325,7 @@ fun CreateScreenShotBitmap(
                 }
                 drawLayer(graphicsLayer)
             }
-            .background(color = WikipediaTheme.colors.paperColor)
+            .background(color = NITCWikiTheme.colors.paperColor)
             .padding(vertical = 8.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -341,7 +341,7 @@ fun CreateScreenShotBitmap(
         ) {
             Icon(
                 painter = painterResource(R.drawable.ic_wikipedia_b),
-                tint = WikipediaTheme.colors.primaryColor,
+                tint = NITCWikiTheme.colors.primaryColor,
                 contentDescription = stringResource(R.string.app_name_prod),
                 modifier = Modifier
                     .height(20.dp)
@@ -362,7 +362,7 @@ fun CreateScreenShotBitmap(
         Text(
             modifier = Modifier.padding(top = 32.dp),
             text = processString(R.string.year_in_review_hashtag),
-            color = WikipediaTheme.colors.primaryColor,
+            color = NITCWikiTheme.colors.primaryColor,
             style = MaterialTheme.typography.bodyLarge.copy(
                 fontWeight = FontWeight.Medium
             )
@@ -437,7 +437,7 @@ private fun StandardScreenContent(
                         .height(IntrinsicSize.Min)
                         .weight(1f),
                     text = processString(screenData.headlineText),
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     style = MaterialTheme.typography.headlineMedium
                 )
                 if (!screenCaptureMode && !isOnboardingScreen) {
@@ -450,7 +450,7 @@ private fun StandardScreenContent(
                         }) {
                         Icon(
                             painter = painterResource(R.drawable.baseline_info_24),
-                            tint = WikipediaTheme.colors.primaryColor,
+                            tint = NITCWikiTheme.colors.primaryColor,
                             contentDescription = stringResource(R.string.year_in_review_information_icon)
                         )
                     }
@@ -474,10 +474,10 @@ private fun StandardScreenContent(
                         .padding(top = 10.dp, start = 16.dp, end = 16.dp, bottom = 16.dp)
                         .height(IntrinsicSize.Min),
                     text = processString(screenData.bodyText),
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     linkStyle = TextLinkStyles(
                         style = SpanStyle(
-                            color = WikipediaTheme.colors.progressiveColor,
+                            color = NITCWikiTheme.colors.progressiveColor,
                             fontSize = 16.sp
                         )
                     ),
@@ -501,14 +501,14 @@ fun ReadingPatternsItem(
             modifier = Modifier
                 .height(IntrinsicSize.Min),
             text = processString(title),
-            color = WikipediaTheme.colors.primaryColor,
+            color = NITCWikiTheme.colors.primaryColor,
             style = MaterialTheme.typography.bodyLarge
         )
         Text(
             modifier = Modifier
                 .height(IntrinsicSize.Min),
             text = processString(description),
-            color = WikipediaTheme.colors.primaryColor,
+            color = NITCWikiTheme.colors.primaryColor,
             style = MaterialTheme.typography.bodyMedium
         )
     }
@@ -521,12 +521,12 @@ fun LoadingIndicator() {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxSize()
-            .background(WikipediaTheme.colors.paperColor)
+            .background(NITCWikiTheme.colors.paperColor)
     ) {
         CircularProgressIndicator(
             modifier = Modifier
                 .padding(24.dp),
-            color = WikipediaTheme.colors.progressiveColor
+            color = NITCWikiTheme.colors.progressiveColor
         )
     }
 }

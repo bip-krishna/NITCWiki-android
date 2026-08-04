@@ -49,7 +49,7 @@ import org.wikipedia.R
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.extensions.lazyColumnScrollbar
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.extensions.instrument
 import org.wikipedia.language.AppLanguageState
 import org.wikipedia.theme.Theme
@@ -70,7 +70,7 @@ fun InitialOnboardingScreen(
     var currentScreenIndex by remember { mutableIntStateOf(0) }
     Scaffold(
         modifier = modifier,
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
         bottomBar = {
             Column(
                 modifier = Modifier
@@ -81,7 +81,7 @@ fun InitialOnboardingScreen(
                     Spacer(
                         modifier = Modifier.height(1.dp)
                             .fillMaxWidth()
-                            .background(WikipediaTheme.colors.borderColor)
+                            .background(NITCWikiTheme.colors.borderColor)
                     )
                 }
                 Box(
@@ -100,7 +100,7 @@ fun InitialOnboardingScreen(
                     }) {
                         Icon(
                             painter = painterResource(R.drawable.ic_arrow_forward_black_24dp),
-                            tint = WikipediaTheme.colors.progressiveColor,
+                            tint = NITCWikiTheme.colors.progressiveColor,
                             contentDescription = stringResource(R.string.nav_item_forward)
                         )
                     }
@@ -118,7 +118,7 @@ fun InitialOnboardingScreen(
                     InitialOnboardingIntroContent(
                         onLearnMoreClick = {
                             context.instrument?.submitInteraction("click", elementId = "about_link", actionSubtype = onboardingScreens[currentScreenIndex].name)
-                            FeedbackUtil.showAboutWikipedia(context)
+                            FeedbackUtil.showAboutNITCWiki(context)
                         }
                     )
                 }
@@ -166,7 +166,7 @@ fun InitialOnboardingIntroContent(
                 .height(20.dp),
             painter = painterResource(R.drawable.feed_header_wordmark),
             contentDescription = stringResource(R.string.app_name_prod),
-            colorFilter = ColorFilter.tint(WikipediaTheme.colors.primaryColor),
+            colorFilter = ColorFilter.tint(NITCWikiTheme.colors.primaryColor),
         )
 
         Spacer(modifier = Modifier.height(24.dp))
@@ -178,7 +178,7 @@ fun InitialOnboardingIntroContent(
             text = stringResource(R.string.onboarding_fresh_install_knowledge_title),
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Medium,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         Text(
             modifier = Modifier
@@ -186,7 +186,7 @@ fun InitialOnboardingIntroContent(
                 .padding(horizontal = 24.dp),
             text = stringResource(R.string.onboarding_fresh_install_knowledge_text),
             style = MaterialTheme.typography.bodyLarge,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         Text(
             modifier = Modifier
@@ -196,7 +196,7 @@ fun InitialOnboardingIntroContent(
             text = stringResource(R.string.onboarding_fresh_install_knowledge_learn_more),
             style = MaterialTheme.typography.bodyLarge,
             fontWeight = FontWeight.Bold,
-            color = WikipediaTheme.colors.progressiveColor
+            color = NITCWikiTheme.colors.progressiveColor
         )
 
         Spacer(modifier = Modifier.weight(1f))
@@ -248,7 +248,7 @@ fun InitialOnboardingDataPrivacyContent(
             text = stringResource(R.string.onboarding_data_privacy_title),
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Medium,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         HtmlText(
             modifier = Modifier
@@ -256,10 +256,10 @@ fun InitialOnboardingDataPrivacyContent(
                 .padding(horizontal = 24.dp),
             text = stringResource(R.string.onboarding_data_privacy_text),
             style = MaterialTheme.typography.bodyLarge,
-            color = WikipediaTheme.colors.primaryColor,
+            color = NITCWikiTheme.colors.primaryColor,
             linkStyle = TextLinkStyles(
                 style = SpanStyle(
-                    color = WikipediaTheme.colors.progressiveColor,
+                    color = NITCWikiTheme.colors.progressiveColor,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold
                 )
@@ -319,7 +319,7 @@ fun InitialOnboardingLanguagesScreen(
             text = stringResource(R.string.onboarding_app_languages_title),
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Medium,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
         Text(
             modifier = Modifier
@@ -327,7 +327,7 @@ fun InitialOnboardingLanguagesScreen(
                 .padding(horizontal = 24.dp),
             text = stringResource(R.string.onboarding_app_languages_text),
             style = MaterialTheme.typography.bodyLarge,
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -340,7 +340,7 @@ fun InitialOnboardingLanguagesScreen(
                 .padding(horizontal = 24.dp)
                 .lazyColumnScrollbar(
                     state = lazyListState,
-                    color = WikipediaTheme.colors.inactiveColor
+                    color = NITCWikiTheme.colors.inactiveColor
                 ),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
@@ -350,7 +350,7 @@ fun InitialOnboardingLanguagesScreen(
                     Spacer(
                         modifier = Modifier.height(0.5.dp)
                             .fillMaxWidth()
-                            .background(WikipediaTheme.colors.borderColor)
+                            .background(NITCWikiTheme.colors.borderColor)
                     )
                     Spacer(modifier = Modifier.height(16.dp))
                 }
@@ -373,7 +373,7 @@ fun InitialOnboardingLanguagesScreen(
                 text = stringResource(R.string.onboarding_app_languages_add_button),
                 style = MaterialTheme.typography.bodyLarge,
                 fontWeight = FontWeight.Bold,
-                color = WikipediaTheme.colors.progressiveColor,
+                color = NITCWikiTheme.colors.progressiveColor,
             )
         }
     }
@@ -392,7 +392,7 @@ fun InitialOnboardingLanguageItem(
         text = localizedName,
         style = MaterialTheme.typography.bodyLarge,
         fontWeight = FontWeight.Medium,
-        color = WikipediaTheme.colors.primaryColor
+        color = NITCWikiTheme.colors.primaryColor
     )
     if (isPrimary) {
         Text(
@@ -400,7 +400,7 @@ fun InitialOnboardingLanguageItem(
                 .fillMaxWidth(),
             text = stringResource(R.string.onboarding_app_languages_primary),
             style = MaterialTheme.typography.bodyMedium,
-            color = WikipediaTheme.colors.secondaryColor
+            color = NITCWikiTheme.colors.secondaryColor
         )
     }
     Spacer(modifier = Modifier.height(16.dp))
@@ -408,7 +408,7 @@ fun InitialOnboardingLanguageItem(
         modifier = Modifier
             .height(0.5.dp)
             .fillMaxWidth()
-            .background(WikipediaTheme.colors.borderColor)
+            .background(NITCWikiTheme.colors.borderColor)
     )
 }
 

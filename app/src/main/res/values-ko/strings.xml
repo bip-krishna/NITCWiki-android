@@ -175,7 +175,7 @@
   <string name="search_reading_lists_no_results">읽기 목록에 결과가 없습니다</string>
   <string name="search_history_no_results">역사에 결과가 없습니다</string>
   <string name="edit_section_captcha_message">자동화된 스팸으로부터 보호하기 위해, 아래에 나타나는 낱말을 입력해 주세요</string>
-  <string name="edit_section_captcha_request_an_account_message">그림이 보이지 않습니까? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;계정 요청하기&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">그림이 보이지 않습니까? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;계정 요청하기&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">위의 낱말을 한 번 더 입력하세요</string>
   <string name="title_captcha">캡차를 입력하세요</string>
   <string name="edit_section_captcha_reload">새로 고치려면 캡차를 누르세요</string>
@@ -465,9 +465,9 @@
   <string name="error_blocked_start">차단일: %s</string>
   <string name="error_blocked_expiry">차단 해제일: %s</string>
   <string name="error_blocked_id">차단 ID: %s</string>
-  <string name="error_blocked_footer">&lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt;님 이나 다른 &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;관리자&lt;/a&gt;와 차단에 관해 의논할 수 있습니다.</string>
+  <string name="error_blocked_footer">&lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt;님 이나 다른 &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;관리자&lt;/a&gt;와 차단에 관해 의논할 수 있습니다.</string>
   <string name="theme_chooser_menu_item_short_tooltip">도구 모음 사용자 지정</string>
-  <string name="error_blocked_footer_no_blocker">&lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;관리자&lt;/a&gt;와 차단에 관해 의논할 수 있습니다.</string>
+  <string name="error_blocked_footer_no_blocker">&lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;관리자&lt;/a&gt;와 차단에 관해 의논할 수 있습니다.</string>
   <string name="temp_account_not_logged_in">로그인하고 있지 않습니다</string>
   <string name="temp_account_anon_ip_dialog_body">편집을 하면 IP 주소가 편집에 연결됩니다.&lt;br /&gt;&lt;br /&gt;향후 편집에 대한 신뢰를 얻고 다른 기능에 접근하려면 &lt;a href=\"https://#login\"&gt;로그인&lt;/a&gt;하거나 &lt;a href=\"https://#createaccount\"&gt;계정을 만드세요&lt;/a&gt;.</string>
   <string name="temp_account_anon_dialog_body">편집을 하면 개인 정보 보호를 위해 &lt;b&gt;임시 계정&lt;/b&gt;이 생성됩니다. &lt;a href=\"%1$s\"&gt;더 알아보기&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;향후 편집에 대한 신뢰를 얻고 다른 기능에 접근하려면 &lt;a href=\"https://#login\"&gt;로그인&lt;/a&gt;하거나 &lt;a href=\"https://#createaccount\"&gt;계정을 만드세요&lt;/a&gt;.</string>

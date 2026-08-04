@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.dp
 import org.wikipedia.compose.components.ListItemSkeletonLoader
 import org.wikipedia.compose.extensions.shimmerEffect
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 
 @Composable
@@ -40,7 +40,7 @@ fun HybridSearchSkeletonLoader(
     LazyColumn(
         modifier = modifier
             .fillMaxSize()
-            .background(WikipediaTheme.colors.paperColor),
+            .background(NITCWikiTheme.colors.paperColor),
         contentPadding = PaddingValues(vertical = 12.dp, horizontal = 16.dp)
     ) {
         when (abTestGroupName) {
@@ -147,7 +147,7 @@ fun HorizontalHybridSearchListItemLoader(
                     modifier = Modifier
                         .size(width = 292.dp, height = semanticBoxHeight.dp)
                         .clip(RoundedCornerShape(16.dp))
-                        .background(color = WikipediaTheme.colors.backgroundColor)
+                        .background(color = NITCWikiTheme.colors.backgroundColor)
                         .padding(16.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
@@ -172,7 +172,7 @@ fun HorizontalHybridSearchListItemLoader(
 
 @Composable
 fun semanticShimmerColors(): List<Color> {
-    val colors = WikipediaTheme.colors
+    val colors = NITCWikiTheme.colors
     return listOf(
         colors.inactiveColor.copy(alpha = 0.7f),
         colors.borderColor.copy(alpha = 0.5f),

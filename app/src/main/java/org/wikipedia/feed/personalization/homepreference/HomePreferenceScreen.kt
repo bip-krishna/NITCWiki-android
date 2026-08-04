@@ -46,7 +46,7 @@ import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.extensions.shimmerEffect
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.views.imageservice.ImageService
 
@@ -69,7 +69,7 @@ fun HomePreferenceScreen(
             style = MaterialTheme.typography.titleLarge.copy(
                 fontWeight = FontWeight.Medium
             ),
-            color = WikipediaTheme.colors.primaryColor
+            color = NITCWikiTheme.colors.primaryColor
         )
 
         LazyColumn(
@@ -123,10 +123,10 @@ fun HomePreferenceSection(
                 onClick = { onSelected(homePreferenceType) },
                 enabled = !isPersonalizedContentDisabled,
                 colors = RadioButtonDefaults.colors(
-                    selectedColor = WikipediaTheme.colors.primaryColor,
-                    unselectedColor = WikipediaTheme.colors.primaryColor,
-                    disabledUnselectedColor = WikipediaTheme.colors.inactiveColor,
-                    disabledSelectedColor = WikipediaTheme.colors.inactiveColor
+                    selectedColor = NITCWikiTheme.colors.primaryColor,
+                    unselectedColor = NITCWikiTheme.colors.primaryColor,
+                    disabledUnselectedColor = NITCWikiTheme.colors.inactiveColor,
+                    disabledSelectedColor = NITCWikiTheme.colors.inactiveColor
                 )
             )
             Text(
@@ -134,8 +134,8 @@ fun HomePreferenceSection(
                 style = MaterialTheme.typography.bodyLarge.copy(
                     fontWeight = if (isPersonalizedContentDisabled) FontWeight.Normal else FontWeight.Medium
                 ),
-                color = if (isPersonalizedContentDisabled) WikipediaTheme.colors.inactiveColor else
-                    WikipediaTheme.colors.primaryColor
+                color = if (isPersonalizedContentDisabled) NITCWikiTheme.colors.inactiveColor else
+                    NITCWikiTheme.colors.primaryColor
             )
         }
 
@@ -179,7 +179,7 @@ fun HomePreferenceSection(
                             modifier = Modifier.fillParentMaxWidth(),
                             text = stringResource(R.string.explore_feed_personalized_preference_empty_state_text),
                             style = MaterialTheme.typography.bodyLarge,
-                            color = WikipediaTheme.colors.primaryColor
+                            color = NITCWikiTheme.colors.primaryColor
                         )
                     }
                 }
@@ -208,7 +208,7 @@ fun HomePreferenceArticleCard(
             .width(185.dp)
             .height(230.dp),
         elevation = 0.dp,
-        border = BorderStroke(width = 1.dp, color = WikipediaTheme.colors.borderColor)
+        border = BorderStroke(width = 1.dp, color = NITCWikiTheme.colors.borderColor)
     ) {
         Column(modifier = Modifier.fillMaxHeight()) {
             Box(
@@ -222,8 +222,8 @@ fun HomePreferenceArticleCard(
                 )
                 AsyncImage(
                     model = request,
-                    placeholder = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
-                    error = BrushPainter(SolidColor(WikipediaTheme.colors.borderColor)),
+                    placeholder = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
+                    error = BrushPainter(SolidColor(NITCWikiTheme.colors.borderColor)),
                     contentScale = ContentScale.Crop,
                     contentDescription = null,
                     modifier = Modifier
@@ -237,8 +237,8 @@ fun HomePreferenceArticleCard(
                             .padding(8.dp)
                             .background(
                                 when (homePreferenceType) {
-                                    HomePreferenceType.COMMUNITY -> WikipediaTheme.colors.progressiveColor
-                                    HomePreferenceType.PERSONALIZED -> WikipediaTheme.colors.successColor
+                                    HomePreferenceType.COMMUNITY -> NITCWikiTheme.colors.progressiveColor
+                                    HomePreferenceType.PERSONALIZED -> NITCWikiTheme.colors.successColor
                                 }, shape = RoundedCornerShape(8.dp)
                             )
                             .padding(horizontal = 12.dp, vertical = 4.dp),
@@ -258,7 +258,7 @@ fun HomePreferenceArticleCard(
                             fontWeight = FontWeight.Medium
                         ),
                         maxLines = 2,
-                        color = WikipediaTheme.colors.primaryColor,
+                        color = NITCWikiTheme.colors.primaryColor,
                     )
                 }
 
@@ -266,7 +266,7 @@ fun HomePreferenceArticleCard(
                     HtmlText(
                         text = content.description,
                         style = MaterialTheme.typography.bodyMedium,
-                        color = WikipediaTheme.colors.secondaryColor,
+                        color = NITCWikiTheme.colors.secondaryColor,
                         maxLines = if (!content.title.isNullOrEmpty()) 3 else Int.MAX_VALUE,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -289,7 +289,7 @@ fun ArticleCardTag(
         style = MaterialTheme.typography.bodySmall.copy(
             fontWeight = FontWeight.Medium
         ),
-        color = WikipediaTheme.colors.backgroundColor
+        color = NITCWikiTheme.colors.backgroundColor
     )
 }
 
@@ -302,7 +302,7 @@ private fun HomePreferenceScreenPreview() {
         HomePreferenceScreen(
             modifier = Modifier
                 .fillMaxSize()
-                .background(WikipediaTheme.colors.paperColor)
+                .background(NITCWikiTheme.colors.paperColor)
                 .padding(top = 40.dp),
             selectedType = HomePreferenceType.COMMUNITY,
             communityContentState = HomeContentState.Success(
@@ -352,7 +352,7 @@ private fun HomePreferenceScreenScaledTextPreview() {
         HomePreferenceScreen(
             modifier = Modifier
                 .fillMaxSize()
-                .background(WikipediaTheme.colors.paperColor)
+                .background(NITCWikiTheme.colors.paperColor)
                 .padding(top = 40.dp),
             selectedType = HomePreferenceType.COMMUNITY,
             communityContentState = HomeContentState.Success(
@@ -408,7 +408,7 @@ private fun HomePreferenceScreenLoadingPreview() {
         HomePreferenceScreen(
             modifier = Modifier
                 .fillMaxSize()
-                .background(WikipediaTheme.colors.paperColor)
+                .background(NITCWikiTheme.colors.paperColor)
                 .padding(top = 40.dp),
             selectedType = HomePreferenceType.COMMUNITY,
             communityContentState = HomeContentState.Loading,
@@ -428,7 +428,7 @@ private fun HomePreferenceScreenErrorPreview() {
         HomePreferenceScreen(
             modifier = Modifier
                 .fillMaxSize()
-                .background(WikipediaTheme.colors.paperColor)
+                .background(NITCWikiTheme.colors.paperColor)
                 .padding(top = 40.dp),
             selectedType = HomePreferenceType.COMMUNITY,
             communityContentState = HomeContentState.Error(Throwable("Failed to load community content")),
@@ -448,7 +448,7 @@ private fun HomePreferenceScreenEmptyPersonalizedContentPreview() {
         HomePreferenceScreen(
             modifier = Modifier
                 .fillMaxSize()
-                .background(WikipediaTheme.colors.paperColor)
+                .background(NITCWikiTheme.colors.paperColor)
                 .padding(top = 40.dp),
             selectedType = HomePreferenceType.COMMUNITY,
             communityContentState = HomeContentState.Loading,

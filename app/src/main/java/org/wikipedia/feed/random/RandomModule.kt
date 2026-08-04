@@ -19,7 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import org.wikipedia.R
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.extensions.getString
 import org.wikipedia.feed.ForYouCardContent
@@ -66,8 +66,8 @@ fun RandomModule(
                     onClick = onShuffleClick,
                     modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 16.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = WikipediaTheme.colors.progressiveColor,
-                        contentColor = WikipediaTheme.colors.paperColor,
+                        containerColor = NITCWikiTheme.colors.progressiveColor,
+                        contentColor = NITCWikiTheme.colors.paperColor,
                     ),
                     contentPadding = ButtonDefaults.ButtonWithIconContentPadding
                 ) {
@@ -76,7 +76,7 @@ fun RandomModule(
                     ) {
                         Icon(
                             painter = painterResource(R.drawable.ic_dice_24),
-                            tint = WikipediaTheme.colors.paperColor,
+                            tint = NITCWikiTheme.colors.paperColor,
                             contentDescription = null
                         )
 
@@ -86,7 +86,7 @@ fun RandomModule(
                             text = context.getString(wikiSite.languageCode, R.string.home_feed_random_shuffle_button),
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Medium,
-                            color = WikipediaTheme.colors.paperColor
+                            color = NITCWikiTheme.colors.paperColor
                         )
                     }
                 }

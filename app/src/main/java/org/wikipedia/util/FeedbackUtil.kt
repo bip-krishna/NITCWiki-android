@@ -101,7 +101,7 @@ object FeedbackUtil {
         UriUtil.visitInExternalBrowser(context, context.getString(R.string.offline_reading_and_data_url).toUri())
     }
 
-    fun showAboutWikipedia(context: Context) {
+    fun showAboutNITCWiki(context: Context) {
         UriUtil.visitInExternalBrowser(context, context.getString(R.string.about_wikipedia_url).toUri())
     }
 

@@ -1,1 +1,1 @@
-Wikipedia-program for Android.
+NITCWiki-program for Android.

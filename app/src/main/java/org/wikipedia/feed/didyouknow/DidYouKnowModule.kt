@@ -41,7 +41,7 @@ import androidx.core.net.toUri
 import org.wikipedia.R
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.extensions.getString
@@ -98,14 +98,14 @@ fun DidYouKnowModule(
             Text(
                 text = context.getString(wikiSite.languageCode, R.string.home_feed_did_you_know_more_label),
                 style = MaterialTheme.typography.labelLarge,
-                color = WikipediaTheme.colors.progressiveColor,
+                color = NITCWikiTheme.colors.progressiveColor,
                 fontWeight = FontWeight.Medium
             )
             Spacer(modifier = Modifier.width(8.dp))
             Icon(
                 painter = painterResource(R.drawable.ic_arrow_forward_black_24dp),
                 contentDescription = context.getString(wikiSite.languageCode, R.string.home_feed_did_you_know_more_label),
-                tint = WikipediaTheme.colors.progressiveColor
+                tint = NITCWikiTheme.colors.progressiveColor
             )
         }
     }
@@ -151,7 +151,7 @@ fun DidYouKnowListItem(
             Box {
                 HtmlText(
                     text = StringUtil.removeBoldTags(dykHtml),
-                    color = WikipediaTheme.colors.primaryColor,
+                    color = NITCWikiTheme.colors.primaryColor,
                     style = MaterialTheme.typography.bodyMedium,
                     linkInteractionListener = {
                         val url = (it as LinkAnnotation.Url).url

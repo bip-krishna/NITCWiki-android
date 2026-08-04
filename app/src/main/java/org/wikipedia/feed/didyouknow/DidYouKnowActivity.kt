@@ -26,7 +26,7 @@ import org.wikipedia.compose.components.WikiTopAppBar
 import org.wikipedia.compose.components.menu.PageOverflowMenu
 import org.wikipedia.compose.components.menu.PageOverflowMenuViewModel
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.extensions.parcelableExtra
@@ -133,7 +133,7 @@ fun DidYouKnowScreen(
 ) {
     val context = LocalContext.current
     Scaffold(
-        containerColor = WikipediaTheme.colors.paperColor,
+        containerColor = NITCWikiTheme.colors.paperColor,
         topBar = {
             Column {
                 WikiTopAppBar(

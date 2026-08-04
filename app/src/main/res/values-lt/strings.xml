@@ -131,7 +131,7 @@
   <string name="search_reading_lists_no_results">Nerasta rezultatų skaitymo sąrašuose</string>
   <string name="search_history_no_results">Istorijoje rezultatų nerasta</string>
   <string name="edit_section_captcha_message">Siekiant apsisaugoti nuo automatinio šlamšto, prašome įvesti žodžius, esančius žemiau</string>
-  <string name="edit_section_captcha_request_an_account_message">Nematote paveikslėlio? &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Request_an_account\"&gt;Prašykite paskyros&lt;/a&gt;</string>
+  <string name="edit_section_captcha_request_an_account_message">Nematote paveikslėlio? &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Request_an_account\"&gt;Prašykite paskyros&lt;/a&gt;</string>
   <string name="edit_section_captcha_hint">Pakartoti žodžius iš viršaus</string>
   <string name="title_captcha">Įveskite saugos kodą</string>
   <string name="edit_section_captcha_reload">Bakstelėkite CAPTCHA, kad atnaujinti</string>
@@ -384,9 +384,9 @@
   <string name="error_blocked_start">Blokavimo pradžia: %s</string>
   <string name="error_blocked_expiry">Blokavimo pabaiga: %s</string>
   <string name="error_blocked_id">Blokavimo ID: %s</string>
-  <string name="error_blocked_footer">Norėdami aptarti blokavimą, galite susisiekti su &lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; arba kitu &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;administratoriumi&lt;/a&gt;.</string>
+  <string name="error_blocked_footer">Norėdami aptarti blokavimą, galite susisiekti su &lt;a href=\"%2$s\"&gt;%1$s&lt;/a&gt; arba kitu &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;administratoriumi&lt;/a&gt;.</string>
   <string name="theme_chooser_menu_item_short_tooltip">Tinkinkite savo įrankių juostą</string>
-  <string name="error_blocked_footer_no_blocker">Galite susieksti su &lt;a href=\"https://en.wikipedia.org/wiki/Wikipedia:Administrators\"&gt;administratoriumi&lt;/a&gt;, kad aptartumėte blokavimą.</string>
+  <string name="error_blocked_footer_no_blocker">Galite susieksti su &lt;a href=\"https://en.wikipedia.org/wiki/NITCWiki:Administrators\"&gt;administratoriumi&lt;/a&gt;, kad aptartumėte blokavimą.</string>
   <string name="crash_report_activity_title">Aplikacijos klaida</string>
   <string name="crash_report_relaunch_or_quit">Atsiprašome, Vikipedijos programėlę patyrė klaidą ir buvo nutraukta.\n\nNorėtumėte pradėti iš naujo ar baigti?</string>
   <string name="crash_report_relaunch">Pradėti iš naujo</string>
