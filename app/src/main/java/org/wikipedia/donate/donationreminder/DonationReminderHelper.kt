@@ -2,8 +2,8 @@ package org.wikipedia.donate.donationreminder
 
 import android.app.Activity
 import kotlinx.serialization.Serializable
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.donate.DonateUtil
 import org.wikipedia.donate.donationreminder.DonationReminderHelper.MAX_REMINDER_PROMPTS
 import org.wikipedia.settings.Prefs

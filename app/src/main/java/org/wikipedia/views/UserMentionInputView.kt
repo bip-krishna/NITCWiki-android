@@ -15,8 +15,8 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.databinding.ViewUserMentionInputBinding
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.edit.richtext.SyntaxHighlighter

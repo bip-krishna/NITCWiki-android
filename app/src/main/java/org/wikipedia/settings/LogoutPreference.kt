@@ -11,8 +11,8 @@ import androidx.core.view.isVisible
 import androidx.preference.Preference
 import androidx.preference.PreferenceViewHolder
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.activity.SingleWebViewActivity
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.auth.AccountUtil

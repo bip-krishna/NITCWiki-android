@@ -7,8 +7,8 @@ import android.content.Context
 import android.content.Intent
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.games.WikiGames
 import org.wikipedia.notifications.NotificationCategory

@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.FrameLayout
 import androidx.core.widget.TextViewCompat
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.databinding.ViewTabsCountBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil

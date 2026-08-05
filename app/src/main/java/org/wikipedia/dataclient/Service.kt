@@ -790,7 +790,7 @@ interface Service {
 
         fun isWikimediaAuthority(authority: String?): Boolean {
             return !authority.isNullOrEmpty() &&
-                    ((authority == WikiSite.BASE_DOMAIN || authority.endsWith(".${WikiSite.BASE_DOMAIN}"))  ||
+                    ((authority == WikiSite.BASE_DOMAIN || authority.endsWith(".${WikiSite.BASE_DOMAIN}")) ||
                             authority == BASE_AUTHORITY_WIKIMEDIA || authority.endsWith(".${BASE_AUTHORITY_WIKIMEDIA}") ||
                             authority == BASE_AUTHORITY_WIKIDATA || authority.endsWith(".${BASE_AUTHORITY_WIKIDATA}"))
         }

@@ -11,9 +11,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import org.wikipedia.R
+import org.wikipedia.compose.components.NITCWikiAlertDialog
 import org.wikipedia.compose.components.ToggleListScreen
 import org.wikipedia.compose.components.ToggleSettingItem
-import org.wikipedia.compose.components.NITCWikiAlertDialog
 import org.wikipedia.extensions.instrument
 
 enum class ForYouModuleType(

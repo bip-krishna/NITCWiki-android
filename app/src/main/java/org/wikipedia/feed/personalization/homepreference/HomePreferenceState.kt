@@ -1,7 +1,7 @@
 package org.wikipedia.feed.personalization.homepreference
 
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.feed.personalization.interest.OnboardingTopic
 import org.wikipedia.page.PageTitle
 

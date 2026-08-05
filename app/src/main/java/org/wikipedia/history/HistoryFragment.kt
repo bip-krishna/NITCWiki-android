@@ -28,8 +28,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import org.wikipedia.BackPressedHandler
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.databinding.FragmentHistoryBinding

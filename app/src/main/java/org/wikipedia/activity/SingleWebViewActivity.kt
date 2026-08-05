@@ -19,8 +19,8 @@ import androidx.activity.addCallback
 import androidx.core.view.isVisible
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
 import org.wikipedia.analytics.eventplatform.YearInReviewEvent
 import org.wikipedia.bridge.JavaScriptActionHandler

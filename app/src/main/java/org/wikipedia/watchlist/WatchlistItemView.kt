@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.annotation.DrawableRes
 import androidx.core.view.isVisible
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.databinding.ItemWatchlistBinding
 import org.wikipedia.dataclient.mwapi.MwQueryResult
 import org.wikipedia.extensions.setLayoutDirectionByLang

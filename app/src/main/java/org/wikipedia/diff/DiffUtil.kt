@@ -13,8 +13,8 @@ import androidx.core.text.buildSpannedString
 import androidx.core.text.inSpans
 import androidx.core.text.set
 import androidx.recyclerview.widget.RecyclerView
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.dataclient.restbase.DiffResponse
 import org.wikipedia.dataclient.restbase.Revision
 import org.wikipedia.util.ResourceUtil

@@ -2,8 +2,8 @@ package org.wikipedia.language
 
 import android.content.Context
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.L10nUtil
 import org.wikipedia.util.ReleaseUtil

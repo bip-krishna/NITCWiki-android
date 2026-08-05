@@ -6,8 +6,8 @@ import okhttp3.CacheControl
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.tls.HandshakeCertificates
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.dataclient.SharedPreferenceCookieManager
 import org.wikipedia.settings.Prefs
 import java.io.File

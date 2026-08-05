@@ -6,7 +6,6 @@ import androidx.core.net.toUri
 import kotlinx.parcelize.Parcelize
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import org.wikipedia.Constants
 import org.wikipedia.NITCWikiApp
 import org.wikipedia.json.UriSerializer
 import org.wikipedia.language.AppLanguageLookUpTable

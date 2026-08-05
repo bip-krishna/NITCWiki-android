@@ -6,8 +6,8 @@ import android.util.AttributeSet
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.use
 import com.google.android.material.card.MaterialCardView
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
 

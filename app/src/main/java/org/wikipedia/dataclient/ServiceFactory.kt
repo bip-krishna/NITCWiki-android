@@ -6,7 +6,6 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import org.wikimedia.testkitchen.config.DestinationEventService
-import org.wikipedia.BuildConfig
 import org.wikipedia.NITCWikiApp
 import org.wikipedia.analytics.eventplatform.EventService
 import org.wikipedia.dataclient.okhttp.OkHttpConnectionFactory

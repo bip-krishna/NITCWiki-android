@@ -8,8 +8,8 @@ import android.util.TypedValue
 import androidx.annotation.DimenRes
 import androidx.core.content.res.use
 import androidx.core.util.TypedValueCompat
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.util.log.L
 import kotlin.math.roundToInt
 

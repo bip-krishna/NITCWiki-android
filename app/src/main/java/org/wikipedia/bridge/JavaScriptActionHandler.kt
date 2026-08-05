@@ -3,8 +3,8 @@ package org.wikipedia.bridge
 import android.content.Context
 import kotlinx.serialization.Serializable
 import org.wikipedia.BuildConfig
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.extensions.getStrings
 import org.wikipedia.json.JsonUtil

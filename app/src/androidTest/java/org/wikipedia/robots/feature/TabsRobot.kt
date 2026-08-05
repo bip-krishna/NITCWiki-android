@@ -3,8 +3,8 @@ package org.wikipedia.robots.feature
 import BaseRobot
 import org.wikipedia.R
 import org.wikipedia.base.TestConfig
-import org.wikipedia.base.TestThemeColorType
 import org.wikipedia.base.TestNITCWikiColors
+import org.wikipedia.base.TestThemeColorType
 import org.wikipedia.theme.Theme
 
 class TabsRobot : BaseRobot() {

@@ -15,8 +15,8 @@ import androidx.test.uiautomator.UiDevice
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
-import org.wikipedia.TestLogRule
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.TestLogRule
 import org.wikipedia.settings.Prefs
 import java.util.concurrent.TimeUnit
 

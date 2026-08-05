@@ -6,8 +6,8 @@ import android.accounts.AccountManager
 import android.app.Activity
 import androidx.core.os.bundleOf
 import androidx.core.text.isDigitsOnly
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.dataclient.SharedPreferenceCookieManager
 import org.wikipedia.json.JsonUtil
 import org.wikipedia.login.LoginResult

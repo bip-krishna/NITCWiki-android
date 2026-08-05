@@ -9,8 +9,8 @@ import androidx.test.espresso.intent.matcher.IntentMatchers.hasAction
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasData
 import org.hamcrest.Matchers.allOf
 import org.wikipedia.BuildConfig
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.base.TestConfig
 import org.wikipedia.dataclient.donate.CampaignCollection

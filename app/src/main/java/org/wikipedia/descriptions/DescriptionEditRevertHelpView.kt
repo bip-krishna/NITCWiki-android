@@ -11,8 +11,8 @@ import android.view.LayoutInflater
 import android.widget.ScrollView
 import androidx.core.text.buildSpannedString
 import androidx.core.text.inSpans
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.databinding.ViewDescriptionEditRevertHelpBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.StringUtil

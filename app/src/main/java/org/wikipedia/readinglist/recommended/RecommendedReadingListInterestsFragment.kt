@@ -68,8 +68,8 @@ import org.wikipedia.Constants
 import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.RecommendedReadingListEvent
 import org.wikipedia.compose.components.ArticleCard
-import org.wikipedia.compose.components.SearchBarCard
 import org.wikipedia.compose.components.NITCWikiAlertDialog
+import org.wikipedia.compose.components.SearchBarCard
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.theme.BaseTheme

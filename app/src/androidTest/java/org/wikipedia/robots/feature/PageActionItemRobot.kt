@@ -8,8 +8,8 @@ import androidx.test.espresso.intent.Intents.intending
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasAction
 import org.wikipedia.R
 import org.wikipedia.base.TestConfig
-import org.wikipedia.base.TestThemeColorType
 import org.wikipedia.base.TestNITCWikiColors
+import org.wikipedia.base.TestThemeColorType
 import org.wikipedia.theme.Theme
 
 class PageActionItemRobot : BaseRobot() {

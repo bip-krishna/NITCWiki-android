@@ -39,10 +39,10 @@ import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.auth.AccountUtil
+import org.wikipedia.compose.components.NITCWikiAlertDialog
 import org.wikipedia.compose.components.OnboardingItem
 import org.wikipedia.compose.components.OnboardingListItem
 import org.wikipedia.compose.components.TwoButtonBottomBar
-import org.wikipedia.compose.components.NITCWikiAlertDialog
 import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.compose.theme.NITCWikiTheme
 import org.wikipedia.extensions.instrument

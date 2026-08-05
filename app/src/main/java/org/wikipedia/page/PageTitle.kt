@@ -6,7 +6,6 @@ import kotlinx.parcelize.Parcelize
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import org.wikipedia.dataclient.WikiSite
-import org.wikipedia.language.LanguageUtil
 import org.wikipedia.staticdata.ContributionsNameData
 import org.wikipedia.staticdata.MainPageNameData
 import org.wikipedia.util.StringUtil

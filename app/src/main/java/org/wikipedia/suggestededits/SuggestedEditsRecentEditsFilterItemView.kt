@@ -11,8 +11,8 @@ import android.widget.LinearLayout
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isVisible
 import androidx.core.widget.ImageViewCompat
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.databinding.ItemSuggestedEditsRecentEditsFilterBinding
 import org.wikipedia.util.ResourceUtil
 

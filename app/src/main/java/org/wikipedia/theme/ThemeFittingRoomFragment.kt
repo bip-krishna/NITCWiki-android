@@ -11,8 +11,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.concurrency.FlowEventBus
 import org.wikipedia.databinding.FragmentThemeFittingRoomBinding
 import org.wikipedia.events.ChangeTextSizeEvent

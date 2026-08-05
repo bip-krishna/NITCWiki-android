@@ -26,8 +26,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.commons.FilePageActivity
 import org.wikipedia.databinding.FragmentGalleryItemBinding

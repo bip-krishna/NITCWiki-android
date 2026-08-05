@@ -6,8 +6,8 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.core.view.isVisible
 import org.wikipedia.Constants.MIN_LANGUAGES_TO_UNLOCK_TRANSLATION
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.databinding.ViewSuggestedEditsTaskItemBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil

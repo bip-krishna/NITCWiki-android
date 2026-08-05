@@ -27,8 +27,8 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.databinding.DialogImageTagSelectBinding
 import org.wikipedia.dataclient.ServiceFactory

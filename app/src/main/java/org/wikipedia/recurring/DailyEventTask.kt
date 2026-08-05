@@ -1,7 +1,7 @@
 package org.wikipedia.recurring
 
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.DailyStatsEvent
 import org.wikipedia.analytics.eventplatform.EventPlatformClient
 import org.wikipedia.analytics.eventplatform.RecommendedReadingListEvent

@@ -47,8 +47,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.RecommendedReadingListEvent
-import org.wikipedia.compose.components.WikiTopAppBar
 import org.wikipedia.compose.components.NITCWikiAlertDialog
+import org.wikipedia.compose.components.WikiTopAppBar
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.extensions.noRippleClickable

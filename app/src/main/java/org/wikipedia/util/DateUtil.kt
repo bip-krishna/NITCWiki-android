@@ -4,8 +4,8 @@ import android.content.Context
 import android.icu.text.RelativeDateTimeFormatter
 import android.os.Build
 import android.text.format.DateFormat
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.extensions.getResources
 import org.wikipedia.extensions.getString
 import org.wikipedia.extensions.toLocalDate

@@ -12,8 +12,8 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import org.wikipedia.Constants
 import org.wikipedia.Constants.PREFERRED_GALLERY_IMAGE_SIZE
-import org.wikipedia.R
 import org.wikipedia.NITCWikiApp
+import org.wikipedia.R
 import org.wikipedia.databinding.ViewFilePageBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.mwapi.MwQueryPage
