@@ -137,7 +137,7 @@ data class WikiSite(
         private var DEFAULT_BASE_URL: String? = null
 
         fun supportedAuthority(authority: String): Boolean {
-            return authority.endsWith(DEFAULT_BASE_URL!!.toUri().authority!!)
+            return authority.endsWith((DEFAULT_BASE_URL ?: Service.WIKIPEDIA_URL).toUri().authority!!)
         }
 
         fun setDefaultBaseUrl(url: String) {

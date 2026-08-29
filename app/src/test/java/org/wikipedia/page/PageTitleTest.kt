@@ -45,22 +45,22 @@ class PageTitleTest {
     fun testCanonicalURL() {
         val enwiki = WikiSite.forLanguageCode("en")
 
-        assertEquals("https://en.wikipedia.org/wiki/India", PageTitle.titleForInternalLink("/wiki/India", enwiki).uri)
-        assertEquals("https://en.wikipedia.org/wiki/India_Gate", PageTitle.titleForInternalLink("/wiki/India Gate", enwiki).uri)
-        assertEquals("https://en.wikipedia.org/wiki/India%27s_Gate", PageTitle.titleForInternalLink("/wiki/India's Gate", enwiki).uri)
+        assertEquals("https://wiki.fosscell.org/wiki/India", PageTitle.titleForInternalLink("/wiki/India", enwiki).uri)
+        assertEquals("https://wiki.fosscell.org/wiki/India_Gate", PageTitle.titleForInternalLink("/wiki/India Gate", enwiki).uri)
+        assertEquals("https://wiki.fosscell.org/wiki/India%27s_Gate", PageTitle.titleForInternalLink("/wiki/India's Gate", enwiki).uri)
     }
 
     @Test
     fun testVariants() {
         val zhwiki = WikiSite.forLanguageCode("zh-tw")
 
-        assertEquals("https://en.wikipedia.org/wiki/Taiwan", PageTitle("Taiwan", WikiSite.forLanguageCode("en")).uri)
-        assertEquals("https://zh.wikipedia.org/zh/Taiwan", PageTitle("Taiwan", WikiSite.forLanguageCode("zh")).uri)
-        assertEquals("https://zh.wikipedia.org/zh-tw/Taiwan", PageTitle("Taiwan", WikiSite.forLanguageCode("zh-tw")).uri)
-        assertEquals("https://zh.wikipedia.org/zh-cn/Taiwan", PageTitle("Taiwan", WikiSite.forLanguageCode("zh-cn")).uri)
-        assertEquals("https://zh.wikipedia.org/zh-tw/Taiwan", PageTitle.titleForInternalLink("/zh/Taiwan", zhwiki).uri)
-        assertEquals("https://zh.wikipedia.org/zh-tw/Taiwan", PageTitle.titleForInternalLink("/zh-tw/Taiwan", zhwiki).uri)
-        assertEquals("https://zh.wikipedia.org/zh-tw/Taiwan", PageTitle.titleForInternalLink("/wiki/Taiwan", zhwiki).uri)
+        assertEquals("https://wiki.fosscell.org/wiki/Taiwan", PageTitle("Taiwan", WikiSite.forLanguageCode("en")).uri)
+        assertEquals("https://wiki.fosscell.org/wiki/Taiwan", PageTitle("Taiwan", WikiSite.forLanguageCode("zh")).uri)
+        assertEquals("https://wiki.fosscell.org/wiki/Taiwan", PageTitle("Taiwan", WikiSite.forLanguageCode("zh-tw")).uri)
+        assertEquals("https://wiki.fosscell.org/wiki/Taiwan", PageTitle("Taiwan", WikiSite.forLanguageCode("zh-cn")).uri)
+        assertEquals("https://wiki.fosscell.org/wiki/Taiwan", PageTitle.titleForInternalLink("/zh/Taiwan", zhwiki).uri)
+        assertEquals("https://wiki.fosscell.org/wiki/Taiwan", PageTitle.titleForInternalLink("/zh-tw/Taiwan", zhwiki).uri)
+        assertEquals("https://wiki.fosscell.org/wiki/Taiwan", PageTitle.titleForInternalLink("/wiki/Taiwan", zhwiki).uri)
     }
 
     @Test
@@ -72,10 +72,10 @@ class PageTitleTest {
 
     @Test
     fun testLangAsNamespace() {
-        val uri = Uri.parse("https://en.wikipedia.org/wiki/fr:Article")
+        val uri = Uri.parse("https://wiki.fosscell.org/wiki/fr:Article")
         val site = WikiSite(uri)
         val title = PageTitle.titleForUri(uri, site)
-        assertEquals("fr.wikipedia.org", title.wikiSite.authority())
+        assertEquals("wiki.fosscell.org", title.wikiSite.authority())
         assertEquals("Article", title.displayText)
     }
 

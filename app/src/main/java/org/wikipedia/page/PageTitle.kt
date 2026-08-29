@@ -190,7 +190,7 @@ data class PageTitle(
 
     private fun getUriForDomain(domain: String): String {
         return String.format(
-            "%1\$s://%2\$s/%3\$s%4\$s",
+            "%1\$s://%2\$s/wiki/%3\$s%4\$s",
             wikiSite.scheme(),
             domain,
             UriUtil.encodeURL(prefixedText),

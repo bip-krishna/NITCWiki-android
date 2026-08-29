@@ -15,9 +15,8 @@ import org.wikipedia.test.TestParcelUtil
 class WikiSiteTest {
     @Test
     fun testSupportedAuthority() {
-        assertTrue(WikiSite.supportedAuthority("fr.wikipedia.org"))
-        assertTrue(WikiSite.supportedAuthority("fr.m.wikipedia.org"))
-        assertTrue(WikiSite.supportedAuthority("roa-rup.wikipedia.org"))
+        assertTrue(WikiSite.supportedAuthority("wiki.fosscell.org"))
+        assertFalse(WikiSite.supportedAuthority("en.wikipedia.org"))
         assertFalse(WikiSite.supportedAuthority("google.com"))
     }
 
@@ -30,7 +29,7 @@ class WikiSiteTest {
     @Test
     fun testForLanguageCodeAuthority() {
         val subject = WikiSite.forLanguageCode("test")
-        assertEquals("test.wikipedia.org", subject.authority())
+        assertEquals("wiki.fosscell.org", subject.authority())
     }
 
     @Test
@@ -48,13 +47,13 @@ class WikiSiteTest {
     @Test
     fun testForLanguageCodeNoLanguageAuthority() {
         val subject = WikiSite.forLanguageCode("")
-        assertEquals("wikipedia.org", subject.authority())
+        assertEquals("wiki.fosscell.org", subject.authority())
     }
 
     @Test
     fun testForLanguageCodeLanguageAuthority() {
         val subject = WikiSite.forLanguageCode("zh-hans")
-        assertEquals("zh.wikipedia.org", subject.authority())
+        assertEquals("wiki.fosscell.org", subject.authority())
         assertEquals("zh-hans", subject.languageCode)
     }
 
@@ -78,8 +77,8 @@ class WikiSiteTest {
 
     @Test
     fun testCtorAuthorityLanguage() {
-        val subject = WikiSite("test.wikipedia.org")
-        assertEquals("test", subject.languageCode)
+        val subject = WikiSite("wiki.fosscell.org")
+        assertEquals("", subject.languageCode)
     }
 
     @Test
@@ -90,8 +89,8 @@ class WikiSiteTest {
 
     @Test
     fun testCtordesktopAuthorityLanguage() {
-        val subject = WikiSite("test.m.wikipedia.org")
-        assertEquals("test", subject.languageCode)
+        val subject = WikiSite("wiki.fosscell.org")
+        assertEquals("", subject.languageCode)
     }
 
     @Test
@@ -102,78 +101,78 @@ class WikiSiteTest {
 
     @Test
     fun testCtorUriLangVariant() {
-        var subject = WikiSite("en.wikipedia.org/wiki/Foo")
-        assertEquals("en.wikipedia.org", subject.authority())
-        assertEquals("en", subject.subdomain())
-        assertEquals("en", subject.languageCode)
+        var subject = WikiSite("wiki.fosscell.org/wiki/Foo")
+        assertEquals("wiki.fosscell.org", subject.authority())
+        assertEquals("", subject.subdomain())
+        assertEquals("", subject.languageCode)
         assertEquals("https", subject.scheme())
-        assertEquals("enwiki", subject.dbName())
-        assertEquals("https://en.wikipedia.org", subject.url())
+        assertEquals("wiki", subject.dbName())
+        assertEquals("https://wiki.fosscell.org", subject.url())
 
-        subject = WikiSite("zh.wikipedia.org/zh-tw/Foo")
-        assertEquals("zh.wikipedia.org", subject.authority())
+        subject = WikiSite("wiki.fosscell.org/zh-tw/Foo")
+        assertEquals("wiki.fosscell.org", subject.authority())
         assertEquals("zh", subject.subdomain())
         assertEquals("zh-tw", subject.languageCode)
         assertEquals("https", subject.scheme())
         assertEquals("zhwiki", subject.dbName())
-        assertEquals("https://zh.wikipedia.org", subject.url())
+        assertEquals("https://wiki.fosscell.org", subject.url())
 
-        subject = WikiSite("zh.wikipedia.org/zh-cn/Foo")
-        assertEquals("zh.wikipedia.org", subject.authority())
+        subject = WikiSite("wiki.fosscell.org/zh-cn/Foo")
+        assertEquals("wiki.fosscell.org", subject.authority())
         assertEquals("zh", subject.subdomain())
         assertEquals("zh-cn", subject.languageCode)
         assertEquals("https", subject.scheme())
         assertEquals("zhwiki", subject.dbName())
-        assertEquals("https://zh.wikipedia.org", subject.url())
+        assertEquals("https://wiki.fosscell.org", subject.url())
 
-        subject = WikiSite("zh.wikipedia.org/zh-hant/Foo")
-        assertEquals("zh.wikipedia.org", subject.authority())
+        subject = WikiSite("wiki.fosscell.org/zh-hant/Foo")
+        assertEquals("wiki.fosscell.org", subject.authority())
         assertEquals("zh", subject.subdomain())
         assertEquals("zh-hant", subject.languageCode)
         assertEquals("https", subject.scheme())
         assertEquals("zhwiki", subject.dbName())
-        assertEquals("https://zh.wikipedia.org", subject.url())
+        assertEquals("https://wiki.fosscell.org", subject.url())
     }
 
     @Test
     fun testCtorUriLangVariantInSubdomain() {
-        val subject = WikiSite("zh-tw.wikipedia.org/wiki/Foo")
-        assertEquals("zh.wikipedia.org", subject.authority())
+        val subject = WikiSite("wiki.fosscell.org/zh-tw/Foo")
+        assertEquals("wiki.fosscell.org", subject.authority())
         assertEquals("zh", subject.subdomain())
         assertEquals("zh-tw", subject.languageCode)
         assertEquals("https", subject.scheme())
         assertEquals("zhwiki", subject.dbName())
-        assertEquals("https://zh.wikipedia.org", subject.url())
+        assertEquals("https://wiki.fosscell.org", subject.url())
     }
 
     @Test
     fun testCtorMobileUriLangVariant() {
-        val subject = WikiSite("zh.m.wikipedia.org/zh-hant/Foo")
-        assertEquals("zh.wikipedia.org", subject.authority())
+        val subject = WikiSite("wiki.fosscell.org/zh-hant/Foo")
+        assertEquals("wiki.fosscell.org", subject.authority())
         assertEquals("zh", subject.subdomain())
         assertEquals("zh-hant", subject.languageCode)
         assertEquals("https", subject.scheme())
-        assertEquals("https://zh.wikipedia.org", subject.url())
+        assertEquals("https://wiki.fosscell.org", subject.url())
     }
 
     @Test
     fun testCtorUriNoLangVariant() {
-        val subject = WikiSite("http://zh.wikipedia.org/wiki/Foo")
-        assertEquals("zh.wikipedia.org", subject.authority())
-        assertEquals("zh", subject.subdomain())
-        assertEquals("zh", subject.languageCode)
+        val subject = WikiSite("http://wiki.fosscell.org/wiki/Foo")
+        assertEquals("wiki.fosscell.org", subject.authority())
+        assertEquals("", subject.subdomain())
+        assertEquals("", subject.languageCode)
         assertEquals("http", subject.scheme())
-        assertEquals("http://zh.wikipedia.org", subject.url())
+        assertEquals("http://wiki.fosscell.org", subject.url())
     }
 
     @Test
     fun testCtorUriGeneralLangVariant() {
-        val subject = WikiSite("http://zh.wikipedia.org/wiki/Foo")
-        assertEquals("zh.wikipedia.org", subject.authority())
-        assertEquals("zh", subject.subdomain())
-        assertEquals("zh", subject.languageCode)
+        val subject = WikiSite("http://wiki.fosscell.org/wiki/Foo")
+        assertEquals("wiki.fosscell.org", subject.authority())
+        assertEquals("", subject.subdomain())
+        assertEquals("", subject.languageCode)
         assertEquals("http", subject.scheme())
-        assertEquals("http://zh.wikipedia.org", subject.url())
+        assertEquals("http://wiki.fosscell.org", subject.url())
     }
 
     @Test
@@ -192,7 +191,7 @@ class WikiSiteTest {
     @Test
     fun testDesktopAuthorityLanguage() {
         val subject = WikiSite.forLanguageCode("fiu-vro")
-        assertEquals("fiu-vro.wikipedia.org", subject.authority())
+        assertEquals("wiki.fosscell.org", subject.authority())
     }
 
     @Test
@@ -227,13 +226,13 @@ class WikiSiteTest {
 
     @Test
     fun testDbNameWithOneUnderscore() {
-        val subject = WikiSite("zh-yue.wikipedia.org")
+        val subject = WikiSite("wiki.fosscell.org", "zh-yue")
         assertEquals("zh_yuewiki", subject.dbName())
     }
 
     @Test
     fun testDbNameWithTwoUnderscore() {
-        val subject = WikiSite("zh-min-nan.wikipedia.org")
+        val subject = WikiSite("wiki.fosscell.org", "zh-min-nan")
         assertEquals("zh_min_nanwiki", subject.dbName())
     }
 
@@ -258,7 +257,7 @@ class WikiSiteTest {
     @Test
     fun testUrlPath() {
         val subject = WikiSite.forLanguageCode("test")
-        assertEquals("https://test.wikipedia.org/w/Segment", subject.url("Segment"))
+        assertEquals("https://wiki.fosscell.org/w/Segment", subject.url("Segment"))
     }
 
     @Test
@@ -321,6 +320,6 @@ class WikiSiteTest {
 
     @Test
     fun testNormalization() {
-        assertEquals("bm.wikipedia.org", WikiSite.forLanguageCode("bm").authority())
+        assertEquals("wiki.fosscell.org", WikiSite.forLanguageCode("bm").authority())
     }
 }
