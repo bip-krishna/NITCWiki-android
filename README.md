@@ -1,34 +1,26 @@
-# NITC Wiki Android
+# NITC Wiki for Android
 
-An Android app for browsing and editing the [NITC Wiki](https://wiki.fosscell.org).
+Browse, search, and edit the [NITC Wiki](https://wiki.fosscell.org) on Android. Save articles in reading lists, adjust the reading theme and text size, and use the article outline to jump between sections.
 
-Forked from the [official NITCWiki Android app](https://github.com/wikimedia/apps-android-wikipedia) by the Wikimedia Foundation.
+[Build locally](#build-locally) · [Roadmap](ROADMAP.md) · [Report an issue](https://github.com/Wiki-NITC/nitc-wiki-android/issues)
 
-## Features
+## Build locally
 
-- Fast article search with search suggestions
-- Clean, mobile-optimized article reader
-- Table of contents with quick section navigation
-- Image viewer with pinch-to-zoom
-- Internal link navigation between wiki pages
-- Multiple themes (Light, Dark, Black, Sepia)
-- Adjustable font size and reading preferences
-- Offline reading through saved pages or reading lists
-- Reading history
-- Bookmarks and reading lists
-- Share articles and images
-- Login support for editing
+Install Android Studio with the Android SDK and JDK 17. From the repository root, run the same debug build task used in [CI](.github/workflows/nitcwiki_build.yml).
 
-## Coming soon
+```bash
+./gradlew assembleNitcwikiDebug
+```
 
-- Personalised feed
-- Language switching support
+The debug APK is under `app/build/outputs/apk/`. For release packaging, see the [F-Droid submission guide](FDROID_SUBMISSION_GUIDE.md).
 
-## Bug reports
+## Reading and editing
 
-Found something broken? Please open an issue at
-https://github.com/Wiki-NITC/nitc-wiki-android/issues with:
-- A description of the issue
-- Steps to reproduce
-- Your device model and Android version
-- Screenshots if applicable
+- Find articles with search suggestions and browse related pages through internal links.
+- Save pages to reading lists for offline reading and return to recent articles from history.
+- Choose Light, Dark, Black, or Sepia and adjust the reading font size.
+- Sign in to edit wiki pages.
+
+## Upstream
+
+The app builds on Wikimedia’s [Wikipedia Android app](https://github.com/wikimedia/apps-android-wikipedia). See [COPYING](COPYING) for licensing.
